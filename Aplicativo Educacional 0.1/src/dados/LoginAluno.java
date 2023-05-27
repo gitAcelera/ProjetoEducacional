@@ -1,19 +1,19 @@
 package Dados;
 
-public class Login
+public class LoginAluno
 {
     private String ra;
     private String senha;
    
 
-    public Login() 
+    public LoginAluno() 
     {
         this.ra=null;
         this.senha=null;
           
     }
 
-    public Login(String ra, String senha)
+    public LoginAluno(String ra, String senha)
     {
         this.ra = ra;
         this.senha = senha;

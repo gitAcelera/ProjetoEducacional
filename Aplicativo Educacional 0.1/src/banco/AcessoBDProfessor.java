@@ -6,16 +6,16 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 
-import Dados.Login;
-import dados.LoginProf;
+import Dados.LoginAluno;
+import dados.LoginProfessor;
 
 
 
-public class AcessoBdProf 
+public class AcessoBDProfessor 
 {
    Connection connection = null;
 
-    public boolean verificaAcessoProfessor(LoginProf loginProf)
+    public boolean verificaAcessoProfessor(LoginProfessor loginProfessor)
     {
     	
     	connection = Conexao.getInstance().getConnection();
@@ -31,7 +31,7 @@ public class AcessoBdProf
             
             while(res.next())
 			{
-			   if(loginProf.getCpf().compareTo(res.getString("cpf"))==0 && loginProf.getSenha().compareTo(res.getString("senha"))==0)
+			   if(loginProfessor.getCpf().compareTo(res.getString("cpf"))==0 && loginProfessor.getSenha().compareTo(res.getString("senha"))==0)
 			   {
 				   status = true;
 				   

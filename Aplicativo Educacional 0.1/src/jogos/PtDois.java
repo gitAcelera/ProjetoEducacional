@@ -32,7 +32,7 @@ public class PtDois extends javax.swing.JFrame {
         btPtDoisB = new javax.swing.JButton();
         btPtDoisC = new javax.swing.JButton();
         btPtDoisD = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        jlPtUmA = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(700, 420));
@@ -55,8 +55,8 @@ public class PtDois extends javax.swing.JFrame {
         btPtDoisD.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btPtDoisD.setText("CACHORRES");
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        jLabel1.setText("Qual é o plural da palavra \"CACHORRO\"?");
+        jlPtUmA.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        jlPtUmA.setText("Qual é o plural da palavra \"CACHORRO\"?");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -77,14 +77,14 @@ public class PtDois extends javax.swing.JFrame {
                                 .addComponent(btPtDoisD, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(35, 35, 35)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 666, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jlPtUmA, javax.swing.GroupLayout.PREFERRED_SIZE, 666, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(267, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(72, Short.MAX_VALUE)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jlPtUmA, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(48, 48, 48)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btPtDoisA, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -96,7 +96,7 @@ public class PtDois extends javax.swing.JFrame {
                 .addGap(89, 89, 89))
         );
 
-        jLabel1.getAccessibleContext().setAccessibleName("");
+        jlPtUmA.getAccessibleContext().setAccessibleName("");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -127,7 +127,7 @@ public class PtDois extends javax.swing.JFrame {
     private javax.swing.JButton btPtDoisB;
     private javax.swing.JButton btPtDoisC;
     private javax.swing.JButton btPtDoisD;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel jlPtUmA;
     // End of variables declaration//GEN-END:variables
 }

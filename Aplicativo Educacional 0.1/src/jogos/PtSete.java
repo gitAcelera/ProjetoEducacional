@@ -9,12 +9,13 @@ package jogos;
  * @author fellr
  */
 public class PtSete extends javax.swing.JFrame {
-
+    private PtOito TelaPtOito;
     /**
      * Creates new form PtSete
      */
     public PtSete() {
         initComponents();
+        TelaPtOito = new PtOito();
     }
 
     /**
@@ -27,37 +28,42 @@ public class PtSete extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        jlPtSeteA = new javax.swing.JLabel();
+        jlPtSeteB = new javax.swing.JLabel();
+        btPtSeteA = new javax.swing.JButton();
+        btPtSeteB = new javax.swing.JButton();
+        btPtSeteC = new javax.swing.JButton();
+        btPtSeteD = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        jLabel1.setText("Qual das palavras a seguir ");
+        jlPtSeteA.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        jlPtSeteA.setText("Qual das palavras a seguir ");
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        jLabel2.setText("NÃO é um pronome:");
+        jlPtSeteB.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        jlPtSeteB.setText("NÃO é um pronome:");
 
-        jButton1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jButton1.setText("EU");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btPtSeteA.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        btPtSeteA.setText("EU");
+        btPtSeteA.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btPtSeteAActionPerformed(evt);
             }
         });
 
-        jButton2.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jButton2.setText("DEU");
+        btPtSeteB.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        btPtSeteB.setText("DEU");
+        btPtSeteB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btPtSeteBActionPerformed(evt);
+            }
+        });
 
-        jButton3.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jButton3.setText("NÓS");
+        btPtSeteC.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        btPtSeteC.setText("NÓS");
 
-        jButton4.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jButton4.setText("TU");
+        btPtSeteD.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        btPtSeteD.setText("TU");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -71,33 +77,33 @@ public class PtSete extends javax.swing.JFrame {
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(21, 21, 21)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(btPtSeteA, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(btPtSeteC, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(45, 45, 45)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addComponent(jLabel1)))
+                                    .addComponent(btPtSeteD, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(btPtSeteB, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(jlPtSeteA)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(185, 185, 185)
-                        .addComponent(jLabel2)))
+                        .addComponent(jlPtSeteB)))
                 .addContainerGap(270, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(37, 37, 37)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jlPtSeteA, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jlPtSeteB, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(49, 49, 49)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btPtSeteA, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btPtSeteB, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, 82, Short.MAX_VALUE))
+                    .addComponent(btPtSeteC, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btPtSeteD, javax.swing.GroupLayout.DEFAULT_SIZE, 82, Short.MAX_VALUE))
                 .addContainerGap(26, Short.MAX_VALUE))
         );
 
@@ -118,21 +124,26 @@ public class PtSete extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btPtSeteAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPtSeteAActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_btPtSeteAActionPerformed
+
+    private void btPtSeteBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPtSeteBActionPerformed
+       TelaPtOito.setVisible(true);
+      dispose();
+    }//GEN-LAST:event_btPtSeteBActionPerformed
 
     /**
      * @param args the command line arguments
      */
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JButton btPtSeteA;
+    private javax.swing.JButton btPtSeteB;
+    private javax.swing.JButton btPtSeteC;
+    private javax.swing.JButton btPtSeteD;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel jlPtSeteA;
+    private javax.swing.JLabel jlPtSeteB;
     // End of variables declaration//GEN-END:variables
 }

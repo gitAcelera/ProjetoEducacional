@@ -1,19 +1,19 @@
 
 package dados;
 
-public class LoginProf
+public class LoginProfessor
 {
  private String cpf;
     private String senha;
    
-    public LoginProf() 
+    public LoginProfessor() 
     {
         this.cpf=null;
         this.senha=null;
           
     }
 
-    public LoginProf(String cpf, String senha)
+    public LoginProfessor(String cpf, String senha)
     {
         this.cpf = cpf;
         this.senha = senha;

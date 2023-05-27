@@ -6,14 +6,14 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 
-import Dados.Login;
+import Dados.LoginAluno;
 
-public class AcessoBD
+public class AcessoBDAluno
 {
 
     Connection connection = null;
 
-    public boolean verificaAcesso(Login login)
+    public boolean verificaAcesso(LoginAluno login)
     {
     	
     	connection = Conexao.getInstance().getConnection();
