@@ -11,10 +11,12 @@ import javax.swing.JOptionPane;
 public class loginAluno extends javax.swing.JFrame {
     
     private menuPrincipal mp;
+    private recuperaSenhaAluno rs;
     
     public loginAluno() {
         initComponents();
         mp = new menuPrincipal();
+        rs = new recuperaSenhaAluno();
     }
 
     /**
@@ -34,6 +36,7 @@ public class loginAluno extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
         senhaLoginAluno = new javax.swing.JPasswordField();
         mostrarSenha = new javax.swing.JCheckBox();
+        btRecuperarSenhaAluno = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(700, 420));
@@ -64,10 +67,23 @@ public class loginAluno extends javax.swing.JFrame {
             }
         });
 
+        senhaLoginAluno.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                senhaLoginAlunoActionPerformed(evt);
+            }
+        });
+
         mostrarSenha.setText(" Mostrar senha ");
         mostrarSenha.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 mostrarSenhaActionPerformed(evt);
+            }
+        });
+
+        btRecuperarSenhaAluno.setText("Esqueci a Senha");
+        btRecuperarSenhaAluno.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btRecuperarSenhaAlunoActionPerformed(evt);
             }
         });
 
@@ -90,21 +106,27 @@ public class loginAluno extends javax.swing.JFrame {
                     .addComponent(mostrarSenha)
                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(235, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btRecuperarSenhaAluno)
+                .addGap(150, 150, 150))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(64, 64, 64)
+                .addGap(52, 52, 52)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(raLoginAluno, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(senhaLoginAluno, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
+                .addComponent(btRecuperarSenhaAluno)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 6, Short.MAX_VALUE)
                 .addComponent(mostrarSenha)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
+                .addGap(33, 33, 33)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -119,7 +141,7 @@ public class loginAluno extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 378, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 381, Short.MAX_VALUE)
         );
 
         pack();
@@ -169,12 +191,23 @@ else
 }
     }//GEN-LAST:event_mostrarSenhaActionPerformed
 
+    private void senhaLoginAlunoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_senhaLoginAlunoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_senhaLoginAlunoActionPerformed
+
+    private void btRecuperarSenhaAlunoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btRecuperarSenhaAlunoActionPerformed
+        
+        rs.setVisible(true); 
+        dispose();
+    }//GEN-LAST:event_btRecuperarSenhaAlunoActionPerformed
+
     /**
      * @param args the command line arguments
      */
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btRecuperarSenhaAluno;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
