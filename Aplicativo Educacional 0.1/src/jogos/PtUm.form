@@ -83,7 +83,7 @@
                   <Component id="jlPtUmA" min="-2" pref="80" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Component id="jlPtUmB" min="-2" pref="73" max="-2" attributes="0"/>
-                  <EmptySpace pref="21" max="32767" attributes="0"/>
+                  <EmptySpace pref="22" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="btPtUmA" alignment="3" min="-2" pref="80" max="-2" attributes="0"/>
                       <Component id="btPtUmB" alignment="3" min="-2" pref="80" max="-2" attributes="0"/>

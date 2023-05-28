@@ -235,6 +235,8 @@ public class cadastroAluno extends javax.swing.JFrame {
                 raAluno.setText("");
                 senhaAluno.setText("");
                 recuperaSenhaAluno.setText("");
+                new loginAluno (). show();
+                dispose();
             } else{
                 JOptionPane.showMessageDialog(null,"Erro para realizar o cadastro!!!","Erro",JOptionPane.ERROR_MESSAGE);   
             }

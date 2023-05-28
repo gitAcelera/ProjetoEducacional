@@ -5,6 +5,7 @@
 package telas;
    import jogos.PtUm;
    import jogos.LgPtUm;
+   import jogos.MtUm;
 /**
  *
  * @author izaah
@@ -13,6 +14,7 @@ public class menuPrincipal extends javax.swing.JFrame
 {
     private PtUm TelaPtUm;
     private LgPtUm TelaLgPtUm;
+    private MtUm TelaMtUm;
     
     
     public menuPrincipal()
@@ -20,6 +22,7 @@ public class menuPrincipal extends javax.swing.JFrame
         initComponents();
         TelaPtUm = new PtUm();
         TelaLgPtUm = new LgPtUm();
+        TelaMtUm = new MtUm();
     }
 
     /**
@@ -42,7 +45,6 @@ public class menuPrincipal extends javax.swing.JFrame
         jMenu4 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(700, 420));
 
         jPanel2.setPreferredSize(new java.awt.Dimension(700, 420));
 
@@ -56,6 +58,11 @@ public class menuPrincipal extends javax.swing.JFrame
 
         btMt.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btMt.setText("Matemática");
+        btMt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btMtActionPerformed(evt);
+            }
+        });
 
         btLgPt.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btLgPt.setText("Lógica");
@@ -93,7 +100,7 @@ public class menuPrincipal extends javax.swing.JFrame
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(26, 26, 26)
                         .addComponent(jButton1)))
-                .addContainerGap(363, Short.MAX_VALUE))
+                .addContainerGap(129, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -108,7 +115,7 @@ public class menuPrincipal extends javax.swing.JFrame
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btLgPt, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btLgMt, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(118, Short.MAX_VALUE))
+                .addContainerGap(26, Short.MAX_VALUE))
         );
 
         jMenu3.setText("File");
@@ -125,11 +132,11 @@ public class menuPrincipal extends javax.swing.JFrame
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 924, Short.MAX_VALUE))
+                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 690, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 491, Short.MAX_VALUE)
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 399, Short.MAX_VALUE)
         );
 
         pack();
@@ -149,6 +156,12 @@ public class menuPrincipal extends javax.swing.JFrame
        TelaLgPtUm.setVisible(true);
        dispose();
     }//GEN-LAST:event_btLgPtActionPerformed
+
+    private void btMtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btMtActionPerformed
+       
+        TelaMtUm.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_btMtActionPerformed
 
     /**
      * @param args the command line arguments
