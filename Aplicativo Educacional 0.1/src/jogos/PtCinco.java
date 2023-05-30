@@ -27,18 +27,25 @@ public class PtCinco extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
+        PainelPtCinco = new javax.swing.JPanel();
         jlPtCincoA = new javax.swing.JLabel();
+        jlPtCincoB = new javax.swing.JLabel();
         btPtCincoA = new javax.swing.JButton();
         btPtCincoB = new javax.swing.JButton();
         btPtCincoC = new javax.swing.JButton();
         btPtCincoD = new javax.swing.JButton();
-        jlPtCincoB = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        PainelPtCinco.setPreferredSize(new java.awt.Dimension(700, 400));
+        PainelPtCinco.setRequestFocusEnabled(false);
+        PainelPtCinco.setVerifyInputWhenFocusTarget(false);
+
         jlPtCincoA.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         jlPtCincoA.setText("Qual é a sílaba tônica da palavra ");
+
+        jlPtCincoB.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        jlPtCincoB.setText("\"TELEFONE\"?");
 
         btPtCincoA.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btPtCincoA.setText("FO");
@@ -57,66 +64,64 @@ public class PtCinco extends javax.swing.JFrame {
         btPtCincoD.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btPtCincoD.setText("TE");
 
-        jlPtCincoB.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        jlPtCincoB.setText("\"TELEFONE\"?");
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(146, 146, 146)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout PainelPtCincoLayout = new javax.swing.GroupLayout(PainelPtCinco);
+        PainelPtCinco.setLayout(PainelPtCincoLayout);
+        PainelPtCincoLayout.setHorizontalGroup(
+            PainelPtCincoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelPtCincoLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jlPtCincoB)
+                .addGap(246, 246, 246))
+            .addGroup(PainelPtCincoLayout.createSequentialGroup()
+                .addGroup(PainelPtCincoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(PainelPtCincoLayout.createSequentialGroup()
+                        .addGap(129, 129, 129)
+                        .addGroup(PainelPtCincoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(btPtCincoA, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(btPtCincoC, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(44, 44, 44)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGap(82, 82, 82)
+                        .addGroup(PainelPtCincoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(btPtCincoB, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btPtCincoD, javax.swing.GroupLayout.DEFAULT_SIZE, 180, Short.MAX_VALUE)))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(79, 79, 79)
-                        .addComponent(jlPtCincoA))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(237, 237, 237)
-                        .addComponent(jlPtCincoB)))
-                .addContainerGap(100, Short.MAX_VALUE))
+                            .addComponent(btPtCincoD, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(PainelPtCincoLayout.createSequentialGroup()
+                        .addGap(88, 88, 88)
+                        .addComponent(jlPtCincoA)))
+                .addContainerGap(91, Short.MAX_VALUE))
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(22, 22, 22)
+        PainelPtCincoLayout.setVerticalGroup(
+            PainelPtCincoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PainelPtCincoLayout.createSequentialGroup()
+                .addContainerGap(35, Short.MAX_VALUE)
                 .addComponent(jlPtCincoA, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jlPtCincoB, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(24, 24, 24)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGap(18, 18, 18)
+                .addGroup(PainelPtCincoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btPtCincoA, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btPtCincoB, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(btPtCincoC, javax.swing.GroupLayout.DEFAULT_SIZE, 80, Short.MAX_VALUE)
-                    .addComponent(btPtCincoD, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(50, Short.MAX_VALUE))
+                .addGap(32, 32, 32)
+                .addGroup(PainelPtCincoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(btPtCincoC, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btPtCincoD, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(23, 23, 23))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(PainelPtCinco, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(PainelPtCinco, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void btPtCincoAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPtCincoAActionPerformed
-          TelaPtSeis.setVisible(true);
+      TelaPtSeis.setVisible(true);
       dispose();
     }//GEN-LAST:event_btPtCincoAActionPerformed
 
@@ -125,11 +130,11 @@ public class PtCinco extends javax.swing.JFrame {
      */
    
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel PainelPtCinco;
     private javax.swing.JButton btPtCincoA;
     private javax.swing.JButton btPtCincoB;
     private javax.swing.JButton btPtCincoC;
     private javax.swing.JButton btPtCincoD;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel jlPtCincoA;
     private javax.swing.JLabel jlPtCincoB;
     // End of variables declaration//GEN-END:variables

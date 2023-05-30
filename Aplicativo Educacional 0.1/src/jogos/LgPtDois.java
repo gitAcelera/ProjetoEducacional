@@ -28,7 +28,7 @@ public class LgPtDois extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
+        PainelLgPtDois = new javax.swing.JPanel();
         jlLgPtDoisA = new javax.swing.JLabel();
         jlLgPtDoisB = new javax.swing.JLabel();
         btLgPtDoisA = new javax.swing.JButton();
@@ -43,6 +43,9 @@ public class LgPtDois extends javax.swing.JFrame {
         jlLgPtDoisB.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         jlLgPtDoisB.setText("quatro lados iguais?");
 
+        btLgPtDoisA.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+
+        btLgPtDoisB.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btLgPtDoisB.setText("Aqui");
         btLgPtDoisB.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -50,53 +53,58 @@ public class LgPtDois extends javax.swing.JFrame {
             }
         });
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+        btLgPtDoisC.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+
+        javax.swing.GroupLayout PainelLgPtDoisLayout = new javax.swing.GroupLayout(PainelLgPtDois);
+        PainelLgPtDois.setLayout(PainelLgPtDoisLayout);
+        PainelLgPtDoisLayout.setHorizontalGroup(
+            PainelLgPtDoisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PainelLgPtDoisLayout.createSequentialGroup()
+                .addGroup(PainelLgPtDoisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(PainelLgPtDoisLayout.createSequentialGroup()
                         .addGap(179, 179, 179)
                         .addComponent(jlLgPtDoisB))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addGroup(PainelLgPtDoisLayout.createSequentialGroup()
                         .addGap(117, 117, 117)
-                        .addComponent(jlLgPtDoisA))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(33, 33, 33)
+                        .addComponent(jlLgPtDoisA)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelLgPtDoisLayout.createSequentialGroup()
+                .addGap(0, 125, Short.MAX_VALUE)
+                .addGroup(PainelLgPtDoisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelLgPtDoisLayout.createSequentialGroup()
                         .addComponent(btLgPtDoisA, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(38, 38, 38)
+                        .addGap(82, 82, 82)
+                        .addComponent(btLgPtDoisC, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(118, 118, 118))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelLgPtDoisLayout.createSequentialGroup()
                         .addComponent(btLgPtDoisB, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(37, 37, 37)
-                        .addComponent(btLgPtDoisC, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(60, Short.MAX_VALUE))
+                        .addGap(250, 250, 250))))
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+        PainelLgPtDoisLayout.setVerticalGroup(
+            PainelLgPtDoisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PainelLgPtDoisLayout.createSequentialGroup()
                 .addGap(25, 25, 25)
                 .addComponent(jlLgPtDoisA)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jlLgPtDoisB)
-                .addGap(92, 92, 92)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 53, Short.MAX_VALUE)
+                .addGroup(PainelLgPtDoisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(btLgPtDoisA, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btLgPtDoisB, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btLgPtDoisC, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(52, 52, 52))
+                .addGap(30, 30, 30)
+                .addComponent(btLgPtDoisB, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(24, 24, 24))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(PainelLgPtDois, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(49, Short.MAX_VALUE))
+            .addComponent(PainelLgPtDois, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -113,10 +121,10 @@ public class LgPtDois extends javax.swing.JFrame {
   
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel PainelLgPtDois;
     private javax.swing.JButton btLgPtDoisA;
     private javax.swing.JButton btLgPtDoisB;
     private javax.swing.JButton btLgPtDoisC;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel jlLgPtDoisA;
     private javax.swing.JLabel jlLgPtDoisB;
     // End of variables declaration//GEN-END:variables

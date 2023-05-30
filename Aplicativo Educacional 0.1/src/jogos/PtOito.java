@@ -27,16 +27,30 @@ public class PtOito extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        PainelPtOito = new javax.swing.JPanel();
+        jlPtOitoA = new javax.swing.JLabel();
         btPtOitoA = new javax.swing.JButton();
         btPtOitoB = new javax.swing.JButton();
         btPtOitoC = new javax.swing.JButton();
         btPtOitoD = new javax.swing.JButton();
-        jlPtOitoA = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        btPtOitoA.setText("CABELELEIRO");
+        PainelPtOito.setRequestFocusEnabled(false);
+        PainelPtOito.setVerifyInputWhenFocusTarget(false);
 
+        jlPtOitoA.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        jlPtOitoA.setText("Escolha a opção correta:");
+
+        btPtOitoA.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        btPtOitoA.setText("CABELELEIRO");
+        btPtOitoA.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btPtOitoAActionPerformed(evt);
+            }
+        });
+
+        btPtOitoB.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btPtOitoB.setText("CROCANTE");
         btPtOitoB.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -44,56 +58,90 @@ public class PtOito extends javax.swing.JFrame {
             }
         });
 
+        btPtOitoC.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btPtOitoC.setText("OMEM");
+        btPtOitoC.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btPtOitoCActionPerformed(evt);
+            }
+        });
 
+        btPtOitoD.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btPtOitoD.setText("ABITATI");
+        btPtOitoD.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btPtOitoDActionPerformed(evt);
+            }
+        });
 
-        jlPtOitoA.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        jlPtOitoA.setText("Escolha a opção correta:");
+        javax.swing.GroupLayout PainelPtOitoLayout = new javax.swing.GroupLayout(PainelPtOito);
+        PainelPtOito.setLayout(PainelPtOitoLayout);
+        PainelPtOitoLayout.setHorizontalGroup(
+            PainelPtOitoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PainelPtOitoLayout.createSequentialGroup()
+                .addContainerGap(135, Short.MAX_VALUE)
+                .addGroup(PainelPtOitoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelPtOitoLayout.createSequentialGroup()
+                        .addGroup(PainelPtOitoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(PainelPtOitoLayout.createSequentialGroup()
+                                .addComponent(btPtOitoC, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(btPtOitoD, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(PainelPtOitoLayout.createSequentialGroup()
+                                .addComponent(btPtOitoA, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 82, Short.MAX_VALUE)
+                                .addComponent(btPtOitoB, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(123, 123, 123))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelPtOitoLayout.createSequentialGroup()
+                        .addComponent(jlPtOitoA)
+                        .addGap(156, 156, 156))))
+        );
+        PainelPtOitoLayout.setVerticalGroup(
+            PainelPtOitoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PainelPtOitoLayout.createSequentialGroup()
+                .addGap(53, 53, 53)
+                .addComponent(jlPtOitoA)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 87, Short.MAX_VALUE)
+                .addGroup(PainelPtOitoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btPtOitoA, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btPtOitoB, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(30, 30, 30)
+                .addGroup(PainelPtOitoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btPtOitoD, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btPtOitoC, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(22, 22, 22))
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(144, 144, 144)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(btPtOitoC, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btPtOitoA, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 48, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(btPtOitoB, javax.swing.GroupLayout.DEFAULT_SIZE, 180, Short.MAX_VALUE)
-                            .addComponent(btPtOitoD, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(148, 148, 148))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jlPtOitoA, javax.swing.GroupLayout.PREFERRED_SIZE, 395, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+            .addComponent(PainelPtOito, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(73, 73, 73)
-                .addComponent(jlPtOitoA, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 79, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btPtOitoA, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btPtOitoB, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(27, 27, 27)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btPtOitoD, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btPtOitoC, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(36, 36, 36))
+            .addComponent(PainelPtOito, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void btPtOitoBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPtOitoBActionPerformed
-          TelaPtNove.setVisible(true);
+      TelaPtNove.setVisible(true);
       dispose();
     }//GEN-LAST:event_btPtOitoBActionPerformed
+
+    private void btPtOitoAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPtOitoAActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btPtOitoAActionPerformed
+
+    private void btPtOitoCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPtOitoCActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btPtOitoCActionPerformed
+
+    private void btPtOitoDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPtOitoDActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btPtOitoDActionPerformed
 
     /**
      * @param args the command line arguments
@@ -101,6 +149,7 @@ public class PtOito extends javax.swing.JFrame {
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel PainelPtOito;
     private javax.swing.JButton btPtOitoA;
     private javax.swing.JButton btPtOitoB;
     private javax.swing.JButton btPtOitoC;

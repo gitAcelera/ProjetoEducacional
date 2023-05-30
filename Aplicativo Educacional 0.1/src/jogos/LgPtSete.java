@@ -28,6 +28,7 @@ public class LgPtSete extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        PainelLgPtSete = new javax.swing.JPanel();
         jlLgPtSeteA = new javax.swing.JLabel();
         btLgPtSeteA = new javax.swing.JButton();
         btLgPtSeteB = new javax.swing.JButton();
@@ -35,10 +36,30 @@ public class LgPtSete extends javax.swing.JFrame {
         btLgPtSeteD = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setAutoRequestFocus(false);
+        setResizable(false);
+
+        PainelLgPtSete.setRequestFocusEnabled(false);
+        PainelLgPtSete.setVerifyInputWhenFocusTarget(false);
 
         jlLgPtSeteA.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         jlLgPtSeteA.setText("O que vem depois de \"terça-feira\" ?");
 
+        btLgPtSeteA.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        btLgPtSeteA.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btLgPtSeteAActionPerformed(evt);
+            }
+        });
+
+        btLgPtSeteB.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        btLgPtSeteB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btLgPtSeteBActionPerformed(evt);
+            }
+        });
+
+        btLgPtSeteC.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btLgPtSeteC.setText("Aqui");
         btLgPtSeteC.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -46,49 +67,79 @@ public class LgPtSete extends javax.swing.JFrame {
             }
         });
 
+        btLgPtSeteD.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        btLgPtSeteD.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btLgPtSeteDActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout PainelLgPtSeteLayout = new javax.swing.GroupLayout(PainelLgPtSete);
+        PainelLgPtSete.setLayout(PainelLgPtSeteLayout);
+        PainelLgPtSeteLayout.setHorizontalGroup(
+            PainelLgPtSeteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PainelLgPtSeteLayout.createSequentialGroup()
+                .addGroup(PainelLgPtSeteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(PainelLgPtSeteLayout.createSequentialGroup()
+                        .addGap(128, 128, 128)
+                        .addGroup(PainelLgPtSeteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btLgPtSeteA, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btLgPtSeteC, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(82, 82, 82)
+                        .addGroup(PainelLgPtSeteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btLgPtSeteB, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btLgPtSeteD, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(PainelLgPtSeteLayout.createSequentialGroup()
+                        .addGap(62, 62, 62)
+                        .addComponent(jlLgPtSeteA)))
+                .addContainerGap(71, Short.MAX_VALUE))
+        );
+        PainelLgPtSeteLayout.setVerticalGroup(
+            PainelLgPtSeteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelLgPtSeteLayout.createSequentialGroup()
+                .addContainerGap(86, Short.MAX_VALUE)
+                .addComponent(jlLgPtSeteA)
+                .addGap(49, 49, 49)
+                .addGroup(PainelLgPtSeteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(btLgPtSeteB, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btLgPtSeteA, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(30, 30, 30)
+                .addGroup(PainelLgPtSeteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btLgPtSeteC, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btLgPtSeteD, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(39, 39, 39))
+        );
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(114, 114, 114)
-                        .addComponent(jlLgPtSeteA))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(173, 173, 173)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btLgPtSeteA, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btLgPtSeteC, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(73, 73, 73)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btLgPtSeteD, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btLgPtSeteB, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(125, Short.MAX_VALUE))
+            .addComponent(PainelLgPtSete, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(71, 71, 71)
-                .addComponent(jlLgPtSeteA)
-                .addGap(95, 95, 95)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btLgPtSeteA, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btLgPtSeteB, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(27, 27, 27)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btLgPtSeteC, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btLgPtSeteD, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(48, Short.MAX_VALUE))
+            .addComponent(PainelLgPtSete, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void btLgPtSeteBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btLgPtSeteBActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btLgPtSeteBActionPerformed
+
     private void btLgPtSeteCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btLgPtSeteCActionPerformed
        TelaLgPtOito.setVisible(true);
-        dispose();
+       dispose();
     }//GEN-LAST:event_btLgPtSeteCActionPerformed
+
+    private void btLgPtSeteAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btLgPtSeteAActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btLgPtSeteAActionPerformed
+
+    private void btLgPtSeteDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btLgPtSeteDActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btLgPtSeteDActionPerformed
 
     /**
      * @param args the command line arguments
@@ -96,6 +147,7 @@ public class LgPtSete extends javax.swing.JFrame {
    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel PainelLgPtSete;
     private javax.swing.JButton btLgPtSeteA;
     private javax.swing.JButton btLgPtSeteB;
     private javax.swing.JButton btLgPtSeteC;

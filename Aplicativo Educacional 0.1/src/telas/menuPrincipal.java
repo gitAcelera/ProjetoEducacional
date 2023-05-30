@@ -5,6 +5,8 @@
 package telas;
    import jogos.PtUm;
    import jogos.LgPtUm;
+   import jogos.QAUm;
+   import jogos.QEUm;
    import jogos.MtUm;
 /**
  *
@@ -14,14 +16,16 @@ public class menuPrincipal extends javax.swing.JFrame
 {
     private PtUm TelaPtUm;
     private LgPtUm TelaLgPtUm;
+    private QAUm TelaQAUm;
+    private QEUm TelaQEUm;
     private MtUm TelaMtUm;
-    
-    
     public menuPrincipal()
     {
         initComponents();
         TelaPtUm = new PtUm();
         TelaLgPtUm = new LgPtUm();
+        TelaQAUm = new QAUm();
+        TelaQEUm = new QEUm();
         TelaMtUm = new MtUm();
     }
 
@@ -40,11 +44,14 @@ public class menuPrincipal extends javax.swing.JFrame
         btLgPt = new javax.swing.JButton();
         btLgMt = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
+        btQA = new javax.swing.JButton();
+        btQC = new javax.swing.JButton();
         jMenuBar2 = new javax.swing.JMenuBar();
         jMenu3 = new javax.swing.JMenu();
         jMenu4 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(700, 420));
 
         jPanel2.setPreferredSize(new java.awt.Dimension(700, 420));
 
@@ -82,40 +89,58 @@ public class menuPrincipal extends javax.swing.JFrame
 
         jButton1.setText("imagem");
 
+        btQA.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        btQA.setText("Qual é o animal?");
+        btQA.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btQAActionPerformed(evt);
+            }
+        });
+
+        btQC.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        btQC.setText("Qual é a cor?");
+        btQC.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btQCActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(26, 26, 26)
+                .addComponent(jButton1)
+                .addGap(54, 54, 54)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(154, 154, 154)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btPt, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btLgPt, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(47, 47, 47)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btMt, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btLgMt, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(26, 26, 26)
-                        .addComponent(jButton1)))
-                .addContainerGap(129, Short.MAX_VALUE))
+                    .addComponent(btMt, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btLgPt, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btPt, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btLgMt, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btQA, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btQC, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(134, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(77, 77, 77)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btPt, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btMt, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(44, 44, 44)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btLgPt, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btLgMt, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(26, Short.MAX_VALUE))
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(btPt, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btLgPt, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btLgMt, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btQA, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btQC, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btMt, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(52, Short.MAX_VALUE))
         );
 
         jMenu3.setText("File");
@@ -130,9 +155,10 @@ public class menuPrincipal extends javax.swing.JFrame
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 690, Short.MAX_VALUE))
+                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 688, Short.MAX_VALUE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -157,10 +183,19 @@ public class menuPrincipal extends javax.swing.JFrame
        dispose();
     }//GEN-LAST:event_btLgPtActionPerformed
 
+    private void btQCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btQCActionPerformed
+     TelaQEUm.setVisible(true);
+     dispose();
+    }//GEN-LAST:event_btQCActionPerformed
+
+    private void btQAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btQAActionPerformed
+      TelaQAUm.setVisible(true);
+      dispose();
+    }//GEN-LAST:event_btQAActionPerformed
+
     private void btMtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btMtActionPerformed
-       
-        TelaMtUm.setVisible(true);
-        dispose();
+      TelaMtUm.setVisible(true);
+      dispose();
     }//GEN-LAST:event_btMtActionPerformed
 
     /**
@@ -173,6 +208,8 @@ public class menuPrincipal extends javax.swing.JFrame
     private javax.swing.JButton btLgPt;
     private javax.swing.JButton btMt;
     private javax.swing.JButton btPt;
+    private javax.swing.JButton btQA;
+    private javax.swing.JButton btQC;
     private javax.swing.JButton jButton1;
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenu jMenu4;
