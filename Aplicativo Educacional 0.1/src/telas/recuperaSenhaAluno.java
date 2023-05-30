@@ -183,6 +183,7 @@ public class recuperaSenhaAluno extends javax.swing.JFrame {
             {
 
                 JOptionPane.showMessageDialog(null,"Sua senha é: "+senhaAtual);
+                //JOptionPane.showConfirmDialog(rootPane, res, raAtual, status, status);
                 new loginAluno().show();
                 dispose();
 
