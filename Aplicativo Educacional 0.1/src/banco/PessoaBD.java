@@ -109,14 +109,14 @@ public class PessoaBD
         try
         {
             stmt = connection.createStatement();
-            ResultSet res = stmt.executeQuery("SELECT * FROM dados");
+            ResultSet res = stmt.executeQuery("SELECT * FROM aluno");
             
             while (res.next())
             {
             	dados += "\n"+res.getString("nome");
-				dados += "\n"+res.getString("endereco");
-				dados += "\n"+res.getString("telefone");
-				dados += "\n"+res.getString("email");
+				dados += "\n"+res.getString("idade");
+				dados += "\n"+res.getString("ra");
+				dados += "\n"+res.getString("");
 				dados += "\n-----------------------------------------";				
             }
             
@@ -186,7 +186,7 @@ public class PessoaBD
         return listaPessoas;
     } 
     
-    public boolean excluirPessoa(Pessoa pessoa) 
+    public boolean excluirAluno(Pessoa pessoa) 
     {
     	boolean status = true;
     	
@@ -201,6 +201,57 @@ public class PessoaBD
             stmt = connection.createStatement();
             
             String sql = "DELETE FROM aluno WHERE nome='"+pessoa.getNome()+"'";
+            
+            System.out.println("SQL: " + sql);
+            
+            if(stmt.executeUpdate(sql)!=0)
+            {
+            	status = true;	
+            }
+            else
+            {
+            	status = false;
+            }
+            
+        } 
+        catch (SQLException e)
+        {
+            System.out.println(e.getMessage());
+            status = false;
+        }
+        finally 
+        {
+            
+            try
+            {
+                stmt.close();
+                connection.close();
+            } 
+            catch (SQLException e)
+            {
+                System.out.println("Erro ao desconectar" + e.getMessage());
+            }
+        }
+        return status;
+    }
+
+
+
+public boolean excluirProfessor(Pessoa pessoa) 
+    {
+    	boolean status = true;
+    	
+        System.out.println("Excluir Pessoa");
+        
+        connection = Conexao.getInstance().getConnection();
+        System.out.println("Conectado e pronto para excluir");
+        Statement stmt = null;
+        
+        try 
+        {
+            stmt = connection.createStatement();
+            
+            String sql = "DELETE FROM professor WHERE nome='"+pessoa.getNome()+"'";
             
             System.out.println("SQL: " + sql);
             

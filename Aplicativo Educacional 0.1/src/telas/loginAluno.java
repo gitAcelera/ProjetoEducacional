@@ -4,7 +4,7 @@
  */
 package telas;
 
-import Banco.AcessoBDAluno;
+import Banco.AcessoBDaluno;
 import Dados.LoginAluno;
 import javax.swing.JOptionPane;
 
@@ -156,7 +156,7 @@ public class loginAluno extends javax.swing.JFrame {
         String ra;
 	String senha;
 				
-	AcessoBDAluno acesso = new AcessoBDAluno();
+	AcessoBDaluno acesso = new AcessoBDaluno();
 	LoginAluno login = new LoginAluno();
 				
 	ra = raLoginAluno.getText();

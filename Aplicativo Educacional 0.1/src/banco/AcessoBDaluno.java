@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 import Dados.LoginAluno;
 
-public class AcessoBDAluno
+public class AcessoBDaluno
 {
 
     Connection connection = null;

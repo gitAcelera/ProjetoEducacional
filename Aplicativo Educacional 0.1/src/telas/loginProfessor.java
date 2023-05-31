@@ -4,7 +4,7 @@
  */
 package telas;
 
-import Banco.AcessoBDAluno;
+
 import Banco.AcessoBDProfessor;
 import dados.LoginProfessor;
 import javax.swing.JOptionPane;
@@ -16,7 +16,7 @@ import javax.swing.JOptionPane;
 public class loginProfessor extends javax.swing.JFrame {
     private  menuPrincipal mp;
     private recuperaSenhaProfessor rsp;
-
+    private menuPrincipalProfessor mpp;
     /**
      * Creates new form loginProfessor
      */
@@ -24,6 +24,7 @@ public class loginProfessor extends javax.swing.JFrame {
         initComponents();
         mp = new menuPrincipal();
         rsp = new recuperaSenhaProfessor();
+        mpp = new menuPrincipalProfessor();
     }
 
     /**
@@ -189,7 +190,8 @@ public class loginProfessor extends javax.swing.JFrame {
 				
 	if(acesso.verificaAcessoProfessor(loginProf) == true)
 	{
-            mp.setVisible(true);
+            
+            mpp.setVisible(true);
             dispose();
 	}
 	else
