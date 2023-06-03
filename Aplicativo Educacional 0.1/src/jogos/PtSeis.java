@@ -3,6 +3,8 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package jogos;
+import javax.swing.JOptionPane;
+import telas.menuPrincipal;
 
 /**
  *
@@ -26,6 +28,7 @@ public class PtSeis extends javax.swing.JFrame {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
+        java.awt.GridBagConstraints gridBagConstraints;
 
         PainelPtSeis = new javax.swing.JPanel();
         jlPtSeisA = new javax.swing.JLabel();
@@ -34,8 +37,12 @@ public class PtSeis extends javax.swing.JFrame {
         btPtSeisB = new javax.swing.JButton();
         btPtSeisC = new javax.swing.JButton();
         btPtSeisD = new javax.swing.JButton();
+        btMtUmMenu = new javax.swing.JButton();
+        btPtDica = new javax.swing.JButton();
+        btPtAvancar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new java.awt.GridBagLayout());
 
         jlPtSeisA.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         jlPtSeisA.setText("Qual é a correta separação silábica ");
@@ -65,6 +72,27 @@ public class PtSeis extends javax.swing.JFrame {
             }
         });
 
+        btMtUmMenu.setText("MENU");
+        btMtUmMenu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btMtUmMenuActionPerformed(evt);
+            }
+        });
+
+        btPtDica.setText("?");
+        btPtDica.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btPtDicaActionPerformed(evt);
+            }
+        });
+
+        btPtAvancar.setText("Avançar");
+        btPtAvancar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btPtAvancarActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout PainelPtSeisLayout = new javax.swing.GroupLayout(PainelPtSeis);
         PainelPtSeis.setLayout(PainelPtSeisLayout);
         PainelPtSeisLayout.setHorizontalGroup(
@@ -76,23 +104,41 @@ public class PtSeis extends javax.swing.JFrame {
                     .addComponent(btPtSeisC, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(82, 82, 82)
                 .addGroup(PainelPtSeisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btPtSeisD, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btPtSeisB, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(126, 126, 126))
+                    .addComponent(btPtSeisB, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(PainelPtSeisLayout.createSequentialGroup()
+                        .addComponent(btPtSeisD, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(27, 27, 27)
+                        .addComponent(btPtAvancar)))
+                .addGap(26, 26, 26))
             .addGroup(PainelPtSeisLayout.createSequentialGroup()
                 .addGroup(PainelPtSeisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(PainelPtSeisLayout.createSequentialGroup()
-                        .addGap(70, 70, 70)
-                        .addComponent(jlPtSeisA))
+                        .addContainerGap()
+                        .addComponent(btMtUmMenu)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btPtDica))
                     .addGroup(PainelPtSeisLayout.createSequentialGroup()
-                        .addGap(163, 163, 163)
-                        .addComponent(jlPtSeisB, javax.swing.GroupLayout.PREFERRED_SIZE, 371, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(70, Short.MAX_VALUE))
+                        .addGroup(PainelPtSeisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(PainelPtSeisLayout.createSequentialGroup()
+                                .addGap(70, 70, 70)
+                                .addComponent(jlPtSeisA))
+                            .addGroup(PainelPtSeisLayout.createSequentialGroup()
+                                .addGap(163, 163, 163)
+                                .addComponent(jlPtSeisB, javax.swing.GroupLayout.PREFERRED_SIZE, 371, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 64, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         PainelPtSeisLayout.setVerticalGroup(
             PainelPtSeisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PainelPtSeisLayout.createSequentialGroup()
-                .addGap(39, 39, 39)
+                .addGroup(PainelPtSeisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(PainelPtSeisLayout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(btMtUmMenu))
+                    .addGroup(PainelPtSeisLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(btPtDica)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jlPtSeisA, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jlPtSeisB, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -100,23 +146,26 @@ public class PtSeis extends javax.swing.JFrame {
                 .addGroup(PainelPtSeisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btPtSeisB, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btPtSeisA, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(30, 30, 30)
-                .addGroup(PainelPtSeisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btPtSeisD, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btPtSeisC, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(22, 22, 22))
+                .addGroup(PainelPtSeisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(PainelPtSeisLayout.createSequentialGroup()
+                        .addGap(30, 30, 30)
+                        .addGroup(PainelPtSeisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(btPtSeisD, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btPtSeisC, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(22, 22, 22))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelPtSeisLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btPtAvancar)
+                        .addGap(20, 20, 20))))
         );
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(PainelPtSeis, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(PainelPtSeis, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.ipadx = 64;
+        gridBagConstraints.ipady = 3;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        getContentPane().add(PainelPtSeis, gridBagConstraints);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -130,12 +179,29 @@ public class PtSeis extends javax.swing.JFrame {
       dispose();
     }//GEN-LAST:event_btPtSeisDActionPerformed
 
+    private void btMtUmMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btMtUmMenuActionPerformed
+        new menuPrincipal().show();
+        dispose();
+    }//GEN-LAST:event_btMtUmMenuActionPerformed
+
+    private void btPtDicaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPtDicaActionPerformed
+        JOptionPane.showMessageDialog(null,"Exemplos de separação silábica: BO-CA,CO-RA-ÇÃO,A-MI-ZA-DE");
+    }//GEN-LAST:event_btPtDicaActionPerformed
+
+    private void btPtAvancarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPtAvancarActionPerformed
+        TelaPtSete.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_btPtAvancarActionPerformed
+
     /**
      * @param args the command line arguments
      */
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel PainelPtSeis;
+    private javax.swing.JButton btMtUmMenu;
+    private javax.swing.JButton btPtAvancar;
+    private javax.swing.JButton btPtDica;
     private javax.swing.JButton btPtSeisA;
     private javax.swing.JButton btPtSeisB;
     private javax.swing.JButton btPtSeisC;

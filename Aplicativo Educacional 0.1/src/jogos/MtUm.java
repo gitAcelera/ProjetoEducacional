@@ -5,6 +5,7 @@
  */
 package jogos;
 import telas.menuPrincipal;
+import javax.swing.JOptionPane;
 /**
  *
  * @author ADM
@@ -35,8 +36,9 @@ public class MtUm extends javax.swing.JFrame {
         btMtUmB = new javax.swing.JButton();
         btMtUmC = new javax.swing.JButton();
         btMtUmD = new javax.swing.JButton();
-        btAvancar = new javax.swing.JButton();
-        btVoltarMenu = new javax.swing.JButton();
+        btMtUmAvançar = new javax.swing.JButton();
+        btMtUmMenu = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -72,17 +74,24 @@ public class MtUm extends javax.swing.JFrame {
             }
         });
 
-        btAvancar.setText("Avançar");
-        btAvancar.addActionListener(new java.awt.event.ActionListener() {
+        btMtUmAvançar.setText("Avançar");
+        btMtUmAvançar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btAvancarActionPerformed(evt);
+                btMtUmAvançarActionPerformed(evt);
             }
         });
 
-        btVoltarMenu.setText("Voltar para o MENU");
-        btVoltarMenu.addActionListener(new java.awt.event.ActionListener() {
+        btMtUmMenu.setText("MENU");
+        btMtUmMenu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btVoltarMenuActionPerformed(evt);
+                btMtUmMenuActionPerformed(evt);
+            }
+        });
+
+        jButton1.setText("?");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
             }
         });
 
@@ -91,38 +100,44 @@ public class MtUm extends javax.swing.JFrame {
         PainelMtUmLayout.setHorizontalGroup(
             PainelMtUmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PainelMtUmLayout.createSequentialGroup()
-                .addContainerGap(127, Short.MAX_VALUE)
-                .addGroup(PainelMtUmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(btMtUmA, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btMtUmC, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(82, 82, 82)
-                .addGroup(PainelMtUmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(btMtUmD, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btMtUmB, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(35, 35, 35)
-                .addComponent(btAvancar)
-                .addGap(23, 23, 23))
-            .addGroup(PainelMtUmLayout.createSequentialGroup()
                 .addGroup(PainelMtUmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(PainelMtUmLayout.createSequentialGroup()
                         .addGap(284, 284, 284)
                         .addComponent(jlMtUmB))
                     .addGroup(PainelMtUmLayout.createSequentialGroup()
                         .addGap(147, 147, 147)
-                        .addComponent(jlMtUmA))
-                    .addGroup(PainelMtUmLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(btVoltarMenu)))
+                        .addComponent(jlMtUmA)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelMtUmLayout.createSequentialGroup()
+                .addGroup(PainelMtUmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(PainelMtUmLayout.createSequentialGroup()
+                        .addContainerGap(127, Short.MAX_VALUE)
+                        .addGroup(PainelMtUmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(btMtUmA, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btMtUmC, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(82, 82, 82)
+                        .addGroup(PainelMtUmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(btMtUmD, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btMtUmB, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(35, 35, 35)
+                        .addComponent(btMtUmAvançar))
+                    .addGroup(PainelMtUmLayout.createSequentialGroup()
+                        .addGap(29, 29, 29)
+                        .addComponent(btMtUmMenu)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButton1)))
+                .addGap(23, 23, 23))
         );
         PainelMtUmLayout.setVerticalGroup(
             PainelMtUmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PainelMtUmLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(btVoltarMenu)
+                .addGroup(PainelMtUmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btMtUmMenu)
+                    .addComponent(jButton1))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
                 .addGroup(PainelMtUmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btAvancar, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(btMtUmAvançar, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelMtUmLayout.createSequentialGroup()
                         .addComponent(jlMtUmA)
                         .addGap(18, 18, 18)
@@ -163,15 +178,19 @@ public class MtUm extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_btMtUmDActionPerformed
 
-    private void btAvancarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btAvancarActionPerformed
+    private void btMtUmAvançarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btMtUmAvançarActionPerformed
         TelaMtDois.setVisible(true);
         dispose();
-    }//GEN-LAST:event_btAvancarActionPerformed
+    }//GEN-LAST:event_btMtUmAvançarActionPerformed
 
-    private void btVoltarMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btVoltarMenuActionPerformed
-         new menuPrincipal().show();
+    private void btMtUmMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btMtUmMenuActionPerformed
+        new menuPrincipal().show();
         dispose();
-    }//GEN-LAST:event_btVoltarMenuActionPerformed
+    }//GEN-LAST:event_btMtUmMenuActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        JOptionPane.showMessageDialog(null,"As vogais são A, E, I, O, U");
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -180,12 +199,13 @@ public class MtUm extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel PainelMtUm;
-    private javax.swing.JButton btAvancar;
     private javax.swing.JButton btMtUmA;
+    private javax.swing.JButton btMtUmAvançar;
     private javax.swing.JButton btMtUmB;
     private javax.swing.JButton btMtUmC;
     private javax.swing.JButton btMtUmD;
-    private javax.swing.JButton btVoltarMenu;
+    private javax.swing.JButton btMtUmMenu;
+    private javax.swing.JButton jButton1;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JLabel jlMtUmA;
     private javax.swing.JLabel jlMtUmB;

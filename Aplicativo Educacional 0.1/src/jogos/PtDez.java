@@ -3,6 +3,8 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package jogos;
+import javax.swing.JOptionPane;
+import telas.menuPrincipal;
 
 /**
  *
@@ -33,11 +35,14 @@ public class PtDez extends javax.swing.JFrame {
         btPtDezB = new javax.swing.JButton();
         btPtDezC = new javax.swing.JButton();
         btPtDezD = new javax.swing.JButton();
+        btMtUmMenu = new javax.swing.JButton();
+        btPtDica = new javax.swing.JButton();
+        btPtAvancar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jlPtDezA.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        jlPtDezA.setText("Qual é o significado da palavra");
+        jlPtDezA.setText("Qual é o semelhante da palavra");
 
         jlPtDezB.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         jlPtDezB.setText("\"ALEGRIA\" ?");
@@ -59,6 +64,27 @@ public class PtDez extends javax.swing.JFrame {
         btPtDezD.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btPtDezD.setText("MEDO");
 
+        btMtUmMenu.setText("MENU");
+        btMtUmMenu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btMtUmMenuActionPerformed(evt);
+            }
+        });
+
+        btPtDica.setText("?");
+        btPtDica.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btPtDicaActionPerformed(evt);
+            }
+        });
+
+        btPtAvancar.setText("Avançar");
+        btPtAvancar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btPtAvancarActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout PainelPtDezLayout = new javax.swing.GroupLayout(PainelPtDez);
         PainelPtDez.setLayout(PainelPtDezLayout);
         PainelPtDezLayout.setHorizontalGroup(
@@ -70,9 +96,12 @@ public class PtDez extends javax.swing.JFrame {
                     .addComponent(btPtDezA, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(82, 82, 82)
                 .addGroup(PainelPtDezLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btPtDezD, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btPtDezB, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(135, 135, 135))
+                    .addComponent(btPtDezB, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(PainelPtDezLayout.createSequentialGroup()
+                        .addComponent(btPtDezD, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(30, 30, 30)
+                        .addComponent(btPtAvancar)))
+                .addGap(32, 32, 32))
             .addGroup(PainelPtDezLayout.createSequentialGroup()
                 .addGroup(PainelPtDezLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(PainelPtDezLayout.createSequentialGroup()
@@ -82,11 +111,21 @@ public class PtDez extends javax.swing.JFrame {
                         .addGap(100, 100, 100)
                         .addComponent(jlPtDezA)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(PainelPtDezLayout.createSequentialGroup()
+                .addGap(17, 17, 17)
+                .addComponent(btMtUmMenu)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btPtDica)
+                .addGap(14, 14, 14))
         );
         PainelPtDezLayout.setVerticalGroup(
             PainelPtDezLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PainelPtDezLayout.createSequentialGroup()
-                .addGap(40, 40, 40)
+                .addGap(11, 11, 11)
+                .addGroup(PainelPtDezLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btMtUmMenu)
+                    .addComponent(btPtDica))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jlPtDezA)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jlPtDezB)
@@ -94,10 +133,15 @@ public class PtDez extends javax.swing.JFrame {
                 .addGroup(PainelPtDezLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btPtDezB, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btPtDezA, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(30, 30, 30)
-                .addGroup(PainelPtDezLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btPtDezC, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btPtDezD, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(PainelPtDezLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(PainelPtDezLayout.createSequentialGroup()
+                        .addGap(30, 30, 30)
+                        .addGroup(PainelPtDezLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(btPtDezC, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btPtDezD, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelPtDezLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btPtAvancar)))
                 .addGap(34, 34, 34))
         );
 
@@ -119,6 +163,20 @@ public class PtDez extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btPtDezCActionPerformed
 
+    private void btMtUmMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btMtUmMenuActionPerformed
+        new menuPrincipal().show();
+        dispose();
+    }//GEN-LAST:event_btMtUmMenuActionPerformed
+
+    private void btPtDicaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPtDicaActionPerformed
+        JOptionPane.showMessageDialog(null,"Algo idêntico ou próximo, exemplo: o semelhante de ruim é mal");
+    }//GEN-LAST:event_btPtDicaActionPerformed
+
+    private void btPtAvancarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPtAvancarActionPerformed
+        new menuPrincipal().show();
+        dispose();
+    }//GEN-LAST:event_btPtAvancarActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -126,10 +184,13 @@ public class PtDez extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel PainelPtDez;
+    private javax.swing.JButton btMtUmMenu;
+    private javax.swing.JButton btPtAvancar;
     private javax.swing.JButton btPtDezA;
     private javax.swing.JButton btPtDezB;
     private javax.swing.JButton btPtDezC;
     private javax.swing.JButton btPtDezD;
+    private javax.swing.JButton btPtDica;
     private javax.swing.JLabel jlPtDezA;
     private javax.swing.JLabel jlPtDezB;
     // End of variables declaration//GEN-END:variables

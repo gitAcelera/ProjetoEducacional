@@ -3,6 +3,8 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package jogos;
+import javax.swing.JOptionPane;
+import telas.menuPrincipal;
 
 /**
  *
@@ -27,17 +29,22 @@ public class PtUm extends javax.swing.JFrame {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
+        java.awt.GridBagConstraints gridBagConstraints;
 
         PainelPtUm = new javax.swing.JPanel();
         jlPtUmA = new javax.swing.JLabel();
         jlPtUmB = new javax.swing.JLabel();
         btPtUmA = new javax.swing.JButton();
         btPtUmB = new javax.swing.JButton();
-        btPtUmD = new javax.swing.JButton();
         btPtUmC = new javax.swing.JButton();
+        btPtUmD = new javax.swing.JButton();
+        btPtDica = new javax.swing.JButton();
+        btPtVM = new javax.swing.JButton();
+        btPtAvancar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(700, 420));
+        getContentPane().setLayout(new java.awt.GridBagLayout());
 
         PainelPtUm.setPreferredSize(new java.awt.Dimension(700, 420));
 
@@ -58,11 +65,32 @@ public class PtUm extends javax.swing.JFrame {
         btPtUmB.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btPtUmB.setText("C");
 
+        btPtUmC.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        btPtUmC.setText("S");
+
         btPtUmD.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btPtUmD.setText("O");
 
-        btPtUmC.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        btPtUmC.setText("S");
+        btPtDica.setText("?");
+        btPtDica.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btPtDicaActionPerformed(evt);
+            }
+        });
+
+        btPtVM.setText("MENU");
+        btPtVM.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btPtVMActionPerformed(evt);
+            }
+        });
+
+        btPtAvancar.setText("Avançar");
+        btPtAvancar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btPtAvancarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout PainelPtUmLayout = new javax.swing.GroupLayout(PainelPtUm);
         PainelPtUm.setLayout(PainelPtUmLayout);
@@ -73,47 +101,65 @@ public class PtUm extends javax.swing.JFrame {
                 .addComponent(jlPtUmB, javax.swing.GroupLayout.PREFERRED_SIZE, 269, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(214, 214, 214))
             .addGroup(PainelPtUmLayout.createSequentialGroup()
-                .addGap(133, 133, 133)
                 .addGroup(PainelPtUmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jlPtUmA)
                     .addGroup(PainelPtUmLayout.createSequentialGroup()
+                        .addGap(133, 133, 133)
                         .addGroup(PainelPtUmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(btPtUmC, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(btPtUmA, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(82, 82, 82)
                         .addGroup(PainelPtUmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(btPtUmB, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btPtUmD, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(125, Short.MAX_VALUE))
+                            .addComponent(btPtUmD, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, PainelPtUmLayout.createSequentialGroup()
+                        .addGap(22, 22, 22)
+                        .addComponent(btPtVM)
+                        .addGap(50, 50, 50)
+                        .addComponent(jlPtUmA)))
+                .addGroup(PainelPtUmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(PainelPtUmLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 96, Short.MAX_VALUE)
+                        .addComponent(btPtDica)
+                        .addContainerGap())
+                    .addGroup(PainelPtUmLayout.createSequentialGroup()
+                        .addGap(26, 26, 26)
+                        .addComponent(btPtAvancar)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         PainelPtUmLayout.setVerticalGroup(
             PainelPtUmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelPtUmLayout.createSequentialGroup()
                 .addContainerGap(9, Short.MAX_VALUE)
-                .addComponent(jlPtUmA, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(PainelPtUmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jlPtUmA, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btPtDica)
+                    .addComponent(btPtVM))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jlPtUmB, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(PainelPtUmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btPtUmA, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btPtUmB, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(30, 30, 30)
-                .addGroup(PainelPtUmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btPtUmC, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btPtUmD, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(24, 24, 24))
+                .addGroup(PainelPtUmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(PainelPtUmLayout.createSequentialGroup()
+                        .addGap(30, 30, 30)
+                        .addGroup(PainelPtUmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(btPtUmC, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btPtUmD, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(24, 24, 24))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelPtUmLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btPtAvancar)
+                        .addGap(26, 26, 26))))
         );
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(PainelPtUm, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(PainelPtUm, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
-        );
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.ipadx = 20;
+        gridBagConstraints.ipady = 3;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        getContentPane().add(PainelPtUm, gridBagConstraints);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -123,6 +169,20 @@ public class PtUm extends javax.swing.JFrame {
       dispose();
     }//GEN-LAST:event_btPtUmAActionPerformed
 
+    private void btPtDicaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPtDicaActionPerformed
+      JOptionPane.showMessageDialog(null,"As vogais são A, E, I, O, U");
+    }//GEN-LAST:event_btPtDicaActionPerformed
+
+    private void btPtVMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPtVMActionPerformed
+        new menuPrincipal().show();
+        dispose();
+    }//GEN-LAST:event_btPtVMActionPerformed
+
+    private void btPtAvancarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPtAvancarActionPerformed
+        TelaPtDois.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_btPtAvancarActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -130,10 +190,13 @@ public class PtUm extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel PainelPtUm;
+    private javax.swing.JButton btPtAvancar;
+    private javax.swing.JButton btPtDica;
     private javax.swing.JButton btPtUmA;
     private javax.swing.JButton btPtUmB;
     private javax.swing.JButton btPtUmC;
     private javax.swing.JButton btPtUmD;
+    private javax.swing.JButton btPtVM;
     private javax.swing.JLabel jlPtUmA;
     private javax.swing.JLabel jlPtUmB;
     // End of variables declaration//GEN-END:variables
