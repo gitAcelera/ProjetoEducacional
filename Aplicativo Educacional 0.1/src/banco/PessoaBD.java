@@ -100,7 +100,7 @@ public class PessoaBD
     
     public String relatorioPessoas()
     {
-    	String dados = "";
+    	String classificacao = "";
     	
     	connection = Conexao.getInstance().getConnection();
         System.out.println("Conectado e preparando a listagem");
@@ -113,11 +113,11 @@ public class PessoaBD
             
             while (res.next())
             {
-            	dados += "\n"+res.getString("nome");
-				dados += "\n"+res.getString("idade");
-				dados += "\n"+res.getString("ra");
-				dados += "\n"+res.getString("");
-				dados += "\n-----------------------------------------";				
+            	classificacao+= "\n"+res.getString("nome");
+			//classificacao += "\n"+res.getString("idade");
+				classificacao += "\n"+res.getString("ra");
+				//classificacao += "\n"+res.getString("");
+				classificacao += "\n-----------------------------------------";				
             }
             
         } 
@@ -140,7 +140,7 @@ public class PessoaBD
             }
         }
     	
-    	return dados;
+    	return classificacao;
     }
     
 
@@ -200,7 +200,7 @@ public class PessoaBD
         {
             stmt = connection.createStatement();
             
-            String sql = "DELETE FROM aluno WHERE nome='"+pessoa.getNome()+"'";
+            String sql = "DELETE FROM aluno WHERE ra='"+pessoa.getRa()+"'";
             
             System.out.println("SQL: " + sql);
             
@@ -251,7 +251,7 @@ public boolean excluirProfessor(Pessoa pessoa)
         {
             stmt = connection.createStatement();
             
-            String sql = "DELETE FROM professor WHERE nome='"+pessoa.getNome()+"'";
+            String sql = "DELETE FROM professor WHERE cpf='"+pessoa.getCpf()+"'";
             
             System.out.println("SQL: " + sql);
             

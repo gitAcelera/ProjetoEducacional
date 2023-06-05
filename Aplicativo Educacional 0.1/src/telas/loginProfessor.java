@@ -7,6 +7,11 @@ package telas;
 
 import Banco.AcessoBDProfessor;
 import dados.LoginProfessor;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import javax.swing.JOptionPane;
 
 /**
@@ -14,17 +19,20 @@ import javax.swing.JOptionPane;
  * @author izaah
  */
 public class loginProfessor extends javax.swing.JFrame {
-    private  menuPrincipal mp;
+    private  menuPrincipalProfessor mpp;
     private recuperaSenhaProfessor rsp;
-    private menuPrincipalProfessor mpp;
+     private loginDirecao lD;
+    
+    String cpfAtual,senhaAtual,cpfBanco,senhaBanco;
     /**
      * Creates new form loginProfessor
      */
     public loginProfessor() {
         initComponents();
-        mp = new menuPrincipal();
-        rsp = new recuperaSenhaProfessor();
         mpp = new menuPrincipalProfessor();
+        rsp = new recuperaSenhaProfessor();
+        lD= new loginDirecao();
+        
     }
 
     /**
@@ -45,6 +53,7 @@ public class loginProfessor extends javax.swing.JFrame {
         mostrarSenha = new javax.swing.JCheckBox();
         cpfLoginProf = new javax.swing.JFormattedTextField();
         btRecuperarSenhaAluno = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(700, 420));
@@ -100,6 +109,13 @@ public class loginProfessor extends javax.swing.JFrame {
             }
         });
 
+        jButton3.setText("DIREÇÃO");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -111,19 +127,21 @@ public class loginProfessor extends javax.swing.JFrame {
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(121, 121, 121))
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(265, 265, 265)
+                .addContainerGap()
+                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(124, 124, 124)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addContainerGap(543, Short.MAX_VALUE))
+                        .addContainerGap(402, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 242, Short.MAX_VALUE)
-                        .addContainerGap(340, Short.MAX_VALUE))
+                        .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 415, Short.MAX_VALUE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(mostrarSenha)
                         .addGap(128, 128, 128)
                         .addComponent(btRecuperarSenhaAluno)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addContainerGap(101, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(senhaLoginProf, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -133,8 +151,13 @@ public class loginProfessor extends javax.swing.JFrame {
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(42, 42, 42)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(42, 42, 42)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(21, 21, 21)
+                        .addComponent(jButton3)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(cpfLoginProf, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
@@ -145,7 +168,7 @@ public class loginProfessor extends javax.swing.JFrame {
                         .addComponent(senhaLoginProf, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(41, 41, 41)
                         .addComponent(mostrarSenha)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 65, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -176,28 +199,55 @@ public class loginProfessor extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        String cpf;
-	String senha;
-				
-	AcessoBDProfessor acesso = new AcessoBDProfessor();
-	LoginProfessor loginProf = new LoginProfessor();
-				
-	cpf = cpfLoginProf.getText();
-	senha = senhaLoginProf.getText();
-				
-	loginProf.setCpf(cpf);
-	loginProf.setSenha(senha);
-				
-	if(acesso.verificaAcessoProfessor(loginProf) == true)
-	{
-            
-            mpp.setVisible(true);
+       int status;
+        try
+        {
+
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost/aplicativo_educacional","root","");
+            Statement stm = con.createStatement();
+            ResultSet res = stm.executeQuery("SELECT * from professor");
+
+            cpfAtual = cpfLoginProf.getText();
+            senhaAtual = senhaLoginProf.getText();
+
+            status =0;
+            while(res.next())
+
+            {
+
+                cpfBanco = res.getString("cpf");
+                senhaBanco = res.getString("senha");
+
+                if(cpfBanco.compareTo(cpfAtual)==0 && senhaBanco.compareTo(senhaAtual)==0 )
+                
+
+                {
+                    status=1;
+                }
+
+            }
+
+            if(status == 1)
+            {
+
+               mpp.setVisible(true);
             dispose();
-	}
-	else
-	{
-            JOptionPane.showMessageDialog(null, "Erro nos dados informados", "Erro", JOptionPane.ERROR_MESSAGE);
-	}
+
+            }
+            if(status == 0)
+            {
+                JOptionPane.showMessageDialog(null,"Erro nos dados informados!!!","Erro",JOptionPane.ERROR_MESSAGE);
+            }
+        }
+        catch(ClassNotFoundException ex)
+        {
+            JOptionPane.showMessageDialog(null,ex.getMessage(),"Erro",JOptionPane.ERROR_MESSAGE);
+        }
+        catch(SQLException ex)
+        {
+            JOptionPane.showMessageDialog(null,ex.getMessage(),"Erro",JOptionPane.ERROR_MESSAGE);
+        }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void senhaLoginProfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_senhaLoginProfActionPerformed
@@ -225,6 +275,11 @@ else
        dispose();
     }//GEN-LAST:event_btRecuperarSenhaAlunoActionPerformed
 
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+ lD.setVisible(true); 
+ dispose();// TODO add your handling code here:
+    }//GEN-LAST:event_jButton3ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -234,6 +289,7 @@ else
     private javax.swing.JFormattedTextField cpfLoginProf;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;

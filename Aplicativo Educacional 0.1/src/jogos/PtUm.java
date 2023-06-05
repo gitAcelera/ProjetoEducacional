@@ -3,6 +3,11 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package jogos;
+import dados.PontosAluno;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
 import javax.swing.JOptionPane;
 import telas.menuPrincipal;
 
@@ -12,6 +17,8 @@ import telas.menuPrincipal;
  */
 public class PtUm extends javax.swing.JFrame {
     private PtDois TelaPtDois;
+     int pontosPt = PontosAluno.getPontosPt();
+     String tipo="portugues";
 
     /**
      * Creates new form PtUm
@@ -43,7 +50,6 @@ public class PtUm extends javax.swing.JFrame {
         btPtAvancar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(700, 420));
         getContentPane().setLayout(new java.awt.GridBagLayout());
 
         PainelPtUm.setPreferredSize(new java.awt.Dimension(700, 420));
@@ -64,12 +70,27 @@ public class PtUm extends javax.swing.JFrame {
 
         btPtUmB.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btPtUmB.setText("C");
+        btPtUmB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btPtUmBActionPerformed(evt);
+            }
+        });
 
         btPtUmC.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btPtUmC.setText("S");
+        btPtUmC.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btPtUmCActionPerformed(evt);
+            }
+        });
 
         btPtUmD.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btPtUmD.setText("O");
+        btPtUmD.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btPtUmDActionPerformed(evt);
+            }
+        });
 
         btPtDica.setText("?");
         btPtDica.addActionListener(new java.awt.event.ActionListener() {
@@ -118,7 +139,7 @@ public class PtUm extends javax.swing.JFrame {
                         .addComponent(jlPtUmA)))
                 .addGroup(PainelPtUmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(PainelPtUmLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 96, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 82, Short.MAX_VALUE)
                         .addComponent(btPtDica)
                         .addContainerGap())
                     .addGroup(PainelPtUmLayout.createSequentialGroup()
@@ -129,7 +150,7 @@ public class PtUm extends javax.swing.JFrame {
         PainelPtUmLayout.setVerticalGroup(
             PainelPtUmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelPtUmLayout.createSequentialGroup()
-                .addContainerGap(9, Short.MAX_VALUE)
+                .addContainerGap(14, Short.MAX_VALUE)
                 .addGroup(PainelPtUmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jlPtUmA, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btPtDica)
@@ -165,7 +186,25 @@ public class PtUm extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btPtUmAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPtUmAActionPerformed
-      TelaPtDois.setVisible(true);
+         
+        pontosPt=pontosPt+20;
+         System.out.println(""+pontosPt);
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost/aplicativo_educacional","root","");
+            Statement stm = con.createStatement();
+            stm.executeUpdate("INSERT into jogos (q1,q2,q3,q4,q5,q6,q7,q8,q9,q10) values ("+pontosPt+","+0+","+0+","+0+","+0+","+0+","+0+","+0+","+0+","+0+")");
+          
+        }
+                catch(ClassNotFoundException ex)
+        {
+            JOptionPane.showMessageDialog(null,ex.getMessage(),"Erro",JOptionPane.ERROR_MESSAGE);
+        }
+        catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null,ex.getMessage(),"Erro",JOptionPane.ERROR_MESSAGE);
+        }   
+   
+        TelaPtDois.setVisible(true);
       dispose();
     }//GEN-LAST:event_btPtUmAActionPerformed
 
@@ -179,9 +218,22 @@ public class PtUm extends javax.swing.JFrame {
     }//GEN-LAST:event_btPtVMActionPerformed
 
     private void btPtAvancarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPtAvancarActionPerformed
+        pontosPt=0;
         TelaPtDois.setVisible(true);
         dispose();
     }//GEN-LAST:event_btPtAvancarActionPerformed
+
+    private void btPtUmBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPtUmBActionPerformed
+     pontosPt=pontosPt-5;   // TODO add your handling code here:
+    }//GEN-LAST:event_btPtUmBActionPerformed
+
+    private void btPtUmDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPtUmDActionPerformed
+    pontosPt=pontosPt-5;    // TODO add your handling code here:
+    }//GEN-LAST:event_btPtUmDActionPerformed
+
+    private void btPtUmCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPtUmCActionPerformed
+      pontosPt=pontosPt-5;  // TODO add your handling code here:
+    }//GEN-LAST:event_btPtUmCActionPerformed
 
     /**
      * @param args the command line arguments
@@ -197,6 +249,8 @@ public class PtUm extends javax.swing.JFrame {
     private javax.swing.JButton btPtUmC;
     private javax.swing.JButton btPtUmD;
     private javax.swing.JButton btPtVM;
+    private javax.swing.JButton btVoltarMt;
+    private javax.swing.JButton btVoltarMt1;
     private javax.swing.JLabel jlPtUmA;
     private javax.swing.JLabel jlPtUmB;
     // End of variables declaration//GEN-END:variables

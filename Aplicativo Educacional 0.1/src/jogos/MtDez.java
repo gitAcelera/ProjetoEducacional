@@ -4,6 +4,14 @@
  * and open the template in the editor.
  */
 package jogos;
+import dados.PontosAluno;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import javax.swing.JOptionPane;
 import telas.menuPrincipal;
 
 /**
@@ -11,7 +19,9 @@ import telas.menuPrincipal;
  * @author ADM
  */
 public class MtDez extends javax.swing.JFrame {
-
+int pontosMt = PontosAluno.getPontosMt();
+     int idAluno=0;
+     Integer total=null;
     /**
      * Creates new form MtDez
      */
@@ -36,6 +46,7 @@ public class MtDez extends javax.swing.JFrame {
         btMtDezD = new javax.swing.JButton();
         btAvancar = new javax.swing.JButton();
         btVoltarMenu = new javax.swing.JButton();
+        btVoltarMt = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -77,7 +88,14 @@ public class MtDez extends javax.swing.JFrame {
 
         btAvancar.setText("Avançar");
 
-        btVoltarMenu.setText("Voltar para o MENU");
+        btVoltarMenu.setText(" MENU");
+
+        btVoltarMt.setText("Voltar");
+        btVoltarMt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btVoltarMtActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout PainelMtDezLayout = new javax.swing.GroupLayout(PainelMtDez);
         PainelMtDez.setLayout(PainelMtDezLayout);
@@ -90,29 +108,30 @@ public class MtDez extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelMtDezLayout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addGroup(PainelMtDezLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelMtDezLayout.createSequentialGroup()
-                        .addGroup(PainelMtDezLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btMtDezA, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btMtDezC, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(82, 82, 82)
-                        .addGroup(PainelMtDezLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btMtDezD, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btMtDezB, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(124, 124, 124))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelMtDezLayout.createSequentialGroup()
-                        .addComponent(btAvancar)
-                        .addGap(24, 24, 24))))
+                    .addComponent(btMtDezA, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btMtDezC, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(82, 82, 82)
+                .addGroup(PainelMtDezLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btMtDezD, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btMtDezB, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(124, 124, 124))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelMtDezLayout.createSequentialGroup()
                 .addContainerGap(125, Short.MAX_VALUE)
                 .addComponent(jlMtDezA)
                 .addGap(105, 105, 105))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelMtDezLayout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addComponent(btVoltarMt)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btAvancar)
+                .addGap(24, 24, 24))
         );
         PainelMtDezLayout.setVerticalGroup(
             PainelMtDezLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PainelMtDezLayout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(21, 21, 21)
                 .addComponent(btVoltarMenu)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 61, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 51, Short.MAX_VALUE)
                 .addComponent(jlMtDezA)
                 .addGap(31, 31, 31)
                 .addGroup(PainelMtDezLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -123,7 +142,9 @@ public class MtDez extends javax.swing.JFrame {
                     .addComponent(btMtDezD, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btMtDezC, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(12, 12, 12)
-                .addComponent(btAvancar)
+                .addGroup(PainelMtDezLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btAvancar)
+                    .addComponent(btVoltarMt))
                 .addContainerGap())
         );
 
@@ -144,21 +165,74 @@ public class MtDez extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btMtDezAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btMtDezAActionPerformed
-        // TODO add your handling code here:
+   pontosMt=pontosMt-5;       // TODO add your handling code here:
     }//GEN-LAST:event_btMtDezAActionPerformed
 
     private void btMtDezBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btMtDezBActionPerformed
-        // TODO add your handling code here:
+    pontosMt=pontosMt-5;      // TODO add your handling code here:
     }//GEN-LAST:event_btMtDezBActionPerformed
 
     private void btMtDezCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btMtDezCActionPerformed
+        pontosMt=pontosMt+20;
+        System.out.println(""+pontosMt);
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost/aplicativo_educacional","root","");
+            Statement stm = con.createStatement();
+             ResultSet res = stm.executeQuery("SELECT * from jogos");
+            while(res.next())
+            {
+                //idNew=("SELECT MAX(idAluno) AS idAluno FROM jogos");
+                idAluno= res.getInt("idAluno");
+            }
+           stm.executeUpdate("UPDATE jogos set q10="+pontosMt+" WHERE idAluno="+idAluno);
+          
+        }
+                catch(ClassNotFoundException ex)
+        {
+            JOptionPane.showMessageDialog(null,ex.getMessage(),"Erro",JOptionPane.ERROR_MESSAGE);
+        }
+        catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null,ex.getMessage(),"Erro",JOptionPane.ERROR_MESSAGE);
+        }    
+        
+      
+        try
+	{
+               Class.forName("com.mysql.cj.jdbc.Driver");
+               
+              
+               Connection con = DriverManager.getConnection("jdbc:mysql://localhost/aplicativo_educacional","root","");
+              String sql= ("SELECT SUM(q1+q2+q3+q4+q5+q6+q7+q8+q9+q10)FROM jogos WHERE idAluno="+idAluno); 
+               PreparedStatement stmt = con.prepareStatement(sql);
+               ResultSet res = stmt.executeQuery();
+	
+		while(res.next())
+		{
+		  total=res.getInt(1);
+                }
+        JOptionPane.showMessageDialog(null,"SUA PONTUAÇÃO FOI: "+total+"PONTOS" );
+        }
+        
+        
+        catch(Exception ex)
+	{
+		JOptionPane.showMessageDialog(null,ex.getMessage(),"Erro",JOptionPane.ERROR_MESSAGE);
+	}
+	
+        
         new menuPrincipal().show();
         dispose();
     }//GEN-LAST:event_btMtDezCActionPerformed
 
     private void btMtDezDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btMtDezDActionPerformed
-        // TODO add your handling code here:
+   pontosMt=pontosMt-5;       // TODO add your handling code here:
     }//GEN-LAST:event_btMtDezDActionPerformed
+
+    private void btVoltarMtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btVoltarMtActionPerformed
+        new MtNove().show();
+        dispose();
+    }//GEN-LAST:event_btVoltarMtActionPerformed
 
     /**
      * @param args the command line arguments
@@ -173,6 +247,7 @@ public class MtDez extends javax.swing.JFrame {
     private javax.swing.JButton btMtDezC;
     private javax.swing.JButton btMtDezD;
     private javax.swing.JButton btVoltarMenu;
+    private javax.swing.JButton btVoltarMt;
     private javax.swing.JLabel jlMtDezA;
     // End of variables declaration//GEN-END:variables
 }

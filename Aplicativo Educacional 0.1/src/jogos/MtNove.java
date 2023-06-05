@@ -4,6 +4,13 @@
  * and open the template in the editor.
  */
 package jogos;
+import dados.PontosAluno;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import javax.swing.JOptionPane;
 import telas.menuPrincipal;
 /**
  *
@@ -11,6 +18,8 @@ import telas.menuPrincipal;
  */
 public class MtNove extends javax.swing.JFrame {
 private MtDez TelaMtDez;
+int pontosMt = PontosAluno.getPontosMt();
+     int idAluno=0;
     /**
      * Creates new form MtNove
      */
@@ -36,6 +45,7 @@ private MtDez TelaMtDez;
         jlMtNoveA = new javax.swing.JLabel();
         btAvancar = new javax.swing.JButton();
         btVoltarMenu = new javax.swing.JButton();
+        btVoltarMt = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -82,10 +92,17 @@ private MtDez TelaMtDez;
             }
         });
 
-        btVoltarMenu.setText("Voltar para o MENU");
+        btVoltarMenu.setText(" MENU");
         btVoltarMenu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btVoltarMenuActionPerformed(evt);
+            }
+        });
+
+        btVoltarMt.setText("Voltar");
+        btVoltarMt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btVoltarMtActionPerformed(evt);
             }
         });
 
@@ -94,7 +111,9 @@ private MtDez TelaMtDez;
         PainelMtNoveLayout.setHorizontalGroup(
             PainelMtNoveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelMtNoveLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
+                .addContainerGap()
+                .addComponent(btVoltarMt)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(btAvancar)
                 .addGap(20, 20, 20))
             .addGroup(PainelMtNoveLayout.createSequentialGroup()
@@ -130,7 +149,9 @@ private MtDez TelaMtDez;
                     .addComponent(btMtNoveD, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btMtNoveC, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(9, 9, 9)
-                .addComponent(btAvancar)
+                .addGroup(PainelMtNoveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btAvancar)
+                    .addComponent(btVoltarMt))
                 .addContainerGap())
         );
 
@@ -149,19 +170,41 @@ private MtDez TelaMtDez;
     }// </editor-fold>//GEN-END:initComponents
 
     private void btMtNoveAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btMtNoveAActionPerformed
-        // TODO add your handling code here:
+     pontosMt=pontosMt-5;   // TODO add your handling code here:
     }//GEN-LAST:event_btMtNoveAActionPerformed
 
     private void btMtNoveBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btMtNoveBActionPerformed
-        // TODO add your handling code here:
+    pontosMt=pontosMt-5;    // TODO add your handling code here:
     }//GEN-LAST:event_btMtNoveBActionPerformed
 
     private void btMtNoveCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btMtNoveCActionPerformed
-        // TODO add your handling code here:
+    pontosMt=pontosMt-5;    // TODO add your handling code here:
     }//GEN-LAST:event_btMtNoveCActionPerformed
 
     private void btMtNoveDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btMtNoveDActionPerformed
-           TelaMtDez.setVisible(true);
+         pontosMt=pontosMt+20;
+        System.out.println(""+pontosMt);
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost/aplicativo_educacional","root","");
+            Statement stm = con.createStatement();
+            ResultSet res = stm.executeQuery("SELECT * from jogos");
+            while(res.next())
+            {
+                 
+                idAluno= res.getInt("idAluno");
+            }
+            stm.executeUpdate("UPDATE jogos set q9="+pontosMt+" WHERE idAluno="+idAluno);
+          
+        }
+                catch(ClassNotFoundException ex)
+        {
+            JOptionPane.showMessageDialog(null,ex.getMessage(),"Erro",JOptionPane.ERROR_MESSAGE);
+        }
+        catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null,ex.getMessage(),"Erro",JOptionPane.ERROR_MESSAGE);
+        }       
+        TelaMtDez.setVisible(true);
            dispose();
     }//GEN-LAST:event_btMtNoveDActionPerformed
 
@@ -174,6 +217,11 @@ private MtDez TelaMtDez;
         new menuPrincipal().show();
         dispose();
     }//GEN-LAST:event_btVoltarMenuActionPerformed
+
+    private void btVoltarMtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btVoltarMtActionPerformed
+        new MtOito().show();
+        dispose();
+    }//GEN-LAST:event_btVoltarMtActionPerformed
 
     /**
      * @param args the command line arguments
@@ -188,6 +236,7 @@ private MtDez TelaMtDez;
     private javax.swing.JButton btMtNoveC;
     private javax.swing.JButton btMtNoveD;
     private javax.swing.JButton btVoltarMenu;
+    private javax.swing.JButton btVoltarMt;
     private javax.swing.JLabel jlMtNoveA;
     // End of variables declaration//GEN-END:variables
 }

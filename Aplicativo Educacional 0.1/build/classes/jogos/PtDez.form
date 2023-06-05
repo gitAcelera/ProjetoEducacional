@@ -39,7 +39,9 @@
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="1" attributes="0">
-                  <EmptySpace pref="123" max="32767" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="btVoltarPt" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace pref="52" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="btPtDezC" min="-2" pref="180" max="-2" attributes="0"/>
                       <Component id="btPtDezA" min="-2" pref="180" max="-2" attributes="0"/>
@@ -47,13 +49,9 @@
                   <EmptySpace min="-2" pref="82" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="btPtDezB" alignment="0" min="-2" pref="180" max="-2" attributes="0"/>
-                      <Group type="102" alignment="0" attributes="0">
-                          <Component id="btPtDezD" min="-2" pref="180" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-                          <Component id="btPtAvancar" min="-2" max="-2" attributes="0"/>
-                      </Group>
+                      <Component id="btPtDezD" alignment="0" min="-2" pref="180" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="135" max="-2" attributes="0"/>
               </Group>
               <Group type="102" attributes="0">
                   <Group type="103" groupAlignment="0" attributes="0">
@@ -101,13 +99,14 @@
                               <Component id="btPtDezC" alignment="3" min="-2" pref="80" max="-2" attributes="0"/>
                               <Component id="btPtDezD" alignment="3" min="-2" pref="80" max="-2" attributes="0"/>
                           </Group>
+                          <EmptySpace min="34" pref="34" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="1" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="btPtAvancar" min="-2" max="-2" attributes="0"/>
+                          <Component id="btVoltarPt" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace min="34" pref="34" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -136,6 +135,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="RAIVA"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btPtDezAActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btPtDezB">
           <Properties>
@@ -144,6 +146,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="TRISTEZA"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btPtDezBActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btPtDezC">
           <Properties>
@@ -163,6 +168,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="MEDO"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btPtDezDActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btMtUmMenu">
           <Properties>
@@ -180,12 +188,12 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btPtDicaActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="btPtAvancar">
+        <Component class="javax.swing.JButton" name="btVoltarPt">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Avan&#xe7;ar"/>
+            <Property name="text" type="java.lang.String" value="Voltar"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btPtAvancarActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btVoltarPtActionPerformed"/>
           </Events>
         </Component>
       </SubComponents>

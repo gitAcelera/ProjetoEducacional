@@ -4,6 +4,13 @@
  * and open the template in the editor.
  */
 package jogos;
+import dados.PontosAluno;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import javax.swing.JOptionPane;
 import telas.menuPrincipal;
 /**
  *
@@ -11,6 +18,8 @@ import telas.menuPrincipal;
  */
 public class MtCinco extends javax.swing.JFrame {
     MtSeis TelaMtSeis;
+    int pontosMt = PontosAluno.getPontosMt();
+     int idAluno=0;
     /**
      * Creates new form MtCinco
      */
@@ -37,6 +46,7 @@ public class MtCinco extends javax.swing.JFrame {
         btMtCincoD = new javax.swing.JButton();
         btVoltarMenu = new javax.swing.JButton();
         btAvancar = new javax.swing.JButton();
+        btVoltarMt = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(720, 420));
@@ -82,7 +92,7 @@ public class MtCinco extends javax.swing.JFrame {
             }
         });
 
-        btVoltarMenu.setText("Voltar para o MENU");
+        btVoltarMenu.setText(" MENU");
         btVoltarMenu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btVoltarMenuActionPerformed(evt);
@@ -96,6 +106,13 @@ public class MtCinco extends javax.swing.JFrame {
             }
         });
 
+        btVoltarMt.setText("Voltar");
+        btVoltarMt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btVoltarMtActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout PainelMtCincoLayout = new javax.swing.GroupLayout(PainelMtCinco);
         PainelMtCinco.setLayout(PainelMtCincoLayout);
         PainelMtCincoLayout.setHorizontalGroup(
@@ -104,34 +121,37 @@ public class MtCinco extends javax.swing.JFrame {
                 .addComponent(btVoltarMenu)
                 .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelMtCincoLayout.createSequentialGroup()
-                .addContainerGap(130, Short.MAX_VALUE)
+                .addContainerGap(151, Short.MAX_VALUE)
                 .addGroup(PainelMtCincoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelMtCincoLayout.createSequentialGroup()
-                        .addGroup(PainelMtCincoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addGroup(PainelMtCincoLayout.createSequentialGroup()
-                                .addComponent(btMtCincoC, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(btMtCincoD, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(PainelMtCincoLayout.createSequentialGroup()
-                                .addComponent(btMtCincoA, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(82, 82, 82)
-                                .addComponent(btMtCincoB, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(34, 34, 34)
-                        .addComponent(btAvancar)
-                        .addGap(21, 21, 21))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelMtCincoLayout.createSequentialGroup()
                         .addComponent(jlMtCincoA)
                         .addGap(149, 149, 149))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelMtCincoLayout.createSequentialGroup()
                         .addComponent(jlMtCincoB)
                         .addGap(287, 287, 287))))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelMtCincoLayout.createSequentialGroup()
+                .addGap(21, 21, 21)
+                .addComponent(btVoltarMt)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(PainelMtCincoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addGroup(PainelMtCincoLayout.createSequentialGroup()
+                        .addComponent(btMtCincoC, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btMtCincoD, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(PainelMtCincoLayout.createSequentialGroup()
+                        .addComponent(btMtCincoA, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(82, 82, 82)
+                        .addComponent(btMtCincoB, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(34, 34, 34)
+                .addComponent(btAvancar)
+                .addGap(21, 21, 21))
         );
         PainelMtCincoLayout.setVerticalGroup(
             PainelMtCincoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PainelMtCincoLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(btVoltarMenu)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 38, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
                 .addComponent(jlMtCincoA)
                 .addGap(12, 12, 12)
                 .addComponent(jlMtCincoB)
@@ -141,14 +161,16 @@ public class MtCinco extends javax.swing.JFrame {
                         .addGap(1, 1, 1)
                         .addComponent(btMtCincoB, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(btMtCincoA, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
                 .addGroup(PainelMtCincoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btMtCincoC, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btMtCincoD, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(28, 28, 28))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelMtCincoLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btAvancar)
+                .addGroup(PainelMtCincoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btAvancar)
+                    .addComponent(btVoltarMt))
                 .addContainerGap())
         );
 
@@ -156,29 +178,51 @@ public class MtCinco extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(PainelMtCinco, javax.swing.GroupLayout.PREFERRED_SIZE, 700, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(PainelMtCinco, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(PainelMtCinco, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(PainelMtCinco, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void btMtCincoAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btMtCincoAActionPerformed
-        // TODO add your handling code here:
+     pontosMt=pontosMt-5;     // TODO add your handling code here:
     }//GEN-LAST:event_btMtCincoAActionPerformed
 
     private void btMtCincoBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btMtCincoBActionPerformed
-        // TODO add your handling code here:
+    pontosMt=pontosMt-5;      // TODO add your handling code here:
     }//GEN-LAST:event_btMtCincoBActionPerformed
 
     private void btMtCincoCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btMtCincoCActionPerformed
-        // TODO add your handling code here:
+      pontosMt=pontosMt-5;    // TODO add your handling code here:
     }//GEN-LAST:event_btMtCincoCActionPerformed
 
     private void btMtCincoDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btMtCincoDActionPerformed
+      pontosMt=pontosMt+20;
+        System.out.println(""+pontosMt);
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost/aplicativo_educacional","root","");
+            Statement stm = con.createStatement();
+            ResultSet res = stm.executeQuery("SELECT * from jogos");
+            while(res.next())
+            {
+                 
+                idAluno= res.getInt("idAluno");
+            }
+            stm.executeUpdate("UPDATE jogos set q5="+pontosMt+" WHERE idAluno="+idAluno);
+          
+        }
+                catch(ClassNotFoundException ex)
+        {
+            JOptionPane.showMessageDialog(null,ex.getMessage(),"Erro",JOptionPane.ERROR_MESSAGE);
+        }
+        catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null,ex.getMessage(),"Erro",JOptionPane.ERROR_MESSAGE);
+        }   
         TelaMtSeis.setVisible(true);
         dispose();
     }//GEN-LAST:event_btMtCincoDActionPerformed
@@ -193,6 +237,11 @@ public class MtCinco extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_btVoltarMenuActionPerformed
 
+    private void btVoltarMtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btVoltarMtActionPerformed
+        new MtQuatro ().show();
+        dispose();
+    }//GEN-LAST:event_btVoltarMtActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -206,6 +255,7 @@ public class MtCinco extends javax.swing.JFrame {
     private javax.swing.JButton btMtCincoC;
     private javax.swing.JButton btMtCincoD;
     private javax.swing.JButton btVoltarMenu;
+    private javax.swing.JButton btVoltarMt;
     private javax.swing.JLabel jlMtCincoA;
     private javax.swing.JLabel jlMtCincoB;
     // End of variables declaration//GEN-END:variables

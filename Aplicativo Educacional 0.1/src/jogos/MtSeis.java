@@ -4,6 +4,13 @@
  * and open the template in the editor.
  */
 package jogos;
+import dados.PontosAluno;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import javax.swing.JOptionPane;
 import telas.menuPrincipal;
 
 /**
@@ -12,6 +19,8 @@ import telas.menuPrincipal;
  */
 public class MtSeis extends javax.swing.JFrame {
   private MtSete TelaMtSete;
+  int pontosMt = PontosAluno.getPontosMt();
+     int idAluno=0;
     /**
      * Creates new form MtSeis
      */
@@ -38,6 +47,7 @@ public class MtSeis extends javax.swing.JFrame {
         btMtSeisD = new javax.swing.JButton();
         btAvancar = new javax.swing.JButton();
         btVoltarMenu = new javax.swing.JButton();
+        btVoltarMt = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -91,10 +101,17 @@ public class MtSeis extends javax.swing.JFrame {
             }
         });
 
-        btVoltarMenu.setText("Voltar para o MENU");
+        btVoltarMenu.setText(" MENU");
         btVoltarMenu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btVoltarMenuActionPerformed(evt);
+            }
+        });
+
+        btVoltarMt.setText("Voltar");
+        btVoltarMt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btVoltarMtActionPerformed(evt);
             }
         });
 
@@ -103,7 +120,9 @@ public class MtSeis extends javax.swing.JFrame {
         PainelMtSeisLayout.setHorizontalGroup(
             PainelMtSeisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelMtSeisLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
+                .addGap(20, 20, 20)
+                .addComponent(btVoltarMt)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(btAvancar)
                 .addGap(20, 20, 20))
             .addGroup(PainelMtSeisLayout.createSequentialGroup()
@@ -148,7 +167,9 @@ public class MtSeis extends javax.swing.JFrame {
                     .addComponent(btMtSeisC, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btMtSeisD, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(2, 2, 2)
-                .addComponent(btAvancar)
+                .addGroup(PainelMtSeisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btAvancar)
+                    .addComponent(btVoltarMt))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -167,20 +188,42 @@ public class MtSeis extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btMtSeisAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btMtSeisAActionPerformed
-        // TODO add your handling code here:
+      pontosMt=pontosMt-5;    // TODO add your handling code here:
     }//GEN-LAST:event_btMtSeisAActionPerformed
 
     private void btMtSeisBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btMtSeisBActionPerformed
-        // TODO add your handling code here:
+     pontosMt=pontosMt-5;     // TODO add your handling code here:
     }//GEN-LAST:event_btMtSeisBActionPerformed
 
     private void btMtSeisCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btMtSeisCActionPerformed
+       pontosMt=pontosMt+20;
+        System.out.println(""+pontosMt);
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost/aplicativo_educacional","root","");
+            Statement stm = con.createStatement();
+            ResultSet res = stm.executeQuery("SELECT * from jogos");
+            while(res.next())
+            {
+                 
+                idAluno= res.getInt("idAluno");
+            }
+            stm.executeUpdate("UPDATE jogos set q6="+pontosMt+" WHERE idAluno="+idAluno);
+          
+        }
+                catch(ClassNotFoundException ex)
+        {
+            JOptionPane.showMessageDialog(null,ex.getMessage(),"Erro",JOptionPane.ERROR_MESSAGE);
+        }
+        catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null,ex.getMessage(),"Erro",JOptionPane.ERROR_MESSAGE);
+        }   
         TelaMtSete.setVisible(true);
         dispose();
     }//GEN-LAST:event_btMtSeisCActionPerformed
 
     private void btMtSeisDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btMtSeisDActionPerformed
-        // TODO add your handling code here:
+      pontosMt=pontosMt-5;    // TODO add your handling code here:
     }//GEN-LAST:event_btMtSeisDActionPerformed
 
     private void btAvancarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btAvancarActionPerformed
@@ -193,6 +236,11 @@ public class MtSeis extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_btVoltarMenuActionPerformed
 
+    private void btVoltarMtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btVoltarMtActionPerformed
+        new MtCinco ().show();
+        dispose();
+    }//GEN-LAST:event_btVoltarMtActionPerformed
+
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -203,6 +251,7 @@ public class MtSeis extends javax.swing.JFrame {
     private javax.swing.JButton btMtSeisC;
     private javax.swing.JButton btMtSeisD;
     private javax.swing.JButton btVoltarMenu;
+    private javax.swing.JButton btVoltarMt;
     private javax.swing.JLabel jlMtSeisA;
     private javax.swing.JLabel jlMtSeisB;
     // End of variables declaration//GEN-END:variables

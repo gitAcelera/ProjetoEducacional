@@ -32,13 +32,19 @@ public class deletarAluno extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         nomeAlunoDeletar = new javax.swing.JLabel();
-        campoNomeAlunoDeletar = new javax.swing.JTextField();
+        campoNomeRaDeletar = new javax.swing.JTextField();
         btConfirmarDelete = new javax.swing.JButton();
         btVoltar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        nomeAlunoDeletar.setText("Nome do Aluno ");
+        nomeAlunoDeletar.setText("Digite o RA do Aluno ");
+
+        campoNomeRaDeletar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                campoNomeRaDeletarActionPerformed(evt);
+            }
+        });
 
         btConfirmarDelete.setText("Confirmar");
         btConfirmarDelete.addActionListener(new java.awt.event.ActionListener() {
@@ -64,7 +70,7 @@ public class deletarAluno extends javax.swing.JFrame {
                         .addGap(58, 58, 58)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(nomeAlunoDeletar)
-                            .addComponent(campoNomeAlunoDeletar, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(campoNomeRaDeletar, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(btConfirmarDelete)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(20, 20, 20)
@@ -79,7 +85,7 @@ public class deletarAluno extends javax.swing.JFrame {
                 .addGap(63, 63, 63)
                 .addComponent(nomeAlunoDeletar)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(campoNomeAlunoDeletar, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(campoNomeRaDeletar, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 140, Short.MAX_VALUE)
                 .addComponent(btConfirmarDelete)
                 .addGap(73, 73, 73))
@@ -105,9 +111,13 @@ public class deletarAluno extends javax.swing.JFrame {
     }//GEN-LAST:event_btConfirmarDeleteActionPerformed
 
     private void btVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btVoltarActionPerformed
-       new menuPrincipalProfessor().show();
+       new menuPrincipalDirecao().show();
        dispose();
     }//GEN-LAST:event_btVoltarActionPerformed
+
+    private void campoNomeRaDeletarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoNomeRaDeletarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_campoNomeRaDeletarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -116,7 +126,7 @@ public class deletarAluno extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btConfirmarDelete;
     private javax.swing.JButton btVoltar;
-    private javax.swing.JTextField campoNomeAlunoDeletar;
+    private javax.swing.JTextField campoNomeRaDeletar;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel nomeAlunoDeletar;
     // End of variables declaration//GEN-END:variables
@@ -124,13 +134,13 @@ public class deletarAluno extends javax.swing.JFrame {
 
 public void deletarContaAluno()
 {
-    String nomeAluno ;
+    String raAluno ;
        
        PessoaBD alunoBD = new PessoaBD();
        Pessoa alunoPessoa = new Pessoa();
        
-       nomeAluno = campoNomeAlunoDeletar.getText();
-       alunoPessoa.setNome(nomeAluno);
+       raAluno = campoNomeRaDeletar.getText();
+       alunoPessoa.setRa(raAluno);
        
       
        if (alunoBD.excluirAluno(alunoPessoa)==true)

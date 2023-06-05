@@ -3,6 +3,12 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package jogos;
+import dados.PontosAluno;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import javax.swing.JOptionPane;
 import telas.menuPrincipal;
 
@@ -12,6 +18,8 @@ import telas.menuPrincipal;
  */
 public class PtNove extends javax.swing.JFrame {
      private PtDez TelaPtDez;
+     int pontosPt = PontosAluno.getPontosPt();
+        int idAluno=0;
     /**
      * Creates new form PtNove
      */
@@ -39,6 +47,7 @@ public class PtNove extends javax.swing.JFrame {
         btMtUmMenu = new javax.swing.JButton();
         btPtDica = new javax.swing.JButton();
         btPtAvancar = new javax.swing.JButton();
+        btVoltarPt = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new java.awt.GridBagLayout());
@@ -48,12 +57,27 @@ public class PtNove extends javax.swing.JFrame {
 
         btPtNoveA.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btPtNoveA.setText("CASOS");
+        btPtNoveA.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btPtNoveAActionPerformed(evt);
+            }
+        });
 
         btPtNoveB.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btPtNoveB.setText("CANÇÕES");
+        btPtNoveB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btPtNoveBActionPerformed(evt);
+            }
+        });
 
         btPtNoveC.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btPtNoveC.setText("CASÕES");
+        btPtNoveC.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btPtNoveCActionPerformed(evt);
+            }
+        });
 
         btPtNoveD.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btPtNoveD.setText("CASAS");
@@ -84,6 +108,13 @@ public class PtNove extends javax.swing.JFrame {
             }
         });
 
+        btVoltarPt.setText("Voltar");
+        btVoltarPt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btVoltarPtActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout PainelPtNoveLayout = new javax.swing.GroupLayout(PainelPtNove);
         PainelPtNove.setLayout(PainelPtNoveLayout);
         PainelPtNoveLayout.setHorizontalGroup(
@@ -101,10 +132,15 @@ public class PtNove extends javax.swing.JFrame {
                         .addComponent(btPtDica)))
                 .addContainerGap())
             .addGroup(PainelPtNoveLayout.createSequentialGroup()
-                .addGap(121, 121, 121)
-                .addGroup(PainelPtNoveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(btPtNoveC, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btPtNoveA, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(PainelPtNoveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addGroup(PainelPtNoveLayout.createSequentialGroup()
+                        .addGap(121, 121, 121)
+                        .addComponent(btPtNoveA, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(PainelPtNoveLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(btVoltarPt)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btPtNoveC, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(82, 82, 82)
                 .addGroup(PainelPtNoveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(btPtNoveB, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -135,8 +171,13 @@ public class PtNove extends javax.swing.JFrame {
                         .addGap(36, 36, 36))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelPtNoveLayout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btPtAvancar)
-                        .addGap(38, 38, 38))))
+                        .addGroup(PainelPtNoveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelPtNoveLayout.createSequentialGroup()
+                                .addComponent(btPtAvancar)
+                                .addGap(38, 38, 38))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelPtNoveLayout.createSequentialGroup()
+                                .addComponent(btVoltarPt)
+                                .addGap(33, 33, 33))))))
         );
 
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -151,7 +192,28 @@ public class PtNove extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btPtNoveDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPtNoveDActionPerformed
-      TelaPtDez.setVisible(true);
+     pontosPt=pontosPt+20;
+        System.out.println(""+pontosPt);
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost/aplicativo_educacional","root","");
+            Statement stm = con.createStatement();
+             ResultSet res = stm.executeQuery("SELECT * from jogos");
+            while(res.next())
+            {
+                idAluno= res.getInt("idAluno");
+            }
+            stm.executeUpdate("UPDATE jogos set q9="+pontosPt+" WHERE idAluno="+idAluno);
+          
+        }
+                catch(ClassNotFoundException ex)
+        {
+            JOptionPane.showMessageDialog(null,ex.getMessage(),"Erro",JOptionPane.ERROR_MESSAGE);
+        }
+        catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null,ex.getMessage(),"Erro",JOptionPane.ERROR_MESSAGE);
+        }   
+        TelaPtDez.setVisible(true);
       dispose();
     }//GEN-LAST:event_btPtNoveDActionPerformed
 
@@ -165,9 +227,28 @@ public class PtNove extends javax.swing.JFrame {
     }//GEN-LAST:event_btPtDicaActionPerformed
 
     private void btPtAvancarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPtAvancarActionPerformed
+  pontosPt=0;
+        System.out.println(""+pontosPt);
         TelaPtDez.setVisible(true);
         dispose();
     }//GEN-LAST:event_btPtAvancarActionPerformed
+
+    private void btPtNoveAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPtNoveAActionPerformed
+pontosPt=pontosPt-5;        // TODO add your handling code here:
+    }//GEN-LAST:event_btPtNoveAActionPerformed
+
+    private void btPtNoveBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPtNoveBActionPerformed
+pontosPt=pontosPt-5;        // TODO add your handling code here:
+    }//GEN-LAST:event_btPtNoveBActionPerformed
+
+    private void btPtNoveCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPtNoveCActionPerformed
+pontosPt=pontosPt-5;        // TODO add your handling code here:
+    }//GEN-LAST:event_btPtNoveCActionPerformed
+
+    private void btVoltarPtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btVoltarPtActionPerformed
+        new PtOito ().show();
+        dispose();
+    }//GEN-LAST:event_btVoltarPtActionPerformed
 
     /**
      * @param args the command line arguments
@@ -183,6 +264,7 @@ public class PtNove extends javax.swing.JFrame {
     private javax.swing.JButton btPtNoveB;
     private javax.swing.JButton btPtNoveC;
     private javax.swing.JButton btPtNoveD;
+    private javax.swing.JButton btVoltarPt;
     private javax.swing.JLabel jlPtNoveA;
     // End of variables declaration//GEN-END:variables
 }

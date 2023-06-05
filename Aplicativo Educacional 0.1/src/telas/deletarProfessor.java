@@ -33,7 +33,7 @@ public class deletarProfessor extends javax.swing.JFrame {
         btVoltar = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         btConfirmarDelete = new javax.swing.JButton();
-        campoNomeProfessorDeletar = new javax.swing.JTextField();
+        campoCpfProfessorDeletar = new javax.swing.JFormattedTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -44,12 +44,23 @@ public class deletarProfessor extends javax.swing.JFrame {
             }
         });
 
-        jLabel1.setText("Nome do Professor ");
+        jLabel1.setText("Digite o CPF Professor ");
 
         btConfirmarDelete.setText("Confirmar");
         btConfirmarDelete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btConfirmarDeleteActionPerformed(evt);
+            }
+        });
+
+        try {
+            campoCpfProfessorDeletar.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("###.###.###-##")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
+        campoCpfProfessorDeletar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                campoCpfProfessorDeletarActionPerformed(evt);
             }
         });
 
@@ -67,8 +78,8 @@ public class deletarProfessor extends javax.swing.JFrame {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(btConfirmarDelete)
                             .addComponent(jLabel1)
-                            .addComponent(campoNomeProfessorDeletar, javax.swing.GroupLayout.PREFERRED_SIZE, 221, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(400, Short.MAX_VALUE))
+                            .addComponent(campoCpfProfessorDeletar, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(381, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -78,8 +89,8 @@ public class deletarProfessor extends javax.swing.JFrame {
                 .addGap(50, 50, 50)
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(campoNomeProfessorDeletar, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 179, Short.MAX_VALUE)
+                .addComponent(campoCpfProfessorDeletar, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 171, Short.MAX_VALUE)
                 .addComponent(btConfirmarDelete)
                 .addGap(57, 57, 57))
         );
@@ -99,7 +110,7 @@ public class deletarProfessor extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btVoltarActionPerformed
-        new menuPrincipalProfessor().show();
+        new menuPrincipalDirecao().show();
         dispose();
     }//GEN-LAST:event_btVoltarActionPerformed
 
@@ -108,30 +119,34 @@ public class deletarProfessor extends javax.swing.JFrame {
         deletarContaProfessor();
     }//GEN-LAST:event_btConfirmarDeleteActionPerformed
 
+    private void campoCpfProfessorDeletarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoCpfProfessorDeletarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_campoCpfProfessorDeletarActionPerformed
+
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btConfirmarDelete;
     private javax.swing.JButton btVoltar;
-    private javax.swing.JTextField campoNomeProfessorDeletar;
+    private javax.swing.JFormattedTextField campoCpfProfessorDeletar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
  
    public void deletarContaProfessor()
    {
-       String nomeProfessor;
+       String CpfProfessor;
        
        PessoaBD professorBD = new PessoaBD();
        Pessoa  professorPessoa = new Pessoa();
        
-       nomeProfessor = campoNomeProfessorDeletar.getText();
-       professorPessoa.setNome(nomeProfessor);
+      CpfProfessor = campoCpfProfessorDeletar.getText();
+       professorPessoa.setCpf(CpfProfessor);
        
        
       if (professorBD.excluirProfessor(professorPessoa)==true)
        {
-           JOptionPane.showMessageDialog(null, "Pessoa excluída com sucesso!!!", "Exclusão",JOptionPane.INFORMATION_MESSAGE);
+           JOptionPane.showMessageDialog(null, "Professor excluído com sucesso!!!", "Exclusão",JOptionPane.INFORMATION_MESSAGE);
        }
         
         else

@@ -4,6 +4,13 @@
  * and open the template in the editor.
  */
 package jogos;
+import dados.PontosAluno;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import javax.swing.JOptionPane;
 import telas.menuPrincipal;
 /**
  *
@@ -11,6 +18,8 @@ import telas.menuPrincipal;
  */
 public class MtDois extends javax.swing.JFrame {
  private MtTres TelaMtTres;
+ int pontosMt = PontosAluno.getPontosMt();
+     int idAluno=0;
     /**
      * Creates new form MtDois
      */
@@ -37,6 +46,7 @@ public class MtDois extends javax.swing.JFrame {
         btMtDoisD = new javax.swing.JButton();
         btAvancar = new javax.swing.JButton();
         btVoltarMenu = new javax.swing.JButton();
+        btVoltarMt = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -87,10 +97,17 @@ public class MtDois extends javax.swing.JFrame {
             }
         });
 
-        btVoltarMenu.setText("Voltar para o MENU");
+        btVoltarMenu.setText("MENU");
         btVoltarMenu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btVoltarMenuActionPerformed(evt);
+            }
+        });
+
+        btVoltarMt.setText("Voltar");
+        btVoltarMt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btVoltarMtActionPerformed(evt);
             }
         });
 
@@ -103,9 +120,10 @@ public class MtDois extends javax.swing.JFrame {
                     .addGroup(PainelMtDoisLayout.createSequentialGroup()
                         .addGap(255, 255, 255)
                         .addComponent(jlMtDoisB))
-                    .addComponent(btVoltarMenu)
                     .addGroup(PainelMtDoisLayout.createSequentialGroup()
-                        .addGap(132, 132, 132)
+                        .addContainerGap()
+                        .addComponent(btVoltarMt)
+                        .addGap(52, 52, 52)
                         .addGroup(PainelMtDoisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(btMtDoisA, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(btMtDoisC, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -114,27 +132,29 @@ public class MtDois extends javax.swing.JFrame {
                             .addComponent(btMDoisB, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(PainelMtDoisLayout.createSequentialGroup()
                                 .addComponent(btMtDoisD, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
                                 .addComponent(btAvancar)))))
                 .addGap(17, 17, 17))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelMtDoisLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
+                .addComponent(btVoltarMenu)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jlMtDoisA)
                 .addGap(147, 147, 147))
         );
         PainelMtDoisLayout.setVerticalGroup(
             PainelMtDoisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PainelMtDoisLayout.createSequentialGroup()
-                .addContainerGap()
                 .addGroup(PainelMtDoisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(PainelMtDoisLayout.createSequentialGroup()
-                        .addComponent(btVoltarMenu)
-                        .addGap(152, 152, 152))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelMtDoisLayout.createSequentialGroup()
-                        .addComponent(jlMtDoisA)
-                        .addGap(18, 18, 18)
-                        .addComponent(jlMtDoisB)
-                        .addGap(28, 28, 28)))
+                        .addGap(44, 44, 44)
+                        .addComponent(jlMtDoisA))
+                    .addGroup(PainelMtDoisLayout.createSequentialGroup()
+                        .addGap(26, 26, 26)
+                        .addComponent(btVoltarMenu)))
+                .addGap(18, 18, 18)
+                .addComponent(jlMtDoisB)
+                .addGap(28, 28, 28)
                 .addGroup(PainelMtDoisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btMtDoisA, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btMDoisB, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -144,11 +164,16 @@ public class MtDois extends javax.swing.JFrame {
                         .addGroup(PainelMtDoisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(btMtDoisC, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(btMtDoisD, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addContainerGap(29, Short.MAX_VALUE))
+                        .addContainerGap(24, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelMtDoisLayout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btAvancar)
-                        .addGap(36, 36, 36))))
+                        .addGroup(PainelMtDoisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelMtDoisLayout.createSequentialGroup()
+                                .addComponent(btAvancar)
+                                .addGap(36, 36, 36))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelMtDoisLayout.createSequentialGroup()
+                                .addComponent(btVoltarMt)
+                                .addGap(33, 33, 33))))))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -166,20 +191,42 @@ public class MtDois extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btMtDoisAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btMtDoisAActionPerformed
-        // TODO add your handling code here:
+     pontosMt=pontosMt-5;    // TODO add your handling code here:
     }//GEN-LAST:event_btMtDoisAActionPerformed
 
     private void btMDoisBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btMDoisBActionPerformed
-     TelaMtTres.setVisible(true);  
+     pontosMt=pontosMt+20;
+        System.out.println(""+pontosMt);
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost/aplicativo_educacional","root","");
+            Statement stm = con.createStatement();
+            ResultSet res = stm.executeQuery("SELECT * from jogos");
+            while(res.next())
+            {
+                 
+                idAluno= res.getInt("idAluno");
+            }
+            stm.executeUpdate("UPDATE jogos set q2="+pontosMt+" WHERE idAluno="+idAluno);
+          
+        }
+                catch(ClassNotFoundException ex)
+        {
+            JOptionPane.showMessageDialog(null,ex.getMessage(),"Erro",JOptionPane.ERROR_MESSAGE);
+        }
+        catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null,ex.getMessage(),"Erro",JOptionPane.ERROR_MESSAGE);
+        }   
+        TelaMtTres.setVisible(true);  
      dispose();
     }//GEN-LAST:event_btMDoisBActionPerformed
 
     private void btMtDoisCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btMtDoisCActionPerformed
-        // TODO add your handling code here:
+    pontosMt=pontosMt-5;     // TODO add your handling code here:
     }//GEN-LAST:event_btMtDoisCActionPerformed
 
     private void btMtDoisDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btMtDoisDActionPerformed
-        // TODO add your handling code here:
+      pontosMt=pontosMt-5;   // TODO add your handling code here:
     }//GEN-LAST:event_btMtDoisDActionPerformed
 
     private void btAvancarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btAvancarActionPerformed
@@ -191,6 +238,11 @@ public class MtDois extends javax.swing.JFrame {
          new menuPrincipal().show();
         dispose();
     }//GEN-LAST:event_btVoltarMenuActionPerformed
+
+    private void btVoltarMtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btVoltarMtActionPerformed
+ new MtUm ().show();
+   dispose();     
+    }//GEN-LAST:event_btVoltarMtActionPerformed
 
     /**
      * @param args the command line arguments
@@ -205,6 +257,7 @@ public class MtDois extends javax.swing.JFrame {
     private javax.swing.JButton btMtDoisC;
     private javax.swing.JButton btMtDoisD;
     private javax.swing.JButton btVoltarMenu;
+    private javax.swing.JButton btVoltarMt;
     private javax.swing.JLabel jlMtDoisA;
     private javax.swing.JLabel jlMtDoisB;
     // End of variables declaration//GEN-END:variables

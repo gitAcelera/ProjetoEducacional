@@ -6,12 +6,18 @@ package telas;
 
 import Banco.AcessoBDaluno;
 import Dados.LoginAluno;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import javax.swing.JOptionPane;
 
 public class loginAluno extends javax.swing.JFrame {
     
     private menuPrincipal mp;
     private recuperaSenhaAluno rs;
+    String raAtual,senhaAtual,raBanco,senhaBanco;
     
     public loginAluno() {
         initComponents();
@@ -105,7 +111,7 @@ public class loginAluno extends javax.swing.JFrame {
                     .addComponent(raLoginAluno, javax.swing.GroupLayout.PREFERRED_SIZE, 252, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(mostrarSenha)
                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(235, Short.MAX_VALUE))
+                .addContainerGap(215, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(btRecuperarSenhaAluno)
@@ -124,7 +130,7 @@ public class loginAluno extends javax.swing.JFrame {
                 .addComponent(senhaLoginAluno, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(btRecuperarSenhaAluno)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 6, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
                 .addComponent(mostrarSenha)
                 .addGap(33, 33, 33)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -137,11 +143,11 @@ public class loginAluno extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 720, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 381, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -153,27 +159,55 @@ public class loginAluno extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        String ra;
-	String senha;
-				
-	AcessoBDaluno acesso = new AcessoBDaluno();
-	LoginAluno login = new LoginAluno();
-				
-	ra = raLoginAluno.getText();
-	senha = senhaLoginAluno.getText();
-				
-	login.setRa(ra);
-	login.setSenha(senha);
-				
-	if(acesso.verificaAcesso(login) == true)
-	{
-            mp.setVisible(true);
+        int status;
+        try
+        {
+
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost/aplicativo_educacional","root","");
+            Statement stm = con.createStatement();
+            ResultSet res = stm.executeQuery("SELECT * from aluno");
+
+            raAtual = raLoginAluno.getText();
+            senhaAtual = senhaLoginAluno.getText();
+
+            status =0;
+            while(res.next())
+
+            {
+
+                raBanco = res.getString("ra");
+                senhaBanco = res.getString("senha");
+
+                if(raBanco.compareTo(raAtual)==0 && senhaBanco.compareTo(senhaAtual)==0 )
+                
+
+                {
+                    status=1;
+                }
+
+            }
+
+            if(status == 1)
+            {
+
+                mp.setVisible(true);
             dispose();
-	}
-	else
-	{
-            JOptionPane.showMessageDialog(null, "Erro nos dados informados", "Erro", JOptionPane.ERROR_MESSAGE);
-	}
+
+            }
+            if(status == 0)
+            {
+                JOptionPane.showMessageDialog(null,"Erro nos dados informados!!!","Erro",JOptionPane.ERROR_MESSAGE);
+            }
+        }
+        catch(ClassNotFoundException ex)
+        {
+            JOptionPane.showMessageDialog(null,ex.getMessage(),"Erro",JOptionPane.ERROR_MESSAGE);
+        }
+        catch(SQLException ex)
+        {
+            JOptionPane.showMessageDialog(null,ex.getMessage(),"Erro",JOptionPane.ERROR_MESSAGE);
+        }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void raLoginAlunoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_raLoginAlunoActionPerformed

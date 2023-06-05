@@ -4,6 +4,11 @@
  * and open the template in the editor.
  */
 package jogos;
+import dados.PontosAluno;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
 import telas.menuPrincipal;
 import javax.swing.JOptionPane;
 /**
@@ -12,12 +17,18 @@ import javax.swing.JOptionPane;
  */
 public class MtUm extends javax.swing.JFrame {
   private MtDois TelaMtDois;
+  int pontosMt = PontosAluno.getPontosMt();
+  String tipo="matematica";
+  int q1,q2,q3,q4,q5,q6,q7,q8,q9,q10;
+    
+       int idAluno=0;
     /**
      * Creates new form MtUm
      */
     public MtUm() {
         initComponents();
         TelaMtDois = new MtDois();
+        q1=q2=q3=q4=q5=q6=q7=q8=q9=q10=0; 
     }
 
     /**
@@ -54,6 +65,11 @@ public class MtUm extends javax.swing.JFrame {
 
         btMtUmA.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btMtUmA.setText("10");
+        btMtUmA.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btMtUmAActionPerformed(evt);
+            }
+        });
 
         btMtUmB.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btMtUmB.setText("8");
@@ -65,6 +81,11 @@ public class MtUm extends javax.swing.JFrame {
 
         btMtUmC.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btMtUmC.setText("2");
+        btMtUmC.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btMtUmCActionPerformed(evt);
+            }
+        });
 
         btMtUmD.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btMtUmD.setText("12");
@@ -170,10 +191,27 @@ public class MtUm extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btMtUmBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btMtUmBActionPerformed
-        // TODO add your handling code here:
+pontosMt=pontosMt-5;         // TODO add your handling code here:
     }//GEN-LAST:event_btMtUmBActionPerformed
 
     private void btMtUmDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btMtUmDActionPerformed
+        pontosMt=pontosMt+20;
+        System.out.println(""+pontosMt);
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost/aplicativo_educacional","root","");
+            Statement stm = con.createStatement();
+            stm.executeUpdate("INSERT into jogos (q1,q2,q3,q4,q5,q6,q7,q8,q9,q10) values ("+pontosMt+","+q2+","+q3+","+q4+","+q5+","+q6+","+q7+","+q8+","+q9+","+q10+")");
+          
+        }
+                catch(ClassNotFoundException ex)
+        {
+            JOptionPane.showMessageDialog(null,ex.getMessage(),"Erro",JOptionPane.ERROR_MESSAGE);
+        }
+        catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null,ex.getMessage(),"Erro",JOptionPane.ERROR_MESSAGE);
+        }   
+   
         TelaMtDois.setVisible(true);
         dispose();
     }//GEN-LAST:event_btMtUmDActionPerformed
@@ -191,6 +229,14 @@ public class MtUm extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         JOptionPane.showMessageDialog(null,"As vogais são A, E, I, O, U");
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void btMtUmAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btMtUmAActionPerformed
+pontosMt=pontosMt-5;         // TODO add your handling code here:
+    }//GEN-LAST:event_btMtUmAActionPerformed
+
+    private void btMtUmCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btMtUmCActionPerformed
+pontosMt=pontosMt-5;         // TODO add your handling code here:
+    }//GEN-LAST:event_btMtUmCActionPerformed
 
     /**
      * @param args the command line arguments

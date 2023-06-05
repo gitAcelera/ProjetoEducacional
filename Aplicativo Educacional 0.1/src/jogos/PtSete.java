@@ -3,6 +3,12 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package jogos;
+import dados.PontosAluno;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import javax.swing.JOptionPane;
 import telas.menuPrincipal;
 
@@ -12,6 +18,8 @@ import telas.menuPrincipal;
  */
 public class PtSete extends javax.swing.JFrame {
     private PtOito TelaPtOito;
+    int pontosPt = PontosAluno.getPontosPt();
+       int idAluno=0;
     /**
      * Creates new form PtSete
      */
@@ -40,6 +48,8 @@ public class PtSete extends javax.swing.JFrame {
         btMtUmMenu = new javax.swing.JButton();
         btPtAvancar = new javax.swing.JButton();
         btPtDica = new javax.swing.JButton();
+        btVoltarPt = new javax.swing.JButton();
+        btVoltarMt = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(700, 400));
@@ -71,9 +81,19 @@ public class PtSete extends javax.swing.JFrame {
 
         btPtSeteC.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btPtSeteC.setText("NÓS");
+        btPtSeteC.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btPtSeteCActionPerformed(evt);
+            }
+        });
 
         btPtSeteD.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btPtSeteD.setText("TU");
+        btPtSeteD.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btPtSeteDActionPerformed(evt);
+            }
+        });
 
         btMtUmMenu.setText("MENU");
         btMtUmMenu.addActionListener(new java.awt.event.ActionListener() {
@@ -96,20 +116,28 @@ public class PtSete extends javax.swing.JFrame {
             }
         });
 
+        btVoltarPt.setText("Voltar");
+        btVoltarPt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btVoltarPtActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout PainelPtSeteLayout = new javax.swing.GroupLayout(PainelPtSete);
         PainelPtSete.setLayout(PainelPtSeteLayout);
         PainelPtSeteLayout.setHorizontalGroup(
             PainelPtSeteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PainelPtSeteLayout.createSequentialGroup()
+                .addGap(14, 14, 14)
                 .addGroup(PainelPtSeteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(PainelPtSeteLayout.createSequentialGroup()
-                        .addGap(14, 14, 14)
                         .addComponent(btMtUmMenu)
                         .addGap(49, 49, 49)
                         .addComponent(jlPtSeteA)
                         .addGap(0, 18, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelPtSeteLayout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
+                    .addGroup(PainelPtSeteLayout.createSequentialGroup()
+                        .addComponent(btVoltarPt)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(PainelPtSeteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(btPtSeteA, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(btPtSeteC, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -153,7 +181,9 @@ public class PtSete extends javax.swing.JFrame {
                             .addComponent(btPtDica)
                             .addComponent(btMtUmMenu))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btPtAvancar)))
+                        .addGroup(PainelPtSeteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btPtAvancar, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(btVoltarPt, javax.swing.GroupLayout.Alignment.TRAILING))))
                 .addGap(33, 33, 33))
         );
 
@@ -165,15 +195,44 @@ public class PtSete extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(0, 0, 0, 35);
         getContentPane().add(PainelPtSete, gridBagConstraints);
 
+        btVoltarMt.setText("Voltar");
+        btVoltarMt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btVoltarMtActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btVoltarMt, new java.awt.GridBagConstraints());
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void btPtSeteAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPtSeteAActionPerformed
-        // TODO add your handling code here:
+pontosPt=pontosPt-5;         // TODO add your handling code here:
     }//GEN-LAST:event_btPtSeteAActionPerformed
 
     private void btPtSeteBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPtSeteBActionPerformed
-      TelaPtOito.setVisible(true);
+      pontosPt=pontosPt+20;
+        System.out.println(""+pontosPt);
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost/aplicativo_educacional","root","");
+            Statement stm = con.createStatement();
+             ResultSet res = stm.executeQuery("SELECT * from jogos");
+            while(res.next())
+            {
+                idAluno= res.getInt("idAluno");
+            }
+            stm.executeUpdate("UPDATE jogos set q7="+pontosPt+" WHERE idAluno="+idAluno);
+          
+        }
+                catch(ClassNotFoundException ex)
+        {
+            JOptionPane.showMessageDialog(null,ex.getMessage(),"Erro",JOptionPane.ERROR_MESSAGE);
+        }
+        catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null,ex.getMessage(),"Erro",JOptionPane.ERROR_MESSAGE);
+        }   
+        TelaPtOito.setVisible(true);
       dispose();
     }//GEN-LAST:event_btPtSeteBActionPerformed
 
@@ -183,6 +242,8 @@ public class PtSete extends javax.swing.JFrame {
     }//GEN-LAST:event_btMtUmMenuActionPerformed
 
     private void btPtAvancarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPtAvancarActionPerformed
+  pontosPt=0;
+        System.out.println(""+pontosPt);
         TelaPtOito.setVisible(true);
         dispose();
     }//GEN-LAST:event_btPtAvancarActionPerformed
@@ -190,6 +251,24 @@ public class PtSete extends javax.swing.JFrame {
     private void btPtDicaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPtDicaActionPerformed
         JOptionPane.showMessageDialog(null,"Exemplos: EU, TU, ELE, NÓS, VÓS, ELES");
     }//GEN-LAST:event_btPtDicaActionPerformed
+
+    private void btPtSeteCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPtSeteCActionPerformed
+pontosPt=pontosPt-5;         // TODO add your handling code here:
+    }//GEN-LAST:event_btPtSeteCActionPerformed
+
+    private void btPtSeteDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPtSeteDActionPerformed
+pontosPt=pontosPt-5;         // TODO add your handling code here:
+    }//GEN-LAST:event_btPtSeteDActionPerformed
+
+    private void btVoltarMtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btVoltarMtActionPerformed
+        new MtDois ().show();
+        dispose();
+    }//GEN-LAST:event_btVoltarMtActionPerformed
+
+    private void btVoltarPtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btVoltarPtActionPerformed
+        new PtSeis ().show();
+        dispose();
+    }//GEN-LAST:event_btVoltarPtActionPerformed
 
     /**
      * @param args the command line arguments
@@ -204,6 +283,8 @@ public class PtSete extends javax.swing.JFrame {
     private javax.swing.JButton btPtSeteB;
     private javax.swing.JButton btPtSeteC;
     private javax.swing.JButton btPtSeteD;
+    private javax.swing.JButton btVoltarMt;
+    private javax.swing.JButton btVoltarPt;
     private javax.swing.JLabel jlPtSeteA;
     private javax.swing.JLabel jlPtSeteB;
     // End of variables declaration//GEN-END:variables

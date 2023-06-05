@@ -4,6 +4,13 @@
  * and open the template in the editor.
  */
 package jogos;
+import dados.PontosAluno;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import javax.swing.JOptionPane;
 import telas.menuPrincipal;
 
 /**
@@ -12,7 +19,10 @@ import telas.menuPrincipal;
  */
 public class MtOito extends javax.swing.JFrame {
   private MtNove TelaMtNove;
+   int pontosMt = PontosAluno.getPontosMt();
+     int idAluno=0;
     /**
+     *
      * Creates new form MtOito
      */
     public MtOito() {
@@ -38,6 +48,7 @@ public class MtOito extends javax.swing.JFrame {
         btMtOitoD = new javax.swing.JButton();
         btAvancar = new javax.swing.JButton();
         btVoltarMenu = new javax.swing.JButton();
+        btVoltarMt2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -87,10 +98,17 @@ public class MtOito extends javax.swing.JFrame {
             }
         });
 
-        btVoltarMenu.setText("Voltar para o MENU");
+        btVoltarMenu.setText("MENU");
         btVoltarMenu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btVoltarMenuActionPerformed(evt);
+            }
+        });
+
+        btVoltarMt2.setText("Voltar");
+        btVoltarMt2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btVoltarMt2ActionPerformed(evt);
             }
         });
 
@@ -99,7 +117,9 @@ public class MtOito extends javax.swing.JFrame {
         PainelMtOitoLayout.setHorizontalGroup(
             PainelMtOitoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelMtOitoLayout.createSequentialGroup()
-                .addGap(0, 599, Short.MAX_VALUE)
+                .addContainerGap()
+                .addComponent(btVoltarMt2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(btAvancar)
                 .addGap(28, 28, 28))
             .addGroup(PainelMtOitoLayout.createSequentialGroup()
@@ -120,7 +140,7 @@ public class MtOito extends javax.swing.JFrame {
                     .addGroup(PainelMtOitoLayout.createSequentialGroup()
                         .addGap(114, 114, 114)
                         .addComponent(jlMtOitoA)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(123, Short.MAX_VALUE))
         );
         PainelMtOitoLayout.setVerticalGroup(
             PainelMtOitoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -140,7 +160,9 @@ public class MtOito extends javax.swing.JFrame {
                     .addComponent(btMtOitoC, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btMtOitoD, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btAvancar)
+                .addGroup(PainelMtOitoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btAvancar)
+                    .addComponent(btVoltarMt2))
                 .addContainerGap())
         );
 
@@ -159,20 +181,42 @@ public class MtOito extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btMtOitoAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btMtOitoAActionPerformed
-       TelaMtNove.setVisible(true);
+       pontosMt=pontosMt+20;
+        System.out.println(""+pontosMt);
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost/aplicativo_educacional","root","");
+            Statement stm = con.createStatement();
+            ResultSet res = stm.executeQuery("SELECT * from jogos");
+            while(res.next())
+            {
+                 
+                idAluno= res.getInt("idAluno");
+            }
+            stm.executeUpdate("UPDATE jogos set q8="+pontosMt+" WHERE idAluno="+idAluno);
+          
+        }
+                catch(ClassNotFoundException ex)
+        {
+            JOptionPane.showMessageDialog(null,ex.getMessage(),"Erro",JOptionPane.ERROR_MESSAGE);
+        }
+        catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null,ex.getMessage(),"Erro",JOptionPane.ERROR_MESSAGE);
+        }   
+        TelaMtNove.setVisible(true);
        dispose();
     }//GEN-LAST:event_btMtOitoAActionPerformed
 
     private void btMtOitoBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btMtOitoBActionPerformed
-        // TODO add your handling code here:
+    pontosMt=pontosMt-5;    // TODO add your handling code here:
     }//GEN-LAST:event_btMtOitoBActionPerformed
 
     private void btMtOitoCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btMtOitoCActionPerformed
-        // TODO add your handling code here:
+      pontosMt=pontosMt-5;  // TODO add your handling code here:
     }//GEN-LAST:event_btMtOitoCActionPerformed
 
     private void btMtOitoDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btMtOitoDActionPerformed
-        // TODO add your handling code here:
+      pontosMt=pontosMt-5;  // TODO add your handling code here:
     }//GEN-LAST:event_btMtOitoDActionPerformed
 
     private void btAvancarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btAvancarActionPerformed
@@ -184,6 +228,11 @@ public class MtOito extends javax.swing.JFrame {
          new menuPrincipal().show();
         dispose();
     }//GEN-LAST:event_btVoltarMenuActionPerformed
+
+    private void btVoltarMt2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btVoltarMt2ActionPerformed
+        new MtSete().show();
+        dispose();
+    }//GEN-LAST:event_btVoltarMt2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -198,6 +247,9 @@ public class MtOito extends javax.swing.JFrame {
     private javax.swing.JButton btMtOitoC;
     private javax.swing.JButton btMtOitoD;
     private javax.swing.JButton btVoltarMenu;
+    private javax.swing.JButton btVoltarMt;
+    private javax.swing.JButton btVoltarMt1;
+    private javax.swing.JButton btVoltarMt2;
     private javax.swing.JLabel jlMtOitoA;
     private javax.swing.JLabel jlMtOitoB;
     // End of variables declaration//GEN-END:variables

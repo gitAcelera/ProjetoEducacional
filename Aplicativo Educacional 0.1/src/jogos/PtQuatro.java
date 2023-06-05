@@ -3,6 +3,12 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package jogos;
+import dados.PontosAluno;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import javax.swing.JOptionPane;
 import telas.menuPrincipal;
 
@@ -12,6 +18,8 @@ import telas.menuPrincipal;
  */
 public class PtQuatro extends javax.swing.JFrame {
     private PtCinco TelaPtCinco;
+    int pontosPt = PontosAluno.getPontosPt();
+      int idAluno=0;
     /**
      * Creates new form PtQuatro
      */
@@ -40,6 +48,7 @@ public class PtQuatro extends javax.swing.JFrame {
         btPtVM = new javax.swing.JButton();
         btPtDica = new javax.swing.JButton();
         btPtAvancar = new javax.swing.JButton();
+        btVoltarPt = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new java.awt.GridBagLayout());
@@ -56,6 +65,11 @@ public class PtQuatro extends javax.swing.JFrame {
 
         btPtQuatroA.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btPtQuatroA.setText("GRANDE ");
+        btPtQuatroA.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btPtQuatroAActionPerformed(evt);
+            }
+        });
 
         btPtQuatroB.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btPtQuatroB.setText("BELO");
@@ -75,6 +89,11 @@ public class PtQuatro extends javax.swing.JFrame {
 
         btPtQuatroD.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btPtQuatroD.setText("NORMAL");
+        btPtQuatroD.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btPtQuatroDActionPerformed(evt);
+            }
+        });
 
         btPtVM.setText("MENU");
         btPtVM.addActionListener(new java.awt.event.ActionListener() {
@@ -97,6 +116,13 @@ public class PtQuatro extends javax.swing.JFrame {
             }
         });
 
+        btVoltarPt.setText("Voltar");
+        btVoltarPt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btVoltarPtActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout PainelPtQuatroLayout = new javax.swing.GroupLayout(PainelPtQuatro);
         PainelPtQuatro.setLayout(PainelPtQuatroLayout);
         PainelPtQuatroLayout.setHorizontalGroup(
@@ -108,7 +134,9 @@ public class PtQuatro extends javax.swing.JFrame {
                 .addComponent(btPtDica)
                 .addGap(17, 17, 17))
             .addGroup(PainelPtQuatroLayout.createSequentialGroup()
-                .addGap(128, 128, 128)
+                .addContainerGap()
+                .addComponent(btVoltarPt)
+                .addGap(57, 57, 57)
                 .addGroup(PainelPtQuatroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(PainelPtQuatroLayout.createSequentialGroup()
                         .addGroup(PainelPtQuatroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -121,7 +149,7 @@ public class PtQuatro extends javax.swing.JFrame {
                     .addComponent(jlPtQuatroA))
                 .addGap(29, 29, 29)
                 .addComponent(btPtAvancar)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(32, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelPtQuatroLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jlPtQuatroB, javax.swing.GroupLayout.PREFERRED_SIZE, 554, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -130,7 +158,7 @@ public class PtQuatro extends javax.swing.JFrame {
         PainelPtQuatroLayout.setVerticalGroup(
             PainelPtQuatroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelPtQuatroLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(18, Short.MAX_VALUE)
                 .addGroup(PainelPtQuatroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btPtVM)
                     .addComponent(btPtDica))
@@ -148,7 +176,8 @@ public class PtQuatro extends javax.swing.JFrame {
                         .addGroup(PainelPtQuatroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(btPtQuatroD, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(btPtQuatroC, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(btPtAvancar))
+                    .addComponent(btPtAvancar)
+                    .addComponent(btVoltarPt))
                 .addGap(40, 40, 40))
         );
 
@@ -164,11 +193,33 @@ public class PtQuatro extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btPtQuatroCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPtQuatroCActionPerformed
-        // TODO add your handling code here:
+pontosPt=pontosPt-5;        // TODO add your handling code here:
     }//GEN-LAST:event_btPtQuatroCActionPerformed
 
     private void btPtQuatroBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPtQuatroBActionPerformed
-       TelaPtCinco.setVisible(true);
+       pontosPt=pontosPt+20;
+        System.out.println(""+pontosPt);
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost/aplicativo_educacional","root","");
+            Statement stm = con.createStatement();
+             ResultSet res = stm.executeQuery("SELECT * from jogos");
+            while(res.next())
+            {
+                idAluno= res.getInt("idAluno");
+            }
+            stm.executeUpdate("UPDATE jogos set q4="+pontosPt+" WHERE idAluno="+idAluno);
+          
+        }
+                catch(ClassNotFoundException ex)
+        {
+            JOptionPane.showMessageDialog(null,ex.getMessage(),"Erro",JOptionPane.ERROR_MESSAGE);
+        }
+        catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null,ex.getMessage(),"Erro",JOptionPane.ERROR_MESSAGE);
+        }   
+        
+        TelaPtCinco.setVisible(true);
       dispose();
     }//GEN-LAST:event_btPtQuatroBActionPerformed
 
@@ -182,9 +233,24 @@ public class PtQuatro extends javax.swing.JFrame {
     }//GEN-LAST:event_btPtDicaActionPerformed
 
     private void btPtAvancarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPtAvancarActionPerformed
+          pontosPt=0;
+        System.out.println(""+pontosPt);
         TelaPtCinco.setVisible(true);
         dispose();
     }//GEN-LAST:event_btPtAvancarActionPerformed
+
+    private void btPtQuatroAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPtQuatroAActionPerformed
+pontosPt=pontosPt-5;        // TODO add your handling code here:
+    }//GEN-LAST:event_btPtQuatroAActionPerformed
+
+    private void btPtQuatroDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPtQuatroDActionPerformed
+pontosPt=pontosPt-5;        // TODO add your handling code here:
+    }//GEN-LAST:event_btPtQuatroDActionPerformed
+
+    private void btVoltarPtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btVoltarPtActionPerformed
+        new PtTres ().show();
+        dispose();
+    }//GEN-LAST:event_btVoltarPtActionPerformed
 
     /**
      * @param args the command line arguments
@@ -200,6 +266,7 @@ public class PtQuatro extends javax.swing.JFrame {
     private javax.swing.JButton btPtQuatroC;
     private javax.swing.JButton btPtQuatroD;
     private javax.swing.JButton btPtVM;
+    private javax.swing.JButton btVoltarPt;
     private javax.swing.JLabel jlPtQuatroA;
     private javax.swing.JLabel jlPtQuatroB;
     // End of variables declaration//GEN-END:variables

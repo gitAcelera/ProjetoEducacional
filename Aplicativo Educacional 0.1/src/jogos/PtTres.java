@@ -3,6 +3,12 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package jogos;
+import dados.PontosAluno;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import javax.swing.JOptionPane;
 import telas.menuPrincipal;
 
@@ -12,6 +18,8 @@ import telas.menuPrincipal;
  */
 public class PtTres extends javax.swing.JFrame {
 private PtQuatro TelaPtQuatro;
+      int pontosPt = PontosAluno.getPontosPt();
+      int idAluno=0;
     /**
      * Creates new form PtTres
      */
@@ -38,6 +46,7 @@ private PtQuatro TelaPtQuatro;
         btPtVM = new javax.swing.JButton();
         btPtDica = new javax.swing.JButton();
         btPtAvancar = new javax.swing.JButton();
+        btVoltarMt = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new java.awt.GridBagLayout());
@@ -47,9 +56,19 @@ private PtQuatro TelaPtQuatro;
 
         btPtTresA.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btPtTresA.setText("GRANDE");
+        btPtTresA.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btPtTresAActionPerformed(evt);
+            }
+        });
 
         btPtTresB.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btPtTresB.setText("FORTE");
+        btPtTresB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btPtTresBActionPerformed(evt);
+            }
+        });
 
         btPtTresC.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btPtTresC.setText("BAIXO");
@@ -61,6 +80,11 @@ private PtQuatro TelaPtQuatro;
 
         btPtTresD.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btPtTresD.setText("ELEVADO");
+        btPtTresD.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btPtTresDActionPerformed(evt);
+            }
+        });
 
         btPtVM.setText("MENU");
         btPtVM.addActionListener(new java.awt.event.ActionListener() {
@@ -83,21 +107,29 @@ private PtQuatro TelaPtQuatro;
             }
         });
 
+        btVoltarMt.setText("Voltar");
+        btVoltarMt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btVoltarMtActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout PainelPtTresLayout = new javax.swing.GroupLayout(PainelPtTres);
         PainelPtTres.setLayout(PainelPtTresLayout);
         PainelPtTresLayout.setHorizontalGroup(
             PainelPtTresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PainelPtTresLayout.createSequentialGroup()
+                .addGap(17, 17, 17)
                 .addGroup(PainelPtTresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(PainelPtTresLayout.createSequentialGroup()
-                        .addGap(17, 17, 17)
                         .addComponent(btPtVM)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(btPtDica))
                     .addGroup(PainelPtTresLayout.createSequentialGroup()
                         .addGroup(PainelPtTresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(PainelPtTresLayout.createSequentialGroup()
-                                .addGap(125, 125, 125)
+                                .addComponent(btVoltarMt)
+                                .addGap(47, 47, 47)
                                 .addGroup(PainelPtTresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(btPtTresA, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(btPtTresC, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -109,7 +141,7 @@ private PtQuatro TelaPtQuatro;
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                         .addComponent(btPtAvancar))))
                             .addGroup(PainelPtTresLayout.createSequentialGroup()
-                                .addGap(36, 36, 36)
+                                .addGap(19, 19, 19)
                                 .addComponent(jlPtTresA, javax.swing.GroupLayout.PREFERRED_SIZE, 624, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(23, 23, 23)))
                 .addContainerGap())
@@ -132,14 +164,20 @@ private PtQuatro TelaPtQuatro;
                     .addComponent(btPtTresB, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(PainelPtTresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(PainelPtTresLayout.createSequentialGroup()
-                        .addGap(30, 30, 30)
-                        .addGroup(PainelPtTresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(btPtTresC, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btPtTresD, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(PainelPtTresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(PainelPtTresLayout.createSequentialGroup()
+                                .addGap(30, 30, 30)
+                                .addGroup(PainelPtTresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(btPtTresC, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(btPtTresD, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelPtTresLayout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(btPtAvancar)))
+                        .addGap(30, 30, 30))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelPtTresLayout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btPtAvancar)))
-                .addGap(30, 30, 30))
+                        .addComponent(btVoltarMt)
+                        .addGap(27, 27, 27))))
         );
 
         getContentPane().add(PainelPtTres, new java.awt.GridBagConstraints());
@@ -148,6 +186,27 @@ private PtQuatro TelaPtQuatro;
     }// </editor-fold>//GEN-END:initComponents
 
     private void btPtTresCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPtTresCActionPerformed
+        pontosPt=pontosPt+20;
+        System.out.println(""+pontosPt);
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost/aplicativo_educacional","root","");
+            Statement stm = con.createStatement();
+             ResultSet res = stm.executeQuery("SELECT * from jogos");
+            while(res.next())
+            {
+                idAluno= res.getInt("idAluno");
+            }
+           stm.executeUpdate("UPDATE jogos set q3="+pontosPt+" WHERE idAluno="+idAluno);
+          
+        }
+                catch(ClassNotFoundException ex)
+        {
+            JOptionPane.showMessageDialog(null,ex.getMessage(),"Erro",JOptionPane.ERROR_MESSAGE);
+        }
+        catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null,ex.getMessage(),"Erro",JOptionPane.ERROR_MESSAGE);
+        }   
         TelaPtQuatro.setVisible(true);
       dispose();
     }//GEN-LAST:event_btPtTresCActionPerformed
@@ -162,9 +221,28 @@ private PtQuatro TelaPtQuatro;
     }//GEN-LAST:event_btPtDicaActionPerformed
 
     private void btPtAvancarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPtAvancarActionPerformed
+          pontosPt=0;
         TelaPtQuatro.setVisible(true);
         dispose();
+        System.out.println(""+pontosPt);
     }//GEN-LAST:event_btPtAvancarActionPerformed
+
+    private void btPtTresAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPtTresAActionPerformed
+        pontosPt=pontosPt-5;    // TODO add your handling code here:
+    }//GEN-LAST:event_btPtTresAActionPerformed
+
+    private void btPtTresDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPtTresDActionPerformed
+ pontosPt=pontosPt-5;           // TODO add your handling code here:
+    }//GEN-LAST:event_btPtTresDActionPerformed
+
+    private void btPtTresBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPtTresBActionPerformed
+ pontosPt=pontosPt-5;           // TODO add your handling code here:
+    }//GEN-LAST:event_btPtTresBActionPerformed
+
+    private void btVoltarMtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btVoltarMtActionPerformed
+        new PtDois().show();
+        dispose();
+    }//GEN-LAST:event_btVoltarMtActionPerformed
 
     /**
      * @param args the command line arguments
@@ -180,6 +258,7 @@ private PtQuatro TelaPtQuatro;
     private javax.swing.JButton btPtTresC;
     private javax.swing.JButton btPtTresD;
     private javax.swing.JButton btPtVM;
+    private javax.swing.JButton btVoltarMt;
     private javax.swing.JLabel jlPtTresA;
     // End of variables declaration//GEN-END:variables
 }

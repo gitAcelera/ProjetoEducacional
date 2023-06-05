@@ -4,6 +4,13 @@
  * and open the template in the editor.
  */
 package jogos;
+import dados.PontosAluno;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import javax.swing.JOptionPane;
 import telas.menuPrincipal;
 /**
  *
@@ -11,6 +18,8 @@ import telas.menuPrincipal;
  */
 public class MtTres extends javax.swing.JFrame {
   private MtQuatro  TelaMtQuatro;
+  int pontosMt = PontosAluno.getPontosMt();
+     int idAluno=0;
     /**
      * Creates new form MtTres
      */
@@ -37,6 +46,7 @@ public class MtTres extends javax.swing.JFrame {
         btMtTresD = new javax.swing.JButton();
         btAvancar = new javax.swing.JButton();
         btVoltarMenu = new javax.swing.JButton();
+        btVoltarMt = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -88,10 +98,17 @@ public class MtTres extends javax.swing.JFrame {
             }
         });
 
-        btVoltarMenu.setText("Voltar para o MENU");
+        btVoltarMenu.setText("MENU");
         btVoltarMenu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btVoltarMenuActionPerformed(evt);
+            }
+        });
+
+        btVoltarMt.setText("Voltar");
+        btVoltarMt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btVoltarMtActionPerformed(evt);
             }
         });
 
@@ -105,7 +122,9 @@ public class MtTres extends javax.swing.JFrame {
                         .addComponent(btVoltarMenu)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelMtTresLayout.createSequentialGroup()
-                        .addGap(0, 135, Short.MAX_VALUE)
+                        .addContainerGap()
+                        .addComponent(btVoltarMt)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 60, Short.MAX_VALUE)
                         .addGroup(PainelMtTresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(btMtTresA, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(btMtTresC, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -145,11 +164,16 @@ public class MtTres extends javax.swing.JFrame {
                         .addGroup(PainelMtTresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(btMtTresC, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(btMtTresD, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addContainerGap(28, Short.MAX_VALUE))
+                        .addContainerGap(23, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelMtTresLayout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btAvancar)
-                        .addGap(28, 28, 28))))
+                        .addGroup(PainelMtTresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelMtTresLayout.createSequentialGroup()
+                                .addComponent(btAvancar)
+                                .addGap(28, 28, 28))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelMtTresLayout.createSequentialGroup()
+                                .addComponent(btVoltarMt)
+                                .addGap(25, 25, 25))))))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -167,20 +191,43 @@ public class MtTres extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btMtTresAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btMtTresAActionPerformed
-        // TODO add your handling code here:
+    pontosMt=pontosMt-5;     // TODO add your handling code here:
     }//GEN-LAST:event_btMtTresAActionPerformed
 
     private void btMtTresBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btMtTresBActionPerformed
-        // TODO add your handling code here:
+     pontosMt=pontosMt-5;    // TODO add your handling code here:
     }//GEN-LAST:event_btMtTresBActionPerformed
 
     private void btMtTresCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btMtTresCActionPerformed
-       TelaMtQuatro.setVisible(true);
+      pontosMt=pontosMt+20;
+        System.out.println(""+pontosMt);
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost/aplicativo_educacional","root","");
+            Statement stm = con.createStatement();
+            ResultSet res = stm.executeQuery("SELECT * from jogos");
+            while(res.next())
+            {
+                 
+                idAluno= res.getInt("idAluno");
+            }
+            stm.executeUpdate("UPDATE jogos set q3="+pontosMt+" WHERE idAluno="+idAluno);
+          
+        }
+                catch(ClassNotFoundException ex)
+        {
+            JOptionPane.showMessageDialog(null,ex.getMessage(),"Erro",JOptionPane.ERROR_MESSAGE);
+        }
+        catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null,ex.getMessage(),"Erro",JOptionPane.ERROR_MESSAGE);
+        }   
+        
+        TelaMtQuatro.setVisible(true);
        dispose();
     }//GEN-LAST:event_btMtTresCActionPerformed
 
     private void btMtTresDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btMtTresDActionPerformed
-        // TODO add your handling code here:
+    pontosMt=pontosMt-5;     // TODO add your handling code here:
     }//GEN-LAST:event_btMtTresDActionPerformed
 
     private void btAvancarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btAvancarActionPerformed
@@ -193,6 +240,11 @@ public class MtTres extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_btVoltarMenuActionPerformed
 
+    private void btVoltarMtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btVoltarMtActionPerformed
+        new MtDois ().show();
+        dispose();
+    }//GEN-LAST:event_btVoltarMtActionPerformed
+
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -203,6 +255,7 @@ public class MtTres extends javax.swing.JFrame {
     private javax.swing.JButton btMtTresC;
     private javax.swing.JButton btMtTresD;
     private javax.swing.JButton btVoltarMenu;
+    private javax.swing.JButton btVoltarMt;
     private javax.swing.JLabel jlMtTresA;
     private javax.swing.JLabel jlMtTresB;
     // End of variables declaration//GEN-END:variables

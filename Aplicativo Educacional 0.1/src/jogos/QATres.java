@@ -4,13 +4,22 @@
  */
 package jogos;
 
+import dados.PontosAluno;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import javax.swing.JOptionPane;
+import telas.menuPrincipal;
 /**
  *
  * @author fellr
  */
 public class QATres extends javax.swing.JFrame {
     private QAQuatro TelaQAQuatro;
-
+int pontosQA = PontosAluno.getPontosQA();
+      int idAluno=0;
     /**
      * Creates new form QATres
      */
@@ -35,6 +44,9 @@ public class QATres extends javax.swing.JFrame {
         btQATresB = new javax.swing.JButton();
         btQATresC = new javax.swing.JButton();
         btQATresD = new javax.swing.JButton();
+        btQETresMenu = new javax.swing.JButton();
+        btAvancarQA = new javax.swing.JButton();
+        btVoltarQA = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -70,6 +82,32 @@ public class QATres extends javax.swing.JFrame {
 
         btQATresD.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btQATresD.setText("AVESTRUZ");
+        btQATresD.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btQATresDActionPerformed(evt);
+            }
+        });
+
+        btQETresMenu.setText("MENU");
+        btQETresMenu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btQETresMenuActionPerformed(evt);
+            }
+        });
+
+        btAvancarQA.setText("AVANÇAR");
+        btAvancarQA.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btAvancarQAActionPerformed(evt);
+            }
+        });
+
+        btVoltarQA.setText("Voltar");
+        btVoltarQA.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btVoltarQAActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout PainelQATresLayout = new javax.swing.GroupLayout(PainelQATres);
         PainelQATres.setLayout(PainelQATresLayout);
@@ -80,23 +118,34 @@ public class QATres extends javax.swing.JFrame {
                 .addComponent(jlQATresA)
                 .addGap(90, 90, 90))
             .addGroup(PainelQATresLayout.createSequentialGroup()
-                .addGap(130, 130, 130)
-                .addGroup(PainelQATresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jlQATresB, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap()
+                .addGroup(PainelQATresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(PainelQATresLayout.createSequentialGroup()
-                        .addGroup(PainelQATresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btQATresA, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btQATresC, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(82, 82, 82)
-                        .addGroup(PainelQATresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btQATresD, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btQATresB, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(btVoltarQA)
+                        .addGap(59, 59, 59)
+                        .addGroup(PainelQATresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jlQATresB, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(PainelQATresLayout.createSequentialGroup()
+                                .addGroup(PainelQATresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(btQATresA, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(btQATresC, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(82, 82, 82)
+                                .addGroup(PainelQATresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(btQATresD, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(btQATresB, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btAvancarQA))
+                    .addGroup(PainelQATresLayout.createSequentialGroup()
+                        .addComponent(btQETresMenu)
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         PainelQATresLayout.setVerticalGroup(
             PainelQATresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelQATresLayout.createSequentialGroup()
-                .addContainerGap(62, Short.MAX_VALUE)
+                .addContainerGap(21, Short.MAX_VALUE)
+                .addComponent(btQETresMenu)
+                .addGap(18, 18, 18)
                 .addComponent(jlQATresA)
                 .addGap(18, 18, 18)
                 .addComponent(jlQATresB, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -104,11 +153,19 @@ public class QATres extends javax.swing.JFrame {
                 .addGroup(PainelQATresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btQATresB, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btQATresA, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(30, 30, 30)
-                .addGroup(PainelQATresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btQATresD, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btQATresC, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(39, 39, 39))
+                .addGroup(PainelQATresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(PainelQATresLayout.createSequentialGroup()
+                        .addGap(30, 30, 30)
+                        .addGroup(PainelQATresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(btQATresD, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btQATresC, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(39, 39, 39))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelQATresLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(PainelQATresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(btAvancarQA)
+                            .addComponent(btVoltarQA))
+                        .addGap(29, 29, 29))))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -126,17 +183,58 @@ public class QATres extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btQATresCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btQATresCActionPerformed
-        // TODO add your handling code here:
+      pontosQA=pontosQA-5;      // TODO add your handling code here:
     }//GEN-LAST:event_btQATresCActionPerformed
 
     private void btQATresBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btQATresBActionPerformed
-      
+       pontosQA=pontosQA-5;   
     }//GEN-LAST:event_btQATresBActionPerformed
 
     private void btQATresAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btQATresAActionPerformed
-      TelaQAQuatro.setVisible(true);
+      pontosQA=pontosQA+20;
+        System.out.println(""+pontosQA);
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost/aplicativo_educacional","root","");
+            Statement stm = con.createStatement();
+            ResultSet res = stm.executeQuery("SELECT * from jogos");
+            while(res.next())
+            {
+                 
+                idAluno= res.getInt("idAluno");
+            }
+            stm.executeUpdate("UPDATE jogos set q3="+pontosQA+" WHERE idAluno="+idAluno);
+          
+        }
+                catch(ClassNotFoundException ex)
+        {
+            JOptionPane.showMessageDialog(null,ex.getMessage(),"Erro",JOptionPane.ERROR_MESSAGE);
+        }
+        catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null,ex.getMessage(),"Erro",JOptionPane.ERROR_MESSAGE);
+        }   
+        TelaQAQuatro.setVisible(true);
       dispose();
     }//GEN-LAST:event_btQATresAActionPerformed
+
+    private void btQATresDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btQATresDActionPerformed
+      pontosQA=pontosQA-5;      // TODO add your handling code here:
+    }//GEN-LAST:event_btQATresDActionPerformed
+
+    private void btQETresMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btQETresMenuActionPerformed
+        new menuPrincipal().show();
+        dispose();
+    }//GEN-LAST:event_btQETresMenuActionPerformed
+
+    private void btAvancarQAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btAvancarQAActionPerformed
+         TelaQAQuatro.setVisible(true);
+      dispose();  // TODO add your handling code here:
+    }//GEN-LAST:event_btAvancarQAActionPerformed
+
+    private void btVoltarQAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btVoltarQAActionPerformed
+        new QADois().show();
+        dispose();
+    }//GEN-LAST:event_btVoltarQAActionPerformed
 
     /**
      * @param args the cjlQATresline arguments
@@ -144,10 +242,13 @@ public class QATres extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel PainelQATres;
+    private javax.swing.JButton btAvancarQA;
     private javax.swing.JButton btQATresA;
     private javax.swing.JButton btQATresB;
     private javax.swing.JButton btQATresC;
     private javax.swing.JButton btQATresD;
+    private javax.swing.JButton btQETresMenu;
+    private javax.swing.JButton btVoltarQA;
     private javax.swing.JLabel jlQATresA;
     private javax.swing.JLabel jlQATresB;
     // End of variables declaration//GEN-END:variables

@@ -3,6 +3,12 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package jogos;
+import dados.PontosAluno;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import javax.swing.JOptionPane;
 import telas.menuPrincipal;
 
@@ -13,6 +19,8 @@ import telas.menuPrincipal;
  */
 public class PtOito extends javax.swing.JFrame {
     private PtNove TelaPtNove;
+     int pontosPt = PontosAluno.getPontosPt();
+       int idAluno=0;
     /**
      * Creates new form PtOito
      */
@@ -40,6 +48,7 @@ public class PtOito extends javax.swing.JFrame {
         btMtUmMenu = new javax.swing.JButton();
         btPtDica = new javax.swing.JButton();
         btPtAvancar = new javax.swing.JButton();
+        btVoltarPt = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new java.awt.GridBagLayout());
@@ -103,6 +112,13 @@ public class PtOito extends javax.swing.JFrame {
             }
         });
 
+        btVoltarPt.setText("Voltar");
+        btVoltarPt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btVoltarPtActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout PainelPtOitoLayout = new javax.swing.GroupLayout(PainelPtOito);
         PainelPtOito.setLayout(PainelPtOitoLayout);
         PainelPtOitoLayout.setHorizontalGroup(
@@ -110,9 +126,15 @@ public class PtOito extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelPtOitoLayout.createSequentialGroup()
                 .addGroup(PainelPtOitoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(PainelPtOitoLayout.createSequentialGroup()
-                        .addContainerGap(135, Short.MAX_VALUE)
+                        .addContainerGap(234, Short.MAX_VALUE)
+                        .addComponent(jlPtOitoA)
+                        .addGap(138, 138, 138))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, PainelPtOitoLayout.createSequentialGroup()
+                        .addGap(14, 14, 14)
                         .addGroup(PainelPtOitoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelPtOitoLayout.createSequentialGroup()
+                            .addGroup(PainelPtOitoLayout.createSequentialGroup()
+                                .addComponent(btVoltarPt)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addGroup(PainelPtOitoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addGroup(PainelPtOitoLayout.createSequentialGroup()
                                         .addComponent(btPtOitoC, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -124,14 +146,10 @@ public class PtOito extends javax.swing.JFrame {
                                         .addComponent(btPtOitoB, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addGap(32, 32, 32)
                                 .addComponent(btPtAvancar))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelPtOitoLayout.createSequentialGroup()
-                                .addComponent(jlPtOitoA)
-                                .addGap(138, 138, 138))))
-                    .addGroup(PainelPtOitoLayout.createSequentialGroup()
-                        .addGap(14, 14, 14)
-                        .addComponent(btMtUmMenu)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btPtDica)))
+                            .addGroup(PainelPtOitoLayout.createSequentialGroup()
+                                .addComponent(btMtUmMenu)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(btPtDica)))))
                 .addGap(18, 18, 18))
         );
         PainelPtOitoLayout.setVerticalGroup(
@@ -156,8 +174,13 @@ public class PtOito extends javax.swing.JFrame {
                         .addGap(22, 22, 22))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelPtOitoLayout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btPtAvancar)
-                        .addGap(24, 24, 24))))
+                        .addGroup(PainelPtOitoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelPtOitoLayout.createSequentialGroup()
+                                .addComponent(btPtAvancar)
+                                .addGap(24, 24, 24))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelPtOitoLayout.createSequentialGroup()
+                                .addComponent(btVoltarPt)
+                                .addGap(22, 22, 22))))))
         );
 
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -172,20 +195,41 @@ public class PtOito extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btPtOitoBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPtOitoBActionPerformed
-      TelaPtNove.setVisible(true);
+      pontosPt=pontosPt+20;
+        System.out.println(""+pontosPt);
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost/aplicativo_educacional","root","");
+            Statement stm = con.createStatement();
+             ResultSet res = stm.executeQuery("SELECT * from jogos");
+            while(res.next())
+            {
+                idAluno= res.getInt("idAluno");
+            }
+            stm.executeUpdate("UPDATE jogos set q8="+pontosPt+" WHERE idAluno="+idAluno);
+          
+        }
+                catch(ClassNotFoundException ex)
+        {
+            JOptionPane.showMessageDialog(null,ex.getMessage(),"Erro",JOptionPane.ERROR_MESSAGE);
+        }
+        catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null,ex.getMessage(),"Erro",JOptionPane.ERROR_MESSAGE);
+        }   
+        TelaPtNove.setVisible(true);
       dispose();
     }//GEN-LAST:event_btPtOitoBActionPerformed
 
     private void btPtOitoAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPtOitoAActionPerformed
-        // TODO add your handling code here:
+     pontosPt=pontosPt-5;   // TODO add your handling code here:
     }//GEN-LAST:event_btPtOitoAActionPerformed
 
     private void btPtOitoCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPtOitoCActionPerformed
-        // TODO add your handling code here:
+      pontosPt=pontosPt-5;  // TODO add your handling code here:
     }//GEN-LAST:event_btPtOitoCActionPerformed
 
     private void btPtOitoDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPtOitoDActionPerformed
-        // TODO add your handling code here:
+     pontosPt=pontosPt-5;   // TODO add your handling code here:
     }//GEN-LAST:event_btPtOitoDActionPerformed
 
     private void btMtUmMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btMtUmMenuActionPerformed
@@ -198,9 +242,16 @@ public class PtOito extends javax.swing.JFrame {
     }//GEN-LAST:event_btPtDicaActionPerformed
 
     private void btPtAvancarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPtAvancarActionPerformed
+  pontosPt=0;
+        System.out.println(""+pontosPt);
         TelaPtNove.setVisible(true);
         dispose();
     }//GEN-LAST:event_btPtAvancarActionPerformed
+
+    private void btVoltarPtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btVoltarPtActionPerformed
+        new PtSete ().show();
+        dispose();
+    }//GEN-LAST:event_btVoltarPtActionPerformed
 
     /**
      * @param args the command line arguments
@@ -216,6 +267,7 @@ public class PtOito extends javax.swing.JFrame {
     private javax.swing.JButton btPtOitoB;
     private javax.swing.JButton btPtOitoC;
     private javax.swing.JButton btPtOitoD;
+    private javax.swing.JButton btVoltarPt;
     private javax.swing.JLabel jlPtOitoA;
     // End of variables declaration//GEN-END:variables
 }

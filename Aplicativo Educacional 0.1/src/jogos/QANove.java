@@ -4,19 +4,29 @@
  */
 package jogos;
 
+import dados.PontosAluno;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import javax.swing.JOptionPane;
+import telas.menuPrincipal;
 /**
  *
  * @author fellr
  */
 public class QANove extends javax.swing.JFrame {
-    private QANove TelaQANove;
+  private QADez TelaQADez;
+    int pontosQA = PontosAluno.getPontosQA();
+      int idAluno=0;
 
     /**
      * Creates new form QANove
      */
     public QANove() {
         initComponents();
-        TelaQANove = new QANove();
+        TelaQADez = new QADez();
     }
 
     /**
@@ -34,6 +44,9 @@ public class QANove extends javax.swing.JFrame {
         btQANoveB = new javax.swing.JButton();
         btQANoveC = new javax.swing.JButton();
         btQANoveD = new javax.swing.JButton();
+        btQENoveMenu = new javax.swing.JButton();
+        btAvancarQA = new javax.swing.JButton();
+        btVoltarQA = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -50,47 +63,105 @@ public class QANove extends javax.swing.JFrame {
 
         btQANoveB.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btQANoveB.setText("GALO");
+        btQANoveB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btQANoveBActionPerformed(evt);
+            }
+        });
 
         btQANoveC.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btQANoveC.setText("GALINHO");
+        btQANoveC.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btQANoveCActionPerformed(evt);
+            }
+        });
 
         btQANoveD.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btQANoveD.setText("POMBINHO");
+        btQANoveD.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btQANoveDActionPerformed(evt);
+            }
+        });
+
+        btQENoveMenu.setText("MENU");
+        btQENoveMenu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btQENoveMenuActionPerformed(evt);
+            }
+        });
+
+        btAvancarQA.setText("AVANÇAR");
+        btAvancarQA.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btAvancarQAActionPerformed(evt);
+            }
+        });
+
+        btVoltarQA.setText("Voltar");
+        btVoltarQA.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btVoltarQAActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout PainelQANoveLayout = new javax.swing.GroupLayout(PainelQANove);
         PainelQANove.setLayout(PainelQANoveLayout);
         PainelQANoveLayout.setHorizontalGroup(
             PainelQANoveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PainelQANoveLayout.createSequentialGroup()
-                .addContainerGap(130, Short.MAX_VALUE)
+                .addContainerGap()
                 .addGroup(PainelQANoveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelQANoveLayout.createSequentialGroup()
+                    .addGroup(PainelQANoveLayout.createSequentialGroup()
+                        .addComponent(btVoltarQA)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 59, Short.MAX_VALUE)
                         .addGroup(PainelQANoveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btQANoveA, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btQANoveC, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(82, 82, 82)
-                        .addGroup(PainelQANoveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btQANoveD, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btQANoveB, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(128, 128, 128))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelQANoveLayout.createSequentialGroup()
-                        .addComponent(jlQANoveA, javax.swing.GroupLayout.PREFERRED_SIZE, 418, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(138, 138, 138))))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelQANoveLayout.createSequentialGroup()
+                                .addGroup(PainelQANoveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(btQANoveA, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(btQANoveC, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(82, 82, 82)
+                                .addGroup(PainelQANoveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addGroup(PainelQANoveLayout.createSequentialGroup()
+                                        .addComponent(btQANoveB, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(128, 128, 128))
+                                    .addGroup(PainelQANoveLayout.createSequentialGroup()
+                                        .addComponent(btQANoveD, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(btAvancarQA)
+                                        .addContainerGap())))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelQANoveLayout.createSequentialGroup()
+                                .addComponent(jlQANoveA, javax.swing.GroupLayout.PREFERRED_SIZE, 418, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(138, 138, 138))))
+                    .addGroup(PainelQANoveLayout.createSequentialGroup()
+                        .addComponent(btQENoveMenu)
+                        .addGap(0, 0, Short.MAX_VALUE))))
         );
         PainelQANoveLayout.setVerticalGroup(
             PainelQANoveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PainelQANoveLayout.createSequentialGroup()
-                .addContainerGap(69, Short.MAX_VALUE)
+                .addContainerGap(28, Short.MAX_VALUE)
+                .addComponent(btQENoveMenu)
+                .addGap(18, 18, 18)
                 .addComponent(jlQANoveA)
                 .addGap(52, 52, 52)
                 .addGroup(PainelQANoveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btQANoveA, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btQANoveB, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(30, 30, 30)
-                .addGroup(PainelQANoveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btQANoveC, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btQANoveD, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(41, 41, 41))
+                .addGroup(PainelQANoveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(PainelQANoveLayout.createSequentialGroup()
+                        .addGap(30, 30, 30)
+                        .addGroup(PainelQANoveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(btQANoveC, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btQANoveD, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(41, 41, 41))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelQANoveLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(PainelQANoveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(btAvancarQA)
+                            .addComponent(btVoltarQA))
+                        .addGap(21, 21, 21))))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -108,9 +179,58 @@ public class QANove extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btQANoveAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btQANoveAActionPerformed
-     TelaQANove.setVisible(true);
+    pontosQA=pontosQA+20;
+        System.out.println(""+pontosQA);
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost/aplicativo_educacional","root","");
+            Statement stm = con.createStatement();
+            ResultSet res = stm.executeQuery("SELECT * from jogos");
+            while(res.next())
+            {
+                 
+                idAluno= res.getInt("idAluno");
+            }
+            stm.executeUpdate("UPDATE jogos set q9="+pontosQA+" WHERE idAluno="+idAluno);
+          
+        }
+                catch(ClassNotFoundException ex)
+        {
+            JOptionPane.showMessageDialog(null,ex.getMessage(),"Erro",JOptionPane.ERROR_MESSAGE);
+        }
+        catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null,ex.getMessage(),"Erro",JOptionPane.ERROR_MESSAGE);
+        }   
+        TelaQADez.setVisible(true);
      dispose();
     }//GEN-LAST:event_btQANoveAActionPerformed
+
+    private void btQANoveBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btQANoveBActionPerformed
+    pontosQA=pontosQA-5;       // TODO add your handling code here:
+    }//GEN-LAST:event_btQANoveBActionPerformed
+
+    private void btQANoveDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btQANoveDActionPerformed
+    pontosQA=pontosQA-5;       // TODO add your handling code here:
+    }//GEN-LAST:event_btQANoveDActionPerformed
+
+    private void btQANoveCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btQANoveCActionPerformed
+     pontosQA=pontosQA-5;      // TODO add your handling code here:
+    }//GEN-LAST:event_btQANoveCActionPerformed
+
+    private void btQENoveMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btQENoveMenuActionPerformed
+        new menuPrincipal().show();
+        dispose();
+    }//GEN-LAST:event_btQENoveMenuActionPerformed
+
+    private void btAvancarQAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btAvancarQAActionPerformed
+         TelaQADez.setVisible(true);
+     dispose();  // TODO add your handling code here:
+    }//GEN-LAST:event_btAvancarQAActionPerformed
+
+    private void btVoltarQAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btVoltarQAActionPerformed
+        new QAOito().show();
+        dispose();
+    }//GEN-LAST:event_btVoltarQAActionPerformed
 
     /**
      * @param args the command line arguments
@@ -118,10 +238,13 @@ public class QANove extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel PainelQANove;
+    private javax.swing.JButton btAvancarQA;
     private javax.swing.JButton btQANoveA;
     private javax.swing.JButton btQANoveB;
     private javax.swing.JButton btQANoveC;
     private javax.swing.JButton btQANoveD;
+    private javax.swing.JButton btQENoveMenu;
+    private javax.swing.JButton btVoltarQA;
     private javax.swing.JLabel jlQANoveA;
     // End of variables declaration//GEN-END:variables
 }

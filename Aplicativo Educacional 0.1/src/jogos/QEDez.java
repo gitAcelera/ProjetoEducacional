@@ -4,11 +4,24 @@
  */
 package jogos;
 
+import dados.PontosAluno;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import javax.swing.JOptionPane;
+import telas.menuPrincipal;
+
 /**
  *
  * @author fellr
  */
 public class QEDez extends javax.swing.JFrame {
+    int pontosQE = PontosAluno.getPontosQE();
+      int idAluno=0;
+       Integer total=null;
     
     /**
      * Creates new form QEDez
@@ -32,6 +45,8 @@ public class QEDez extends javax.swing.JFrame {
         btQEDezB = new javax.swing.JButton();
         btQEDezC = new javax.swing.JButton();
         btQEDezD = new javax.swing.JButton();
+        btQEDezMenu = new javax.swing.JButton();
+        btVoltarQE = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -40,6 +55,11 @@ public class QEDez extends javax.swing.JFrame {
 
         btQEDezA.setBackground(new java.awt.Color(255, 102, 153));
         btQEDezA.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        btQEDezA.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btQEDezAActionPerformed(evt);
+            }
+        });
 
         btQEDezB.setBackground(new java.awt.Color(51, 153, 255));
         btQEDezB.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
@@ -51,9 +71,33 @@ public class QEDez extends javax.swing.JFrame {
 
         btQEDezC.setBackground(new java.awt.Color(255, 102, 255));
         btQEDezC.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        btQEDezC.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btQEDezCActionPerformed(evt);
+            }
+        });
 
         btQEDezD.setBackground(new java.awt.Color(153, 255, 153));
         btQEDezD.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        btQEDezD.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btQEDezDActionPerformed(evt);
+            }
+        });
+
+        btQEDezMenu.setText("MENU");
+        btQEDezMenu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btQEDezMenuActionPerformed(evt);
+            }
+        });
+
+        btVoltarQE.setText("Voltar");
+        btVoltarQE.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btVoltarQEActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout PainelQEDezLayout = new javax.swing.GroupLayout(PainelQEDez);
         PainelQEDez.setLayout(PainelQEDezLayout);
@@ -72,24 +116,39 @@ public class QEDez extends javax.swing.JFrame {
                         .addComponent(btQEDezB, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(134, 134, 134))
             .addGroup(PainelQEDezLayout.createSequentialGroup()
-                .addGap(181, 181, 181)
-                .addComponent(jlQEDezA)
+                .addGroup(PainelQEDezLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(PainelQEDezLayout.createSequentialGroup()
+                        .addGap(181, 181, 181)
+                        .addComponent(jlQEDezA))
+                    .addGroup(PainelQEDezLayout.createSequentialGroup()
+                        .addGap(25, 25, 25)
+                        .addGroup(PainelQEDezLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btVoltarQE)
+                            .addComponent(btQEDezMenu))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         PainelQEDezLayout.setVerticalGroup(
             PainelQEDezLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelQEDezLayout.createSequentialGroup()
-                .addContainerGap(71, Short.MAX_VALUE)
+                .addContainerGap(30, Short.MAX_VALUE)
+                .addComponent(btQEDezMenu)
+                .addGap(18, 18, 18)
                 .addComponent(jlQEDezA)
                 .addGap(42, 42, 42)
                 .addGroup(PainelQEDezLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btQEDezA, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btQEDezB, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(37, 37, 37)
-                .addGroup(PainelQEDezLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btQEDezC, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btQEDezD, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(42, 42, 42))
+                .addGroup(PainelQEDezLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(PainelQEDezLayout.createSequentialGroup()
+                        .addGap(37, 37, 37)
+                        .addGroup(PainelQEDezLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(btQEDezC, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btQEDezD, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(42, 42, 42))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelQEDezLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btVoltarQE)
+                        .addGap(37, 37, 37))))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -107,8 +166,78 @@ public class QEDez extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btQEDezBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btQEDezBActionPerformed
-    
+pontosQE=pontosQE+20;
+        System.out.println(""+pontosQE);
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost/aplicativo_educacional","root","");
+            Statement stm = con.createStatement();
+             ResultSet res = stm.executeQuery("SELECT * from jogos");
+            while(res.next())
+            {
+                //idNew=("SELECT MAX(idAluno) AS idAluno FROM jogos");
+                idAluno= res.getInt("idAluno");
+            }
+           stm.executeUpdate("UPDATE jogos set q10="+pontosQE+" WHERE idAluno="+idAluno);
+          
+        }
+                catch(ClassNotFoundException ex)
+        {
+            JOptionPane.showMessageDialog(null,ex.getMessage(),"Erro",JOptionPane.ERROR_MESSAGE);
+        }
+        catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null,ex.getMessage(),"Erro",JOptionPane.ERROR_MESSAGE);
+        }    
+        
+      
+        try
+	{
+               Class.forName("com.mysql.cj.jdbc.Driver");
+               
+              
+               Connection con = DriverManager.getConnection("jdbc:mysql://localhost/aplicativo_educacional","root","");
+              String sql= ("SELECT SUM(q1+q2+q3+q4+q5+q6+q7+q8+q9+q10)FROM jogos WHERE idAluno="+idAluno); 
+               PreparedStatement stmt = con.prepareStatement(sql);
+               ResultSet res = stmt.executeQuery();
+	
+		while(res.next())
+		{
+		  total=res.getInt(1);
+                }
+        JOptionPane.showMessageDialog(null,"SUA PONTUAÇÃO FOI: "+total+ " PONTOS");
+        }
+        
+        
+        catch(Exception ex)
+	{
+		JOptionPane.showMessageDialog(null,ex.getMessage(),"Erro",JOptionPane.ERROR_MESSAGE);
+	}
+	
+        new menuPrincipal().show();
+        dispose();       
     }//GEN-LAST:event_btQEDezBActionPerformed
+
+    private void btQEDezAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btQEDezAActionPerformed
+      pontosQE=pontosQE-5;   // TODO add your handling code here:
+    }//GEN-LAST:event_btQEDezAActionPerformed
+
+    private void btQEDezCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btQEDezCActionPerformed
+      pontosQE=pontosQE-5;   // TODO add your handling code here:
+    }//GEN-LAST:event_btQEDezCActionPerformed
+
+    private void btQEDezDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btQEDezDActionPerformed
+     pontosQE=pontosQE-5;    // TODO add your handling code here:
+    }//GEN-LAST:event_btQEDezDActionPerformed
+
+    private void btQEDezMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btQEDezMenuActionPerformed
+        new menuPrincipal().show();
+        dispose();
+    }//GEN-LAST:event_btQEDezMenuActionPerformed
+
+    private void btVoltarQEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btVoltarQEActionPerformed
+new QENove().show();
+        dispose();        // TODO add your handling code here:
+    }//GEN-LAST:event_btVoltarQEActionPerformed
 
     /**
      * @param args the command line arguments
@@ -120,6 +249,8 @@ public class QEDez extends javax.swing.JFrame {
     private javax.swing.JButton btQEDezB;
     private javax.swing.JButton btQEDezC;
     private javax.swing.JButton btQEDezD;
+    private javax.swing.JButton btQEDezMenu;
+    private javax.swing.JButton btVoltarQE;
     private javax.swing.JLabel jlQEDezA;
     // End of variables declaration//GEN-END:variables
 }

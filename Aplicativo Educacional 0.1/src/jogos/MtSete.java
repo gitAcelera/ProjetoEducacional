@@ -4,6 +4,13 @@
  * and open the template in the editor.
  */
 package jogos;
+import dados.PontosAluno;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import javax.swing.JOptionPane;
 import telas.menuPrincipal;
 
 /**
@@ -13,6 +20,8 @@ import telas.menuPrincipal;
 public class MtSete extends javax.swing.JFrame {
  
      MtOito TelaMtOito;
+     int pontosMt = PontosAluno.getPontosMt();
+     int idAluno=0;
     /**
      * Creates new form MtSete
      */
@@ -40,6 +49,7 @@ public class MtSete extends javax.swing.JFrame {
         btMtSeteC = new javax.swing.JButton();
         btAvancar = new javax.swing.JButton();
         btVoltarMenu = new javax.swing.JButton();
+        btVoltarMt = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -93,10 +103,17 @@ public class MtSete extends javax.swing.JFrame {
             }
         });
 
-        btVoltarMenu.setText("Voltar para o MENU");
+        btVoltarMenu.setText(" MENU");
         btVoltarMenu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btVoltarMenuActionPerformed(evt);
+            }
+        });
+
+        btVoltarMt.setText("Voltar");
+        btVoltarMt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btVoltarMtActionPerformed(evt);
             }
         });
 
@@ -124,11 +141,14 @@ public class MtSete extends javax.swing.JFrame {
                             .addComponent(btMtSeteB, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(128, 128, 128))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelMtSeteLayout.createSequentialGroup()
-                        .addComponent(btAvancar)
-                        .addGap(17, 17, 17))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelMtSeteLayout.createSequentialGroup()
                         .addComponent(jlMtSeteA)
                         .addGap(115, 115, 115))))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelMtSeteLayout.createSequentialGroup()
+                .addGap(21, 21, 21)
+                .addComponent(btVoltarMt)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btAvancar)
+                .addGap(17, 17, 17))
         );
         PainelMtSeteLayout.setVerticalGroup(
             PainelMtSeteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -148,7 +168,9 @@ public class MtSete extends javax.swing.JFrame {
                     .addComponent(btMtSeteD, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btMtSeteC, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btAvancar)
+                .addGroup(PainelMtSeteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btAvancar)
+                    .addComponent(btVoltarMt))
                 .addContainerGap())
         );
 
@@ -167,18 +189,40 @@ public class MtSete extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btMtSeteAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btMtSeteAActionPerformed
-        // TODO add your handling code here:
+      pontosMt=pontosMt-5;   // TODO add your handling code here:
     }//GEN-LAST:event_btMtSeteAActionPerformed
 
     private void btMtSeteBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btMtSeteBActionPerformed
-        // TODO add your handling code here:
+        pontosMt=pontosMt-5; // TODO add your handling code here:
     }//GEN-LAST:event_btMtSeteBActionPerformed
 
     private void btMtSeteDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btMtSeteDActionPerformed
-        // TODO add your handling code here:
+        pontosMt=pontosMt-5; // TODO add your handling code here:
     }//GEN-LAST:event_btMtSeteDActionPerformed
 
     private void btMtSeteCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btMtSeteCActionPerformed
+      pontosMt=pontosMt+20;
+        System.out.println(""+pontosMt);
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost/aplicativo_educacional","root","");
+            Statement stm = con.createStatement();
+            ResultSet res = stm.executeQuery("SELECT * from jogos");
+            while(res.next())
+            {
+                 
+                idAluno= res.getInt("idAluno");
+            }
+            stm.executeUpdate("UPDATE jogos set q7="+pontosMt+" WHERE idAluno="+idAluno);
+          
+        }
+                catch(ClassNotFoundException ex)
+        {
+            JOptionPane.showMessageDialog(null,ex.getMessage(),"Erro",JOptionPane.ERROR_MESSAGE);
+        }
+        catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null,ex.getMessage(),"Erro",JOptionPane.ERROR_MESSAGE);
+        }   
         TelaMtOito.setVisible(true);
         dispose();
     }//GEN-LAST:event_btMtSeteCActionPerformed
@@ -193,6 +237,11 @@ public class MtSete extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_btVoltarMenuActionPerformed
 
+    private void btVoltarMtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btVoltarMtActionPerformed
+        new MtSeis ().show();
+        dispose();
+    }//GEN-LAST:event_btVoltarMtActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -206,6 +255,7 @@ public class MtSete extends javax.swing.JFrame {
     private javax.swing.JButton btMtSeteC;
     private javax.swing.JButton btMtSeteD;
     private javax.swing.JButton btVoltarMenu;
+    private javax.swing.JButton btVoltarMt;
     private javax.swing.JLabel jlMtSeteA;
     private javax.swing.JLabel jlMtSeteB;
     // End of variables declaration//GEN-END:variables

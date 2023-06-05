@@ -4,17 +4,28 @@
  */
 package jogos;
 
+import dados.PontosAluno;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import javax.swing.JOptionPane;
+import telas.menuPrincipal;
 /**
  *
  * @author fellr
  */
 public class QAOito extends javax.swing.JFrame {
-
+    private QANove TelaQANove;
+int pontosQA = PontosAluno.getPontosQA();
+      int idAluno=0;
     /**
      * Creates new form QAOito
      */
     public QAOito() {
         initComponents();
+        TelaQANove = new QANove();
     }
 
     /**
@@ -33,6 +44,9 @@ public class QAOito extends javax.swing.JFrame {
         btQAOitoB = new javax.swing.JButton();
         btQAOitoC = new javax.swing.JButton();
         btQAOitoD = new javax.swing.JButton();
+        btQEOitoMenu = new javax.swing.JButton();
+        btAvancarQA = new javax.swing.JButton();
+        btVoltarQA = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -44,12 +58,27 @@ public class QAOito extends javax.swing.JFrame {
 
         btQAOitoA.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btQAOitoA.setText("TARTARUGA");
+        btQAOitoA.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btQAOitoAActionPerformed(evt);
+            }
+        });
 
         btQAOitoB.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btQAOitoB.setText("COELHO");
+        btQAOitoB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btQAOitoBActionPerformed(evt);
+            }
+        });
 
         btQAOitoC.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btQAOitoC.setText("TUCANO");
+        btQAOitoC.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btQAOitoCActionPerformed(evt);
+            }
+        });
 
         btQAOitoD.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btQAOitoD.setText("MACACO");
@@ -59,12 +88,35 @@ public class QAOito extends javax.swing.JFrame {
             }
         });
 
+        btQEOitoMenu.setText("MENU");
+        btQEOitoMenu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btQEOitoMenuActionPerformed(evt);
+            }
+        });
+
+        btAvancarQA.setText("AVANÇAR");
+        btAvancarQA.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btAvancarQAActionPerformed(evt);
+            }
+        });
+
+        btVoltarQA.setText("Voltar");
+        btVoltarQA.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btVoltarQAActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout PainelQAOitoLayout = new javax.swing.GroupLayout(PainelQAOito);
         PainelQAOito.setLayout(PainelQAOitoLayout);
         PainelQAOitoLayout.setHorizontalGroup(
             PainelQAOitoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PainelQAOitoLayout.createSequentialGroup()
-                .addGap(127, 127, 127)
+                .addGap(21, 21, 21)
+                .addComponent(btVoltarQA)
+                .addGap(45, 45, 45)
                 .addGroup(PainelQAOitoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addGroup(PainelQAOitoLayout.createSequentialGroup()
                         .addComponent(btQAOitoC, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -74,32 +126,50 @@ public class QAOito extends javax.swing.JFrame {
                         .addComponent(btQAOitoA, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(82, 82, 82)
                         .addComponent(btQAOitoB, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(131, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 40, Short.MAX_VALUE)
+                .addComponent(btAvancarQA)
+                .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelQAOitoLayout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(jlQAOitoB, javax.swing.GroupLayout.PREFERRED_SIZE, 265, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(209, 209, 209))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelQAOitoLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap()
+                .addComponent(btQEOitoMenu)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jlQAOitoA, javax.swing.GroupLayout.PREFERRED_SIZE, 472, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(112, 112, 112))
         );
         PainelQAOitoLayout.setVerticalGroup(
             PainelQAOitoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PainelQAOitoLayout.createSequentialGroup()
-                .addContainerGap(37, Short.MAX_VALUE)
-                .addComponent(jlQAOitoA)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(PainelQAOitoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(PainelQAOitoLayout.createSequentialGroup()
+                        .addContainerGap(37, Short.MAX_VALUE)
+                        .addComponent(jlQAOitoA)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED))
+                    .addGroup(PainelQAOitoLayout.createSequentialGroup()
+                        .addGap(21, 21, 21)
+                        .addComponent(btQEOitoMenu)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addComponent(jlQAOitoB)
                 .addGap(28, 28, 28)
                 .addGroup(PainelQAOitoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btQAOitoA, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btQAOitoB, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(30, 30, 30)
-                .addGroup(PainelQAOitoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btQAOitoC, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btQAOitoD, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(37, 37, 37))
+                .addGroup(PainelQAOitoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(PainelQAOitoLayout.createSequentialGroup()
+                        .addGap(30, 30, 30)
+                        .addGroup(PainelQAOitoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(btQAOitoC, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btQAOitoD, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(37, 37, 37))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelQAOitoLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(PainelQAOitoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(btAvancarQA)
+                            .addComponent(btVoltarQA))
+                        .addGap(21, 21, 21))))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -117,8 +187,59 @@ public class QAOito extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btQAOitoDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btQAOitoDActionPerformed
-        // TODO add your handling code here:
+    pontosQA=pontosQA-5;     // TODO add your handling code here:
     }//GEN-LAST:event_btQAOitoDActionPerformed
+
+    private void btQAOitoBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btQAOitoBActionPerformed
+ pontosQA=pontosQA-5;        // TODO add your handling code here:
+    }//GEN-LAST:event_btQAOitoBActionPerformed
+
+    private void btQAOitoCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btQAOitoCActionPerformed
+pontosQA=pontosQA-5;         // TODO add your handling code here:
+    }//GEN-LAST:event_btQAOitoCActionPerformed
+
+    private void btQAOitoAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btQAOitoAActionPerformed
+        pontosQA=pontosQA+20;
+        System.out.println(""+pontosQA);
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost/aplicativo_educacional","root","");
+            Statement stm = con.createStatement();
+            ResultSet res = stm.executeQuery("SELECT * from jogos");
+            while(res.next())
+            {
+                 
+                idAluno= res.getInt("idAluno");
+            }
+            stm.executeUpdate("UPDATE jogos set q8="+pontosQA+" WHERE idAluno="+idAluno);
+          
+        }
+                catch(ClassNotFoundException ex)
+        {
+            JOptionPane.showMessageDialog(null,ex.getMessage(),"Erro",JOptionPane.ERROR_MESSAGE);
+        }
+        catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null,ex.getMessage(),"Erro",JOptionPane.ERROR_MESSAGE);
+        }   
+        TelaQANove.setVisible(true);
+     dispose();
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btQAOitoAActionPerformed
+
+    private void btQEOitoMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btQEOitoMenuActionPerformed
+        new menuPrincipal().show();
+        dispose();
+    }//GEN-LAST:event_btQEOitoMenuActionPerformed
+
+    private void btAvancarQAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btAvancarQAActionPerformed
+        TelaQANove.setVisible(true);
+     dispose();  // TODO add your handling code here:
+    }//GEN-LAST:event_btAvancarQAActionPerformed
+
+    private void btVoltarQAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btVoltarQAActionPerformed
+        new QASete().show();
+        dispose();
+    }//GEN-LAST:event_btVoltarQAActionPerformed
 
     /**
      * @param args the command line arguments
@@ -126,10 +247,13 @@ public class QAOito extends javax.swing.JFrame {
  
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel PainelQAOito;
+    private javax.swing.JButton btAvancarQA;
     private javax.swing.JButton btQAOitoA;
     private javax.swing.JButton btQAOitoB;
     private javax.swing.JButton btQAOitoC;
     private javax.swing.JButton btQAOitoD;
+    private javax.swing.JButton btQEOitoMenu;
+    private javax.swing.JButton btVoltarQA;
     private javax.swing.JLabel jlQAOitoA;
     private javax.swing.JLabel jlQAOitoB;
     // End of variables declaration//GEN-END:variables

@@ -4,12 +4,21 @@
  */
 package jogos;
 
+import dados.PontosAluno;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
+import javax.swing.JOptionPane;
+import telas.menuPrincipal;
 /**
  *
  * @author fellr
  */
 public class QEUm extends javax.swing.JFrame {
     private QEDois TelaQEDois;
+    int pontosQE = PontosAluno.getPontosQE();
+    String tipo="Qual é a cor";
 
     /**
      * Creates new form QEUm
@@ -35,6 +44,8 @@ public class QEUm extends javax.swing.JFrame {
         btQEUmB = new javax.swing.JButton();
         btQEUmC = new javax.swing.JButton();
         btQEUmD = new javax.swing.JButton();
+        btQEUmMenu = new javax.swing.JButton();
+        btAvancarQE = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -88,44 +99,72 @@ public class QEUm extends javax.swing.JFrame {
             }
         });
 
+        btQEUmMenu.setText("MENU");
+        btQEUmMenu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btQEUmMenuActionPerformed(evt);
+            }
+        });
+
+        btAvancarQE.setText("AVANÇAR");
+        btAvancarQE.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btAvancarQEActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout PainelQEUmLayout = new javax.swing.GroupLayout(PainelQEUm);
         PainelQEUm.setLayout(PainelQEUmLayout);
         PainelQEUmLayout.setHorizontalGroup(
             PainelQEUmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PainelQEUmLayout.createSequentialGroup()
-                .addGap(190, 190, 190)
-                .addComponent(jlQEUmA))
-            .addGroup(PainelQEUmLayout.createSequentialGroup()
-                .addGap(140, 140, 140)
-                .addComponent(jlQEUmB))
-            .addGroup(PainelQEUmLayout.createSequentialGroup()
-                .addGap(140, 140, 140)
-                .addComponent(btQEUmA, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(66, 66, 66)
-                .addComponent(btQEUmB, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(PainelQEUmLayout.createSequentialGroup()
                 .addGap(137, 137, 137)
                 .addComponent(btQEUmC, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(69, 69, 69)
-                .addComponent(btQEUmD, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(btQEUmD, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
+                .addComponent(btAvancarQE)
+                .addContainerGap())
+            .addGroup(PainelQEUmLayout.createSequentialGroup()
+                .addGroup(PainelQEUmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(PainelQEUmLayout.createSequentialGroup()
+                        .addGap(190, 190, 190)
+                        .addComponent(jlQEUmA))
+                    .addGroup(PainelQEUmLayout.createSequentialGroup()
+                        .addGap(140, 140, 140)
+                        .addComponent(jlQEUmB))
+                    .addGroup(PainelQEUmLayout.createSequentialGroup()
+                        .addGap(140, 140, 140)
+                        .addComponent(btQEUmA, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(66, 66, 66)
+                        .addComponent(btQEUmB, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(PainelQEUmLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(btQEUmMenu)))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         PainelQEUmLayout.setVerticalGroup(
             PainelQEUmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PainelQEUmLayout.createSequentialGroup()
-                .addGap(50, 50, 50)
-                .addComponent(jlQEUmA)
-                .addGap(2, 2, 2)
-                .addComponent(jlQEUmB)
-                .addGap(32, 32, 32)
+                .addContainerGap()
                 .addGroup(PainelQEUmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btQEUmA, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(PainelQEUmLayout.createSequentialGroup()
-                        .addGap(1, 1, 1)
-                        .addComponent(btQEUmB, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(37, 37, 37)
-                .addGroup(PainelQEUmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btQEUmC, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btQEUmD, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(btAvancarQE, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelQEUmLayout.createSequentialGroup()
+                        .addComponent(btQEUmMenu)
+                        .addGap(16, 16, 16)
+                        .addComponent(jlQEUmA)
+                        .addGap(2, 2, 2)
+                        .addComponent(jlQEUmB)
+                        .addGap(32, 32, 32)
+                        .addGroup(PainelQEUmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btQEUmA, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(PainelQEUmLayout.createSequentialGroup()
+                                .addGap(1, 1, 1)
+                                .addComponent(btQEUmB, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(37, 37, 37)
+                        .addGroup(PainelQEUmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btQEUmC, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btQEUmD, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)))))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -143,21 +182,47 @@ public class QEUm extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btQEUmAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btQEUmAActionPerformed
-     // TODO add your handling code here:
+    pontosQE=pontosQE-5;   // TODO add your handling code here:
     }//GEN-LAST:event_btQEUmAActionPerformed
 
     private void btQEUmDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btQEUmDActionPerformed
-        // TODO add your handling code here:
+      pontosQE=pontosQE-5;    // TODO add your handling code here:
     }//GEN-LAST:event_btQEUmDActionPerformed
 
     private void btQEUmBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btQEUmBActionPerformed
-      TelaQEDois.setVisible(true);
+      pontosQE=pontosQE+20;
+        System.out.println(""+pontosQE);
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost/aplicativo_educacional","root","");
+            Statement stm = con.createStatement();
+            stm.executeUpdate("INSERT into jogos (q1,q2,q3,q4,q5,q6,q7,q8,q9,q10) values ("+pontosQE+","+0+","+0+","+0+","+0+","+0+","+0+","+0+","+0+","+0+")");
+          
+        }
+                catch(ClassNotFoundException ex)
+        {
+            JOptionPane.showMessageDialog(null,ex.getMessage(),"Erro",JOptionPane.ERROR_MESSAGE);
+        }
+        catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null,ex.getMessage(),"Erro",JOptionPane.ERROR_MESSAGE);
+        }   
+        TelaQEDois.setVisible(true);
       dispose();
     }//GEN-LAST:event_btQEUmBActionPerformed
 
     private void btQEUmCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btQEUmCActionPerformed
-        // TODO add your handling code here:
+    pontosQE=pontosQE-5;      // TODO add your handling code here:
     }//GEN-LAST:event_btQEUmCActionPerformed
+
+    private void btQEUmMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btQEUmMenuActionPerformed
+        new menuPrincipal().show();
+        dispose();
+    }//GEN-LAST:event_btQEUmMenuActionPerformed
+
+    private void btAvancarQEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btAvancarQEActionPerformed
+     TelaQEDois.setVisible(true);
+      dispose();   // TODO add your handling code here:
+    }//GEN-LAST:event_btAvancarQEActionPerformed
 
     /**
      * @param args the command line arguments
@@ -165,10 +230,12 @@ public class QEUm extends javax.swing.JFrame {
  
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel PainelQEUm;
+    private javax.swing.JButton btAvancarQE;
     private javax.swing.JButton btQEUmA;
     private javax.swing.JButton btQEUmB;
     private javax.swing.JButton btQEUmC;
     private javax.swing.JButton btQEUmD;
+    private javax.swing.JButton btQEUmMenu;
     private javax.swing.JLabel jlQEUmA;
     private javax.swing.JLabel jlQEUmB;
     // End of variables declaration//GEN-END:variables
