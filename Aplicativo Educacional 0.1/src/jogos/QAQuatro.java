@@ -47,6 +47,7 @@ public class QAQuatro extends javax.swing.JFrame {
         btQEQuatroMenu = new javax.swing.JButton();
         btAvancarQA = new javax.swing.JButton();
         btVoltarQA = new javax.swing.JButton();
+        btPtDica = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -109,6 +110,13 @@ public class QAQuatro extends javax.swing.JFrame {
             }
         });
 
+        btPtDica.setText("?");
+        btPtDica.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btPtDicaActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout PainelQAQuatroLayout = new javax.swing.GroupLayout(PainelQAQuatro);
         PainelQAQuatro.setLayout(PainelQAQuatroLayout);
         PainelQAQuatroLayout.setHorizontalGroup(
@@ -116,19 +124,8 @@ public class QAQuatro extends javax.swing.JFrame {
             .addGroup(PainelQAQuatroLayout.createSequentialGroup()
                 .addGroup(PainelQAQuatroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(PainelQAQuatroLayout.createSequentialGroup()
-                        .addGroup(PainelQAQuatroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addGroup(PainelQAQuatroLayout.createSequentialGroup()
-                                .addGap(129, 129, 129)
-                                .addComponent(btQAQuatroA, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(PainelQAQuatroLayout.createSequentialGroup()
-                                .addContainerGap()
-                                .addComponent(btVoltarQA)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(btQAQuatroC, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(82, 82, 82)
-                        .addGroup(PainelQAQuatroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(btQAQuatroB, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btQAQuatroD, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addContainerGap()
+                        .addComponent(btVoltarQA)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(btAvancarQA))
                     .addGroup(PainelQAQuatroLayout.createSequentialGroup()
@@ -137,27 +134,36 @@ public class QAQuatro extends javax.swing.JFrame {
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelQAQuatroLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(btQEQuatroMenu)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 24, Short.MAX_VALUE)
+                .addContainerGap(102, Short.MAX_VALUE)
                 .addComponent(jlQAQuatroA)
                 .addGap(91, 91, 91))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelQAQuatroLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(btQEQuatroMenu)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btPtDica)
+                .addContainerGap())
+            .addGroup(PainelQAQuatroLayout.createSequentialGroup()
+                .addGap(128, 128, 128)
+                .addGroup(PainelQAQuatroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(btQAQuatroA, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btQAQuatroC, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(82, 82, 82)
+                .addGroup(PainelQAQuatroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(btQAQuatroB, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btQAQuatroD, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         PainelQAQuatroLayout.setVerticalGroup(
             PainelQAQuatroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PainelQAQuatroLayout.createSequentialGroup()
                 .addGroup(PainelQAQuatroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(PainelQAQuatroLayout.createSequentialGroup()
-                        .addGroup(PainelQAQuatroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(PainelQAQuatroLayout.createSequentialGroup()
-                                .addGap(44, 44, 44)
-                                .addComponent(jlQAQuatroA))
-                            .addGroup(PainelQAQuatroLayout.createSequentialGroup()
-                                .addGap(32, 32, 32)
-                                .addComponent(btQEQuatroMenu)))
+                        .addGap(44, 44, 44)
+                        .addComponent(jlQAQuatroA)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jlQAQuatroB)
-                        .addGap(31, 31, 31)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(PainelQAQuatroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(btQAQuatroA, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(btQAQuatroB, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -165,9 +171,13 @@ public class QAQuatro extends javax.swing.JFrame {
                         .addGroup(PainelQAQuatroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(btQAQuatroC, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(btQAQuatroD, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 16, Short.MAX_VALUE))
+                        .addGap(0, 35, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelQAQuatroLayout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addContainerGap()
+                        .addGroup(PainelQAQuatroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(btPtDica)
+                            .addComponent(btQEQuatroMenu))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(PainelQAQuatroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(btAvancarQA)
                             .addComponent(btVoltarQA))))
@@ -242,6 +252,10 @@ public class QAQuatro extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_btVoltarQAActionPerformed
 
+    private void btPtDicaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPtDicaActionPerformed
+        JOptionPane.showMessageDialog(null,"É um animal muito grande e pesado!");
+    }//GEN-LAST:event_btPtDicaActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -250,6 +264,7 @@ public class QAQuatro extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel PainelQAQuatro;
     private javax.swing.JButton btAvancarQA;
+    private javax.swing.JButton btPtDica;
     private javax.swing.JButton btQAQuatroA;
     private javax.swing.JButton btQAQuatroB;
     private javax.swing.JButton btQAQuatroC;

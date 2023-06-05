@@ -47,6 +47,7 @@ public class QASete extends javax.swing.JFrame {
         btQESeteMenu = new javax.swing.JButton();
         btAvancarQA = new javax.swing.JButton();
         btVoltarQA = new javax.swing.JButton();
+        btPtDica = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -109,6 +110,13 @@ public class QASete extends javax.swing.JFrame {
             }
         });
 
+        btPtDica.setText("?");
+        btPtDica.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btPtDicaActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout PainelQASeteLayout = new javax.swing.GroupLayout(PainelQASete);
         PainelQASete.setLayout(PainelQASeteLayout);
         PainelQASeteLayout.setHorizontalGroup(
@@ -132,22 +140,28 @@ public class QASete extends javax.swing.JFrame {
                                         .addGap(82, 82, 82)
                                         .addGroup(PainelQASeteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                             .addComponent(btQASeteB, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                            .addComponent(btQASeteD, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                            .addGroup(PainelQASeteLayout.createSequentialGroup()
-                                .addContainerGap()
-                                .addComponent(btQESeteMenu)))
+                                            .addComponent(btQASeteD, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))))))
                         .addGap(0, 42, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelQASeteLayout.createSequentialGroup()
-                        .addComponent(btVoltarQA)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btAvancarQA)))
+                    .addGroup(PainelQASeteLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(PainelQASeteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelQASeteLayout.createSequentialGroup()
+                                .addComponent(btVoltarQA)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(btAvancarQA))
+                            .addGroup(PainelQASeteLayout.createSequentialGroup()
+                                .addComponent(btQESeteMenu)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(btPtDica)))))
                 .addContainerGap())
         );
         PainelQASeteLayout.setVerticalGroup(
             PainelQASeteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PainelQASeteLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(btQESeteMenu)
+                .addGroup(PainelQASeteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btQESeteMenu)
+                    .addComponent(btPtDica))
                 .addGap(1, 1, 1)
                 .addComponent(jlQASeteA)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -235,6 +249,10 @@ pontosQA=pontosQA-5;         // TODO add your handling code here:
         dispose();
     }//GEN-LAST:event_btVoltarQAActionPerformed
 
+    private void btPtDicaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPtDicaActionPerformed
+        JOptionPane.showMessageDialog(null,"Os animais que NÃO podem ser de estimação, não podem viver dentro de casa mas sim em seu habitat natural!");
+    }//GEN-LAST:event_btPtDicaActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -243,6 +261,7 @@ pontosQA=pontosQA-5;         // TODO add your handling code here:
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel PainelQASete;
     private javax.swing.JButton btAvancarQA;
+    private javax.swing.JButton btPtDica;
     private javax.swing.JButton btQASeteA;
     private javax.swing.JButton btQASeteB;
     private javax.swing.JButton btQASeteC;

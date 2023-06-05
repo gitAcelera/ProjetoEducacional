@@ -47,6 +47,7 @@ public class QETres extends javax.swing.JFrame {
         btAvancarQE = new javax.swing.JButton();
         btQETresMenu = new javax.swing.JButton();
         btVoltarQE = new javax.swing.JButton();
+        btPtDica2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -106,57 +107,73 @@ public class QETres extends javax.swing.JFrame {
             }
         });
 
+        btPtDica2.setText("?");
+        btPtDica2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btPtDica2ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout PainelQETresLayout = new javax.swing.GroupLayout(PainelQETres);
         PainelQETres.setLayout(PainelQETresLayout);
         PainelQETresLayout.setHorizontalGroup(
             PainelQETresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelQETresLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(btVoltarQE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btAvancarQE)
-                .addGap(18, 18, 18))
             .addGroup(PainelQETresLayout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(PainelQETresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelQETresLayout.createSequentialGroup()
+                        .addComponent(btVoltarQE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btAvancarQE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelQETresLayout.createSequentialGroup()
+                        .addComponent(btQETresMenu)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btPtDica2)))
+                .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelQETresLayout.createSequentialGroup()
+                .addGap(0, 137, Short.MAX_VALUE)
+                .addGroup(PainelQETresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addGroup(PainelQETresLayout.createSequentialGroup()
-                        .addGap(130, 130, 130)
-                        .addGroup(PainelQETresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addGroup(PainelQETresLayout.createSequentialGroup()
-                                .addComponent(btQETresC, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(btQETresD, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(PainelQETresLayout.createSequentialGroup()
-                                .addComponent(btQETresA, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(69, 69, 69)
-                                .addComponent(btQETresB, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addComponent(btQETresC, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btQETresD, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(PainelQETresLayout.createSequentialGroup()
-                        .addGap(158, 158, 158)
-                        .addComponent(jlQETresA))
-                    .addGroup(PainelQETresLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(btQETresMenu)))
-                .addContainerGap(141, Short.MAX_VALUE))
+                        .addComponent(btQETresA, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(82, 82, 82)
+                        .addComponent(btQETresB, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(134, 134, 134))
+            .addGroup(PainelQETresLayout.createSequentialGroup()
+                .addGap(165, 165, 165)
+                .addComponent(jlQETresA)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         PainelQETresLayout.setVerticalGroup(
             PainelQETresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelQETresLayout.createSequentialGroup()
-                .addGap(29, 29, 29)
-                .addComponent(btQETresMenu)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addContainerGap()
+                .addGroup(PainelQETresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btPtDica2)
+                    .addComponent(btQETresMenu))
+                .addGap(34, 34, 34)
                 .addComponent(jlQETresA)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 55, Short.MAX_VALUE)
-                .addGroup(PainelQETresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btQETresA, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btQETresB, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(37, 37, 37)
-                .addGroup(PainelQETresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btQETresC, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btQETresD, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(PainelQETresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btAvancarQE)
-                    .addComponent(btVoltarQE))
-                .addGap(13, 13, 13))
+                .addGap(22, 22, 22)
+                .addGroup(PainelQETresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(PainelQETresLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(PainelQETresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(btQETresA, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btQETresB, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(30, 30, 30)
+                        .addGroup(PainelQETresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(btQETresC, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btQETresD, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(42, 42, 42))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelQETresLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(PainelQETresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(btVoltarQE)
+                            .addComponent(btAvancarQE))
+                        .addContainerGap())))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -227,6 +244,10 @@ public class QETres extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_btVoltarQEActionPerformed
 
+    private void btPtDica2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPtDica2ActionPerformed
+        JOptionPane.showMessageDialog(null,"Tem na bandeira do Brasil!");
+    }//GEN-LAST:event_btPtDica2ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -234,6 +255,7 @@ public class QETres extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel PainelQETres;
     private javax.swing.JButton btAvancarQE;
+    private javax.swing.JButton btPtDica2;
     private javax.swing.JButton btQETresA;
     private javax.swing.JButton btQETresB;
     private javax.swing.JButton btQETresC;

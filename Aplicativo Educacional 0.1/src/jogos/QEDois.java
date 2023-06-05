@@ -48,6 +48,7 @@ public class QEDois extends javax.swing.JFrame {
         btavncarQE = new javax.swing.JButton();
         btQEDoisMenu = new javax.swing.JButton();
         btVoltarQE = new javax.swing.JButton();
+        btPtDica2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -107,16 +108,21 @@ public class QEDois extends javax.swing.JFrame {
             }
         });
 
+        btPtDica2.setText("?");
+        btPtDica2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btPtDica2ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout PainelQEDoisLayout = new javax.swing.GroupLayout(PainelQEDois);
         PainelQEDois.setLayout(PainelQEDoisLayout);
         PainelQEDoisLayout.setHorizontalGroup(
             PainelQEDoisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PainelQEDoisLayout.createSequentialGroup()
                 .addGroup(PainelQEDoisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelQEDoisLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(btVoltarQE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 61, Short.MAX_VALUE)
+                    .addGroup(PainelQEDoisLayout.createSequentialGroup()
+                        .addContainerGap(130, Short.MAX_VALUE)
                         .addGroup(PainelQEDoisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addGroup(PainelQEDoisLayout.createSequentialGroup()
                                 .addComponent(btQEDoisC, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -124,45 +130,47 @@ public class QEDois extends javax.swing.JFrame {
                                 .addComponent(btQEDoisD, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(PainelQEDoisLayout.createSequentialGroup()
                                 .addComponent(btQEDoisA, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(69, 69, 69)
+                                .addGap(82, 82, 82)
                                 .addComponent(btQEDoisB, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(37, 37, 37)
-                        .addComponent(btavncarQE))
+                        .addGap(122, 122, 122))
                     .addGroup(PainelQEDoisLayout.createSequentialGroup()
-                        .addGroup(PainelQEDoisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(PainelQEDoisLayout.createSequentialGroup()
-                                .addGap(185, 185, 185)
-                                .addComponent(jlQEDoisA))
-                            .addGroup(PainelQEDoisLayout.createSequentialGroup()
-                                .addContainerGap()
-                                .addComponent(btQEDoisMenu)))
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                        .addContainerGap()
+                        .addComponent(btVoltarQE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btavncarQE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelQEDoisLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(btQEDoisMenu)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btPtDica2)))
                 .addContainerGap())
+            .addGroup(PainelQEDoisLayout.createSequentialGroup()
+                .addGap(186, 186, 186)
+                .addComponent(jlQEDoisA)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         PainelQEDoisLayout.setVerticalGroup(
             PainelQEDoisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelQEDoisLayout.createSequentialGroup()
-                .addContainerGap(53, Short.MAX_VALUE)
-                .addComponent(btQEDoisMenu)
-                .addGap(18, 18, 18)
+                .addContainerGap()
+                .addGroup(PainelQEDoisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btPtDica2)
+                    .addComponent(btQEDoisMenu))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 41, Short.MAX_VALUE)
                 .addComponent(jlQEDoisA)
-                .addGap(47, 47, 47)
+                .addGap(28, 28, 28)
                 .addGroup(PainelQEDoisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btQEDoisA, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btQEDoisB, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGroup(PainelQEDoisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(PainelQEDoisLayout.createSequentialGroup()
-                        .addGap(37, 37, 37)
-                        .addGroup(PainelQEDoisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(btQEDoisC, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btQEDoisD, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(45, 45, 45))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelQEDoisLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(PainelQEDoisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(btavncarQE)
-                            .addComponent(btVoltarQE))
-                        .addGap(25, 25, 25))))
+                .addGap(30, 30, 30)
+                .addGroup(PainelQEDoisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btQEDoisC, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btQEDoisD, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
+                .addGroup(PainelQEDoisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btVoltarQE)
+                    .addComponent(btavncarQE))
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -233,12 +241,17 @@ pontosQE=pontosQE-5;        // TODO add your handling code here:
         dispose();
     }//GEN-LAST:event_btVoltarQEActionPerformed
 
+    private void btPtDica2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPtDica2ActionPerformed
+        JOptionPane.showMessageDialog(null,"Essa cor é uma cor clara e brilhante!");
+    }//GEN-LAST:event_btPtDica2ActionPerformed
+
     /**
      * @param args the command line arguments
      */
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel PainelQEDois;
+    private javax.swing.JButton btPtDica2;
     private javax.swing.JButton btQEDoisA;
     private javax.swing.JButton btQEDoisB;
     private javax.swing.JButton btQEDoisC;

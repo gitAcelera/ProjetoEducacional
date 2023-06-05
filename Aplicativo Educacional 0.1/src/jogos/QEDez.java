@@ -47,8 +47,15 @@ public class QEDez extends javax.swing.JFrame {
         btQEDezD = new javax.swing.JButton();
         btQEDezMenu = new javax.swing.JButton();
         btVoltarQE = new javax.swing.JButton();
+        btPtDica2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(700, 400));
+        setResizable(false);
+
+        PainelQEDez.setPreferredSize(new java.awt.Dimension(700, 400));
+        PainelQEDez.setRequestFocusEnabled(false);
+        PainelQEDez.setVerifyInputWhenFocusTarget(false);
 
         jlQEDezA.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         jlQEDezA.setText("Qual é a cor do mar?");
@@ -99,12 +106,36 @@ public class QEDez extends javax.swing.JFrame {
             }
         });
 
+        btPtDica2.setText("?");
+        btPtDica2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btPtDica2ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout PainelQEDezLayout = new javax.swing.GroupLayout(PainelQEDez);
         PainelQEDez.setLayout(PainelQEDezLayout);
         PainelQEDezLayout.setHorizontalGroup(
             PainelQEDezLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PainelQEDezLayout.createSequentialGroup()
+                .addGroup(PainelQEDezLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelQEDezLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(btQEDezMenu)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btPtDica2))
+                    .addGroup(PainelQEDezLayout.createSequentialGroup()
+                        .addGroup(PainelQEDezLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(PainelQEDezLayout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(btVoltarQE))
+                            .addGroup(PainelQEDezLayout.createSequentialGroup()
+                                .addGap(170, 170, 170)
+                                .addComponent(jlQEDezA)))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelQEDezLayout.createSequentialGroup()
-                .addContainerGap(137, Short.MAX_VALUE)
+                .addGap(0, 131, Short.MAX_VALUE)
                 .addGroup(PainelQEDezLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addGroup(PainelQEDezLayout.createSequentialGroup()
                         .addComponent(btQEDezC, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -112,54 +143,41 @@ public class QEDez extends javax.swing.JFrame {
                         .addComponent(btQEDezD, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(PainelQEDezLayout.createSequentialGroup()
                         .addComponent(btQEDezA, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(69, 69, 69)
+                        .addGap(82, 82, 82)
                         .addComponent(btQEDezB, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(134, 134, 134))
-            .addGroup(PainelQEDezLayout.createSequentialGroup()
-                .addGroup(PainelQEDezLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(PainelQEDezLayout.createSequentialGroup()
-                        .addGap(181, 181, 181)
-                        .addComponent(jlQEDezA))
-                    .addGroup(PainelQEDezLayout.createSequentialGroup()
-                        .addGap(25, 25, 25)
-                        .addGroup(PainelQEDezLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btVoltarQE)
-                            .addComponent(btQEDezMenu))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(127, 127, 127))
         );
         PainelQEDezLayout.setVerticalGroup(
             PainelQEDezLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelQEDezLayout.createSequentialGroup()
-                .addContainerGap(30, Short.MAX_VALUE)
-                .addComponent(btQEDezMenu)
-                .addGap(18, 18, 18)
+                .addContainerGap()
+                .addGroup(PainelQEDezLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btPtDica2)
+                    .addComponent(btQEDezMenu))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
                 .addComponent(jlQEDezA)
-                .addGap(42, 42, 42)
+                .addGap(35, 35, 35)
                 .addGroup(PainelQEDezLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btQEDezA, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btQEDezB, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGroup(PainelQEDezLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(PainelQEDezLayout.createSequentialGroup()
-                        .addGap(37, 37, 37)
-                        .addGroup(PainelQEDezLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(btQEDezC, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btQEDezD, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(42, 42, 42))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelQEDezLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btVoltarQE)
-                        .addGap(37, 37, 37))))
+                .addGap(30, 30, 30)
+                .addGroup(PainelQEDezLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btQEDezC, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btQEDezD, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(26, 26, 26)
+                .addComponent(btVoltarQE)
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(PainelQEDez, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(PainelQEDez, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(PainelQEDez, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(PainelQEDez, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -239,12 +257,19 @@ new QENove().show();
         dispose();        // TODO add your handling code here:
     }//GEN-LAST:event_btVoltarQEActionPerformed
 
+    private void btPtDica2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPtDica2ActionPerformed
+        JOptionPane.showMessageDialog(null,"É a mesma cor da água da piscina em um dia ensolarado!");
+    }//GEN-LAST:event_btPtDica2ActionPerformed
+
     /**
      * @param args the command line arguments
      */
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel PainelQEDez;
+    private javax.swing.JButton btPtDica;
+    private javax.swing.JButton btPtDica1;
+    private javax.swing.JButton btPtDica2;
     private javax.swing.JButton btQEDezA;
     private javax.swing.JButton btQEDezB;
     private javax.swing.JButton btQEDezC;

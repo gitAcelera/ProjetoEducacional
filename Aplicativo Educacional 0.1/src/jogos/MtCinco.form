@@ -90,7 +90,7 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="btVoltarMenu" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="35" max="32767" attributes="0"/>
+                  <EmptySpace pref="37" max="32767" attributes="0"/>
                   <Component id="jlMtCincoA" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
                   <Component id="jlMtCincoB" min="-2" max="-2" attributes="0"/>
@@ -102,7 +102,7 @@
                       </Group>
                       <Component id="btMtCincoA" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="28" max="32767" attributes="0"/>
+                  <EmptySpace pref="31" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="btMtCincoC" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
                       <Component id="btMtCincoD" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>

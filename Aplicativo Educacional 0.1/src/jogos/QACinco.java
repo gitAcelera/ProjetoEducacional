@@ -47,6 +47,7 @@ int pontosQA = PontosAluno.getPontosQA();
         btQECincoMenu = new javax.swing.JButton();
         btAvancarQA = new javax.swing.JButton();
         btVoltarQA = new javax.swing.JButton();
+        btPtDica = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -109,6 +110,13 @@ int pontosQA = PontosAluno.getPontosQA();
             }
         });
 
+        btPtDica.setText("?");
+        btPtDica.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btPtDicaActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout PainelQACincoLayout = new javax.swing.GroupLayout(PainelQACinco);
         PainelQACinco.setLayout(PainelQACincoLayout);
         PainelQACincoLayout.setHorizontalGroup(
@@ -116,20 +124,6 @@ int pontosQA = PontosAluno.getPontosQA();
             .addGroup(PainelQACincoLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(PainelQACincoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelQACincoLayout.createSequentialGroup()
-                        .addGroup(PainelQACincoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btQACincoA, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelQACincoLayout.createSequentialGroup()
-                                .addComponent(btVoltarQA)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(btQACincoC, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(82, 82, 82)
-                        .addGroup(PainelQACincoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(btQACincoB, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btQACincoD, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(37, 37, 37)
-                        .addComponent(btAvancarQA)
-                        .addContainerGap())
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelQACincoLayout.createSequentialGroup()
                         .addGap(0, 105, Short.MAX_VALUE)
                         .addGroup(PainelQACincoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -140,15 +134,30 @@ int pontosQA = PontosAluno.getPontosQA();
                                 .addComponent(jlQACincoA)
                                 .addGap(92, 92, 92))))
                     .addGroup(PainelQACincoLayout.createSequentialGroup()
-                        .addComponent(btQECincoMenu)
-                        .addGap(0, 0, Short.MAX_VALUE))))
+                        .addGroup(PainelQACincoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelQACincoLayout.createSequentialGroup()
+                                .addGroup(PainelQACincoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(btQACincoA, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelQACincoLayout.createSequentialGroup()
+                                        .addComponent(btVoltarQA)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(btQACincoC, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGap(82, 82, 82)
+                                .addGroup(PainelQACincoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(btQACincoB, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(btQACincoD, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(37, 37, 37)
+                                .addComponent(btAvancarQA))
+                            .addGroup(PainelQACincoLayout.createSequentialGroup()
+                                .addComponent(btQECincoMenu)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(btPtDica)))
+                        .addContainerGap())))
         );
         PainelQACincoLayout.setVerticalGroup(
             PainelQACincoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PainelQACincoLayout.createSequentialGroup()
-                .addGap(22, 22, 22)
-                .addComponent(btQECincoMenu)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(51, 51, 51)
                 .addComponent(jlQACincoA, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jlQACincoB)
@@ -162,7 +171,11 @@ int pontosQA = PontosAluno.getPontosQA();
                     .addComponent(btQACincoD, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(27, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelQACincoLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap()
+                .addGroup(PainelQACincoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btPtDica)
+                    .addComponent(btQECincoMenu))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(PainelQACincoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btAvancarQA)
                     .addComponent(btVoltarQA))
@@ -237,6 +250,10 @@ int pontosQA = PontosAluno.getPontosQA();
         dispose();
     }//GEN-LAST:event_btVoltarQAActionPerformed
 
+    private void btPtDicaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPtDicaActionPerformed
+        JOptionPane.showMessageDialog(null,"Esse animal possui uma grande juba!");
+    }//GEN-LAST:event_btPtDicaActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -245,6 +262,7 @@ int pontosQA = PontosAluno.getPontosQA();
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel PainelQACinco;
     private javax.swing.JButton btAvancarQA;
+    private javax.swing.JButton btPtDica;
     private javax.swing.JButton btQACincoA;
     private javax.swing.JButton btQACincoB;
     private javax.swing.JButton btQACincoC;

@@ -47,6 +47,7 @@ int pontosQA = PontosAluno.getPontosQA();
         btQADezD = new javax.swing.JButton();
         btQEQuatroMenu = new javax.swing.JButton();
         btVoltarQA = new javax.swing.JButton();
+        btPtDica = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -102,6 +103,13 @@ int pontosQA = PontosAluno.getPontosQA();
             }
         });
 
+        btPtDica.setText("?");
+        btPtDica.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btPtDicaActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout PainelQADezLayout = new javax.swing.GroupLayout(PainelQADez);
         PainelQADez.setLayout(PainelQADezLayout);
         PainelQADezLayout.setHorizontalGroup(
@@ -124,11 +132,15 @@ int pontosQA = PontosAluno.getPontosQA();
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelQADezLayout.createSequentialGroup()
                                 .addComponent(jlQADezB)
                                 .addGap(276, 276, 276))))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelQADezLayout.createSequentialGroup()
+                        .addComponent(btQEQuatroMenu)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btPtDica)
+                        .addContainerGap())
                     .addGroup(PainelQADezLayout.createSequentialGroup()
                         .addGroup(PainelQADezLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(PainelQADezLayout.createSequentialGroup()
-                                .addComponent(btQEQuatroMenu)
-                                .addGap(37, 37, 37)
+                                .addGap(109, 109, 109)
                                 .addComponent(jlQADezA))
                             .addComponent(btVoltarQA))
                         .addGap(0, 114, Short.MAX_VALUE))))
@@ -136,13 +148,12 @@ int pontosQA = PontosAluno.getPontosQA();
         PainelQADezLayout.setVerticalGroup(
             PainelQADezLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PainelQADezLayout.createSequentialGroup()
-                .addGroup(PainelQADezLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(PainelQADezLayout.createSequentialGroup()
-                        .addGap(37, 37, 37)
-                        .addComponent(jlQADezA))
-                    .addGroup(PainelQADezLayout.createSequentialGroup()
-                        .addGap(23, 23, 23)
-                        .addComponent(btQEQuatroMenu)))
+                .addContainerGap()
+                .addGroup(PainelQADezLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btPtDica)
+                    .addComponent(btQEQuatroMenu))
+                .addGap(8, 8, 8)
+                .addComponent(jlQADezA)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jlQADezB)
                 .addGap(31, 31, 31)
@@ -246,12 +257,17 @@ int pontosQA = PontosAluno.getPontosQA();
         dispose();
     }//GEN-LAST:event_btVoltarQAActionPerformed
 
+    private void btPtDicaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPtDicaActionPerformed
+        JOptionPane.showMessageDialog(null,"Esse animal possui escamas!");
+    }//GEN-LAST:event_btPtDicaActionPerformed
+
     /**
      * @param args the command line arguments
      */
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel PainelQADez;
+    private javax.swing.JButton btPtDica;
     private javax.swing.JButton btQADezA;
     private javax.swing.JButton btQADezB;
     private javax.swing.JButton btQADezC;
