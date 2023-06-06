@@ -49,7 +49,6 @@ public class PtSete extends javax.swing.JFrame {
         btPtAvancar = new javax.swing.JButton();
         btPtDica = new javax.swing.JButton();
         btVoltarPt = new javax.swing.JButton();
-        btVoltarMt = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(700, 400));
@@ -134,7 +133,7 @@ public class PtSete extends javax.swing.JFrame {
                         .addComponent(btMtUmMenu)
                         .addGap(49, 49, 49)
                         .addComponent(jlPtSeteA)
-                        .addGap(0, 18, Short.MAX_VALUE))
+                        .addGap(0, 33, Short.MAX_VALUE))
                     .addGroup(PainelPtSeteLayout.createSequentialGroup()
                         .addComponent(btVoltarPt)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -195,14 +194,6 @@ public class PtSete extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(0, 0, 0, 35);
         getContentPane().add(PainelPtSete, gridBagConstraints);
 
-        btVoltarMt.setText("Voltar");
-        btVoltarMt.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btVoltarMtActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btVoltarMt, new java.awt.GridBagConstraints());
-
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
@@ -260,11 +251,6 @@ pontosPt=pontosPt-5;         // TODO add your handling code here:
 pontosPt=pontosPt-5;         // TODO add your handling code here:
     }//GEN-LAST:event_btPtSeteDActionPerformed
 
-    private void btVoltarMtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btVoltarMtActionPerformed
-        new MtDois ().show();
-        dispose();
-    }//GEN-LAST:event_btVoltarMtActionPerformed
-
     private void btVoltarPtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btVoltarPtActionPerformed
         new PtSeis ().show();
         dispose();
@@ -283,7 +269,6 @@ pontosPt=pontosPt-5;         // TODO add your handling code here:
     private javax.swing.JButton btPtSeteB;
     private javax.swing.JButton btPtSeteC;
     private javax.swing.JButton btPtSeteD;
-    private javax.swing.JButton btVoltarMt;
     private javax.swing.JButton btVoltarPt;
     private javax.swing.JLabel jlPtSeteA;
     private javax.swing.JLabel jlPtSeteB;

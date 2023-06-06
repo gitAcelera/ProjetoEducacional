@@ -284,5 +284,51 @@ public boolean excluirProfessor(Pessoa pessoa)
             }
         }
         return status;
+  
     }
+public String buscarJogo()
+    {
+    	String jogo = "";
+    	
+    	connection = Conexao.getInstance().getConnection();
+        System.out.println("Conectado e preparando a listagem");
+        Statement stmt = null;
+        
+        try
+        {
+            stmt = connection.createStatement();
+            ResultSet res = stmt.executeQuery("SELECT * FROM questoes");
+            
+            while (res.next())
+            {
+            	jogo+= "\n Código : "+res.getString("codigo" );
+			jogo += "\n Disciplina : "+res.getString("disciplina");
+				jogo += "\n Questão : "+res.getString("questao");
+				jogo += "\n----------------------------------------------";				
+            }
+            
+        } 
+        catch (SQLException e)
+        {
+            System.out.println(e.getMessage());
+            return null;
+        }
+        finally
+        {
+          
+            try
+            {
+                stmt.close();
+                connection.close();
+            }
+            catch (SQLException e)
+            {
+                System.out.println("Erro ao desconectar" + e.getMessage());
+            }
+        }
+    	
+    	return jogo;
+    }
+
+
 }

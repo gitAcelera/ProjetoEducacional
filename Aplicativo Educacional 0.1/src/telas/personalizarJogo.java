@@ -12,9 +12,7 @@ import javax.swing.JOptionPane;
  * @author ADM
  */
 public class personalizarJogo extends javax.swing.JFrame {
-    private String codigoAtual,disciplinaAtual,questaoAtual;
- private String altA,altB,altC,altD;
- private String novoCodigo, novaQuestao,novaDisciplina, novoAltA,novoAltB,novoAltC,novoAltD;
+    private String novoCodigo, novaQuestao,novaDisciplina, novoAltA,novoAltB,novoAltC,novoAltD;
  private String consultaCodigos= " ";
  private String consultaDisciplina = " ";
 
@@ -36,54 +34,27 @@ public class personalizarJogo extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        consultaCodigo = new javax.swing.JTextField();
         consultaDis = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
-        btConsult = new javax.swing.JButton();
-        jLabel4 = new javax.swing.JLabel();
         campoQuestao = new javax.swing.JTextField();
         campoNovoCodigo = new javax.swing.JTextField();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
         campoAltA = new javax.swing.JTextField();
         campoAltB = new javax.swing.JTextField();
         campoAltC = new javax.swing.JTextField();
         campoAltD = new javax.swing.JTextField();
         btConfirmarAlteracaoAluno = new javax.swing.JButton();
+        Questão = new javax.swing.JLabel();
+        campoAlternativaA = new javax.swing.JLabel();
+        campoAlternativaB = new javax.swing.JLabel();
+        campoAlternativaC = new javax.swing.JLabel();
+        campoAlternativaD = new javax.swing.JLabel();
+        btVoltar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setText("Código do Jogo");
 
-        consultaCodigo.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                consultaCodigoActionPerformed(evt);
-            }
-        });
-
         jLabel5.setText("Disciplina");
-
-        btConsult.setText("consulta");
-        btConsult.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btConsultActionPerformed(evt);
-            }
-        });
-
-        jLabel4.setText("questão");
-
-        jLabel8.setText("Novo Código do Jogo");
-
-        jLabel2.setText("alternativa A");
-
-        jLabel3.setText("alternativa B");
-
-        jLabel6.setText("alternativa C");
-
-        jLabel7.setText("alternativa D");
 
         campoAltC.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -98,105 +69,101 @@ public class personalizarJogo extends javax.swing.JFrame {
             }
         });
 
+        Questão.setText("Questão");
+
+        campoAlternativaA.setText("alternativa A");
+
+        campoAlternativaB.setText("alternativa B");
+
+        campoAlternativaC.setText("alternativa C");
+
+        campoAlternativaD.setText("alternativa D");
+
+        btVoltar.setText("voltar");
+        btVoltar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btVoltarActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(btVoltar)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btConfirmarAlteracaoAluno)
+                .addGap(28, 28, 28))
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(46, 46, 46)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(consultaCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(171, 171, 171)
-                        .addComponent(consultaDis, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(225, 225, 225)
-                        .addComponent(jLabel5)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(58, 58, 58)
+                        .addGap(52, 52, 52)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(campoQuestao, javax.swing.GroupLayout.PREFERRED_SIZE, 279, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(104, 104, 104)
-                                .addComponent(campoNovoCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(campoAltA, javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 72, Short.MAX_VALUE))
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addGap(61, 61, 61)
-                                        .addComponent(jLabel3)
-                                        .addGap(65, 65, 65)
-                                        .addComponent(jLabel6))
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addGap(71, 71, 71)
-                                        .addComponent(campoAltB, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(67, 67, 67)
-                                        .addComponent(campoAltC)))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 90, Short.MAX_VALUE)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel7, javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(campoAltD, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                            .addComponent(consultaDis, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(campoNovoCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel5)
+                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(71, 71, 71)
-                        .addComponent(jLabel4)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel8)))
-                .addGap(169, 169, 169))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(btConsult)
-                        .addGap(119, 119, 119))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(btConfirmarAlteracaoAluno)
-                        .addGap(97, 97, 97))))
+                        .addGap(101, 101, 101)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(campoAlternativaA, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(campoAltA, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(20, 20, 20)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(campoQuestao, javax.swing.GroupLayout.PREFERRED_SIZE, 279, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(20, 20, 20)
+                                .addComponent(campoAltB, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(65, 65, 65)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(campoAltC, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(campoAlternativaC))
+                                .addGap(62, 62, 62)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(campoAlternativaD)
+                                    .addComponent(campoAltD, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(308, 308, 308)
+                        .addComponent(Questão))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(213, 213, 213)
+                        .addComponent(campoAlternativaB)))
+                .addGap(169, 177, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(23, 23, 23)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(jLabel5))
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(consultaCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(consultaDis, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(32, 32, 32)
-                        .addComponent(btConsult)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jLabel4)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(campoQuestao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(campoNovoCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(108, 108, 108)
-                        .addComponent(jLabel8)))
-                .addGap(59, 59, 59)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(jLabel3)
-                    .addComponent(jLabel6)
-                    .addComponent(jLabel7))
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(campoNovoCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
+                .addComponent(jLabel5)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(consultaDis, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(46, 46, 46)
+                .addComponent(Questão)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(campoQuestao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(campoAlternativaA)
+                    .addComponent(campoAlternativaB)
+                    .addComponent(campoAlternativaC)
+                    .addComponent(campoAlternativaD))
+                .addGap(25, 25, 25)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(campoAltA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(campoAltB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(campoAltC, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(campoAltD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 58, Short.MAX_VALUE)
-                .addComponent(btConfirmarAlteracaoAluno)
-                .addGap(29, 29, 29))
+                .addGap(63, 63, 63)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btConfirmarAlteracaoAluno)
+                    .addComponent(btVoltar))
+                .addGap(18, 18, 18))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -213,24 +180,19 @@ public class personalizarJogo extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void consultaCodigoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_consultaCodigoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_consultaCodigoActionPerformed
-
-    private void btConsultActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btConsultActionPerformed
-
-        alterarJogo();
-
-    }//GEN-LAST:event_btConsultActionPerformed
-
     private void campoAltCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoAltCActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_campoAltCActionPerformed
 
     private void btConfirmarAlteracaoAlunoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btConfirmarAlteracaoAlunoActionPerformed
 
-        confirmarAlteracao();
+        criarJogo();
     }//GEN-LAST:event_btConfirmarAlteracaoAlunoActionPerformed
+
+    private void btVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btVoltarActionPerformed
+        new menuPrincipalProfessor().show();
+        dispose(); // TODO add your handling code here:
+    }//GEN-LAST:event_btVoltarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -238,95 +200,26 @@ public class personalizarJogo extends javax.swing.JFrame {
    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Questão;
     private javax.swing.JButton btConfirmarAlteracaoAluno;
-    private javax.swing.JButton btConsult;
+    private javax.swing.JButton btVoltar;
     private javax.swing.JTextField campoAltA;
     private javax.swing.JTextField campoAltB;
     private javax.swing.JTextField campoAltC;
     private javax.swing.JTextField campoAltD;
+    private javax.swing.JLabel campoAlternativaA;
+    private javax.swing.JLabel campoAlternativaB;
+    private javax.swing.JLabel campoAlternativaC;
+    private javax.swing.JLabel campoAlternativaD;
     private javax.swing.JTextField campoNovoCodigo;
     private javax.swing.JTextField campoQuestao;
-    private javax.swing.JTextField consultaCodigo;
     private javax.swing.JTextField consultaDis;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
-public void alterarJogo()
- {
-     
- 
-
- int status;
-				
-				
-	try
-	{
-               Class.forName("com.mysql.cj.jdbc.Driver");
-               Connection con = DriverManager.getConnection("jdbc:mysql://localhost/aplicativo_educacional","root","");
-               Statement stm = con.createStatement();
-               ResultSet res = stm.executeQuery("SELECT * from questoes");
-					
-                consultaCodigos = consultaCodigo.getText();
-                consultaDisciplina = consultaDis.getText();
-                status = 0;
-		while(res.next())
-		{
-		   codigoAtual = res.getString("codigo");
-                   disciplinaAtual = res.getString("disciplina");
-
-
-		   
-                   if(disciplinaAtual.compareTo(consultaDisciplina)==0 && codigoAtual.compareTo(consultaCodigos)==0)
-		   {
-			  questaoAtual = res.getString("questao");
-                          altA= res.getString("a");
-                          altB=res.getString("b");
-                          altC=res.getString("c");
-                          altD=res.getString("d");
-			
-			  status = 1;						  
-		   }					   			   
-		}
-		if(status == 1)
-		{
-			campoQuestao.setText (questaoAtual);
-			campoAltA.setText(altA);
-                        campoAltB.setText(altB);
-                        campoAltC.setText (altC);
-                        campoAltD.setText(altD);
-		}
-		if(status == 0)
-		{
-			JOptionPane.showMessageDialog(null,"Nome: "+consultaCodigo+" n�o encontrado!!!","Erro",JOptionPane.ERROR_MESSAGE);
-		}
-	}
-	catch(ClassNotFoundException ex)
-	{
-		JOptionPane.showMessageDialog(null,ex.getMessage(),"Erro",JOptionPane.ERROR_MESSAGE);
-	}
-	catch(SQLException ex)
-	{
-		JOptionPane.showMessageDialog(null,ex.getMessage(),"Erro",JOptionPane.ERROR_MESSAGE);
-	}
-
- }
-    
-    public void confirmarAlteracao()
+public void criarJogo()
     {
-         String classeDriver = "com.mysql.cj.jdbc.Driver";
-	String stringConexao = "jdbc:mysql://localhost/aplicativo_educacional";
-	String login = "root";
-	String senha = "";
-	Connection con;
-	String sql;
-        
         novoCodigo=campoNovoCodigo.getText();
         novaQuestao = campoQuestao.getText();  
         novaDisciplina = consultaDis.getText();
@@ -335,38 +228,31 @@ public void alterarJogo()
         novoAltC=campoAltC.getText();
         novoAltD=campoAltD.getText();
         
-        
-        
-       con = null;
-        
-        sql = "SELECT *From questoaluno ";
-        
-        try
-	{
-	    Class.forName(classeDriver);
-	    con = DriverManager.getConnection(stringConexao, login, senha);
-	    PreparedStatement stmt = con.prepareStatement(sql);
-           
-
-	    /*int x=stmt.executeUpdate("UPDATE questoes SET codigo='"+novoCodigo+"'," +
-	         "disciplina='"+disciplinaAtual+"',questao='"+novaQuestao
-                    +"', a='"+novoAltA+"', b='"+novoAltB+"', c='"+novoAltC+"', d='"+novoAltD+"' WHERE codigo="+consultaCodigos);*/
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost/aplicativo_educacional","root","");
+            Statement stm = con.createStatement();
+     if(stm.executeUpdate("INSERT into questoes values('"+novoCodigo+"','"+novaDisciplina+"','"+novaQuestao+"','"+novoAltA+"','"+novoAltB+"','"+novoAltC+"','"+novoAltD+"')")!=0)
+            {
+                JOptionPane.showMessageDialog(null,"Jogo Criado com sucesso!!!","Sucesso",JOptionPane.INFORMATION_MESSAGE);
+                campoNovoCodigo.setText("");
+                consultaDis.setText("");
+                campoQuestao.setText("");
+                campoAltA.setText("");
+                campoAltB.setText("");
+                campoAltD.setText("");
+            } else{
+                JOptionPane.showMessageDialog(null,"Erro para realizar a alteração!!!","Erro",JOptionPane.ERROR_MESSAGE);   
+            }
             
-            int x=stmt.executeUpdate("UPDATE questoes SET disciplina='"+disciplinaAtual+"',questao='"+novaQuestao
-                    +"', a='"+novoAltA+"', b='"+novoAltB+"', c='"+novoAltC+"', d='"+novoAltD+"' WHERE codigo="+consultaCodigos);
-            
-            if (x == 1 )
-                JOptionPane.showMessageDialog(null,"Jogo atualizado com sucesso!","",JOptionPane.INFORMATION_MESSAGE);
         }
-	catch(SQLException ex)
-	{
-	   JOptionPane.showMessageDialog(null,ex.getMessage(),"Erro",JOptionPane.INFORMATION_MESSAGE);
-	}
-	catch(ClassNotFoundException ex)
-	{
-	   JOptionPane.showMessageDialog(null,ex.getMessage(),"Erro",JOptionPane.INFORMATION_MESSAGE);
-	}
- 
+                catch(ClassNotFoundException ex)
+        {
+            JOptionPane.showMessageDialog(null,ex.getMessage(),"Erro",JOptionPane.ERROR_MESSAGE);
+        }
+        catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null,ex.getMessage(),"Erro",JOptionPane.ERROR_MESSAGE);
+        }
     }
 
 }
