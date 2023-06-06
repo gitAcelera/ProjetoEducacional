@@ -43,11 +43,22 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="btVoltarMenu" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <Component id="btVoltarMenu" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
+                          <Component id="btPtDica" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="1" attributes="0">
+                          <Component id="btVoltarMt" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
+                          <Component id="btAvancar" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
               </Group>
               <Group type="102" alignment="1" attributes="0">
-                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="btMtDezA" min="-2" pref="180" max="-2" attributes="0"/>
                       <Component id="btMtDezC" min="-2" pref="180" max="-2" attributes="0"/>
@@ -57,30 +68,26 @@
                       <Component id="btMtDezD" min="-2" pref="180" max="-2" attributes="0"/>
                       <Component id="btMtDezB" min="-2" pref="180" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace min="-2" pref="124" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="128" max="-2" attributes="0"/>
               </Group>
-              <Group type="102" alignment="1" attributes="0">
-                  <EmptySpace pref="125" max="32767" attributes="0"/>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="112" max="-2" attributes="0"/>
                   <Component id="jlMtDezA" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="105" max="-2" attributes="0"/>
-              </Group>
-              <Group type="102" alignment="1" attributes="0">
-                  <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
-                  <Component id="btVoltarMt" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="32767" attributes="0"/>
-                  <Component id="btAvancar" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
+                  <EmptySpace pref="118" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
-                  <Component id="btVoltarMenu" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="51" max="32767" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="btVoltarMenu" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="btPtDica" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                   <Component id="jlMtDezA" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
+                  <EmptySpace pref="38" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="btMtDezA" alignment="3" min="-2" pref="80" max="-2" attributes="0"/>
                       <Component id="btMtDezB" alignment="3" min="-2" pref="80" max="-2" attributes="0"/>
@@ -90,7 +97,7 @@
                       <Component id="btMtDezD" alignment="3" min="-2" pref="80" max="-2" attributes="0"/>
                       <Component id="btMtDezC" alignment="3" min="-2" pref="80" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="btAvancar" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="btVoltarMt" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -172,6 +179,14 @@
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btVoltarMtActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="btPtDica">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="?"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btPtDicaActionPerformed"/>
           </Events>
         </Component>
       </SubComponents>

@@ -47,6 +47,7 @@ public class MtTres extends javax.swing.JFrame {
         btAvancar = new javax.swing.JButton();
         btVoltarMenu = new javax.swing.JButton();
         btVoltarMt = new javax.swing.JButton();
+        btPtDica = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -112,68 +113,76 @@ public class MtTres extends javax.swing.JFrame {
             }
         });
 
+        btPtDica.setText("?");
+        btPtDica.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btPtDicaActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout PainelMtTresLayout = new javax.swing.GroupLayout(PainelMtTres);
         PainelMtTres.setLayout(PainelMtTresLayout);
         PainelMtTresLayout.setHorizontalGroup(
             PainelMtTresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PainelMtTresLayout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(PainelMtTresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(PainelMtTresLayout.createSequentialGroup()
-                        .addComponent(btVoltarMenu)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelMtTresLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(btVoltarMt)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 60, Short.MAX_VALUE)
                         .addGroup(PainelMtTresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btMtTresA, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btMtTresC, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(82, 82, 82)
+                            .addGroup(PainelMtTresLayout.createSequentialGroup()
+                                .addComponent(btVoltarMt)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(PainelMtTresLayout.createSequentialGroup()
+                                .addComponent(btVoltarMenu)
+                                .addGap(77, 77, 77)
+                                .addComponent(jlMtTresA)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                         .addGroup(PainelMtTresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btMtTresD, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btMtTresB, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(44, 44, 44)))
-                .addComponent(btAvancar)
-                .addContainerGap())
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelMtTresLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addGroup(PainelMtTresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btAvancar)
+                            .addComponent(btPtDica, javax.swing.GroupLayout.Alignment.TRAILING))
+                        .addContainerGap())
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelMtTresLayout.createSequentialGroup()
-                        .addComponent(jlMtTresB)
-                        .addGap(290, 290, 290))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelMtTresLayout.createSequentialGroup()
-                        .addComponent(jlMtTresA)
-                        .addGap(148, 148, 148))))
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(PainelMtTresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelMtTresLayout.createSequentialGroup()
+                                .addComponent(jlMtTresB)
+                                .addGap(289, 289, 289))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelMtTresLayout.createSequentialGroup()
+                                .addGroup(PainelMtTresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(btMtTresA, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(btMtTresC, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(82, 82, 82)
+                                .addGroup(PainelMtTresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(btMtTresD, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(btMtTresB, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(124, 124, 124))))))
         );
         PainelMtTresLayout.setVerticalGroup(
             PainelMtTresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PainelMtTresLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(btVoltarMenu)
-                .addGap(21, 21, 21)
+                .addGroup(PainelMtTresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btVoltarMenu)
+                    .addComponent(btPtDica))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(PainelMtTresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btVoltarMt)
+                    .addComponent(btAvancar))
+                .addContainerGap())
+            .addGroup(PainelMtTresLayout.createSequentialGroup()
+                .addGap(22, 22, 22)
                 .addComponent(jlMtTresA)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jlMtTresB)
                 .addGap(18, 18, 18)
                 .addGroup(PainelMtTresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btMtTresA, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btMtTresB, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGroup(PainelMtTresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(PainelMtTresLayout.createSequentialGroup()
-                        .addGap(30, 30, 30)
-                        .addGroup(PainelMtTresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(btMtTresC, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btMtTresD, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addContainerGap(23, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelMtTresLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(PainelMtTresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelMtTresLayout.createSequentialGroup()
-                                .addComponent(btAvancar)
-                                .addGap(28, 28, 28))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelMtTresLayout.createSequentialGroup()
-                                .addComponent(btVoltarMt)
-                                .addGap(25, 25, 25))))))
+                .addGap(30, 30, 30)
+                .addGroup(PainelMtTresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btMtTresC, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btMtTresD, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(62, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -245,6 +254,10 @@ public class MtTres extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_btVoltarMtActionPerformed
 
+    private void btPtDicaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPtDicaActionPerformed
+        JOptionPane.showMessageDialog(null,"A operação é soma ou seja conte cada unidade na mão!");
+    }//GEN-LAST:event_btPtDicaActionPerformed
+
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -254,6 +267,7 @@ public class MtTres extends javax.swing.JFrame {
     private javax.swing.JButton btMtTresB;
     private javax.swing.JButton btMtTresC;
     private javax.swing.JButton btMtTresD;
+    private javax.swing.JButton btPtDica;
     private javax.swing.JButton btVoltarMenu;
     private javax.swing.JButton btVoltarMt;
     private javax.swing.JLabel jlMtTresA;

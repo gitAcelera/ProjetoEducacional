@@ -38,18 +38,22 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="1" attributes="0">
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Component id="btVoltarMt" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="32767" attributes="0"/>
-                  <Component id="btAvancar" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
-              </Group>
               <Group type="102" attributes="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="btVoltarMenu" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="btVoltarMt" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
+                          <Component id="btAvancar" min="-2" max="-2" attributes="0"/>
+                      </Group>
                       <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="122" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="btVoltarMenu" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
+                          <Component id="btPtDica" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="128" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
@@ -64,9 +68,10 @@
                               </Group>
                               <Component id="jlMtNoveA" min="-2" max="-2" attributes="0"/>
                           </Group>
+                          <EmptySpace min="0" pref="124" max="32767" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace pref="136" max="32767" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -74,10 +79,13 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="1" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="btVoltarMenu" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="65" max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="btVoltarMenu" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="btPtDica" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
                   <Component id="jlMtNoveA" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                  <EmptySpace pref="40" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="btMtNoveA" alignment="3" min="-2" pref="80" max="-2" attributes="0"/>
                       <Component id="btMtNoveB" alignment="3" min="-2" pref="80" max="-2" attributes="0"/>
@@ -87,7 +95,7 @@
                       <Component id="btMtNoveD" alignment="3" min="-2" pref="80" max="-2" attributes="0"/>
                       <Component id="btMtNoveC" alignment="3" min="-2" pref="80" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="btAvancar" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="btVoltarMt" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -175,6 +183,14 @@
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btVoltarMtActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="btPtDica">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="?"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btPtDicaActionPerformed"/>
           </Events>
         </Component>
       </SubComponents>

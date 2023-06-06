@@ -48,6 +48,7 @@ public class MtSeis extends javax.swing.JFrame {
         btAvancar = new javax.swing.JButton();
         btVoltarMenu = new javax.swing.JButton();
         btVoltarMt = new javax.swing.JButton();
+        btPtDica = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -59,7 +60,7 @@ public class MtSeis extends javax.swing.JFrame {
         jlMtSeisA.setText("Qual o valor da operação");
 
         jlMtSeisB.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        jlMtSeisB.setText("\"12 - 3\"");
+        jlMtSeisB.setText("\"12 - 3\"?");
 
         btMtSeisA.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btMtSeisA.setText("15");
@@ -115,50 +116,62 @@ public class MtSeis extends javax.swing.JFrame {
             }
         });
 
+        btPtDica.setText("?");
+        btPtDica.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btPtDicaActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout PainelMtSeisLayout = new javax.swing.GroupLayout(PainelMtSeis);
         PainelMtSeis.setLayout(PainelMtSeisLayout);
         PainelMtSeisLayout.setHorizontalGroup(
             PainelMtSeisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelMtSeisLayout.createSequentialGroup()
-                .addGap(20, 20, 20)
-                .addComponent(btVoltarMt)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btAvancar)
-                .addGap(20, 20, 20))
             .addGroup(PainelMtSeisLayout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(PainelMtSeisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelMtSeisLayout.createSequentialGroup()
+                        .addComponent(btVoltarMt)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btAvancar))
                     .addGroup(PainelMtSeisLayout.createSequentialGroup()
-                        .addGap(126, 126, 126)
-                        .addGroup(PainelMtSeisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addGroup(PainelMtSeisLayout.createSequentialGroup()
-                                .addComponent(btMtSeisC, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(btMtSeisD, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(PainelMtSeisLayout.createSequentialGroup()
-                                .addComponent(btMtSeisA, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(82, 82, 82)
-                                .addComponent(btMtSeisB, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addComponent(btVoltarMenu)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btPtDica)))
+                .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelMtSeisLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jlMtSeisA)
+                .addGap(149, 149, 149))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelMtSeisLayout.createSequentialGroup()
+                .addContainerGap(132, Short.MAX_VALUE)
+                .addGroup(PainelMtSeisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addGroup(PainelMtSeisLayout.createSequentialGroup()
-                        .addGap(286, 286, 286)
-                        .addComponent(jlMtSeisB))
+                        .addComponent(btMtSeisC, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btMtSeisD, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(PainelMtSeisLayout.createSequentialGroup()
-                        .addGap(149, 149, 149)
-                        .addComponent(jlMtSeisA))
-                    .addGroup(PainelMtSeisLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(btVoltarMenu)))
-                .addContainerGap(132, Short.MAX_VALUE))
+                        .addComponent(btMtSeisA, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(82, 82, 82)
+                        .addComponent(btMtSeisB, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(126, 126, 126))
+            .addGroup(PainelMtSeisLayout.createSequentialGroup()
+                .addGap(288, 288, 288)
+                .addComponent(jlMtSeisB, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         PainelMtSeisLayout.setVerticalGroup(
             PainelMtSeisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PainelMtSeisLayout.createSequentialGroup()
-                .addGap(13, 13, 13)
-                .addComponent(btVoltarMenu)
-                .addGap(18, 18, 18)
+                .addContainerGap()
+                .addGroup(PainelMtSeisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btVoltarMenu)
+                    .addComponent(btPtDica))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jlMtSeisA)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jlMtSeisB)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(18, 18, 18)
                 .addGroup(PainelMtSeisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btMtSeisA, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btMtSeisB, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -166,7 +179,7 @@ public class MtSeis extends javax.swing.JFrame {
                 .addGroup(PainelMtSeisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btMtSeisC, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btMtSeisD, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(2, 2, 2)
+                .addGap(27, 27, 27)
                 .addGroup(PainelMtSeisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btAvancar)
                     .addComponent(btVoltarMt))
@@ -241,6 +254,10 @@ public class MtSeis extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_btVoltarMtActionPerformed
 
+    private void btPtDicaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPtDicaActionPerformed
+        JOptionPane.showMessageDialog(null,"A operação é subtração ou seja, se você tem 5 laranjas e deu 2, você tem 3 laranjas agora!");
+    }//GEN-LAST:event_btPtDicaActionPerformed
+
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -250,6 +267,7 @@ public class MtSeis extends javax.swing.JFrame {
     private javax.swing.JButton btMtSeisB;
     private javax.swing.JButton btMtSeisC;
     private javax.swing.JButton btMtSeisD;
+    private javax.swing.JButton btPtDica;
     private javax.swing.JButton btVoltarMenu;
     private javax.swing.JButton btVoltarMt;
     private javax.swing.JLabel jlMtSeisA;

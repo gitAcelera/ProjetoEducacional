@@ -47,6 +47,7 @@ public class MtDois extends javax.swing.JFrame {
         btAvancar = new javax.swing.JButton();
         btVoltarMenu = new javax.swing.JButton();
         btVoltarMt = new javax.swing.JButton();
+        btPtDica = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -111,69 +112,77 @@ public class MtDois extends javax.swing.JFrame {
             }
         });
 
+        btPtDica.setText("?");
+        btPtDica.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btPtDicaActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout PainelMtDoisLayout = new javax.swing.GroupLayout(PainelMtDois);
         PainelMtDois.setLayout(PainelMtDoisLayout);
         PainelMtDoisLayout.setHorizontalGroup(
             PainelMtDoisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelMtDoisLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jlMtDoisA)
+                .addGap(146, 146, 146))
             .addGroup(PainelMtDoisLayout.createSequentialGroup()
                 .addGroup(PainelMtDoisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(PainelMtDoisLayout.createSequentialGroup()
-                        .addGap(255, 255, 255)
+                        .addGap(273, 273, 273)
                         .addComponent(jlMtDoisB))
                     .addGroup(PainelMtDoisLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(btVoltarMt)
-                        .addGap(52, 52, 52)
+                        .addGap(126, 126, 126)
                         .addGroup(PainelMtDoisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(btMtDoisA, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(btMtDoisC, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(82, 82, 82)
                         .addGroup(PainelMtDoisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(btMDoisB, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(PainelMtDoisLayout.createSequentialGroup()
-                                .addComponent(btMtDoisD, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
-                                .addComponent(btAvancar)))))
-                .addGap(17, 17, 17))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelMtDoisLayout.createSequentialGroup()
-                .addGap(18, 18, 18)
-                .addComponent(btVoltarMenu)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jlMtDoisA)
-                .addGap(147, 147, 147))
+                            .addComponent(btMtDoisD, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(132, Short.MAX_VALUE))
+            .addGroup(PainelMtDoisLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(PainelMtDoisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelMtDoisLayout.createSequentialGroup()
+                        .addComponent(btVoltarMenu)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btPtDica)
+                        .addContainerGap())
+                    .addGroup(PainelMtDoisLayout.createSequentialGroup()
+                        .addComponent(btVoltarMt)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btAvancar))))
         );
         PainelMtDoisLayout.setVerticalGroup(
             PainelMtDoisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PainelMtDoisLayout.createSequentialGroup()
-                .addGroup(PainelMtDoisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(PainelMtDoisLayout.createSequentialGroup()
-                        .addGap(44, 44, 44)
-                        .addComponent(jlMtDoisA))
-                    .addGroup(PainelMtDoisLayout.createSequentialGroup()
-                        .addGap(26, 26, 26)
-                        .addComponent(btVoltarMenu)))
-                .addGap(18, 18, 18)
-                .addComponent(jlMtDoisB)
-                .addGap(28, 28, 28)
+                .addContainerGap()
                 .addGroup(PainelMtDoisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btMtDoisA, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btMDoisB, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btPtDica)
+                    .addComponent(btVoltarMenu))
                 .addGroup(PainelMtDoisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(PainelMtDoisLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jlMtDoisA)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jlMtDoisB)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
+                        .addGroup(PainelMtDoisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(btMtDoisA, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btMDoisB, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(30, 30, 30)
                         .addGroup(PainelMtDoisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(btMtDoisC, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(btMtDoisD, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addContainerGap(24, Short.MAX_VALUE))
+                        .addGap(47, 47, 47))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelMtDoisLayout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(PainelMtDoisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelMtDoisLayout.createSequentialGroup()
-                                .addComponent(btAvancar)
-                                .addGap(36, 36, 36))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelMtDoisLayout.createSequentialGroup()
-                                .addComponent(btVoltarMt)
-                                .addGap(33, 33, 33))))))
+                        .addGroup(PainelMtDoisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(btVoltarMt)
+                            .addComponent(btAvancar))
+                        .addContainerGap())))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -244,6 +253,10 @@ public class MtDois extends javax.swing.JFrame {
    dispose();     
     }//GEN-LAST:event_btVoltarMtActionPerformed
 
+    private void btPtDicaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPtDicaActionPerformed
+        JOptionPane.showMessageDialog(null,"A operação é soma ou seja conte cada unidade na mão!");
+    }//GEN-LAST:event_btPtDicaActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -256,6 +269,7 @@ public class MtDois extends javax.swing.JFrame {
     private javax.swing.JButton btMtDoisA;
     private javax.swing.JButton btMtDoisC;
     private javax.swing.JButton btMtDoisD;
+    private javax.swing.JButton btPtDica;
     private javax.swing.JButton btVoltarMenu;
     private javax.swing.JButton btVoltarMt;
     private javax.swing.JLabel jlMtDoisA;

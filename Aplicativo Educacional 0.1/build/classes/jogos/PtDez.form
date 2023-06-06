@@ -38,75 +38,81 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="1" attributes="0">
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Component id="btVoltarPt" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="52" max="32767" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="btPtDezC" min="-2" pref="180" max="-2" attributes="0"/>
-                      <Component id="btPtDezA" min="-2" pref="180" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace min="-2" pref="82" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="btPtDezB" alignment="0" min="-2" pref="180" max="-2" attributes="0"/>
-                      <Component id="btPtDezD" alignment="0" min="-2" pref="180" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace min="-2" pref="135" max="-2" attributes="0"/>
-              </Group>
               <Group type="102" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="246" max="-2" attributes="0"/>
-                          <Component id="jlPtDezB" min="-2" max="-2" attributes="0"/>
+                      <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="1" attributes="0">
+                                  <Component id="jlPtDezB" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="257" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="1" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="btPtDezC" min="-2" pref="180" max="-2" attributes="0"/>
+                                      <Component id="btPtDezA" min="-2" pref="180" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="82" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="btPtDezB" alignment="0" min="-2" pref="180" max="-2" attributes="0"/>
+                                      <Component id="btPtDezD" alignment="0" min="-2" pref="180" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="131" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
                       </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="100" max="-2" attributes="0"/>
-                          <Component id="jlPtDezA" min="-2" max="-2" attributes="0"/>
+                      <Group type="102" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="btMtUmMenu" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
+                                  <Component id="jlPtDezA" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace pref="73" max="32767" attributes="0"/>
+                                  <Component id="btPtDica" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" attributes="0">
+                                  <Component id="btVoltarPt" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace max="32767" attributes="0"/>
-              </Group>
-              <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
-                  <Component id="btMtUmMenu" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="32767" attributes="0"/>
-                  <Component id="btPtDica" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
-                  <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="btMtUmMenu" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="btPtDica" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="btMtUmMenu" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="btPtDica" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
+                          <Component id="jlPtDezA" min="-2" max="-2" attributes="0"/>
+                      </Group>
                   </Group>
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jlPtDezA" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Component id="jlPtDezB" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="28" max="32767" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="btPtDezB" alignment="3" min="-2" pref="80" max="-2" attributes="0"/>
                       <Component id="btPtDezA" alignment="3" min="-2" pref="80" max="-2" attributes="0"/>
                   </Group>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" attributes="0">
-                          <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="btPtDezC" alignment="3" min="-2" pref="80" max="-2" attributes="0"/>
-                              <Component id="btPtDezD" alignment="3" min="-2" pref="80" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="34" pref="34" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="1" attributes="0">
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="btVoltarPt" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
-                      </Group>
+                  <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="btPtDezC" alignment="3" min="-2" pref="80" max="-2" attributes="0"/>
+                      <Component id="btPtDezD" alignment="3" min="-2" pref="80" max="-2" attributes="0"/>
                   </Group>
+                  <EmptySpace pref="31" max="32767" attributes="0"/>
+                  <Component id="btVoltarPt" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>

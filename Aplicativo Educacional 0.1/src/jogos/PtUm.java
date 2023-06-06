@@ -36,7 +36,6 @@ public class PtUm extends javax.swing.JFrame {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
-        java.awt.GridBagConstraints gridBagConstraints;
 
         PainelPtUm = new javax.swing.JPanel();
         jlPtUmA = new javax.swing.JLabel();
@@ -50,7 +49,6 @@ public class PtUm extends javax.swing.JFrame {
         btPtAvancar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(new java.awt.GridBagLayout());
 
         PainelPtUm.setPreferredSize(new java.awt.Dimension(700, 420));
 
@@ -117,70 +115,76 @@ public class PtUm extends javax.swing.JFrame {
         PainelPtUm.setLayout(PainelPtUmLayout);
         PainelPtUmLayout.setHorizontalGroup(
             PainelPtUmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelPtUmLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jlPtUmB, javax.swing.GroupLayout.PREFERRED_SIZE, 269, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(214, 214, 214))
             .addGroup(PainelPtUmLayout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(PainelPtUmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(PainelPtUmLayout.createSequentialGroup()
-                        .addGap(133, 133, 133)
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(btPtAvancar))
+                    .addGroup(PainelPtUmLayout.createSequentialGroup()
+                        .addComponent(btPtVM)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btPtDica)))
+                .addContainerGap())
+            .addGroup(PainelPtUmLayout.createSequentialGroup()
+                .addGap(211, 211, 211)
+                .addComponent(jlPtUmB, javax.swing.GroupLayout.PREFERRED_SIZE, 269, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelPtUmLayout.createSequentialGroup()
+                .addContainerGap(133, Short.MAX_VALUE)
+                .addGroup(PainelPtUmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jlPtUmA)
+                    .addGroup(PainelPtUmLayout.createSequentialGroup()
                         .addGroup(PainelPtUmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(btPtUmC, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(btPtUmA, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(82, 82, 82)
                         .addGroup(PainelPtUmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(btPtUmB, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btPtUmD, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, PainelPtUmLayout.createSequentialGroup()
-                        .addGap(22, 22, 22)
-                        .addComponent(btPtVM)
-                        .addGap(50, 50, 50)
-                        .addComponent(jlPtUmA)))
-                .addGroup(PainelPtUmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(PainelPtUmLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 82, Short.MAX_VALUE)
-                        .addComponent(btPtDica)
-                        .addContainerGap())
-                    .addGroup(PainelPtUmLayout.createSequentialGroup()
-                        .addGap(26, 26, 26)
-                        .addComponent(btPtAvancar)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                            .addComponent(btPtUmD, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(125, 125, 125))
         );
         PainelPtUmLayout.setVerticalGroup(
             PainelPtUmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelPtUmLayout.createSequentialGroup()
-                .addContainerGap(14, Short.MAX_VALUE)
+                .addContainerGap()
                 .addGroup(PainelPtUmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jlPtUmA, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btPtDica)
-                    .addComponent(btPtVM))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jlPtUmB, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                    .addGroup(PainelPtUmLayout.createSequentialGroup()
+                        .addGroup(PainelPtUmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btPtDica)
+                            .addComponent(btPtVM))
+                        .addGap(127, 127, 127))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelPtUmLayout.createSequentialGroup()
+                        .addComponent(jlPtUmA)
+                        .addGap(18, 18, 18)
+                        .addComponent(jlPtUmB)
+                        .addGap(18, 18, 18)))
                 .addGroup(PainelPtUmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btPtUmA, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btPtUmB, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGroup(PainelPtUmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(PainelPtUmLayout.createSequentialGroup()
-                        .addGap(30, 30, 30)
-                        .addGroup(PainelPtUmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(btPtUmC, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btPtUmD, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(24, 24, 24))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelPtUmLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btPtAvancar)
-                        .addGap(26, 26, 26))))
+                .addGap(30, 30, 30)
+                .addGroup(PainelPtUmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btPtUmC, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btPtUmD, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 25, Short.MAX_VALUE)
+                .addComponent(btPtAvancar)
+                .addContainerGap())
         );
 
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 0;
-        gridBagConstraints.ipadx = 20;
-        gridBagConstraints.ipady = 3;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        getContentPane().add(PainelPtUm, gridBagConstraints);
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addComponent(PainelPtUm, javax.swing.GroupLayout.PREFERRED_SIZE, 660, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(1, 1, 1)
+                .addComponent(PainelPtUm, javax.swing.GroupLayout.PREFERRED_SIZE, 397, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -249,8 +253,6 @@ public class PtUm extends javax.swing.JFrame {
     private javax.swing.JButton btPtUmC;
     private javax.swing.JButton btPtUmD;
     private javax.swing.JButton btPtVM;
-    private javax.swing.JButton btVoltarMt;
-    private javax.swing.JButton btVoltarMt1;
     private javax.swing.JLabel jlPtUmA;
     private javax.swing.JLabel jlPtUmB;
     // End of variables declaration//GEN-END:variables

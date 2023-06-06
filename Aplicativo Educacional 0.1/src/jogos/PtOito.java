@@ -37,7 +37,6 @@ public class PtOito extends javax.swing.JFrame {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
-        java.awt.GridBagConstraints gridBagConstraints;
 
         PainelPtOito = new javax.swing.JPanel();
         jlPtOitoA = new javax.swing.JLabel();
@@ -51,7 +50,7 @@ public class PtOito extends javax.swing.JFrame {
         btVoltarPt = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(new java.awt.GridBagLayout());
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         PainelPtOito.setRequestFocusEnabled(false);
         PainelPtOito.setVerifyInputWhenFocusTarget(false);
@@ -123,18 +122,23 @@ public class PtOito extends javax.swing.JFrame {
         PainelPtOito.setLayout(PainelPtOitoLayout);
         PainelPtOitoLayout.setHorizontalGroup(
             PainelPtOitoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelPtOitoLayout.createSequentialGroup()
-                .addGroup(PainelPtOitoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(PainelPtOitoLayout.createSequentialGroup()
-                        .addContainerGap(234, Short.MAX_VALUE)
-                        .addComponent(jlPtOitoA)
-                        .addGap(138, 138, 138))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, PainelPtOitoLayout.createSequentialGroup()
-                        .addGap(14, 14, 14)
+            .addGroup(PainelPtOitoLayout.createSequentialGroup()
+                .addGroup(PainelPtOitoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelPtOitoLayout.createSequentialGroup()
+                        .addContainerGap()
                         .addGroup(PainelPtOitoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(PainelPtOitoLayout.createSequentialGroup()
                                 .addComponent(btVoltarPt)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(btPtAvancar))
+                            .addGroup(PainelPtOitoLayout.createSequentialGroup()
+                                .addComponent(btMtUmMenu)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(btPtDica))))
+                    .addGroup(PainelPtOitoLayout.createSequentialGroup()
+                        .addGroup(PainelPtOitoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(PainelPtOitoLayout.createSequentialGroup()
+                                .addGap(129, 129, 129)
                                 .addGroup(PainelPtOitoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addGroup(PainelPtOitoLayout.createSequentialGroup()
                                         .addComponent(btPtOitoC, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -143,53 +147,43 @@ public class PtOito extends javax.swing.JFrame {
                                     .addGroup(PainelPtOitoLayout.createSequentialGroup()
                                         .addComponent(btPtOitoA, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 82, Short.MAX_VALUE)
-                                        .addComponent(btPtOitoB, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addGap(32, 32, 32)
-                                .addComponent(btPtAvancar))
+                                        .addComponent(btPtOitoB, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))))
                             .addGroup(PainelPtOitoLayout.createSequentialGroup()
-                                .addComponent(btMtUmMenu)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(btPtDica)))))
-                .addGap(18, 18, 18))
+                                .addGap(147, 147, 147)
+                                .addComponent(jlPtOitoA)))
+                        .addGap(0, 123, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         PainelPtOitoLayout.setVerticalGroup(
             PainelPtOitoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PainelPtOitoLayout.createSequentialGroup()
-                .addGap(12, 12, 12)
+                .addContainerGap()
                 .addGroup(PainelPtOitoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btMtUmMenu)
                     .addComponent(btPtDica))
                 .addGap(18, 18, 18)
                 .addComponent(jlPtOitoA)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 87, Short.MAX_VALUE)
-                .addGroup(PainelPtOitoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btPtOitoA, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btPtOitoB, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(35, 35, 35)
                 .addGroup(PainelPtOitoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(PainelPtOitoLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(PainelPtOitoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(btPtOitoA, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btPtOitoB, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(30, 30, 30)
                         .addGroup(PainelPtOitoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(btPtOitoD, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(btPtOitoC, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(22, 22, 22))
+                        .addGap(80, 80, 80))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelPtOitoLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(PainelPtOitoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelPtOitoLayout.createSequentialGroup()
-                                .addComponent(btPtAvancar)
-                                .addGap(24, 24, 24))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelPtOitoLayout.createSequentialGroup()
-                                .addComponent(btVoltarPt)
-                                .addGap(22, 22, 22))))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(PainelPtOitoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(btVoltarPt)
+                            .addComponent(btPtAvancar))
+                        .addContainerGap())))
         );
 
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 0;
-        gridBagConstraints.ipadx = 129;
-        gridBagConstraints.ipady = 81;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        getContentPane().add(PainelPtOito, gridBagConstraints);
+        getContentPane().add(PainelPtOito, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

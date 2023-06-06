@@ -49,6 +49,7 @@ public class MtOito extends javax.swing.JFrame {
         btAvancar = new javax.swing.JButton();
         btVoltarMenu = new javax.swing.JButton();
         btVoltarMt2 = new javax.swing.JButton();
+        btPtDica = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -112,54 +113,69 @@ public class MtOito extends javax.swing.JFrame {
             }
         });
 
+        btPtDica.setText("?");
+        btPtDica.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btPtDicaActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout PainelMtOitoLayout = new javax.swing.GroupLayout(PainelMtOito);
         PainelMtOito.setLayout(PainelMtOitoLayout);
         PainelMtOitoLayout.setHorizontalGroup(
             PainelMtOitoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelMtOitoLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(btVoltarMt2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btAvancar)
-                .addGap(28, 28, 28))
             .addGroup(PainelMtOitoLayout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(PainelMtOitoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btVoltarMenu)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelMtOitoLayout.createSequentialGroup()
+                        .addComponent(btVoltarMt2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btAvancar))
                     .addGroup(PainelMtOitoLayout.createSequentialGroup()
-                        .addGap(124, 124, 124)
-                        .addGroup(PainelMtOitoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btMtOitoC, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btMtOitoA, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(82, 82, 82)
-                        .addGroup(PainelMtOitoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(btMtOitoB, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btMtOitoD, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(PainelMtOitoLayout.createSequentialGroup()
-                        .addGap(288, 288, 288)
-                        .addComponent(jlMtOitoB))
-                    .addGroup(PainelMtOitoLayout.createSequentialGroup()
-                        .addGap(114, 114, 114)
-                        .addComponent(jlMtOitoA)))
-                .addContainerGap(123, Short.MAX_VALUE))
+                        .addComponent(btVoltarMenu)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btPtDica)))
+                .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelMtOitoLayout.createSequentialGroup()
+                .addContainerGap(123, Short.MAX_VALUE)
+                .addGroup(PainelMtOitoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(PainelMtOitoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jlMtOitoA)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelMtOitoLayout.createSequentialGroup()
+                            .addGroup(PainelMtOitoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(btMtOitoC, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(btMtOitoA, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGap(82, 82, 82)
+                            .addGroup(PainelMtOitoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(btMtOitoB, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(btMtOitoD, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGap(13, 13, 13)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelMtOitoLayout.createSequentialGroup()
+                        .addGap(173, 173, 173)
+                        .addComponent(jlMtOitoB)
+                        .addGap(171, 171, 171)))
+                .addGap(114, 114, 114))
         );
         PainelMtOitoLayout.setVerticalGroup(
             PainelMtOitoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PainelMtOitoLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(btVoltarMenu)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 37, Short.MAX_VALUE)
+                .addGroup(PainelMtOitoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btVoltarMenu)
+                    .addComponent(btPtDica))
+                .addGap(2, 2, 2)
                 .addComponent(jlMtOitoA)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jlMtOitoB)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jlMtOitoB)
+                .addGap(12, 12, 12)
                 .addGroup(PainelMtOitoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btMtOitoB, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btMtOitoA, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 25, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 42, Short.MAX_VALUE)
                 .addGroup(PainelMtOitoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btMtOitoC, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btMtOitoD, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(18, 18, 18)
                 .addGroup(PainelMtOitoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btAvancar)
                     .addComponent(btVoltarMt2))
@@ -234,6 +250,10 @@ public class MtOito extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_btVoltarMt2ActionPerformed
 
+    private void btPtDicaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPtDicaActionPerformed
+        JOptionPane.showMessageDialog(null,"Uma dica é voce tentar gritar a palavra em sua cabeça, a silaba que tiver mais ênfase é a sílaba tónica, exemplo: Abacaxiiii!");
+    }//GEN-LAST:event_btPtDicaActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -246,9 +266,8 @@ public class MtOito extends javax.swing.JFrame {
     private javax.swing.JButton btMtOitoB;
     private javax.swing.JButton btMtOitoC;
     private javax.swing.JButton btMtOitoD;
+    private javax.swing.JButton btPtDica;
     private javax.swing.JButton btVoltarMenu;
-    private javax.swing.JButton btVoltarMt;
-    private javax.swing.JButton btVoltarMt1;
     private javax.swing.JButton btVoltarMt2;
     private javax.swing.JLabel jlMtOitoA;
     private javax.swing.JLabel jlMtOitoB;

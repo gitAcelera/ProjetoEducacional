@@ -4,7 +4,6 @@
  */
 package telas;
    import jogos.PtUm;
-   import jogos.LgPtUm;
    import jogos.QAUm;
    import jogos.QEUm;
    import jogos.MtUm;
@@ -15,7 +14,6 @@ package telas;
 public class menuPrincipal extends javax.swing.JFrame
 {
     private PtUm TelaPtUm;
-    private LgPtUm TelaLgPtUm;
     private QAUm TelaQAUm;
     private QEUm TelaQEUm;
     private MtUm TelaMtUm;
@@ -23,7 +21,6 @@ public class menuPrincipal extends javax.swing.JFrame
     {
         initComponents();
         TelaPtUm = new PtUm();
-        TelaLgPtUm = new LgPtUm();
         TelaQAUm = new QAUm();
         TelaQEUm = new QEUm();
         TelaMtUm = new MtUm();
@@ -38,17 +35,21 @@ public class menuPrincipal extends javax.swing.JFrame
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jMenuBar1 = new javax.swing.JMenuBar();
+        jMenu2 = new javax.swing.JMenu();
+        jMenu5 = new javax.swing.JMenu();
         jPanel2 = new javax.swing.JPanel();
         btPt = new javax.swing.JButton();
         btMt = new javax.swing.JButton();
-        btLgPt = new javax.swing.JButton();
-        btLgMt = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
         btQA = new javax.swing.JButton();
         btQC = new javax.swing.JButton();
-        jMenuBar2 = new javax.swing.JMenuBar();
-        jMenu3 = new javax.swing.JMenu();
-        jMenu4 = new javax.swing.JMenu();
+
+        jMenu2.setText("File");
+        jMenuBar1.add(jMenu2);
+
+        jMenu5.setText("Edit");
+        jMenuBar1.add(jMenu5);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(700, 420));
@@ -68,22 +69,6 @@ public class menuPrincipal extends javax.swing.JFrame
         btMt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btMtActionPerformed(evt);
-            }
-        });
-
-        btLgPt.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        btLgPt.setText("Lógica");
-        btLgPt.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btLgPtActionPerformed(evt);
-            }
-        });
-
-        btLgMt.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        btLgMt.setText("Lógica");
-        btLgMt.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btLgMtActionPerformed(evt);
             }
         });
 
@@ -114,11 +99,9 @@ public class menuPrincipal extends javax.swing.JFrame
                 .addComponent(jButton1)
                 .addGap(54, 54, 54)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btMt, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btLgPt, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btPt, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btLgMt, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btQA, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btPt, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btMt, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btQC, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(134, Short.MAX_VALUE))
         );
@@ -128,28 +111,17 @@ public class menuPrincipal extends javax.swing.JFrame
                 .addGap(77, 77, 77)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(53, 53, 53)
                         .addComponent(btPt, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btLgPt, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btLgMt, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btQA, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btQC, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(btMt, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(52, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btQA, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btQC, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(82, Short.MAX_VALUE))
         );
-
-        jMenu3.setText("File");
-        jMenuBar2.add(jMenu3);
-
-        jMenu4.setText("Edit");
-        jMenuBar2.add(jMenu4);
-
-        setJMenuBar(jMenuBar2);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -162,7 +134,9 @@ public class menuPrincipal extends javax.swing.JFrame
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 399, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 25, Short.MAX_VALUE)
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 395, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         pack();
@@ -173,15 +147,6 @@ public class menuPrincipal extends javax.swing.JFrame
       dispose();
         
     }//GEN-LAST:event_btPtActionPerformed
-
-    private void btLgMtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btLgMtActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btLgMtActionPerformed
-
-    private void btLgPtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btLgPtActionPerformed
-       TelaLgPtUm.setVisible(true);
-       dispose();
-    }//GEN-LAST:event_btLgPtActionPerformed
 
     private void btQCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btQCActionPerformed
      TelaQEUm.setVisible(true);
@@ -204,16 +169,14 @@ public class menuPrincipal extends javax.swing.JFrame
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btLgMt;
-    private javax.swing.JButton btLgPt;
     private javax.swing.JButton btMt;
     private javax.swing.JButton btPt;
     private javax.swing.JButton btQA;
     private javax.swing.JButton btQC;
     private javax.swing.JButton jButton1;
-    private javax.swing.JMenu jMenu3;
-    private javax.swing.JMenu jMenu4;
-    private javax.swing.JMenuBar jMenuBar2;
+    private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenu jMenu5;
+    private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables
 }

@@ -50,6 +50,7 @@ public class MtSete extends javax.swing.JFrame {
         btAvancar = new javax.swing.JButton();
         btVoltarMenu = new javax.swing.JButton();
         btVoltarMt = new javax.swing.JButton();
+        btPtDica = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -117,19 +118,31 @@ public class MtSete extends javax.swing.JFrame {
             }
         });
 
+        btPtDica.setText("?");
+        btPtDica.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btPtDicaActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout PainelMtSeteLayout = new javax.swing.GroupLayout(PainelMtSete);
         PainelMtSete.setLayout(PainelMtSeteLayout);
         PainelMtSeteLayout.setHorizontalGroup(
             PainelMtSeteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PainelMtSeteLayout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(PainelMtSeteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btVoltarMenu)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelMtSeteLayout.createSequentialGroup()
+                        .addComponent(btVoltarMt)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btAvancar))
                     .addGroup(PainelMtSeteLayout.createSequentialGroup()
-                        .addGap(289, 289, 289)
-                        .addComponent(jlMtSeteB)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(btVoltarMenu)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btPtDica)))
+                .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelMtSeteLayout.createSequentialGroup()
-                .addGap(0, 122, Short.MAX_VALUE)
+                .addGap(0, 120, Short.MAX_VALUE)
                 .addGroup(PainelMtSeteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelMtSeteLayout.createSequentialGroup()
                         .addGroup(PainelMtSeteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -142,20 +155,20 @@ public class MtSete extends javax.swing.JFrame {
                         .addGap(128, 128, 128))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelMtSeteLayout.createSequentialGroup()
                         .addComponent(jlMtSeteA)
-                        .addGap(115, 115, 115))))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelMtSeteLayout.createSequentialGroup()
-                .addGap(21, 21, 21)
-                .addComponent(btVoltarMt)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btAvancar)
-                .addGap(17, 17, 17))
+                        .addGap(117, 117, 117))))
+            .addGroup(PainelMtSeteLayout.createSequentialGroup()
+                .addGap(290, 290, 290)
+                .addComponent(jlMtSeteB)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         PainelMtSeteLayout.setVerticalGroup(
             PainelMtSeteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PainelMtSeteLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(btVoltarMenu)
-                .addGap(33, 33, 33)
+                .addGroup(PainelMtSeteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btVoltarMenu)
+                    .addComponent(btPtDica))
+                .addGap(10, 10, 10)
                 .addComponent(jlMtSeteA)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jlMtSeteB)
@@ -167,7 +180,7 @@ public class MtSete extends javax.swing.JFrame {
                 .addGroup(PainelMtSeteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btMtSeteD, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btMtSeteC, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
                 .addGroup(PainelMtSeteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btAvancar)
                     .addComponent(btVoltarMt))
@@ -242,6 +255,10 @@ public class MtSete extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_btVoltarMtActionPerformed
 
+    private void btPtDicaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPtDicaActionPerformed
+        JOptionPane.showMessageDialog(null,"uma dica é entender que 2x3 é a mesma que 2+2+2...");
+    }//GEN-LAST:event_btPtDicaActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -254,6 +271,7 @@ public class MtSete extends javax.swing.JFrame {
     private javax.swing.JButton btMtSeteB;
     private javax.swing.JButton btMtSeteC;
     private javax.swing.JButton btMtSeteD;
+    private javax.swing.JButton btPtDica;
     private javax.swing.JButton btVoltarMenu;
     private javax.swing.JButton btVoltarMt;
     private javax.swing.JLabel jlMtSeteA;

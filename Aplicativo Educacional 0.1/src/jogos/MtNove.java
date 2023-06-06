@@ -46,6 +46,7 @@ int pontosMt = PontosAluno.getPontosMt();
         btAvancar = new javax.swing.JButton();
         btVoltarMenu = new javax.swing.JButton();
         btVoltarMt = new javax.swing.JButton();
+        btPtDica = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -106,21 +107,31 @@ int pontosMt = PontosAluno.getPontosMt();
             }
         });
 
+        btPtDica.setText("?");
+        btPtDica.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btPtDicaActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout PainelMtNoveLayout = new javax.swing.GroupLayout(PainelMtNove);
         PainelMtNove.setLayout(PainelMtNoveLayout);
         PainelMtNoveLayout.setHorizontalGroup(
             PainelMtNoveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelMtNoveLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(btVoltarMt)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btAvancar)
-                .addGap(20, 20, 20))
             .addGroup(PainelMtNoveLayout.createSequentialGroup()
                 .addGroup(PainelMtNoveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btVoltarMenu)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelMtNoveLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(btVoltarMt)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btAvancar))
                     .addGroup(PainelMtNoveLayout.createSequentialGroup()
-                        .addGap(122, 122, 122)
+                        .addContainerGap()
+                        .addComponent(btVoltarMenu)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btPtDica))
+                    .addGroup(PainelMtNoveLayout.createSequentialGroup()
+                        .addGap(128, 128, 128)
                         .addGroup(PainelMtNoveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(PainelMtNoveLayout.createSequentialGroup()
                                 .addGroup(PainelMtNoveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -130,17 +141,20 @@ int pontosMt = PontosAluno.getPontosMt();
                                 .addGroup(PainelMtNoveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addComponent(btMtNoveD, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(btMtNoveB, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addComponent(jlMtNoveA))))
-                .addContainerGap(136, Short.MAX_VALUE))
+                            .addComponent(jlMtNoveA))
+                        .addGap(0, 124, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         PainelMtNoveLayout.setVerticalGroup(
             PainelMtNoveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelMtNoveLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(btVoltarMenu)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 65, Short.MAX_VALUE)
+                .addGroup(PainelMtNoveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btVoltarMenu)
+                    .addComponent(btPtDica))
+                .addGap(31, 31, 31)
                 .addComponent(jlMtNoveA)
-                .addGap(30, 30, 30)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 40, Short.MAX_VALUE)
                 .addGroup(PainelMtNoveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btMtNoveA, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btMtNoveB, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -148,7 +162,7 @@ int pontosMt = PontosAluno.getPontosMt();
                 .addGroup(PainelMtNoveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btMtNoveD, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btMtNoveC, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(9, 9, 9)
+                .addGap(33, 33, 33)
                 .addGroup(PainelMtNoveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btAvancar)
                     .addComponent(btVoltarMt))
@@ -223,6 +237,10 @@ int pontosMt = PontosAluno.getPontosMt();
         dispose();
     }//GEN-LAST:event_btVoltarMtActionPerformed
 
+    private void btPtDicaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPtDicaActionPerformed
+        JOptionPane.showMessageDialog(null,"Todo numero par é dividido por 2!");
+    }//GEN-LAST:event_btPtDicaActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -235,6 +253,7 @@ int pontosMt = PontosAluno.getPontosMt();
     private javax.swing.JButton btMtNoveB;
     private javax.swing.JButton btMtNoveC;
     private javax.swing.JButton btMtNoveD;
+    private javax.swing.JButton btPtDica;
     private javax.swing.JButton btVoltarMenu;
     private javax.swing.JButton btVoltarMt;
     private javax.swing.JLabel jlMtNoveA;

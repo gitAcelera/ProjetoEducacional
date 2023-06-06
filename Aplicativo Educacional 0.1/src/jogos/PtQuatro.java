@@ -36,8 +36,8 @@ public class PtQuatro extends javax.swing.JFrame {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
-        java.awt.GridBagConstraints gridBagConstraints;
 
+        jTextField1 = new javax.swing.JTextField();
         PainelPtQuatro = new javax.swing.JPanel();
         jlPtQuatroA = new javax.swing.JLabel();
         jlPtQuatroB = new javax.swing.JLabel();
@@ -49,6 +49,8 @@ public class PtQuatro extends javax.swing.JFrame {
         btPtDica = new javax.swing.JButton();
         btPtAvancar = new javax.swing.JButton();
         btVoltarPt = new javax.swing.JButton();
+
+        jTextField1.setText("jTextField1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new java.awt.GridBagLayout());
@@ -128,15 +130,13 @@ public class PtQuatro extends javax.swing.JFrame {
         PainelPtQuatroLayout.setHorizontalGroup(
             PainelPtQuatroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PainelPtQuatroLayout.createSequentialGroup()
-                .addGap(14, 14, 14)
+                .addContainerGap()
                 .addComponent(btPtVM)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(btPtDica)
-                .addGap(17, 17, 17))
+                .addContainerGap())
             .addGroup(PainelPtQuatroLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(btVoltarPt)
-                .addGap(57, 57, 57)
+                .addGap(135, 135, 135)
                 .addGroup(PainelPtQuatroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(PainelPtQuatroLayout.createSequentialGroup()
                         .addGroup(PainelPtQuatroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -147,47 +147,45 @@ public class PtQuatro extends javax.swing.JFrame {
                             .addComponent(btPtQuatroD, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(btPtQuatroB, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addComponent(jlPtQuatroA))
-                .addGap(29, 29, 29)
-                .addComponent(btPtAvancar)
-                .addContainerGap(32, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelPtQuatroLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(68, Short.MAX_VALUE)
                 .addComponent(jlPtQuatroB, javax.swing.GroupLayout.PREFERRED_SIZE, 554, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(78, 78, 78))
+            .addGroup(PainelPtQuatroLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(btVoltarPt)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btPtAvancar)
+                .addContainerGap())
         );
         PainelPtQuatroLayout.setVerticalGroup(
             PainelPtQuatroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelPtQuatroLayout.createSequentialGroup()
-                .addContainerGap(18, Short.MAX_VALUE)
+                .addContainerGap()
                 .addGroup(PainelPtQuatroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btPtVM)
                     .addComponent(btPtDica))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 19, Short.MAX_VALUE)
                 .addComponent(jlPtQuatroA, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jlPtQuatroB, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addGroup(PainelPtQuatroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(PainelPtQuatroLayout.createSequentialGroup()
-                        .addGroup(PainelPtQuatroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(btPtQuatroA, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btPtQuatroB, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(30, 30, 30)
-                        .addGroup(PainelPtQuatroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(btPtQuatroD, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btPtQuatroC, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(btPtAvancar)
-                    .addComponent(btVoltarPt))
-                .addGap(40, 40, 40))
+                .addGroup(PainelPtQuatroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btPtQuatroA, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btPtQuatroB, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(30, 30, 30)
+                .addGroup(PainelPtQuatroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(btPtQuatroD, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btPtQuatroC, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(11, 11, 11)
+                .addGroup(PainelPtQuatroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btVoltarPt)
+                    .addComponent(btPtAvancar))
+                .addContainerGap())
         );
 
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 0;
-        gridBagConstraints.ipadx = 22;
-        gridBagConstraints.ipady = 7;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        getContentPane().add(PainelPtQuatro, gridBagConstraints);
+        getContentPane().add(PainelPtQuatro, new java.awt.GridBagConstraints());
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -267,6 +265,7 @@ pontosPt=pontosPt-5;        // TODO add your handling code here:
     private javax.swing.JButton btPtQuatroD;
     private javax.swing.JButton btPtVM;
     private javax.swing.JButton btVoltarPt;
+    private javax.swing.JTextField jTextField1;
     private javax.swing.JLabel jlPtQuatroA;
     private javax.swing.JLabel jlPtQuatroB;
     // End of variables declaration//GEN-END:variables

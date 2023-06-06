@@ -47,6 +47,7 @@ public class MtQuatro extends javax.swing.JFrame {
         btAvancar = new javax.swing.JButton();
         btVoltarMenu = new javax.swing.JButton();
         btVoltarMt = new javax.swing.JButton();
+        btPtDica = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -111,71 +112,74 @@ public class MtQuatro extends javax.swing.JFrame {
             }
         });
 
+        btPtDica.setText("?");
+        btPtDica.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btPtDicaActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout PainelMtQuatroLayout = new javax.swing.GroupLayout(PainelMtQuatro);
         PainelMtQuatro.setLayout(PainelMtQuatroLayout);
         PainelMtQuatroLayout.setHorizontalGroup(
             PainelMtQuatroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PainelMtQuatroLayout.createSequentialGroup()
-                .addComponent(btVoltarMenu)
-                .addContainerGap(637, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelMtQuatroLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(PainelMtQuatroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelMtQuatroLayout.createSequentialGroup()
                         .addComponent(btVoltarMt)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(PainelMtQuatroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btMtQuatroA, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btMtQuatroC, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(82, 82, 82)
-                        .addGroup(PainelMtQuatroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(PainelMtQuatroLayout.createSequentialGroup()
-                                .addComponent(btMtQuatroB, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(124, 124, 124))
-                            .addGroup(PainelMtQuatroLayout.createSequentialGroup()
-                                .addComponent(btMtQuatroD, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(btAvancar)
-                                .addGap(18, 18, 18))))
+                        .addComponent(btAvancar)
+                        .addContainerGap())
+                    .addGroup(PainelMtQuatroLayout.createSequentialGroup()
+                        .addComponent(btVoltarMenu)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btPtDica)
+                        .addContainerGap())
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelMtQuatroLayout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addGroup(PainelMtQuatroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelMtQuatroLayout.createSequentialGroup()
-                                .addComponent(jlMtQuatroB)
-                                .addGap(294, 294, 294))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelMtQuatroLayout.createSequentialGroup()
                                 .addComponent(jlMtQuatroA)
-                                .addGap(135, 135, 135))))))
+                                .addGap(146, 146, 146))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelMtQuatroLayout.createSequentialGroup()
+                                .addComponent(jlMtQuatroB)
+                                .addGap(291, 291, 291))))))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelMtQuatroLayout.createSequentialGroup()
+                .addContainerGap(132, Short.MAX_VALUE)
+                .addGroup(PainelMtQuatroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btMtQuatroA, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btMtQuatroC, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(82, 82, 82)
+                .addGroup(PainelMtQuatroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btMtQuatroB, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btMtQuatroD, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(126, 126, 126))
         );
         PainelMtQuatroLayout.setVerticalGroup(
             PainelMtQuatroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PainelMtQuatroLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(btVoltarMenu)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(PainelMtQuatroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btVoltarMenu)
+                    .addComponent(btPtDica))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jlMtQuatroA)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jlMtQuatroB)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(PainelMtQuatroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btMtQuatroA, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btMtQuatroB, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGroup(PainelMtQuatroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(PainelMtQuatroLayout.createSequentialGroup()
-                        .addGap(30, 30, 30)
-                        .addGroup(PainelMtQuatroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(btMtQuatroC, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btMtQuatroD, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(39, 39, 39))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelMtQuatroLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(PainelMtQuatroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelMtQuatroLayout.createSequentialGroup()
-                                .addComponent(btAvancar)
-                                .addGap(41, 41, 41))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelMtQuatroLayout.createSequentialGroup()
-                                .addComponent(btVoltarMt)
-                                .addGap(39, 39, 39))))))
+                .addGap(30, 30, 30)
+                .addGroup(PainelMtQuatroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btMtQuatroC, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btMtQuatroD, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
+                .addGroup(PainelMtQuatroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btVoltarMt)
+                    .addComponent(btAvancar))
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -186,7 +190,7 @@ public class MtQuatro extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(PainelMtQuatro, javax.swing.GroupLayout.PREFERRED_SIZE, 400, Short.MAX_VALUE)
+            .addComponent(PainelMtQuatro, javax.swing.GroupLayout.DEFAULT_SIZE, 400, Short.MAX_VALUE)
         );
 
         pack();
@@ -246,6 +250,10 @@ public class MtQuatro extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_btVoltarMtActionPerformed
 
+    private void btPtDicaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPtDicaActionPerformed
+        JOptionPane.showMessageDialog(null,"A operação é subtração ou seja, se você tem 5 laranjas e deu 2, você tem 3 laranjas agora!");
+    }//GEN-LAST:event_btPtDicaActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -257,6 +265,7 @@ public class MtQuatro extends javax.swing.JFrame {
     private javax.swing.JButton btMtQuatroB;
     private javax.swing.JButton btMtQuatroC;
     private javax.swing.JButton btMtQuatroD;
+    private javax.swing.JButton btPtDica;
     private javax.swing.JButton btVoltarMenu;
     private javax.swing.JButton btVoltarMt;
     private javax.swing.JLabel jlMtQuatroA;
