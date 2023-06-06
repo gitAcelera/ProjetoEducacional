@@ -38,23 +38,24 @@ private PtQuatro TelaPtQuatro;
     private void initComponents() {
 
         PainelPtTres = new javax.swing.JPanel();
-        jlPtTresA = new javax.swing.JLabel();
+        jlPtTres = new javax.swing.JLabel();
         btPtTresA = new javax.swing.JButton();
         btPtTresB = new javax.swing.JButton();
         btPtTresC = new javax.swing.JButton();
         btPtTresD = new javax.swing.JButton();
-        btPtVM = new javax.swing.JButton();
+        btPtMenu = new javax.swing.JButton();
         btPtDica = new javax.swing.JButton();
         btPtAvancar = new javax.swing.JButton();
-        btVoltarMt = new javax.swing.JButton();
+        btPtVoltar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(new java.awt.GridBagLayout());
 
         PainelPtTres.setPreferredSize(new java.awt.Dimension(700, 400));
+        PainelPtTres.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jlPtTresA.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        jlPtTresA.setText("Qual é o contrário da palavra \"ALTO\"?");
+        jlPtTres.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        jlPtTres.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/PtTres.png"))); // NOI18N
+        PainelPtTres.add(jlPtTres, new org.netbeans.lib.awtextra.AbsoluteConstraints(-4, -5, 700, 410));
 
         btPtTresA.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btPtTresA.setText("GRANDE");
@@ -63,6 +64,7 @@ private PtQuatro TelaPtQuatro;
                 btPtTresAActionPerformed(evt);
             }
         });
+        PainelPtTres.add(btPtTresA, new org.netbeans.lib.awtextra.AbsoluteConstraints(108, 143, 190, 80));
 
         btPtTresB.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btPtTresB.setText("FORTE");
@@ -71,6 +73,7 @@ private PtQuatro TelaPtQuatro;
                 btPtTresBActionPerformed(evt);
             }
         });
+        PainelPtTres.add(btPtTresB, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 143, 180, 80));
 
         btPtTresC.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btPtTresC.setText("BAIXO");
@@ -79,6 +82,7 @@ private PtQuatro TelaPtQuatro;
                 btPtTresCActionPerformed(evt);
             }
         });
+        PainelPtTres.add(btPtTresC, new org.netbeans.lib.awtextra.AbsoluteConstraints(118, 253, 180, 90));
 
         btPtTresD.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btPtTresD.setText("ELEVADO");
@@ -87,13 +91,15 @@ private PtQuatro TelaPtQuatro;
                 btPtTresDActionPerformed(evt);
             }
         });
+        PainelPtTres.add(btPtTresD, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 253, 180, 90));
 
-        btPtVM.setText("MENU");
-        btPtVM.addActionListener(new java.awt.event.ActionListener() {
+        btPtMenu.setText("MENU");
+        btPtMenu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btPtVMActionPerformed(evt);
+                btPtMenuActionPerformed(evt);
             }
         });
+        PainelPtTres.add(btPtMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, 80, 40));
 
         btPtDica.setText("?");
         btPtDica.addActionListener(new java.awt.event.ActionListener() {
@@ -101,6 +107,7 @@ private PtQuatro TelaPtQuatro;
                 btPtDicaActionPerformed(evt);
             }
         });
+        PainelPtTres.add(btPtDica, new org.netbeans.lib.awtextra.AbsoluteConstraints(646, 6, 40, 40));
 
         btPtAvancar.setText("Avançar");
         btPtAvancar.addActionListener(new java.awt.event.ActionListener() {
@@ -108,73 +115,26 @@ private PtQuatro TelaPtQuatro;
                 btPtAvancarActionPerformed(evt);
             }
         });
+        PainelPtTres.add(btPtAvancar, new org.netbeans.lib.awtextra.AbsoluteConstraints(606, 344, 80, 50));
 
-        btVoltarMt.setText("Voltar");
-        btVoltarMt.addActionListener(new java.awt.event.ActionListener() {
+        btPtVoltar.setText("Voltar");
+        btPtVoltar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btVoltarMtActionPerformed(evt);
+                btPtVoltarActionPerformed(evt);
             }
         });
+        PainelPtTres.add(btPtVoltar, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 354, 80, 40));
 
-        javax.swing.GroupLayout PainelPtTresLayout = new javax.swing.GroupLayout(PainelPtTres);
-        PainelPtTres.setLayout(PainelPtTresLayout);
-        PainelPtTresLayout.setHorizontalGroup(
-            PainelPtTresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PainelPtTresLayout.createSequentialGroup()
-                .addGroup(PainelPtTresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(PainelPtTresLayout.createSequentialGroup()
-                        .addGap(36, 36, 36)
-                        .addComponent(jlPtTresA, javax.swing.GroupLayout.PREFERRED_SIZE, 624, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 40, Short.MAX_VALUE))
-                    .addGroup(PainelPtTresLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(PainelPtTresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(PainelPtTresLayout.createSequentialGroup()
-                                .addComponent(btPtVM)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(btPtDica))
-                            .addGroup(PainelPtTresLayout.createSequentialGroup()
-                                .addComponent(btVoltarMt)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(btPtAvancar)))
-                        .addGap(14, 14, 14)))
-                .addContainerGap())
-            .addGroup(PainelPtTresLayout.createSequentialGroup()
-                .addGap(128, 128, 128)
-                .addGroup(PainelPtTresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btPtTresA, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btPtTresC, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(82, 82, 82)
-                .addGroup(PainelPtTresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btPtTresB, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btPtTresD, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(PainelPtTres, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
-        PainelPtTresLayout.setVerticalGroup(
-            PainelPtTresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelPtTresLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(PainelPtTresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btPtVM)
-                    .addComponent(btPtDica))
-                .addGap(16, 16, 16)
-                .addComponent(jlPtTresA, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(PainelPtTresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btPtTresA, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btPtTresB, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(30, 30, 30)
-                .addGroup(PainelPtTresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btPtTresC, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btPtTresD, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 38, Short.MAX_VALUE)
-                .addGroup(PainelPtTresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btVoltarMt)
-                    .addComponent(btPtAvancar))
-                .addContainerGap())
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(PainelPtTres, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
-
-        getContentPane().add(PainelPtTres, new java.awt.GridBagConstraints());
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -205,10 +165,10 @@ private PtQuatro TelaPtQuatro;
       dispose();
     }//GEN-LAST:event_btPtTresCActionPerformed
 
-    private void btPtVMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPtVMActionPerformed
+    private void btPtMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPtMenuActionPerformed
         new menuPrincipal().show();
         dispose();
-    }//GEN-LAST:event_btPtVMActionPerformed
+    }//GEN-LAST:event_btPtMenuActionPerformed
 
     private void btPtDicaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPtDicaActionPerformed
         JOptionPane.showMessageDialog(null,"Contrário é aquilo que é oposto, exemplo: o contrario de LEGAL é CHATO");
@@ -233,10 +193,10 @@ private PtQuatro TelaPtQuatro;
  pontosPt=pontosPt-5;           // TODO add your handling code here:
     }//GEN-LAST:event_btPtTresBActionPerformed
 
-    private void btVoltarMtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btVoltarMtActionPerformed
+    private void btPtVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPtVoltarActionPerformed
         new PtDois().show();
         dispose();
-    }//GEN-LAST:event_btVoltarMtActionPerformed
+    }//GEN-LAST:event_btPtVoltarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -247,12 +207,12 @@ private PtQuatro TelaPtQuatro;
     private javax.swing.JPanel PainelPtTres;
     private javax.swing.JButton btPtAvancar;
     private javax.swing.JButton btPtDica;
+    private javax.swing.JButton btPtMenu;
     private javax.swing.JButton btPtTresA;
     private javax.swing.JButton btPtTresB;
     private javax.swing.JButton btPtTresC;
     private javax.swing.JButton btPtTresD;
-    private javax.swing.JButton btPtVM;
-    private javax.swing.JButton btVoltarMt;
-    private javax.swing.JLabel jlPtTresA;
+    private javax.swing.JButton btPtVoltar;
+    private javax.swing.JLabel jlPtTres;
     // End of variables declaration//GEN-END:variables
 }

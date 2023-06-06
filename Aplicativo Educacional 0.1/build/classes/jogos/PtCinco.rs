@@ -1,0 +1,9 @@
+jogos.PtCinco$3
+jogos.PtCinco$2
+jogos.PtCinco$1
+jogos.PtCinco
+jogos.PtCinco$8
+jogos.PtCinco$7
+jogos.PtCinco$6
+jogos.PtCinco$5
+jogos.PtCinco$4

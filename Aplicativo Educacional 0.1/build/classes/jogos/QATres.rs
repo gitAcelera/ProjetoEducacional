@@ -1,0 +1,9 @@
+jogos.QATres$3
+jogos.QATres$2
+jogos.QATres$1
+jogos.QATres$7
+jogos.QATres$6
+jogos.QATres$5
+jogos.QATres$4
+jogos.QATres$8
+jogos.QATres

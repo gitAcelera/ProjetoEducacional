@@ -1,0 +1,4 @@
+telas.menuPrincipalDirecao$2
+telas.menuPrincipalDirecao$1
+telas.menuPrincipalDirecao$3
+telas.menuPrincipalDirecao

@@ -1,0 +1,9 @@
+jogos.PtNove$8
+jogos.PtNove$1
+jogos.PtNove$2
+jogos.PtNove$3
+jogos.PtNove$4
+jogos.PtNove$5
+jogos.PtNove
+jogos.PtNove$6
+jogos.PtNove$7

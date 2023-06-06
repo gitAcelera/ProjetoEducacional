@@ -1,0 +1,9 @@
+jogos.QESete$8
+jogos.QESete$7
+jogos.QESete$6
+jogos.QESete$5
+jogos.QESete$4
+jogos.QESete$3
+jogos.QESete$2
+jogos.QESete$1
+jogos.QESete

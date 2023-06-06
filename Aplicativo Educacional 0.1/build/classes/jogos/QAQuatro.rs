@@ -1,0 +1,9 @@
+jogos.QAQuatro$5
+jogos.QAQuatro$4
+jogos.QAQuatro
+jogos.QAQuatro$7
+jogos.QAQuatro$6
+jogos.QAQuatro$1
+jogos.QAQuatro$3
+jogos.QAQuatro$2
+jogos.QAQuatro$8

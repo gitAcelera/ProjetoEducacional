@@ -41,140 +41,92 @@ public class MtUm extends javax.swing.JFrame {
     private void initComponents() {
 
         PainelMtUm = new javax.swing.JPanel();
-        jlMtUmA = new javax.swing.JLabel();
-        jlMtUmB = new javax.swing.JLabel();
+        jlMtUm = new javax.swing.JLabel();
         btMtUmA = new javax.swing.JButton();
         btMtUmB = new javax.swing.JButton();
         btMtUmC = new javax.swing.JButton();
         btMtUmD = new javax.swing.JButton();
-        btMtUmAvançar = new javax.swing.JButton();
         btMtUmMenu = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
-        jMenuBar1 = new javax.swing.JMenuBar();
+        btMtDica = new javax.swing.JButton();
+        btMtUmAvançar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(700, 420));
 
         PainelMtUm.setPreferredSize(new java.awt.Dimension(700, 400));
+        PainelMtUm.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jlMtUmA.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        jlMtUmA.setText("Qual o valor da operação");
-
-        jlMtUmB.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        jlMtUmB.setText("\" 7 + 5 \"");
+        jlMtUm.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        jlMtUm.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/MtUm.png"))); // NOI18N
+        jlMtUm.setFocusable(false);
+        PainelMtUm.add(jlMtUm, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         btMtUmA.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btMtUmA.setText("10");
+        btMtUmA.setFocusable(false);
         btMtUmA.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btMtUmAActionPerformed(evt);
             }
         });
+        PainelMtUm.add(btMtUmA, new org.netbeans.lib.awtextra.AbsoluteConstraints(118, 145, 180, 70));
 
         btMtUmB.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btMtUmB.setText("8");
+        btMtUmB.setFocusable(false);
         btMtUmB.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btMtUmBActionPerformed(evt);
             }
         });
+        PainelMtUm.add(btMtUmB, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 145, 170, 70));
 
         btMtUmC.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btMtUmC.setText("2");
+        btMtUmC.setFocusable(false);
         btMtUmC.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btMtUmCActionPerformed(evt);
             }
         });
+        PainelMtUm.add(btMtUmC, new org.netbeans.lib.awtextra.AbsoluteConstraints(118, 265, 180, 80));
 
         btMtUmD.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btMtUmD.setText("12");
+        btMtUmD.setFocusable(false);
         btMtUmD.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btMtUmDActionPerformed(evt);
             }
         });
-
-        btMtUmAvançar.setText("Avançar");
-        btMtUmAvançar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btMtUmAvançarActionPerformed(evt);
-            }
-        });
+        PainelMtUm.add(btMtUmD, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 265, 170, 70));
 
         btMtUmMenu.setText("MENU");
+        btMtUmMenu.setFocusable(false);
         btMtUmMenu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btMtUmMenuActionPerformed(evt);
             }
         });
+        PainelMtUm.add(btMtUmMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, 80, 40));
 
-        jButton1.setText("?");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btMtDica.setText("?");
+        btMtDica.setFocusable(false);
+        btMtDica.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btMtDicaActionPerformed(evt);
             }
         });
+        PainelMtUm.add(btMtDica, new org.netbeans.lib.awtextra.AbsoluteConstraints(644, 6, 50, 40));
 
-        javax.swing.GroupLayout PainelMtUmLayout = new javax.swing.GroupLayout(PainelMtUm);
-        PainelMtUm.setLayout(PainelMtUmLayout);
-        PainelMtUmLayout.setHorizontalGroup(
-            PainelMtUmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PainelMtUmLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(PainelMtUmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(PainelMtUmLayout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(btMtUmAvançar))
-                    .addGroup(PainelMtUmLayout.createSequentialGroup()
-                        .addComponent(btMtUmMenu)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton1)))
-                .addContainerGap())
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelMtUmLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jlMtUmA)
-                .addGap(146, 146, 146))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelMtUmLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jlMtUmB)
-                .addGap(278, 278, 278))
-            .addGroup(PainelMtUmLayout.createSequentialGroup()
-                .addGap(128, 128, 128)
-                .addGroup(PainelMtUmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(btMtUmA, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btMtUmC, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(82, 82, 82)
-                .addGroup(PainelMtUmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(btMtUmD, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btMtUmB, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(130, Short.MAX_VALUE))
-        );
-        PainelMtUmLayout.setVerticalGroup(
-            PainelMtUmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PainelMtUmLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(PainelMtUmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btMtUmMenu)
-                    .addComponent(jButton1))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jlMtUmA)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jlMtUmB)
-                .addGap(18, 18, 18)
-                .addGroup(PainelMtUmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btMtUmA, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btMtUmB, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(30, 30, 30)
-                .addGroup(PainelMtUmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btMtUmC, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btMtUmD, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 25, Short.MAX_VALUE)
-                .addComponent(btMtUmAvançar)
-                .addContainerGap())
-        );
-
-        setJMenuBar(jMenuBar1);
+        btMtUmAvançar.setText("Avançar");
+        btMtUmAvançar.setFocusable(false);
+        btMtUmAvançar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btMtUmAvançarActionPerformed(evt);
+            }
+        });
+        PainelMtUm.add(btMtUmAvançar, new org.netbeans.lib.awtextra.AbsoluteConstraints(614, 344, 70, 50));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -184,7 +136,7 @@ public class MtUm extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(PainelMtUm, javax.swing.GroupLayout.DEFAULT_SIZE, 399, Short.MAX_VALUE)
+            .addComponent(PainelMtUm, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -226,9 +178,9 @@ pontosMt=pontosMt-5;         // TODO add your handling code here:
         dispose();
     }//GEN-LAST:event_btMtUmMenuActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btMtDicaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btMtDicaActionPerformed
         JOptionPane.showMessageDialog(null,"A operação é soma ou seja conte cada unidade na mão!");
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_btMtDicaActionPerformed
 
     private void btMtUmAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btMtUmAActionPerformed
 pontosMt=pontosMt-5;         // TODO add your handling code here:
@@ -245,15 +197,13 @@ pontosMt=pontosMt-5;         // TODO add your handling code here:
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel PainelMtUm;
+    private javax.swing.JButton btMtDica;
     private javax.swing.JButton btMtUmA;
     private javax.swing.JButton btMtUmAvançar;
     private javax.swing.JButton btMtUmB;
     private javax.swing.JButton btMtUmC;
     private javax.swing.JButton btMtUmD;
     private javax.swing.JButton btMtUmMenu;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JLabel jlMtUmA;
-    private javax.swing.JLabel jlMtUmB;
+    private javax.swing.JLabel jlMtUm;
     // End of variables declaration//GEN-END:variables
 }

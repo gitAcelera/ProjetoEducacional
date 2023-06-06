@@ -39,20 +39,22 @@ int pontosMt = PontosAluno.getPontosMt();
     private void initComponents() {
 
         PainelMtDez = new javax.swing.JPanel();
-        jlMtDezA = new javax.swing.JLabel();
+        jlMtDez = new javax.swing.JLabel();
         btMtDezA = new javax.swing.JButton();
         btMtDezB = new javax.swing.JButton();
         btMtDezC = new javax.swing.JButton();
         btMtDezD = new javax.swing.JButton();
-        btAvancar = new javax.swing.JButton();
         btVoltarMenu = new javax.swing.JButton();
         btVoltarMt = new javax.swing.JButton();
         btPtDica = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jlMtDezA.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        jlMtDezA.setText("Qual número abaixo é Ímpar?");
+        PainelMtDez.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jlMtDez.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        jlMtDez.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/MtDez.png"))); // NOI18N
+        PainelMtDez.add(jlMtDez, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         btMtDezA.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btMtDezA.setText("2");
@@ -61,6 +63,7 @@ int pontosMt = PontosAluno.getPontosMt();
                 btMtDezAActionPerformed(evt);
             }
         });
+        PainelMtDez.add(btMtDezA, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 135, 180, 90));
 
         btMtDezB.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btMtDezB.setText("6");
@@ -69,6 +72,7 @@ int pontosMt = PontosAluno.getPontosMt();
                 btMtDezBActionPerformed(evt);
             }
         });
+        PainelMtDez.add(btMtDezB, new org.netbeans.lib.awtextra.AbsoluteConstraints(402, 135, 180, 90));
 
         btMtDezC.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btMtDezC.setText("5");
@@ -78,6 +82,7 @@ int pontosMt = PontosAluno.getPontosMt();
                 btMtDezCActionPerformed(evt);
             }
         });
+        PainelMtDez.add(btMtDezC, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 255, 180, 90));
 
         btMtDezD.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btMtDezD.setText("8");
@@ -86,10 +91,10 @@ int pontosMt = PontosAluno.getPontosMt();
                 btMtDezDActionPerformed(evt);
             }
         });
-
-        btAvancar.setText("Avançar");
+        PainelMtDez.add(btMtDezD, new org.netbeans.lib.awtextra.AbsoluteConstraints(402, 255, 180, 90));
 
         btVoltarMenu.setText(" MENU");
+        PainelMtDez.add(btVoltarMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, 80, 40));
 
         btVoltarMt.setText("Voltar");
         btVoltarMt.addActionListener(new java.awt.event.ActionListener() {
@@ -97,6 +102,7 @@ int pontosMt = PontosAluno.getPontosMt();
                 btVoltarMtActionPerformed(evt);
             }
         });
+        PainelMtDez.add(btVoltarMt, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 349, 80, 50));
 
         btPtDica.setText("?");
         btPtDica.addActionListener(new java.awt.event.ActionListener() {
@@ -104,61 +110,7 @@ int pontosMt = PontosAluno.getPontosMt();
                 btPtDicaActionPerformed(evt);
             }
         });
-
-        javax.swing.GroupLayout PainelMtDezLayout = new javax.swing.GroupLayout(PainelMtDez);
-        PainelMtDez.setLayout(PainelMtDezLayout);
-        PainelMtDezLayout.setHorizontalGroup(
-            PainelMtDezLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PainelMtDezLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(PainelMtDezLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(PainelMtDezLayout.createSequentialGroup()
-                        .addComponent(btVoltarMenu)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btPtDica))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelMtDezLayout.createSequentialGroup()
-                        .addComponent(btVoltarMt)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btAvancar)))
-                .addContainerGap())
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelMtDezLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(PainelMtDezLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btMtDezA, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btMtDezC, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(82, 82, 82)
-                .addGroup(PainelMtDezLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btMtDezD, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btMtDezB, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(128, 128, 128))
-            .addGroup(PainelMtDezLayout.createSequentialGroup()
-                .addGap(112, 112, 112)
-                .addComponent(jlMtDezA)
-                .addContainerGap(118, Short.MAX_VALUE))
-        );
-        PainelMtDezLayout.setVerticalGroup(
-            PainelMtDezLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PainelMtDezLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(PainelMtDezLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btVoltarMenu)
-                    .addComponent(btPtDica))
-                .addGap(30, 30, 30)
-                .addComponent(jlMtDezA)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 38, Short.MAX_VALUE)
-                .addGroup(PainelMtDezLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btMtDezA, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btMtDezB, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(30, 30, 30)
-                .addGroup(PainelMtDezLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btMtDezD, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btMtDezC, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(41, 41, 41)
-                .addGroup(PainelMtDezLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btAvancar)
-                    .addComponent(btVoltarMt))
-                .addContainerGap())
-        );
+        PainelMtDez.add(btPtDica, new org.netbeans.lib.awtextra.AbsoluteConstraints(644, 6, 50, 40));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -257,7 +209,6 @@ int pontosMt = PontosAluno.getPontosMt();
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel PainelMtDez;
-    private javax.swing.JButton btAvancar;
     private javax.swing.JButton btMtDezA;
     private javax.swing.JButton btMtDezB;
     private javax.swing.JButton btMtDezC;
@@ -265,6 +216,6 @@ int pontosMt = PontosAluno.getPontosMt();
     private javax.swing.JButton btPtDica;
     private javax.swing.JButton btVoltarMenu;
     private javax.swing.JButton btVoltarMt;
-    private javax.swing.JLabel jlMtDezA;
+    private javax.swing.JLabel jlMtDez;
     // End of variables declaration//GEN-END:variables
 }

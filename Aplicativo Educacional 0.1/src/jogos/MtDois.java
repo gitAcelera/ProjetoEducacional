@@ -38,26 +38,24 @@ public class MtDois extends javax.swing.JFrame {
     private void initComponents() {
 
         PainelMtDois = new javax.swing.JPanel();
-        jlMtDoisA = new javax.swing.JLabel();
-        jlMtDoisB = new javax.swing.JLabel();
+        jlMtDois = new javax.swing.JLabel();
         btMtDoisA = new javax.swing.JButton();
         btMDoisB = new javax.swing.JButton();
         btMtDoisC = new javax.swing.JButton();
         btMtDoisD = new javax.swing.JButton();
         btAvancar = new javax.swing.JButton();
         btVoltarMenu = new javax.swing.JButton();
-        btVoltarMt = new javax.swing.JButton();
         btPtDica = new javax.swing.JButton();
+        btVoltarMt = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         PainelMtDois.setPreferredSize(new java.awt.Dimension(700, 420));
+        PainelMtDois.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jlMtDoisA.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        jlMtDoisA.setText("Qual o valor da operação");
-
-        jlMtDoisB.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        jlMtDoisB.setText("\" 10 + 6 \"");
+        jlMtDois.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        jlMtDois.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/MtDois.png"))); // NOI18N
+        PainelMtDois.add(jlMtDois, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         btMtDoisA.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btMtDoisA.setText("4");
@@ -66,6 +64,7 @@ public class MtDois extends javax.swing.JFrame {
                 btMtDoisAActionPerformed(evt);
             }
         });
+        PainelMtDois.add(btMtDoisA, new org.netbeans.lib.awtextra.AbsoluteConstraints(116, 143, 180, 80));
 
         btMDoisB.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btMDoisB.setText("16");
@@ -74,6 +73,7 @@ public class MtDois extends javax.swing.JFrame {
                 btMDoisBActionPerformed(evt);
             }
         });
+        PainelMtDois.add(btMDoisB, new org.netbeans.lib.awtextra.AbsoluteConstraints(408, 143, 180, 80));
 
         btMtDoisC.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btMtDoisC.setText("7");
@@ -82,6 +82,7 @@ public class MtDois extends javax.swing.JFrame {
                 btMtDoisCActionPerformed(evt);
             }
         });
+        PainelMtDois.add(btMtDoisC, new org.netbeans.lib.awtextra.AbsoluteConstraints(116, 263, 180, 80));
 
         btMtDoisD.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btMtDoisD.setText("14");
@@ -90,6 +91,7 @@ public class MtDois extends javax.swing.JFrame {
                 btMtDoisDActionPerformed(evt);
             }
         });
+        PainelMtDois.add(btMtDoisD, new org.netbeans.lib.awtextra.AbsoluteConstraints(408, 263, 180, 80));
 
         btAvancar.setText("Avançar");
         btAvancar.addActionListener(new java.awt.event.ActionListener() {
@@ -97,6 +99,7 @@ public class MtDois extends javax.swing.JFrame {
                 btAvancarActionPerformed(evt);
             }
         });
+        PainelMtDois.add(btAvancar, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 354, -1, 30));
 
         btVoltarMenu.setText("MENU");
         btVoltarMenu.addActionListener(new java.awt.event.ActionListener() {
@@ -104,13 +107,7 @@ public class MtDois extends javax.swing.JFrame {
                 btVoltarMenuActionPerformed(evt);
             }
         });
-
-        btVoltarMt.setText("Voltar");
-        btVoltarMt.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btVoltarMtActionPerformed(evt);
-            }
-        });
+        PainelMtDois.add(btVoltarMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, 80, 40));
 
         btPtDica.setText("?");
         btPtDica.addActionListener(new java.awt.event.ActionListener() {
@@ -118,72 +115,15 @@ public class MtDois extends javax.swing.JFrame {
                 btPtDicaActionPerformed(evt);
             }
         });
+        PainelMtDois.add(btPtDica, new org.netbeans.lib.awtextra.AbsoluteConstraints(644, 6, 50, 40));
 
-        javax.swing.GroupLayout PainelMtDoisLayout = new javax.swing.GroupLayout(PainelMtDois);
-        PainelMtDois.setLayout(PainelMtDoisLayout);
-        PainelMtDoisLayout.setHorizontalGroup(
-            PainelMtDoisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelMtDoisLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jlMtDoisA)
-                .addGap(146, 146, 146))
-            .addGroup(PainelMtDoisLayout.createSequentialGroup()
-                .addGroup(PainelMtDoisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(PainelMtDoisLayout.createSequentialGroup()
-                        .addGap(273, 273, 273)
-                        .addComponent(jlMtDoisB))
-                    .addGroup(PainelMtDoisLayout.createSequentialGroup()
-                        .addGap(126, 126, 126)
-                        .addGroup(PainelMtDoisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btMtDoisA, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btMtDoisC, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(82, 82, 82)
-                        .addGroup(PainelMtDoisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btMDoisB, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btMtDoisD, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(132, Short.MAX_VALUE))
-            .addGroup(PainelMtDoisLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(PainelMtDoisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelMtDoisLayout.createSequentialGroup()
-                        .addComponent(btVoltarMenu)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btPtDica)
-                        .addContainerGap())
-                    .addGroup(PainelMtDoisLayout.createSequentialGroup()
-                        .addComponent(btVoltarMt)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btAvancar))))
-        );
-        PainelMtDoisLayout.setVerticalGroup(
-            PainelMtDoisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PainelMtDoisLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(PainelMtDoisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btPtDica)
-                    .addComponent(btVoltarMenu))
-                .addGroup(PainelMtDoisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(PainelMtDoisLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jlMtDoisA)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jlMtDoisB)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
-                        .addGroup(PainelMtDoisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(btMtDoisA, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btMDoisB, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(30, 30, 30)
-                        .addGroup(PainelMtDoisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(btMtDoisC, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btMtDoisD, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(47, 47, 47))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelMtDoisLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(PainelMtDoisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(btVoltarMt)
-                            .addComponent(btAvancar))
-                        .addContainerGap())))
-        );
+        btVoltarMt.setText("Voltar");
+        btVoltarMt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btVoltarMtActionPerformed(evt);
+            }
+        });
+        PainelMtDois.add(btVoltarMt, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 354, 80, 40));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -272,7 +212,6 @@ public class MtDois extends javax.swing.JFrame {
     private javax.swing.JButton btPtDica;
     private javax.swing.JButton btVoltarMenu;
     private javax.swing.JButton btVoltarMt;
-    private javax.swing.JLabel jlMtDoisA;
-    private javax.swing.JLabel jlMtDoisB;
+    private javax.swing.JLabel jlMtDois;
     // End of variables declaration//GEN-END:variables
 }

@@ -1,0 +1,9 @@
+jogos.QEDois$7
+jogos.QEDois$8
+jogos.QEDois$5
+jogos.QEDois$6
+jogos.QEDois$3
+jogos.QEDois$4
+jogos.QEDois$1
+jogos.QEDois$2
+jogos.QEDois

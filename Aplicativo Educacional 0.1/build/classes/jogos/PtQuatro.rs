@@ -1,0 +1,9 @@
+jogos.PtQuatro$8
+jogos.PtQuatro$6
+jogos.PtQuatro$7
+jogos.PtQuatro$4
+jogos.PtQuatro$5
+jogos.PtQuatro$2
+jogos.PtQuatro$3
+jogos.PtQuatro
+jogos.PtQuatro$1

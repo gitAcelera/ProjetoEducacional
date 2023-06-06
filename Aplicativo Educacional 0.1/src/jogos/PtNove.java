@@ -36,24 +36,25 @@ public class PtNove extends javax.swing.JFrame {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
-        java.awt.GridBagConstraints gridBagConstraints;
 
         PainelPtNove = new javax.swing.JPanel();
-        jlPtNoveA = new javax.swing.JLabel();
+        jlPtNove = new javax.swing.JLabel();
         btPtNoveA = new javax.swing.JButton();
         btPtNoveB = new javax.swing.JButton();
         btPtNoveC = new javax.swing.JButton();
         btPtNoveD = new javax.swing.JButton();
-        btMtUmMenu = new javax.swing.JButton();
+        btPtMenu = new javax.swing.JButton();
         btPtDica = new javax.swing.JButton();
         btPtAvancar = new javax.swing.JButton();
-        btVoltarPt = new javax.swing.JButton();
+        btPtVoltar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(new java.awt.GridBagLayout());
 
-        jlPtNoveA.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        jlPtNoveA.setText("Qual o plural da palavra \"CASA\"? ");
+        PainelPtNove.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jlPtNove.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        jlPtNove.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/PtNove.png"))); // NOI18N
+        PainelPtNove.add(jlPtNove, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 400));
 
         btPtNoveA.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btPtNoveA.setText("CASOS");
@@ -62,6 +63,7 @@ public class PtNove extends javax.swing.JFrame {
                 btPtNoveAActionPerformed(evt);
             }
         });
+        PainelPtNove.add(btPtNoveA, new org.netbeans.lib.awtextra.AbsoluteConstraints(115, 139, 190, 80));
 
         btPtNoveB.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btPtNoveB.setText("CANÇÕES");
@@ -70,6 +72,7 @@ public class PtNove extends javax.swing.JFrame {
                 btPtNoveBActionPerformed(evt);
             }
         });
+        PainelPtNove.add(btPtNoveB, new org.netbeans.lib.awtextra.AbsoluteConstraints(407, 139, 180, 80));
 
         btPtNoveC.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btPtNoveC.setText("CASÕES");
@@ -78,6 +81,7 @@ public class PtNove extends javax.swing.JFrame {
                 btPtNoveCActionPerformed(evt);
             }
         });
+        PainelPtNove.add(btPtNoveC, new org.netbeans.lib.awtextra.AbsoluteConstraints(115, 259, 180, 80));
 
         btPtNoveD.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btPtNoveD.setText("CASAS");
@@ -86,13 +90,15 @@ public class PtNove extends javax.swing.JFrame {
                 btPtNoveDActionPerformed(evt);
             }
         });
+        PainelPtNove.add(btPtNoveD, new org.netbeans.lib.awtextra.AbsoluteConstraints(407, 259, 180, 80));
 
-        btMtUmMenu.setText("MENU");
-        btMtUmMenu.addActionListener(new java.awt.event.ActionListener() {
+        btPtMenu.setText("MENU");
+        btPtMenu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btMtUmMenuActionPerformed(evt);
+                btPtMenuActionPerformed(evt);
             }
         });
+        PainelPtNove.add(btPtMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, 80, 40));
 
         btPtDica.setText("?");
         btPtDica.addActionListener(new java.awt.event.ActionListener() {
@@ -100,6 +106,7 @@ public class PtNove extends javax.swing.JFrame {
                 btPtDicaActionPerformed(evt);
             }
         });
+        PainelPtNove.add(btPtDica, new org.netbeans.lib.awtextra.AbsoluteConstraints(644, 6, 50, 40));
 
         btPtAvancar.setText("Avançar");
         btPtAvancar.addActionListener(new java.awt.event.ActionListener() {
@@ -107,79 +114,26 @@ public class PtNove extends javax.swing.JFrame {
                 btPtAvancarActionPerformed(evt);
             }
         });
+        PainelPtNove.add(btPtAvancar, new org.netbeans.lib.awtextra.AbsoluteConstraints(614, 351, 70, 40));
 
-        btVoltarPt.setText("Voltar");
-        btVoltarPt.addActionListener(new java.awt.event.ActionListener() {
+        btPtVoltar.setText("Voltar");
+        btPtVoltar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btVoltarPtActionPerformed(evt);
+                btPtVoltarActionPerformed(evt);
             }
         });
+        PainelPtNove.add(btPtVoltar, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 351, 80, 40));
 
-        javax.swing.GroupLayout PainelPtNoveLayout = new javax.swing.GroupLayout(PainelPtNove);
-        PainelPtNove.setLayout(PainelPtNoveLayout);
-        PainelPtNoveLayout.setHorizontalGroup(
-            PainelPtNoveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelPtNoveLayout.createSequentialGroup()
-                .addContainerGap(86, Short.MAX_VALUE)
-                .addComponent(jlPtNoveA, javax.swing.GroupLayout.PREFERRED_SIZE, 550, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(64, 64, 64))
-            .addGroup(PainelPtNoveLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(PainelPtNoveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(PainelPtNoveLayout.createSequentialGroup()
-                        .addComponent(btMtUmMenu)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btPtDica))
-                    .addGroup(PainelPtNoveLayout.createSequentialGroup()
-                        .addComponent(btVoltarPt)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btPtAvancar)))
-                .addContainerGap())
-            .addGroup(PainelPtNoveLayout.createSequentialGroup()
-                .addGap(125, 125, 125)
-                .addGroup(PainelPtNoveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(btPtNoveA, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btPtNoveC, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(82, 82, 82)
-                .addGroup(PainelPtNoveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(btPtNoveB, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btPtNoveD, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(PainelPtNove, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
-        PainelPtNoveLayout.setVerticalGroup(
-            PainelPtNoveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PainelPtNoveLayout.createSequentialGroup()
-                .addGroup(PainelPtNoveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(PainelPtNoveLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(PainelPtNoveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(btMtUmMenu)
-                            .addComponent(btPtDica)))
-                    .addGroup(PainelPtNoveLayout.createSequentialGroup()
-                        .addGap(40, 40, 40)
-                        .addComponent(jlPtNoveA)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 54, Short.MAX_VALUE)
-                .addGroup(PainelPtNoveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btPtNoveB, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btPtNoveA, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(30, 30, 30)
-                .addGroup(PainelPtNoveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btPtNoveC, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btPtNoveD, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(39, 39, 39)
-                .addGroup(PainelPtNoveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btVoltarPt)
-                    .addComponent(btPtAvancar))
-                .addContainerGap())
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(PainelPtNove, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
-
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 0;
-        gridBagConstraints.ipadx = 28;
-        gridBagConstraints.ipady = 61;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        getContentPane().add(PainelPtNove, gridBagConstraints);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -210,10 +164,10 @@ public class PtNove extends javax.swing.JFrame {
       dispose();
     }//GEN-LAST:event_btPtNoveDActionPerformed
 
-    private void btMtUmMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btMtUmMenuActionPerformed
+    private void btPtMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPtMenuActionPerformed
         new menuPrincipal().show();
         dispose();
-    }//GEN-LAST:event_btMtUmMenuActionPerformed
+    }//GEN-LAST:event_btPtMenuActionPerformed
 
     private void btPtDicaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPtDicaActionPerformed
         JOptionPane.showMessageDialog(null,"Plural se refere a mais de um, exemplo: Os PASSARINHOS voam");
@@ -238,10 +192,10 @@ pontosPt=pontosPt-5;        // TODO add your handling code here:
 pontosPt=pontosPt-5;        // TODO add your handling code here:
     }//GEN-LAST:event_btPtNoveCActionPerformed
 
-    private void btVoltarPtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btVoltarPtActionPerformed
+    private void btPtVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPtVoltarActionPerformed
         new PtOito ().show();
         dispose();
-    }//GEN-LAST:event_btVoltarPtActionPerformed
+    }//GEN-LAST:event_btPtVoltarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -250,14 +204,14 @@ pontosPt=pontosPt-5;        // TODO add your handling code here:
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel PainelPtNove;
-    private javax.swing.JButton btMtUmMenu;
     private javax.swing.JButton btPtAvancar;
     private javax.swing.JButton btPtDica;
+    private javax.swing.JButton btPtMenu;
     private javax.swing.JButton btPtNoveA;
     private javax.swing.JButton btPtNoveB;
     private javax.swing.JButton btPtNoveC;
     private javax.swing.JButton btPtNoveD;
-    private javax.swing.JButton btVoltarPt;
-    private javax.swing.JLabel jlPtNoveA;
+    private javax.swing.JButton btPtVoltar;
+    private javax.swing.JLabel jlPtNove;
     // End of variables declaration//GEN-END:variables
 }

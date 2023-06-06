@@ -1,0 +1,5 @@
+telas.recuperaSenhaProfessor$2
+telas.recuperaSenhaProfessor$3
+telas.recuperaSenhaProfessor$1
+telas.recuperaSenhaProfessor
+telas.recuperaSenhaProfessor$4

@@ -41,12 +41,11 @@ public class MtSete extends javax.swing.JFrame {
     private void initComponents() {
 
         PainelMtSete = new javax.swing.JPanel();
-        jlMtSeteA = new javax.swing.JLabel();
-        jlMtSeteB = new javax.swing.JLabel();
+        jlMtSete = new javax.swing.JLabel();
         btMtSeteA = new javax.swing.JButton();
         btMtSeteB = new javax.swing.JButton();
-        btMtSeteD = new javax.swing.JButton();
         btMtSeteC = new javax.swing.JButton();
+        btMtSeteD = new javax.swing.JButton();
         btAvancar = new javax.swing.JButton();
         btVoltarMenu = new javax.swing.JButton();
         btVoltarMt = new javax.swing.JButton();
@@ -57,12 +56,11 @@ public class MtSete extends javax.swing.JFrame {
         PainelMtSete.setPreferredSize(new java.awt.Dimension(700, 400));
         PainelMtSete.setRequestFocusEnabled(false);
         PainelMtSete.setVerifyInputWhenFocusTarget(false);
+        PainelMtSete.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jlMtSeteA.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        jlMtSeteA.setText("Qual o valor da multiplicação");
-
-        jlMtSeteB.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        jlMtSeteB.setText("\"2 x 3\"?");
+        jlMtSete.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        jlMtSete.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/MtSete.png"))); // NOI18N
+        PainelMtSete.add(jlMtSete, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         btMtSeteA.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btMtSeteA.setText("5");
@@ -71,6 +69,7 @@ public class MtSete extends javax.swing.JFrame {
                 btMtSeteAActionPerformed(evt);
             }
         });
+        PainelMtSete.add(btMtSeteA, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 133, 180, 90));
 
         btMtSeteB.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btMtSeteB.setText("1");
@@ -79,14 +78,7 @@ public class MtSete extends javax.swing.JFrame {
                 btMtSeteBActionPerformed(evt);
             }
         });
-
-        btMtSeteD.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        btMtSeteD.setText("8");
-        btMtSeteD.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btMtSeteDActionPerformed(evt);
-            }
-        });
+        PainelMtSete.add(btMtSeteB, new org.netbeans.lib.awtextra.AbsoluteConstraints(402, 143, 180, 80));
 
         btMtSeteC.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btMtSeteC.setText("6");
@@ -96,6 +88,16 @@ public class MtSete extends javax.swing.JFrame {
                 btMtSeteCActionPerformed(evt);
             }
         });
+        PainelMtSete.add(btMtSeteC, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 263, 180, 80));
+
+        btMtSeteD.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        btMtSeteD.setText("8");
+        btMtSeteD.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btMtSeteDActionPerformed(evt);
+            }
+        });
+        PainelMtSete.add(btMtSeteD, new org.netbeans.lib.awtextra.AbsoluteConstraints(402, 263, 180, 80));
 
         btAvancar.setText("Avançar");
         btAvancar.addActionListener(new java.awt.event.ActionListener() {
@@ -103,6 +105,7 @@ public class MtSete extends javax.swing.JFrame {
                 btAvancarActionPerformed(evt);
             }
         });
+        PainelMtSete.add(btAvancar, new org.netbeans.lib.awtextra.AbsoluteConstraints(604, 344, 90, 50));
 
         btVoltarMenu.setText(" MENU");
         btVoltarMenu.addActionListener(new java.awt.event.ActionListener() {
@@ -110,6 +113,7 @@ public class MtSete extends javax.swing.JFrame {
                 btVoltarMenuActionPerformed(evt);
             }
         });
+        PainelMtSete.add(btVoltarMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, 80, 50));
 
         btVoltarMt.setText("Voltar");
         btVoltarMt.addActionListener(new java.awt.event.ActionListener() {
@@ -117,6 +121,7 @@ public class MtSete extends javax.swing.JFrame {
                 btVoltarMtActionPerformed(evt);
             }
         });
+        PainelMtSete.add(btVoltarMt, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 354, 80, 40));
 
         btPtDica.setText("?");
         btPtDica.addActionListener(new java.awt.event.ActionListener() {
@@ -124,68 +129,7 @@ public class MtSete extends javax.swing.JFrame {
                 btPtDicaActionPerformed(evt);
             }
         });
-
-        javax.swing.GroupLayout PainelMtSeteLayout = new javax.swing.GroupLayout(PainelMtSete);
-        PainelMtSete.setLayout(PainelMtSeteLayout);
-        PainelMtSeteLayout.setHorizontalGroup(
-            PainelMtSeteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PainelMtSeteLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(PainelMtSeteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelMtSeteLayout.createSequentialGroup()
-                        .addComponent(btVoltarMt)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btAvancar))
-                    .addGroup(PainelMtSeteLayout.createSequentialGroup()
-                        .addComponent(btVoltarMenu)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btPtDica)))
-                .addContainerGap())
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelMtSeteLayout.createSequentialGroup()
-                .addGap(0, 120, Short.MAX_VALUE)
-                .addGroup(PainelMtSeteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelMtSeteLayout.createSequentialGroup()
-                        .addGroup(PainelMtSeteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btMtSeteA, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btMtSeteC, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(82, 82, 82)
-                        .addGroup(PainelMtSeteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btMtSeteD, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btMtSeteB, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(128, 128, 128))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelMtSeteLayout.createSequentialGroup()
-                        .addComponent(jlMtSeteA)
-                        .addGap(117, 117, 117))))
-            .addGroup(PainelMtSeteLayout.createSequentialGroup()
-                .addGap(290, 290, 290)
-                .addComponent(jlMtSeteB)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        PainelMtSeteLayout.setVerticalGroup(
-            PainelMtSeteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PainelMtSeteLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(PainelMtSeteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btVoltarMenu)
-                    .addComponent(btPtDica))
-                .addGap(10, 10, 10)
-                .addComponent(jlMtSeteA)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jlMtSeteB)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(PainelMtSeteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btMtSeteA, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btMtSeteB, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(30, 30, 30)
-                .addGroup(PainelMtSeteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btMtSeteD, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btMtSeteC, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
-                .addGroup(PainelMtSeteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btAvancar)
-                    .addComponent(btVoltarMt))
-                .addContainerGap())
-        );
+        PainelMtSete.add(btPtDica, new org.netbeans.lib.awtextra.AbsoluteConstraints(644, 6, 50, 40));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -274,7 +218,6 @@ public class MtSete extends javax.swing.JFrame {
     private javax.swing.JButton btPtDica;
     private javax.swing.JButton btVoltarMenu;
     private javax.swing.JButton btVoltarMt;
-    private javax.swing.JLabel jlMtSeteA;
-    private javax.swing.JLabel jlMtSeteB;
+    private javax.swing.JLabel jlMtSete;
     // End of variables declaration//GEN-END:variables
 }

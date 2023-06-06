@@ -40,24 +40,23 @@ public class MtOito extends javax.swing.JFrame {
     private void initComponents() {
 
         PainelMtOito = new javax.swing.JPanel();
-        jlMtOitoA = new javax.swing.JLabel();
-        jlMtOitoB = new javax.swing.JLabel();
+        jlMtOito = new javax.swing.JLabel();
         btMtOitoA = new javax.swing.JButton();
         btMtOitoB = new javax.swing.JButton();
         btMtOitoC = new javax.swing.JButton();
         btMtOitoD = new javax.swing.JButton();
         btAvancar = new javax.swing.JButton();
         btVoltarMenu = new javax.swing.JButton();
-        btVoltarMt2 = new javax.swing.JButton();
+        btVoltarMt = new javax.swing.JButton();
         btPtDica = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jlMtOitoA.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        jlMtOitoA.setText("Qual o valor da multiplicação");
+        PainelMtOito.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jlMtOitoB.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        jlMtOitoB.setText("\"4 x 2\"?");
+        jlMtOito.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        jlMtOito.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/MtOito.png"))); // NOI18N
+        PainelMtOito.add(jlMtOito, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         btMtOitoA.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btMtOitoA.setText("8");
@@ -67,6 +66,7 @@ public class MtOito extends javax.swing.JFrame {
                 btMtOitoAActionPerformed(evt);
             }
         });
+        PainelMtOito.add(btMtOitoA, new org.netbeans.lib.awtextra.AbsoluteConstraints(121, 141, 180, 80));
 
         btMtOitoB.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btMtOitoB.setText("6");
@@ -75,6 +75,7 @@ public class MtOito extends javax.swing.JFrame {
                 btMtOitoBActionPerformed(evt);
             }
         });
+        PainelMtOito.add(btMtOitoB, new org.netbeans.lib.awtextra.AbsoluteConstraints(403, 141, 180, 80));
 
         btMtOitoC.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btMtOitoC.setText("10");
@@ -83,14 +84,16 @@ public class MtOito extends javax.swing.JFrame {
                 btMtOitoCActionPerformed(evt);
             }
         });
+        PainelMtOito.add(btMtOitoC, new org.netbeans.lib.awtextra.AbsoluteConstraints(121, 263, 180, 80));
 
         btMtOitoD.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        btMtOitoD.setText("2");
+        btMtOitoD.setText("7");
         btMtOitoD.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btMtOitoDActionPerformed(evt);
             }
         });
+        PainelMtOito.add(btMtOitoD, new org.netbeans.lib.awtextra.AbsoluteConstraints(403, 263, 180, 80));
 
         btAvancar.setText("Avançar");
         btAvancar.addActionListener(new java.awt.event.ActionListener() {
@@ -98,6 +101,7 @@ public class MtOito extends javax.swing.JFrame {
                 btAvancarActionPerformed(evt);
             }
         });
+        PainelMtOito.add(btAvancar, new org.netbeans.lib.awtextra.AbsoluteConstraints(604, 344, 90, 50));
 
         btVoltarMenu.setText("MENU");
         btVoltarMenu.addActionListener(new java.awt.event.ActionListener() {
@@ -105,13 +109,15 @@ public class MtOito extends javax.swing.JFrame {
                 btVoltarMenuActionPerformed(evt);
             }
         });
+        PainelMtOito.add(btVoltarMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, 80, 40));
 
-        btVoltarMt2.setText("Voltar");
-        btVoltarMt2.addActionListener(new java.awt.event.ActionListener() {
+        btVoltarMt.setText("Voltar");
+        btVoltarMt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btVoltarMt2ActionPerformed(evt);
+                btVoltarMtActionPerformed(evt);
             }
         });
+        PainelMtOito.add(btVoltarMt, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 371, -1, -1));
 
         btPtDica.setText("?");
         btPtDica.addActionListener(new java.awt.event.ActionListener() {
@@ -119,68 +125,7 @@ public class MtOito extends javax.swing.JFrame {
                 btPtDicaActionPerformed(evt);
             }
         });
-
-        javax.swing.GroupLayout PainelMtOitoLayout = new javax.swing.GroupLayout(PainelMtOito);
-        PainelMtOito.setLayout(PainelMtOitoLayout);
-        PainelMtOitoLayout.setHorizontalGroup(
-            PainelMtOitoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PainelMtOitoLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(PainelMtOitoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelMtOitoLayout.createSequentialGroup()
-                        .addComponent(btVoltarMt2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btAvancar))
-                    .addGroup(PainelMtOitoLayout.createSequentialGroup()
-                        .addComponent(btVoltarMenu)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btPtDica)))
-                .addContainerGap())
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelMtOitoLayout.createSequentialGroup()
-                .addContainerGap(123, Short.MAX_VALUE)
-                .addGroup(PainelMtOitoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(PainelMtOitoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jlMtOitoA)
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelMtOitoLayout.createSequentialGroup()
-                            .addGroup(PainelMtOitoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(btMtOitoC, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(btMtOitoA, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGap(82, 82, 82)
-                            .addGroup(PainelMtOitoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(btMtOitoB, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(btMtOitoD, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGap(13, 13, 13)))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelMtOitoLayout.createSequentialGroup()
-                        .addGap(173, 173, 173)
-                        .addComponent(jlMtOitoB)
-                        .addGap(171, 171, 171)))
-                .addGap(114, 114, 114))
-        );
-        PainelMtOitoLayout.setVerticalGroup(
-            PainelMtOitoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PainelMtOitoLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(PainelMtOitoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btVoltarMenu)
-                    .addComponent(btPtDica))
-                .addGap(2, 2, 2)
-                .addComponent(jlMtOitoA)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jlMtOitoB)
-                .addGap(12, 12, 12)
-                .addGroup(PainelMtOitoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btMtOitoB, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btMtOitoA, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 42, Short.MAX_VALUE)
-                .addGroup(PainelMtOitoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btMtOitoC, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btMtOitoD, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(PainelMtOitoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btAvancar)
-                    .addComponent(btVoltarMt2))
-                .addContainerGap())
-        );
+        PainelMtOito.add(btPtDica, new org.netbeans.lib.awtextra.AbsoluteConstraints(644, 6, 50, 40));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -245,10 +190,10 @@ public class MtOito extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_btVoltarMenuActionPerformed
 
-    private void btVoltarMt2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btVoltarMt2ActionPerformed
+    private void btVoltarMtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btVoltarMtActionPerformed
         new MtSete().show();
         dispose();
-    }//GEN-LAST:event_btVoltarMt2ActionPerformed
+    }//GEN-LAST:event_btVoltarMtActionPerformed
 
     private void btPtDicaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPtDicaActionPerformed
         JOptionPane.showMessageDialog(null,"Uma dica é voce tentar gritar a palavra em sua cabeça, a silaba que tiver mais ênfase é a sílaba tónica, exemplo: Abacaxiiii!");
@@ -268,8 +213,7 @@ public class MtOito extends javax.swing.JFrame {
     private javax.swing.JButton btMtOitoD;
     private javax.swing.JButton btPtDica;
     private javax.swing.JButton btVoltarMenu;
-    private javax.swing.JButton btVoltarMt2;
-    private javax.swing.JLabel jlMtOitoA;
-    private javax.swing.JLabel jlMtOitoB;
+    private javax.swing.JButton btVoltarMt;
+    private javax.swing.JLabel jlMtOito;
     // End of variables declaration//GEN-END:variables
 }

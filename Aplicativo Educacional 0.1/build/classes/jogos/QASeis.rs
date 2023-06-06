@@ -1,0 +1,9 @@
+jogos.QASeis$8
+jogos.QASeis$1
+jogos.QASeis$3
+jogos.QASeis$2
+jogos.QASeis$5
+jogos.QASeis$4
+jogos.QASeis$7
+jogos.QASeis
+jogos.QASeis$6

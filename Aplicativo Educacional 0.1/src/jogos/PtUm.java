@@ -38,25 +38,23 @@ public class PtUm extends javax.swing.JFrame {
     private void initComponents() {
 
         PainelPtUm = new javax.swing.JPanel();
-        jlPtUmA = new javax.swing.JLabel();
-        jlPtUmB = new javax.swing.JLabel();
+        jlPtUm = new javax.swing.JLabel();
         btPtUmA = new javax.swing.JButton();
         btPtUmB = new javax.swing.JButton();
         btPtUmC = new javax.swing.JButton();
         btPtUmD = new javax.swing.JButton();
         btPtDica = new javax.swing.JButton();
-        btPtVM = new javax.swing.JButton();
+        btPtMenu = new javax.swing.JButton();
         btPtAvancar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         PainelPtUm.setPreferredSize(new java.awt.Dimension(700, 420));
+        PainelPtUm.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jlPtUmA.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        jlPtUmA.setText("Qual é a vogal presente na");
-
-        jlPtUmB.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        jlPtUmB.setText("palavra \"CASA\"?");
+        jlPtUm.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        jlPtUm.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/PtUm.png"))); // NOI18N
+        PainelPtUm.add(jlPtUm, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 400));
 
         btPtUmA.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btPtUmA.setText("A");
@@ -65,6 +63,7 @@ public class PtUm extends javax.swing.JFrame {
                 btPtUmAActionPerformed(evt);
             }
         });
+        PainelPtUm.add(btPtUmA, new org.netbeans.lib.awtextra.AbsoluteConstraints(113, 136, 190, 90));
 
         btPtUmB.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btPtUmB.setText("C");
@@ -73,6 +72,7 @@ public class PtUm extends javax.swing.JFrame {
                 btPtUmBActionPerformed(evt);
             }
         });
+        PainelPtUm.add(btPtUmB, new org.netbeans.lib.awtextra.AbsoluteConstraints(405, 136, 180, 90));
 
         btPtUmC.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btPtUmC.setText("S");
@@ -81,6 +81,7 @@ public class PtUm extends javax.swing.JFrame {
                 btPtUmCActionPerformed(evt);
             }
         });
+        PainelPtUm.add(btPtUmC, new org.netbeans.lib.awtextra.AbsoluteConstraints(113, 256, 190, 90));
 
         btPtUmD.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btPtUmD.setText("O");
@@ -89,6 +90,7 @@ public class PtUm extends javax.swing.JFrame {
                 btPtUmDActionPerformed(evt);
             }
         });
+        PainelPtUm.add(btPtUmD, new org.netbeans.lib.awtextra.AbsoluteConstraints(405, 256, 180, 90));
 
         btPtDica.setText("?");
         btPtDica.addActionListener(new java.awt.event.ActionListener() {
@@ -96,13 +98,15 @@ public class PtUm extends javax.swing.JFrame {
                 btPtDicaActionPerformed(evt);
             }
         });
+        PainelPtUm.add(btPtDica, new org.netbeans.lib.awtextra.AbsoluteConstraints(641, 6, 50, 40));
 
-        btPtVM.setText("MENU");
-        btPtVM.addActionListener(new java.awt.event.ActionListener() {
+        btPtMenu.setText("MENU");
+        btPtMenu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btPtVMActionPerformed(evt);
+                btPtMenuActionPerformed(evt);
             }
         });
+        PainelPtUm.add(btPtMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, 80, 40));
 
         btPtAvancar.setText("Avançar");
         btPtAvancar.addActionListener(new java.awt.event.ActionListener() {
@@ -110,80 +114,21 @@ public class PtUm extends javax.swing.JFrame {
                 btPtAvancarActionPerformed(evt);
             }
         });
-
-        javax.swing.GroupLayout PainelPtUmLayout = new javax.swing.GroupLayout(PainelPtUm);
-        PainelPtUm.setLayout(PainelPtUmLayout);
-        PainelPtUmLayout.setHorizontalGroup(
-            PainelPtUmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PainelPtUmLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(PainelPtUmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(PainelPtUmLayout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(btPtAvancar))
-                    .addGroup(PainelPtUmLayout.createSequentialGroup()
-                        .addComponent(btPtVM)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btPtDica)))
-                .addContainerGap())
-            .addGroup(PainelPtUmLayout.createSequentialGroup()
-                .addGap(211, 211, 211)
-                .addComponent(jlPtUmB, javax.swing.GroupLayout.PREFERRED_SIZE, 269, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelPtUmLayout.createSequentialGroup()
-                .addContainerGap(133, Short.MAX_VALUE)
-                .addGroup(PainelPtUmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jlPtUmA)
-                    .addGroup(PainelPtUmLayout.createSequentialGroup()
-                        .addGroup(PainelPtUmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(btPtUmC, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btPtUmA, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(82, 82, 82)
-                        .addGroup(PainelPtUmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btPtUmB, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btPtUmD, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(125, 125, 125))
-        );
-        PainelPtUmLayout.setVerticalGroup(
-            PainelPtUmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelPtUmLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(PainelPtUmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(PainelPtUmLayout.createSequentialGroup()
-                        .addGroup(PainelPtUmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btPtDica)
-                            .addComponent(btPtVM))
-                        .addGap(127, 127, 127))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelPtUmLayout.createSequentialGroup()
-                        .addComponent(jlPtUmA)
-                        .addGap(18, 18, 18)
-                        .addComponent(jlPtUmB)
-                        .addGap(18, 18, 18)))
-                .addGroup(PainelPtUmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btPtUmA, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btPtUmB, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(30, 30, 30)
-                .addGroup(PainelPtUmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btPtUmC, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btPtUmD, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 25, Short.MAX_VALUE)
-                .addComponent(btPtAvancar)
-                .addContainerGap())
-        );
+        PainelPtUm.add(btPtAvancar, new org.netbeans.lib.awtextra.AbsoluteConstraints(601, 351, 90, 40));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(20, 20, 20)
-                .addComponent(PainelPtUm, javax.swing.GroupLayout.PREFERRED_SIZE, 660, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(PainelPtUm, javax.swing.GroupLayout.PREFERRED_SIZE, 694, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 6, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(1, 1, 1)
-                .addComponent(PainelPtUm, javax.swing.GroupLayout.PREFERRED_SIZE, 397, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(PainelPtUm, javax.swing.GroupLayout.PREFERRED_SIZE, 398, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 2, Short.MAX_VALUE))
         );
 
         pack();
@@ -216,10 +161,10 @@ public class PtUm extends javax.swing.JFrame {
       JOptionPane.showMessageDialog(null,"As vogais são A, E, I, O, U");
     }//GEN-LAST:event_btPtDicaActionPerformed
 
-    private void btPtVMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPtVMActionPerformed
+    private void btPtMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPtMenuActionPerformed
         new menuPrincipal().show();
         dispose();
-    }//GEN-LAST:event_btPtVMActionPerformed
+    }//GEN-LAST:event_btPtMenuActionPerformed
 
     private void btPtAvancarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPtAvancarActionPerformed
         pontosPt=0;
@@ -248,12 +193,11 @@ public class PtUm extends javax.swing.JFrame {
     private javax.swing.JPanel PainelPtUm;
     private javax.swing.JButton btPtAvancar;
     private javax.swing.JButton btPtDica;
+    private javax.swing.JButton btPtMenu;
     private javax.swing.JButton btPtUmA;
     private javax.swing.JButton btPtUmB;
     private javax.swing.JButton btPtUmC;
     private javax.swing.JButton btPtUmD;
-    private javax.swing.JButton btPtVM;
-    private javax.swing.JLabel jlPtUmA;
-    private javax.swing.JLabel jlPtUmB;
+    private javax.swing.JLabel jlPtUm;
     // End of variables declaration//GEN-END:variables
 }

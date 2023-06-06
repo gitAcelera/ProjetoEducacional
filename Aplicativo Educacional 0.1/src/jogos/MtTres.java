@@ -38,8 +38,7 @@ public class MtTres extends javax.swing.JFrame {
     private void initComponents() {
 
         PainelMtTres = new javax.swing.JPanel();
-        jlMtTresA = new javax.swing.JLabel();
-        jlMtTresB = new javax.swing.JLabel();
+        jlMtTres = new javax.swing.JLabel();
         btMtTresA = new javax.swing.JButton();
         btMtTresB = new javax.swing.JButton();
         btMtTresC = new javax.swing.JButton();
@@ -52,12 +51,11 @@ public class MtTres extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         PainelMtTres.setPreferredSize(new java.awt.Dimension(700, 420));
+        PainelMtTres.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jlMtTresA.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        jlMtTresA.setText("Qual o valor da operação");
-
-        jlMtTresB.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        jlMtTresB.setText("\"9 + 9\"");
+        jlMtTres.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        jlMtTres.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/MtTres.png"))); // NOI18N
+        PainelMtTres.add(jlMtTres, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         btMtTresA.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btMtTresA.setText("20");
@@ -66,14 +64,16 @@ public class MtTres extends javax.swing.JFrame {
                 btMtTresAActionPerformed(evt);
             }
         });
+        PainelMtTres.add(btMtTresA, new org.netbeans.lib.awtextra.AbsoluteConstraints(114, 140, 190, 80));
 
         btMtTresB.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        btMtTresB.setText("0");
+        btMtTresB.setText("17");
         btMtTresB.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btMtTresBActionPerformed(evt);
             }
         });
+        PainelMtTres.add(btMtTresB, new org.netbeans.lib.awtextra.AbsoluteConstraints(406, 140, 180, 80));
 
         btMtTresC.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btMtTresC.setText("18");
@@ -83,6 +83,7 @@ public class MtTres extends javax.swing.JFrame {
                 btMtTresCActionPerformed(evt);
             }
         });
+        PainelMtTres.add(btMtTresC, new org.netbeans.lib.awtextra.AbsoluteConstraints(114, 260, 190, 80));
 
         btMtTresD.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btMtTresD.setText("16");
@@ -91,6 +92,7 @@ public class MtTres extends javax.swing.JFrame {
                 btMtTresDActionPerformed(evt);
             }
         });
+        PainelMtTres.add(btMtTresD, new org.netbeans.lib.awtextra.AbsoluteConstraints(406, 260, 180, 80));
 
         btAvancar.setText("Avançar");
         btAvancar.addActionListener(new java.awt.event.ActionListener() {
@@ -98,6 +100,7 @@ public class MtTres extends javax.swing.JFrame {
                 btAvancarActionPerformed(evt);
             }
         });
+        PainelMtTres.add(btAvancar, new org.netbeans.lib.awtextra.AbsoluteConstraints(604, 344, 90, 50));
 
         btVoltarMenu.setText("MENU");
         btVoltarMenu.addActionListener(new java.awt.event.ActionListener() {
@@ -105,6 +108,7 @@ public class MtTres extends javax.swing.JFrame {
                 btVoltarMenuActionPerformed(evt);
             }
         });
+        PainelMtTres.add(btVoltarMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, 80, 40));
 
         btVoltarMt.setText("Voltar");
         btVoltarMt.addActionListener(new java.awt.event.ActionListener() {
@@ -112,6 +116,7 @@ public class MtTres extends javax.swing.JFrame {
                 btVoltarMtActionPerformed(evt);
             }
         });
+        PainelMtTres.add(btVoltarMt, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 354, 80, 40));
 
         btPtDica.setText("?");
         btPtDica.addActionListener(new java.awt.event.ActionListener() {
@@ -119,71 +124,7 @@ public class MtTres extends javax.swing.JFrame {
                 btPtDicaActionPerformed(evt);
             }
         });
-
-        javax.swing.GroupLayout PainelMtTresLayout = new javax.swing.GroupLayout(PainelMtTres);
-        PainelMtTres.setLayout(PainelMtTresLayout);
-        PainelMtTresLayout.setHorizontalGroup(
-            PainelMtTresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PainelMtTresLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(PainelMtTresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(PainelMtTresLayout.createSequentialGroup()
-                        .addGroup(PainelMtTresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(PainelMtTresLayout.createSequentialGroup()
-                                .addComponent(btVoltarMt)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addGroup(PainelMtTresLayout.createSequentialGroup()
-                                .addComponent(btVoltarMenu)
-                                .addGap(77, 77, 77)
-                                .addComponent(jlMtTresA)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                        .addGroup(PainelMtTresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btAvancar)
-                            .addComponent(btPtDica, javax.swing.GroupLayout.Alignment.TRAILING))
-                        .addContainerGap())
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelMtTresLayout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addGroup(PainelMtTresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelMtTresLayout.createSequentialGroup()
-                                .addComponent(jlMtTresB)
-                                .addGap(289, 289, 289))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelMtTresLayout.createSequentialGroup()
-                                .addGroup(PainelMtTresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(btMtTresA, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(btMtTresC, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(82, 82, 82)
-                                .addGroup(PainelMtTresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(btMtTresD, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(btMtTresB, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(124, 124, 124))))))
-        );
-        PainelMtTresLayout.setVerticalGroup(
-            PainelMtTresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PainelMtTresLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(PainelMtTresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btVoltarMenu)
-                    .addComponent(btPtDica))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(PainelMtTresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btVoltarMt)
-                    .addComponent(btAvancar))
-                .addContainerGap())
-            .addGroup(PainelMtTresLayout.createSequentialGroup()
-                .addGap(22, 22, 22)
-                .addComponent(jlMtTresA)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jlMtTresB)
-                .addGap(18, 18, 18)
-                .addGroup(PainelMtTresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btMtTresA, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btMtTresB, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(30, 30, 30)
-                .addGroup(PainelMtTresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btMtTresC, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btMtTresD, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(62, Short.MAX_VALUE))
-        );
+        PainelMtTres.add(btPtDica, new org.netbeans.lib.awtextra.AbsoluteConstraints(644, 6, 50, 40));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -270,7 +211,6 @@ public class MtTres extends javax.swing.JFrame {
     private javax.swing.JButton btPtDica;
     private javax.swing.JButton btVoltarMenu;
     private javax.swing.JButton btVoltarMt;
-    private javax.swing.JLabel jlMtTresA;
-    private javax.swing.JLabel jlMtTresB;
+    private javax.swing.JLabel jlMtTres;
     // End of variables declaration//GEN-END:variables
 }

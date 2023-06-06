@@ -1,0 +1,9 @@
+jogos.QENove$4
+jogos.QENove$5
+jogos.QENove$6
+jogos.QENove$7
+jogos.QENove$1
+jogos.QENove$2
+jogos.QENove$3
+jogos.QENove$8
+jogos.QENove

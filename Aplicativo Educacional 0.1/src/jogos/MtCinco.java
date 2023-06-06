@@ -38,8 +38,7 @@ public class MtCinco extends javax.swing.JFrame {
     private void initComponents() {
 
         PainelMtCinco = new javax.swing.JPanel();
-        jlMtCincoA = new javax.swing.JLabel();
-        jlMtCincoB = new javax.swing.JLabel();
+        jlMtCinco = new javax.swing.JLabel();
         btMtCincoA = new javax.swing.JButton();
         btMtCincoB = new javax.swing.JButton();
         btMtCincoC = new javax.swing.JButton();
@@ -53,12 +52,11 @@ public class MtCinco extends javax.swing.JFrame {
         setPreferredSize(new java.awt.Dimension(720, 420));
 
         PainelMtCinco.setPreferredSize(new java.awt.Dimension(700, 400));
+        PainelMtCinco.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jlMtCincoA.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        jlMtCincoA.setText("Qual o valor da operação");
-
-        jlMtCincoB.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        jlMtCincoB.setText("\"14 - 7\"?");
+        jlMtCinco.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        jlMtCinco.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/MtCinco.png"))); // NOI18N
+        PainelMtCinco.add(jlMtCinco, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         btMtCincoA.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btMtCincoA.setText("21");
@@ -67,6 +65,7 @@ public class MtCinco extends javax.swing.JFrame {
                 btMtCincoAActionPerformed(evt);
             }
         });
+        PainelMtCinco.add(btMtCincoA, new org.netbeans.lib.awtextra.AbsoluteConstraints(112, 143, 190, 80));
 
         btMtCincoB.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btMtCincoB.setText("12");
@@ -75,6 +74,7 @@ public class MtCinco extends javax.swing.JFrame {
                 btMtCincoBActionPerformed(evt);
             }
         });
+        PainelMtCinco.add(btMtCincoB, new org.netbeans.lib.awtextra.AbsoluteConstraints(404, 134, 180, 90));
 
         btMtCincoC.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btMtCincoC.setText("8");
@@ -83,6 +83,7 @@ public class MtCinco extends javax.swing.JFrame {
                 btMtCincoCActionPerformed(evt);
             }
         });
+        PainelMtCinco.add(btMtCincoC, new org.netbeans.lib.awtextra.AbsoluteConstraints(112, 255, 190, 90));
 
         btMtCincoD.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btMtCincoD.setText("7");
@@ -92,6 +93,7 @@ public class MtCinco extends javax.swing.JFrame {
                 btMtCincoDActionPerformed(evt);
             }
         });
+        PainelMtCinco.add(btMtCincoD, new org.netbeans.lib.awtextra.AbsoluteConstraints(404, 255, 180, 90));
 
         btVoltarMenu.setText(" MENU");
         btVoltarMenu.addActionListener(new java.awt.event.ActionListener() {
@@ -99,6 +101,7 @@ public class MtCinco extends javax.swing.JFrame {
                 btVoltarMenuActionPerformed(evt);
             }
         });
+        PainelMtCinco.add(btVoltarMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, 80, 40));
 
         btAvancar.setText("Avançar");
         btAvancar.addActionListener(new java.awt.event.ActionListener() {
@@ -106,6 +109,7 @@ public class MtCinco extends javax.swing.JFrame {
                 btAvancarActionPerformed(evt);
             }
         });
+        PainelMtCinco.add(btAvancar, new org.netbeans.lib.awtextra.AbsoluteConstraints(604, 344, 90, 50));
 
         btVoltarMt.setText("Voltar");
         btVoltarMt.addActionListener(new java.awt.event.ActionListener() {
@@ -113,6 +117,7 @@ public class MtCinco extends javax.swing.JFrame {
                 btVoltarMtActionPerformed(evt);
             }
         });
+        PainelMtCinco.add(btVoltarMt, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 354, 80, 40));
 
         btPtDica.setText("?");
         btPtDica.addActionListener(new java.awt.event.ActionListener() {
@@ -120,71 +125,7 @@ public class MtCinco extends javax.swing.JFrame {
                 btPtDicaActionPerformed(evt);
             }
         });
-
-        javax.swing.GroupLayout PainelMtCincoLayout = new javax.swing.GroupLayout(PainelMtCinco);
-        PainelMtCinco.setLayout(PainelMtCincoLayout);
-        PainelMtCincoLayout.setHorizontalGroup(
-            PainelMtCincoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PainelMtCincoLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(btVoltarMenu)
-                .addGap(77, 77, 77)
-                .addComponent(jlMtCincoA)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 116, Short.MAX_VALUE)
-                .addComponent(btPtDica)
-                .addContainerGap())
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelMtCincoLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(btVoltarMt)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btAvancar)
-                .addContainerGap())
-            .addGroup(PainelMtCincoLayout.createSequentialGroup()
-                .addGap(280, 280, 280)
-                .addComponent(jlMtCincoB)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelMtCincoLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(PainelMtCincoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addGroup(PainelMtCincoLayout.createSequentialGroup()
-                        .addComponent(btMtCincoC, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btMtCincoD, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(PainelMtCincoLayout.createSequentialGroup()
-                        .addComponent(btMtCincoA, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(82, 82, 82)
-                        .addComponent(btMtCincoB, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(126, 126, 126))
-        );
-        PainelMtCincoLayout.setVerticalGroup(
-            PainelMtCincoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PainelMtCincoLayout.createSequentialGroup()
-                .addGap(23, 23, 23)
-                .addComponent(jlMtCincoA)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jlMtCincoB)
-                .addGap(18, 18, 18)
-                .addGroup(PainelMtCincoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(PainelMtCincoLayout.createSequentialGroup()
-                        .addGap(1, 1, 1)
-                        .addComponent(btMtCincoB, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(btMtCincoA, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
-                .addGroup(PainelMtCincoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btMtCincoC, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btMtCincoD, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(65, 65, 65))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelMtCincoLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(PainelMtCincoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btVoltarMenu)
-                    .addComponent(btPtDica))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(PainelMtCincoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btAvancar)
-                    .addComponent(btVoltarMt))
-                .addContainerGap())
-        );
+        PainelMtCinco.add(btPtDica, new org.netbeans.lib.awtextra.AbsoluteConstraints(644, 6, 50, 40));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -273,7 +214,6 @@ public class MtCinco extends javax.swing.JFrame {
     private javax.swing.JButton btPtDica;
     private javax.swing.JButton btVoltarMenu;
     private javax.swing.JButton btVoltarMt;
-    private javax.swing.JLabel jlMtCincoA;
-    private javax.swing.JLabel jlMtCincoB;
+    private javax.swing.JLabel jlMtCinco;
     // End of variables declaration//GEN-END:variables
 }

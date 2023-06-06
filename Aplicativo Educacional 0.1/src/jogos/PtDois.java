@@ -36,26 +36,30 @@ public class PtDois extends javax.swing.JFrame {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
-        java.awt.GridBagConstraints gridBagConstraints;
 
         PainelPtDois = new javax.swing.JPanel();
-        jlPtUmA = new javax.swing.JLabel();
+        jlPtUm = new javax.swing.JLabel();
         btPtDoisA = new javax.swing.JButton();
         btPtDoisB = new javax.swing.JButton();
         btPtDoisC = new javax.swing.JButton();
         btPtDoisD = new javax.swing.JButton();
-        btPtVM = new javax.swing.JButton();
+        btPtMenu = new javax.swing.JButton();
         btPtDica = new javax.swing.JButton();
         btPtAvancar = new javax.swing.JButton();
-        btVoltarPt = new javax.swing.JButton();
+        btPtVoltar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(700, 420));
         setResizable(false);
-        getContentPane().setLayout(new java.awt.GridBagLayout());
 
-        jlPtUmA.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        jlPtUmA.setText("Qual é o plural da palavra \"CACHORRO\"?");
+        PainelPtDois.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jlPtUm.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        jlPtUm.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/PtDois.png"))); // NOI18N
+        jlPtUm.setRequestFocusEnabled(false);
+        jlPtUm.setVerifyInputWhenFocusTarget(false);
+        PainelPtDois.add(jlPtUm, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 400));
+        jlPtUm.getAccessibleContext().setAccessibleName("");
 
         btPtDoisA.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btPtDoisA.setText("CACHORRUZ");
@@ -64,6 +68,7 @@ public class PtDois extends javax.swing.JFrame {
                 btPtDoisAActionPerformed(evt);
             }
         });
+        PainelPtDois.add(btPtDoisA, new org.netbeans.lib.awtextra.AbsoluteConstraints(119, 139, 180, 80));
 
         btPtDoisB.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btPtDoisB.setText("CACHORROZ");
@@ -72,6 +77,7 @@ public class PtDois extends javax.swing.JFrame {
                 btPtDoisBActionPerformed(evt);
             }
         });
+        PainelPtDois.add(btPtDoisB, new org.netbeans.lib.awtextra.AbsoluteConstraints(401, 139, 180, 80));
 
         btPtDoisC.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btPtDoisC.setText("CACHORROS");
@@ -80,21 +86,24 @@ public class PtDois extends javax.swing.JFrame {
                 btPtDoisCActionPerformed(evt);
             }
         });
+        PainelPtDois.add(btPtDoisC, new org.netbeans.lib.awtextra.AbsoluteConstraints(119, 259, 180, 80));
 
         btPtDoisD.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        btPtDoisD.setText("CACHORRES");
+        btPtDoisD.setText("CACHORRUS");
         btPtDoisD.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btPtDoisDActionPerformed(evt);
             }
         });
+        PainelPtDois.add(btPtDoisD, new org.netbeans.lib.awtextra.AbsoluteConstraints(401, 259, 190, 80));
 
-        btPtVM.setText("MENU");
-        btPtVM.addActionListener(new java.awt.event.ActionListener() {
+        btPtMenu.setText("MENU");
+        btPtMenu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btPtVMActionPerformed(evt);
+                btPtMenuActionPerformed(evt);
             }
         });
+        PainelPtDois.add(btPtMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, 80, 40));
 
         btPtDica.setText("?");
         btPtDica.addActionListener(new java.awt.event.ActionListener() {
@@ -102,6 +111,7 @@ public class PtDois extends javax.swing.JFrame {
                 btPtDicaActionPerformed(evt);
             }
         });
+        PainelPtDois.add(btPtDica, new org.netbeans.lib.awtextra.AbsoluteConstraints(644, 6, 50, 40));
 
         btPtAvancar.setText("Avançar");
         btPtAvancar.addActionListener(new java.awt.event.ActionListener() {
@@ -109,83 +119,28 @@ public class PtDois extends javax.swing.JFrame {
                 btPtAvancarActionPerformed(evt);
             }
         });
+        PainelPtDois.add(btPtAvancar, new org.netbeans.lib.awtextra.AbsoluteConstraints(604, 348, 90, 40));
 
-        btVoltarPt.setText("Voltar");
-        btVoltarPt.addActionListener(new java.awt.event.ActionListener() {
+        btPtVoltar.setText("Voltar");
+        btPtVoltar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btVoltarPtActionPerformed(evt);
+                btPtVoltarActionPerformed(evt);
             }
         });
+        PainelPtDois.add(btPtVoltar, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 348, 80, 50));
 
-        javax.swing.GroupLayout PainelPtDoisLayout = new javax.swing.GroupLayout(PainelPtDois);
-        PainelPtDois.setLayout(PainelPtDoisLayout);
-        PainelPtDoisLayout.setHorizontalGroup(
-            PainelPtDoisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PainelPtDoisLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(PainelPtDoisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(PainelPtDoisLayout.createSequentialGroup()
-                        .addGroup(PainelPtDoisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(PainelPtDoisLayout.createSequentialGroup()
-                                .addGap(113, 113, 113)
-                                .addGroup(PainelPtDoisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addGroup(PainelPtDoisLayout.createSequentialGroup()
-                                        .addComponent(btPtDoisA, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(btPtDoisB, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(PainelPtDoisLayout.createSequentialGroup()
-                                        .addComponent(btPtDoisC, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(82, 82, 82)
-                                        .addComponent(btPtDoisD, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addGap(0, 0, Short.MAX_VALUE))
-                            .addGroup(PainelPtDoisLayout.createSequentialGroup()
-                                .addComponent(btPtVM)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(btPtDica)))
-                        .addContainerGap())
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelPtDoisLayout.createSequentialGroup()
-                        .addGap(0, 14, Short.MAX_VALUE)
-                        .addComponent(jlPtUmA, javax.swing.GroupLayout.PREFERRED_SIZE, 662, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelPtDoisLayout.createSequentialGroup()
-                        .addComponent(btVoltarPt)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btPtAvancar)
-                        .addContainerGap())))
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(PainelPtDois, javax.swing.GroupLayout.PREFERRED_SIZE, 700, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
-        PainelPtDoisLayout.setVerticalGroup(
-            PainelPtDoisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelPtDoisLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(PainelPtDoisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btPtVM)
-                    .addComponent(btPtDica))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
-                .addComponent(jlPtUmA, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(28, 28, 28)
-                .addGroup(PainelPtDoisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btPtDoisA, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btPtDoisB, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(30, 30, 30)
-                .addGroup(PainelPtDoisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btPtDoisC, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btPtDoisD, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
-                .addGroup(PainelPtDoisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btVoltarPt)
-                    .addComponent(btPtAvancar))
-                .addContainerGap())
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(PainelPtDois, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
-
-        jlPtUmA.getAccessibleContext().setAccessibleName("");
-
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 0;
-        gridBagConstraints.ipadx = 14;
-        gridBagConstraints.ipady = 31;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        getContentPane().add(PainelPtDois, gridBagConstraints);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -217,10 +172,10 @@ public class PtDois extends javax.swing.JFrame {
       dispose();
     }//GEN-LAST:event_btPtDoisCActionPerformed
 
-    private void btPtVMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPtVMActionPerformed
+    private void btPtMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPtMenuActionPerformed
         new menuPrincipal().show();
         dispose();
-    }//GEN-LAST:event_btPtVMActionPerformed
+    }//GEN-LAST:event_btPtMenuActionPerformed
 
     private void btPtDicaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPtDicaActionPerformed
         JOptionPane.showMessageDialog(null,"Plural se refere a mais de um, exemplo: Os PASSARINHOS voam");
@@ -245,10 +200,10 @@ pontosPt=pontosPt-5;        // TODO add your handling code here:
 pontosPt=pontosPt-5;        // TODO add your handling code here:
     }//GEN-LAST:event_btPtDoisDActionPerformed
 
-    private void btVoltarPtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btVoltarPtActionPerformed
+    private void btPtVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPtVoltarActionPerformed
         new PtUm ().show();
         dispose();
-    }//GEN-LAST:event_btVoltarPtActionPerformed
+    }//GEN-LAST:event_btPtVoltarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -263,8 +218,8 @@ pontosPt=pontosPt-5;        // TODO add your handling code here:
     private javax.swing.JButton btPtDoisB;
     private javax.swing.JButton btPtDoisC;
     private javax.swing.JButton btPtDoisD;
-    private javax.swing.JButton btPtVM;
-    private javax.swing.JButton btVoltarPt;
-    private javax.swing.JLabel jlPtUmA;
+    private javax.swing.JButton btPtMenu;
+    private javax.swing.JButton btPtVoltar;
+    private javax.swing.JLabel jlPtUm;
     // End of variables declaration//GEN-END:variables
 }

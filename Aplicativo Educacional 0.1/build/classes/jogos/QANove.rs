@@ -1,0 +1,9 @@
+jogos.QANove
+jogos.QANove$3
+jogos.QANove$2
+jogos.QANove$1
+jogos.QANove$7
+jogos.QANove$6
+jogos.QANove$5
+jogos.QANove$4
+jogos.QANove$8

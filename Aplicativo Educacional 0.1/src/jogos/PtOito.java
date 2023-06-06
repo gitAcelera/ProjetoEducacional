@@ -39,24 +39,28 @@ public class PtOito extends javax.swing.JFrame {
     private void initComponents() {
 
         PainelPtOito = new javax.swing.JPanel();
-        jlPtOitoA = new javax.swing.JLabel();
+        jlPtOito = new javax.swing.JLabel();
         btPtOitoA = new javax.swing.JButton();
         btPtOitoB = new javax.swing.JButton();
         btPtOitoC = new javax.swing.JButton();
         btPtOitoD = new javax.swing.JButton();
-        btMtUmMenu = new javax.swing.JButton();
+        btPtMenu = new javax.swing.JButton();
         btPtDica = new javax.swing.JButton();
         btPtAvancar = new javax.swing.JButton();
-        btVoltarPt = new javax.swing.JButton();
+        btPtVoltar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        setMaximumSize(new java.awt.Dimension(700, 400));
+        setPreferredSize(new java.awt.Dimension(700, 400));
+        setResizable(false);
 
         PainelPtOito.setRequestFocusEnabled(false);
         PainelPtOito.setVerifyInputWhenFocusTarget(false);
+        PainelPtOito.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jlPtOitoA.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        jlPtOitoA.setText("Escolha a opção correta:");
+        jlPtOito.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        jlPtOito.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/PtOito.png"))); // NOI18N
+        PainelPtOito.add(jlPtOito, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 400));
 
         btPtOitoA.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btPtOitoA.setText("CABELELEIRO");
@@ -65,6 +69,7 @@ public class PtOito extends javax.swing.JFrame {
                 btPtOitoAActionPerformed(evt);
             }
         });
+        PainelPtOito.add(btPtOitoA, new org.netbeans.lib.awtextra.AbsoluteConstraints(122, 135, 180, 90));
 
         btPtOitoB.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btPtOitoB.setText("CROCANTE");
@@ -73,6 +78,7 @@ public class PtOito extends javax.swing.JFrame {
                 btPtOitoBActionPerformed(evt);
             }
         });
+        PainelPtOito.add(btPtOitoB, new org.netbeans.lib.awtextra.AbsoluteConstraints(404, 135, 190, 90));
 
         btPtOitoC.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btPtOitoC.setText("OMEM");
@@ -81,6 +87,7 @@ public class PtOito extends javax.swing.JFrame {
                 btPtOitoCActionPerformed(evt);
             }
         });
+        PainelPtOito.add(btPtOitoC, new org.netbeans.lib.awtextra.AbsoluteConstraints(122, 255, 180, 90));
 
         btPtOitoD.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btPtOitoD.setText("ABITATI");
@@ -89,13 +96,15 @@ public class PtOito extends javax.swing.JFrame {
                 btPtOitoDActionPerformed(evt);
             }
         });
+        PainelPtOito.add(btPtOitoD, new org.netbeans.lib.awtextra.AbsoluteConstraints(404, 255, 180, 90));
 
-        btMtUmMenu.setText("MENU");
-        btMtUmMenu.addActionListener(new java.awt.event.ActionListener() {
+        btPtMenu.setText("MENU");
+        btPtMenu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btMtUmMenuActionPerformed(evt);
+                btPtMenuActionPerformed(evt);
             }
         });
+        PainelPtOito.add(btPtMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, 80, 40));
 
         btPtDica.setText("?");
         btPtDica.addActionListener(new java.awt.event.ActionListener() {
@@ -103,6 +112,7 @@ public class PtOito extends javax.swing.JFrame {
                 btPtDicaActionPerformed(evt);
             }
         });
+        PainelPtOito.add(btPtDica, new org.netbeans.lib.awtextra.AbsoluteConstraints(644, 6, 50, 40));
 
         btPtAvancar.setText("Avançar");
         btPtAvancar.addActionListener(new java.awt.event.ActionListener() {
@@ -110,80 +120,28 @@ public class PtOito extends javax.swing.JFrame {
                 btPtAvancarActionPerformed(evt);
             }
         });
+        PainelPtOito.add(btPtAvancar, new org.netbeans.lib.awtextra.AbsoluteConstraints(604, 345, 90, 50));
 
-        btVoltarPt.setText("Voltar");
-        btVoltarPt.addActionListener(new java.awt.event.ActionListener() {
+        btPtVoltar.setText("Voltar");
+        btPtVoltar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btVoltarPtActionPerformed(evt);
+                btPtVoltarActionPerformed(evt);
             }
         });
+        PainelPtOito.add(btPtVoltar, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 355, 80, 40));
 
-        javax.swing.GroupLayout PainelPtOitoLayout = new javax.swing.GroupLayout(PainelPtOito);
-        PainelPtOito.setLayout(PainelPtOitoLayout);
-        PainelPtOitoLayout.setHorizontalGroup(
-            PainelPtOitoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PainelPtOitoLayout.createSequentialGroup()
-                .addGroup(PainelPtOitoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelPtOitoLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(PainelPtOitoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(PainelPtOitoLayout.createSequentialGroup()
-                                .addComponent(btVoltarPt)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(btPtAvancar))
-                            .addGroup(PainelPtOitoLayout.createSequentialGroup()
-                                .addComponent(btMtUmMenu)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(btPtDica))))
-                    .addGroup(PainelPtOitoLayout.createSequentialGroup()
-                        .addGroup(PainelPtOitoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(PainelPtOitoLayout.createSequentialGroup()
-                                .addGap(129, 129, 129)
-                                .addGroup(PainelPtOitoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addGroup(PainelPtOitoLayout.createSequentialGroup()
-                                        .addComponent(btPtOitoC, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(btPtOitoD, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(PainelPtOitoLayout.createSequentialGroup()
-                                        .addComponent(btPtOitoA, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 82, Short.MAX_VALUE)
-                                        .addComponent(btPtOitoB, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                            .addGroup(PainelPtOitoLayout.createSequentialGroup()
-                                .addGap(147, 147, 147)
-                                .addComponent(jlPtOitoA)))
-                        .addGap(0, 123, Short.MAX_VALUE)))
-                .addContainerGap())
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(10, 10, 10)
+                .addComponent(PainelPtOito, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
-        PainelPtOitoLayout.setVerticalGroup(
-            PainelPtOitoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PainelPtOitoLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(PainelPtOitoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btMtUmMenu)
-                    .addComponent(btPtDica))
-                .addGap(18, 18, 18)
-                .addComponent(jlPtOitoA)
-                .addGap(35, 35, 35)
-                .addGroup(PainelPtOitoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(PainelPtOitoLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(PainelPtOitoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(btPtOitoA, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btPtOitoB, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(30, 30, 30)
-                        .addGroup(PainelPtOitoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(btPtOitoD, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btPtOitoC, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(80, 80, 80))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelPtOitoLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(PainelPtOitoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(btVoltarPt)
-                            .addComponent(btPtAvancar))
-                        .addContainerGap())))
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(PainelPtOito, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
-
-        getContentPane().add(PainelPtOito, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -226,10 +184,10 @@ public class PtOito extends javax.swing.JFrame {
      pontosPt=pontosPt-5;   // TODO add your handling code here:
     }//GEN-LAST:event_btPtOitoDActionPerformed
 
-    private void btMtUmMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btMtUmMenuActionPerformed
+    private void btPtMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPtMenuActionPerformed
         new menuPrincipal().show();
         dispose();
-    }//GEN-LAST:event_btMtUmMenuActionPerformed
+    }//GEN-LAST:event_btPtMenuActionPerformed
 
     private void btPtDicaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPtDicaActionPerformed
         JOptionPane.showMessageDialog(null,"Olhe atentamente e veja se a palavra possui um erro de escrita");
@@ -242,10 +200,10 @@ public class PtOito extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_btPtAvancarActionPerformed
 
-    private void btVoltarPtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btVoltarPtActionPerformed
+    private void btPtVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPtVoltarActionPerformed
         new PtSete ().show();
         dispose();
-    }//GEN-LAST:event_btVoltarPtActionPerformed
+    }//GEN-LAST:event_btPtVoltarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -254,14 +212,14 @@ public class PtOito extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel PainelPtOito;
-    private javax.swing.JButton btMtUmMenu;
     private javax.swing.JButton btPtAvancar;
     private javax.swing.JButton btPtDica;
+    private javax.swing.JButton btPtMenu;
     private javax.swing.JButton btPtOitoA;
     private javax.swing.JButton btPtOitoB;
     private javax.swing.JButton btPtOitoC;
     private javax.swing.JButton btPtOitoD;
-    private javax.swing.JButton btVoltarPt;
-    private javax.swing.JLabel jlPtOitoA;
+    private javax.swing.JButton btPtVoltar;
+    private javax.swing.JLabel jlPtOito;
     // End of variables declaration//GEN-END:variables
 }

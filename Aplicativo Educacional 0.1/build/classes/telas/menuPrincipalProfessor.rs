@@ -1,0 +1,2 @@
+telas.menuPrincipalProfessor
+telas.menuPrincipalProfessor$1

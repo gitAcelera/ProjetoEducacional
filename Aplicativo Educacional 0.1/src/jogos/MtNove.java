@@ -38,17 +38,23 @@ int pontosMt = PontosAluno.getPontosMt();
     private void initComponents() {
 
         PainelMtNove = new javax.swing.JPanel();
+        jlMtNove = new javax.swing.JLabel();
         btMtNoveA = new javax.swing.JButton();
         btMtNoveB = new javax.swing.JButton();
         btMtNoveC = new javax.swing.JButton();
         btMtNoveD = new javax.swing.JButton();
-        jlMtNoveA = new javax.swing.JLabel();
         btAvancar = new javax.swing.JButton();
         btVoltarMenu = new javax.swing.JButton();
         btVoltarMt = new javax.swing.JButton();
         btPtDica = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        PainelMtNove.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jlMtNove.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        jlMtNove.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/MtNove.png"))); // NOI18N
+        PainelMtNove.add(jlMtNove, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         btMtNoveA.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btMtNoveA.setText("5");
@@ -57,6 +63,7 @@ int pontosMt = PontosAluno.getPontosMt();
                 btMtNoveAActionPerformed(evt);
             }
         });
+        PainelMtNove.add(btMtNoveA, new org.netbeans.lib.awtextra.AbsoluteConstraints(118, 138, 180, 80));
 
         btMtNoveB.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btMtNoveB.setText("7");
@@ -65,6 +72,7 @@ int pontosMt = PontosAluno.getPontosMt();
                 btMtNoveBActionPerformed(evt);
             }
         });
+        PainelMtNove.add(btMtNoveB, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 138, 190, 90));
 
         btMtNoveC.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btMtNoveC.setText("11");
@@ -73,6 +81,7 @@ int pontosMt = PontosAluno.getPontosMt();
                 btMtNoveCActionPerformed(evt);
             }
         });
+        PainelMtNove.add(btMtNoveC, new org.netbeans.lib.awtextra.AbsoluteConstraints(118, 258, 180, 80));
 
         btMtNoveD.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btMtNoveD.setText("2");
@@ -82,9 +91,7 @@ int pontosMt = PontosAluno.getPontosMt();
                 btMtNoveDActionPerformed(evt);
             }
         });
-
-        jlMtNoveA.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        jlMtNoveA.setText("Qual número abaixo é Par?");
+        PainelMtNove.add(btMtNoveD, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 258, 190, 80));
 
         btAvancar.setText("Avançar");
         btAvancar.addActionListener(new java.awt.event.ActionListener() {
@@ -92,6 +99,7 @@ int pontosMt = PontosAluno.getPontosMt();
                 btAvancarActionPerformed(evt);
             }
         });
+        PainelMtNove.add(btAvancar, new org.netbeans.lib.awtextra.AbsoluteConstraints(604, 344, 90, 50));
 
         btVoltarMenu.setText(" MENU");
         btVoltarMenu.addActionListener(new java.awt.event.ActionListener() {
@@ -99,6 +107,7 @@ int pontosMt = PontosAluno.getPontosMt();
                 btVoltarMenuActionPerformed(evt);
             }
         });
+        PainelMtNove.add(btVoltarMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, 80, 40));
 
         btVoltarMt.setText("Voltar");
         btVoltarMt.addActionListener(new java.awt.event.ActionListener() {
@@ -106,6 +115,7 @@ int pontosMt = PontosAluno.getPontosMt();
                 btVoltarMtActionPerformed(evt);
             }
         });
+        PainelMtNove.add(btVoltarMt, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 344, 80, 50));
 
         btPtDica.setText("?");
         btPtDica.addActionListener(new java.awt.event.ActionListener() {
@@ -113,61 +123,7 @@ int pontosMt = PontosAluno.getPontosMt();
                 btPtDicaActionPerformed(evt);
             }
         });
-
-        javax.swing.GroupLayout PainelMtNoveLayout = new javax.swing.GroupLayout(PainelMtNove);
-        PainelMtNove.setLayout(PainelMtNoveLayout);
-        PainelMtNoveLayout.setHorizontalGroup(
-            PainelMtNoveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PainelMtNoveLayout.createSequentialGroup()
-                .addGroup(PainelMtNoveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelMtNoveLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(btVoltarMt)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btAvancar))
-                    .addGroup(PainelMtNoveLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(btVoltarMenu)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btPtDica))
-                    .addGroup(PainelMtNoveLayout.createSequentialGroup()
-                        .addGap(128, 128, 128)
-                        .addGroup(PainelMtNoveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(PainelMtNoveLayout.createSequentialGroup()
-                                .addGroup(PainelMtNoveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(btMtNoveA, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(btMtNoveC, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(82, 82, 82)
-                                .addGroup(PainelMtNoveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(btMtNoveD, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(btMtNoveB, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addComponent(jlMtNoveA))
-                        .addGap(0, 124, Short.MAX_VALUE)))
-                .addContainerGap())
-        );
-        PainelMtNoveLayout.setVerticalGroup(
-            PainelMtNoveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelMtNoveLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(PainelMtNoveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btVoltarMenu)
-                    .addComponent(btPtDica))
-                .addGap(31, 31, 31)
-                .addComponent(jlMtNoveA)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 40, Short.MAX_VALUE)
-                .addGroup(PainelMtNoveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btMtNoveA, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btMtNoveB, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(30, 30, 30)
-                .addGroup(PainelMtNoveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btMtNoveD, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btMtNoveC, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(33, 33, 33)
-                .addGroup(PainelMtNoveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btAvancar)
-                    .addComponent(btVoltarMt))
-                .addContainerGap())
-        );
+        PainelMtNove.add(btPtDica, new org.netbeans.lib.awtextra.AbsoluteConstraints(644, 6, 50, 40));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -256,6 +212,6 @@ int pontosMt = PontosAluno.getPontosMt();
     private javax.swing.JButton btPtDica;
     private javax.swing.JButton btVoltarMenu;
     private javax.swing.JButton btVoltarMt;
-    private javax.swing.JLabel jlMtNoveA;
+    private javax.swing.JLabel jlMtNove;
     // End of variables declaration//GEN-END:variables
 }

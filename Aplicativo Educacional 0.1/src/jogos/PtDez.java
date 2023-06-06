@@ -39,23 +39,22 @@ int pontosPt = PontosAluno.getPontosPt();
     private void initComponents() {
 
         PainelPtDez = new javax.swing.JPanel();
-        jlPtDezA = new javax.swing.JLabel();
-        jlPtDezB = new javax.swing.JLabel();
+        jlPtDez = new javax.swing.JLabel();
         btPtDezA = new javax.swing.JButton();
         btPtDezB = new javax.swing.JButton();
         btPtDezC = new javax.swing.JButton();
         btPtDezD = new javax.swing.JButton();
-        btMtUmMenu = new javax.swing.JButton();
+        btPtMenu = new javax.swing.JButton();
         btPtDica = new javax.swing.JButton();
-        btVoltarPt = new javax.swing.JButton();
+        btPtVoltar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jlPtDezA.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        jlPtDezA.setText("Qual é o semelhante da palavra");
+        PainelPtDez.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jlPtDezB.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        jlPtDezB.setText("\"ALEGRIA\" ?");
+        jlPtDez.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        jlPtDez.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/PtDez.png"))); // NOI18N
+        PainelPtDez.add(jlPtDez, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         btPtDezA.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btPtDezA.setText("RAIVA");
@@ -64,6 +63,7 @@ int pontosPt = PontosAluno.getPontosPt();
                 btPtDezAActionPerformed(evt);
             }
         });
+        PainelPtDez.add(btPtDezA, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 140, 180, 80));
 
         btPtDezB.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btPtDezB.setText("TRISTEZA");
@@ -72,6 +72,7 @@ int pontosPt = PontosAluno.getPontosPt();
                 btPtDezBActionPerformed(evt);
             }
         });
+        PainelPtDez.add(btPtDezB, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 140, 190, 80));
 
         btPtDezC.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btPtDezC.setText("FELICIDADE");
@@ -80,6 +81,7 @@ int pontosPt = PontosAluno.getPontosPt();
                 btPtDezCActionPerformed(evt);
             }
         });
+        PainelPtDez.add(btPtDezC, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 260, 180, 80));
 
         btPtDezD.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btPtDezD.setText("MEDO");
@@ -88,13 +90,15 @@ int pontosPt = PontosAluno.getPontosPt();
                 btPtDezDActionPerformed(evt);
             }
         });
+        PainelPtDez.add(btPtDezD, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 260, 190, 80));
 
-        btMtUmMenu.setText("MENU");
-        btMtUmMenu.addActionListener(new java.awt.event.ActionListener() {
+        btPtMenu.setText("MENU");
+        btPtMenu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btMtUmMenuActionPerformed(evt);
+                btPtMenuActionPerformed(evt);
             }
         });
+        PainelPtDez.add(btPtMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, 80, 40));
 
         btPtDica.setText("?");
         btPtDica.addActionListener(new java.awt.event.ActionListener() {
@@ -102,75 +106,15 @@ int pontosPt = PontosAluno.getPontosPt();
                 btPtDicaActionPerformed(evt);
             }
         });
+        PainelPtDez.add(btPtDica, new org.netbeans.lib.awtextra.AbsoluteConstraints(651, 6, 40, 40));
 
-        btVoltarPt.setText("Voltar");
-        btVoltarPt.addActionListener(new java.awt.event.ActionListener() {
+        btPtVoltar.setText("Voltar");
+        btPtVoltar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btVoltarPtActionPerformed(evt);
+                btPtVoltarActionPerformed(evt);
             }
         });
-
-        javax.swing.GroupLayout PainelPtDezLayout = new javax.swing.GroupLayout(PainelPtDez);
-        PainelPtDez.setLayout(PainelPtDezLayout);
-        PainelPtDezLayout.setHorizontalGroup(
-            PainelPtDezLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PainelPtDezLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(PainelPtDezLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelPtDezLayout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addGroup(PainelPtDezLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelPtDezLayout.createSequentialGroup()
-                                .addComponent(jlPtDezB)
-                                .addGap(257, 257, 257))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelPtDezLayout.createSequentialGroup()
-                                .addGroup(PainelPtDezLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(btPtDezC, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(btPtDezA, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(82, 82, 82)
-                                .addGroup(PainelPtDezLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(btPtDezB, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(btPtDezD, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(131, 131, 131))))
-                    .addGroup(PainelPtDezLayout.createSequentialGroup()
-                        .addGroup(PainelPtDezLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(PainelPtDezLayout.createSequentialGroup()
-                                .addComponent(btMtUmMenu)
-                                .addGap(28, 28, 28)
-                                .addComponent(jlPtDezA)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 73, Short.MAX_VALUE)
-                                .addComponent(btPtDica))
-                            .addGroup(PainelPtDezLayout.createSequentialGroup()
-                                .addComponent(btVoltarPt)
-                                .addGap(0, 0, Short.MAX_VALUE)))
-                        .addContainerGap())))
-        );
-        PainelPtDezLayout.setVerticalGroup(
-            PainelPtDezLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PainelPtDezLayout.createSequentialGroup()
-                .addGroup(PainelPtDezLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(PainelPtDezLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(PainelPtDezLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(btMtUmMenu)
-                            .addComponent(btPtDica)))
-                    .addGroup(PainelPtDezLayout.createSequentialGroup()
-                        .addGap(24, 24, 24)
-                        .addComponent(jlPtDezA)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jlPtDezB)
-                .addGap(18, 18, 18)
-                .addGroup(PainelPtDezLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btPtDezB, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btPtDezA, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(30, 30, 30)
-                .addGroup(PainelPtDezLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btPtDezC, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btPtDezD, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
-                .addComponent(btVoltarPt)
-                .addContainerGap())
-        );
+        PainelPtDez.add(btPtVoltar, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 354, 80, 40));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -238,9 +182,9 @@ int pontosPt = PontosAluno.getPontosPt();
            
     }//GEN-LAST:event_btPtDezCActionPerformed
 
-    private void btMtUmMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btMtUmMenuActionPerformed
+    private void btPtMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPtMenuActionPerformed
        
-    }//GEN-LAST:event_btMtUmMenuActionPerformed
+    }//GEN-LAST:event_btPtMenuActionPerformed
 
     private void btPtDicaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPtDicaActionPerformed
         JOptionPane.showMessageDialog(null,"Algo idêntico ou próximo, exemplo: o semelhante de ruim é mal");
@@ -258,10 +202,10 @@ pontosPt=pontosPt-5;         // TODO add your handling code here:
 pontosPt=pontosPt-5;         // TODO add your handling code here:
     }//GEN-LAST:event_btPtDezDActionPerformed
 
-    private void btVoltarPtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btVoltarPtActionPerformed
+    private void btPtVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPtVoltarActionPerformed
         new PtNove ().show();
         dispose();
-    }//GEN-LAST:event_btVoltarPtActionPerformed
+    }//GEN-LAST:event_btPtVoltarActionPerformed
 
     
     /**
@@ -271,14 +215,13 @@ pontosPt=pontosPt-5;         // TODO add your handling code here:
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel PainelPtDez;
-    private javax.swing.JButton btMtUmMenu;
     private javax.swing.JButton btPtDezA;
     private javax.swing.JButton btPtDezB;
     private javax.swing.JButton btPtDezC;
     private javax.swing.JButton btPtDezD;
     private javax.swing.JButton btPtDica;
-    private javax.swing.JButton btVoltarPt;
-    private javax.swing.JLabel jlPtDezA;
-    private javax.swing.JLabel jlPtDezB;
+    private javax.swing.JButton btPtMenu;
+    private javax.swing.JButton btPtVoltar;
+    private javax.swing.JLabel jlPtDez;
     // End of variables declaration//GEN-END:variables
 }
