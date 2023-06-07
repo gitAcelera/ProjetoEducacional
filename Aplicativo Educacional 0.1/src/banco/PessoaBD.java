@@ -109,14 +109,13 @@ public class PessoaBD
         try
         {
             stmt = connection.createStatement();
-            ResultSet res = stmt.executeQuery("SELECT * FROM aluno");
-            
+ ResultSet res = stmt.executeQuery("SELECT aluno.nome,aluno.ra,jogos.total FROM aluno JOIN jogos ON aluno.idAluno=jogos.IdAluno");            
             while (res.next())
             {
             	classificacao+= "\n"+res.getString("nome");
 			//classificacao += "\n"+res.getString("idade");
 				classificacao += "\n"+res.getString("ra");
-				//classificacao += "\n"+res.getString("");
+				classificacao += "\n"+res.getString("total");
 				classificacao += "\n-----------------------------------------";				
             }
             

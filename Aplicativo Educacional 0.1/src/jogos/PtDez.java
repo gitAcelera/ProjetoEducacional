@@ -170,6 +170,8 @@ int pontosPt = PontosAluno.getPontosPt();
 		  total=res.getInt(1);
                 }
         JOptionPane.showMessageDialog(null,"SUA PONTUAÇÃO FOI: "+total+ " PONTOS");
+         Statement stm = con.createStatement();
+          stm.executeUpdate("INSERT into jogos (total) values ("+total+")");
         }
         
         

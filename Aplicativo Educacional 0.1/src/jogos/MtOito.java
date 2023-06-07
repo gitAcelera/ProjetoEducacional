@@ -196,7 +196,7 @@ public class MtOito extends javax.swing.JFrame {
     }//GEN-LAST:event_btVoltarMtActionPerformed
 
     private void btPtDicaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPtDicaActionPerformed
-        JOptionPane.showMessageDialog(null,"Uma dica é voce tentar gritar a palavra em sua cabeça, a silaba que tiver mais ênfase é a sílaba tónica, exemplo: Abacaxiiii!");
+        JOptionPane.showMessageDialog(null,"uma dica é entender que 4x2 é a mesma que 4+4...");
     }//GEN-LAST:event_btPtDicaActionPerformed
 
     /**
