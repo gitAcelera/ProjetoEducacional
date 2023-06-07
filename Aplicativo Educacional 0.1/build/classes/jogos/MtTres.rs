@@ -1,9 +1,0 @@
-jogos.MtTres$5
-jogos.MtTres$6
-jogos.MtTres$7
-jogos.MtTres$8
-jogos.MtTres$1
-jogos.MtTres$2
-jogos.MtTres$3
-jogos.MtTres$4
-jogos.MtTres

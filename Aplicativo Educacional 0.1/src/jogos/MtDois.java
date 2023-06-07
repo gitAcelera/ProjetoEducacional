@@ -43,10 +43,10 @@ public class MtDois extends javax.swing.JFrame {
         btMDoisB = new javax.swing.JButton();
         btMtDoisC = new javax.swing.JButton();
         btMtDoisD = new javax.swing.JButton();
-        btAvancar = new javax.swing.JButton();
-        btVoltarMenu = new javax.swing.JButton();
-        btPtDica = new javax.swing.JButton();
-        btVoltarMt = new javax.swing.JButton();
+        btMtAvancar = new javax.swing.JButton();
+        btMtMenu = new javax.swing.JButton();
+        btMtDica = new javax.swing.JButton();
+        btMtVoltar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -93,37 +93,37 @@ public class MtDois extends javax.swing.JFrame {
         });
         PainelMtDois.add(btMtDoisD, new org.netbeans.lib.awtextra.AbsoluteConstraints(408, 263, 180, 80));
 
-        btAvancar.setText("Avançar");
-        btAvancar.addActionListener(new java.awt.event.ActionListener() {
+        btMtAvancar.setText("Avançar");
+        btMtAvancar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btAvancarActionPerformed(evt);
+                btMtAvancarActionPerformed(evt);
             }
         });
-        PainelMtDois.add(btAvancar, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 354, -1, 30));
+        PainelMtDois.add(btMtAvancar, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 354, -1, 30));
 
-        btVoltarMenu.setText("MENU");
-        btVoltarMenu.addActionListener(new java.awt.event.ActionListener() {
+        btMtMenu.setText("MENU");
+        btMtMenu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btVoltarMenuActionPerformed(evt);
+                btMtMenuActionPerformed(evt);
             }
         });
-        PainelMtDois.add(btVoltarMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, 80, 40));
+        PainelMtDois.add(btMtMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, 80, 40));
 
-        btPtDica.setText("?");
-        btPtDica.addActionListener(new java.awt.event.ActionListener() {
+        btMtDica.setText("?");
+        btMtDica.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btPtDicaActionPerformed(evt);
+                btMtDicaActionPerformed(evt);
             }
         });
-        PainelMtDois.add(btPtDica, new org.netbeans.lib.awtextra.AbsoluteConstraints(644, 6, 50, 40));
+        PainelMtDois.add(btMtDica, new org.netbeans.lib.awtextra.AbsoluteConstraints(644, 6, 50, 40));
 
-        btVoltarMt.setText("Voltar");
-        btVoltarMt.addActionListener(new java.awt.event.ActionListener() {
+        btMtVoltar.setText("Voltar");
+        btMtVoltar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btVoltarMtActionPerformed(evt);
+                btMtVoltarActionPerformed(evt);
             }
         });
-        PainelMtDois.add(btVoltarMt, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 354, 80, 40));
+        PainelMtDois.add(btMtVoltar, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 354, 80, 40));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -178,24 +178,24 @@ public class MtDois extends javax.swing.JFrame {
       pontosMt=pontosMt-5;   // TODO add your handling code here:
     }//GEN-LAST:event_btMtDoisDActionPerformed
 
-    private void btAvancarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btAvancarActionPerformed
+    private void btMtAvancarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btMtAvancarActionPerformed
         TelaMtTres.setVisible(true);  
      dispose();
-    }//GEN-LAST:event_btAvancarActionPerformed
+    }//GEN-LAST:event_btMtAvancarActionPerformed
 
-    private void btVoltarMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btVoltarMenuActionPerformed
+    private void btMtMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btMtMenuActionPerformed
          new menuPrincipal().show();
         dispose();
-    }//GEN-LAST:event_btVoltarMenuActionPerformed
+    }//GEN-LAST:event_btMtMenuActionPerformed
 
-    private void btVoltarMtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btVoltarMtActionPerformed
+    private void btMtVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btMtVoltarActionPerformed
  new MtUm ().show();
    dispose();     
-    }//GEN-LAST:event_btVoltarMtActionPerformed
+    }//GEN-LAST:event_btMtVoltarActionPerformed
 
-    private void btPtDicaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPtDicaActionPerformed
+    private void btMtDicaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btMtDicaActionPerformed
         JOptionPane.showMessageDialog(null,"A operação é soma ou seja conte cada unidade na mão!");
-    }//GEN-LAST:event_btPtDicaActionPerformed
+    }//GEN-LAST:event_btMtDicaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -204,14 +204,14 @@ public class MtDois extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel PainelMtDois;
-    private javax.swing.JButton btAvancar;
     private javax.swing.JButton btMDoisB;
+    private javax.swing.JButton btMtAvancar;
+    private javax.swing.JButton btMtDica;
     private javax.swing.JButton btMtDoisA;
     private javax.swing.JButton btMtDoisC;
     private javax.swing.JButton btMtDoisD;
-    private javax.swing.JButton btPtDica;
-    private javax.swing.JButton btVoltarMenu;
-    private javax.swing.JButton btVoltarMt;
+    private javax.swing.JButton btMtMenu;
+    private javax.swing.JButton btMtVoltar;
     private javax.swing.JLabel jlMtDois;
     // End of variables declaration//GEN-END:variables
 }

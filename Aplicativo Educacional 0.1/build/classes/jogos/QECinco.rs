@@ -1,9 +1,0 @@
-jogos.QECinco$1
-jogos.QECinco$2
-jogos.QECinco$3
-jogos.QECinco
-jogos.QECinco$8
-jogos.QECinco$4
-jogos.QECinco$5
-jogos.QECinco$6
-jogos.QECinco$7

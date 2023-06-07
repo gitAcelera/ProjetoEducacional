@@ -1,9 +1,0 @@
-jogos.QASete$7
-jogos.QASete$8
-jogos.QASete
-jogos.QASete$5
-jogos.QASete$6
-jogos.QASete$3
-jogos.QASete$4
-jogos.QASete$1
-jogos.QASete$2

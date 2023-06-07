@@ -40,25 +40,26 @@ public class QEDez extends javax.swing.JFrame {
     private void initComponents() {
 
         PainelQEDez = new javax.swing.JPanel();
-        jlQEDezA = new javax.swing.JLabel();
+        jlQEDez = new javax.swing.JLabel();
         btQEDezA = new javax.swing.JButton();
         btQEDezB = new javax.swing.JButton();
         btQEDezC = new javax.swing.JButton();
         btQEDezD = new javax.swing.JButton();
-        btQEDezMenu = new javax.swing.JButton();
-        btVoltarQE = new javax.swing.JButton();
-        btPtDica2 = new javax.swing.JButton();
+        btQEMenu = new javax.swing.JButton();
+        btQEVoltar = new javax.swing.JButton();
+        btQEDica = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(700, 400));
         setResizable(false);
 
         PainelQEDez.setPreferredSize(new java.awt.Dimension(700, 400));
         PainelQEDez.setRequestFocusEnabled(false);
         PainelQEDez.setVerifyInputWhenFocusTarget(false);
+        PainelQEDez.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jlQEDezA.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        jlQEDezA.setText("Qual é a cor do mar?");
+        jlQEDez.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        jlQEDez.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/QEDez.png"))); // NOI18N
+        PainelQEDez.add(jlQEDez, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         btQEDezA.setBackground(new java.awt.Color(255, 102, 153));
         btQEDezA.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
@@ -67,6 +68,7 @@ public class QEDez extends javax.swing.JFrame {
                 btQEDezAActionPerformed(evt);
             }
         });
+        PainelQEDez.add(btQEDezA, new org.netbeans.lib.awtextra.AbsoluteConstraints(121, 135, 180, 90));
 
         btQEDezB.setBackground(new java.awt.Color(51, 153, 255));
         btQEDezB.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
@@ -75,6 +77,7 @@ public class QEDez extends javax.swing.JFrame {
                 btQEDezBActionPerformed(evt);
             }
         });
+        PainelQEDez.add(btQEDezB, new org.netbeans.lib.awtextra.AbsoluteConstraints(403, 135, 190, 90));
 
         btQEDezC.setBackground(new java.awt.Color(255, 102, 255));
         btQEDezC.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
@@ -83,6 +86,7 @@ public class QEDez extends javax.swing.JFrame {
                 btQEDezCActionPerformed(evt);
             }
         });
+        PainelQEDez.add(btQEDezC, new org.netbeans.lib.awtextra.AbsoluteConstraints(111, 255, 190, 90));
 
         btQEDezD.setBackground(new java.awt.Color(153, 255, 153));
         btQEDezD.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
@@ -91,83 +95,31 @@ public class QEDez extends javax.swing.JFrame {
                 btQEDezDActionPerformed(evt);
             }
         });
+        PainelQEDez.add(btQEDezD, new org.netbeans.lib.awtextra.AbsoluteConstraints(403, 255, 180, 90));
 
-        btQEDezMenu.setText("MENU");
-        btQEDezMenu.addActionListener(new java.awt.event.ActionListener() {
+        btQEMenu.setText("MENU");
+        btQEMenu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btQEDezMenuActionPerformed(evt);
+                btQEMenuActionPerformed(evt);
             }
         });
+        PainelQEDez.add(btQEMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, 80, 40));
 
-        btVoltarQE.setText("Voltar");
-        btVoltarQE.addActionListener(new java.awt.event.ActionListener() {
+        btQEVoltar.setText("Voltar");
+        btQEVoltar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btVoltarQEActionPerformed(evt);
+                btQEVoltarActionPerformed(evt);
             }
         });
+        PainelQEDez.add(btQEVoltar, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 354, 80, 40));
 
-        btPtDica2.setText("?");
-        btPtDica2.addActionListener(new java.awt.event.ActionListener() {
+        btQEDica.setText("?");
+        btQEDica.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btPtDica2ActionPerformed(evt);
+                btQEDicaActionPerformed(evt);
             }
         });
-
-        javax.swing.GroupLayout PainelQEDezLayout = new javax.swing.GroupLayout(PainelQEDez);
-        PainelQEDez.setLayout(PainelQEDezLayout);
-        PainelQEDezLayout.setHorizontalGroup(
-            PainelQEDezLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PainelQEDezLayout.createSequentialGroup()
-                .addGroup(PainelQEDezLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelQEDezLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(btQEDezMenu)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btPtDica2))
-                    .addGroup(PainelQEDezLayout.createSequentialGroup()
-                        .addGroup(PainelQEDezLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(PainelQEDezLayout.createSequentialGroup()
-                                .addContainerGap()
-                                .addComponent(btVoltarQE))
-                            .addGroup(PainelQEDezLayout.createSequentialGroup()
-                                .addGap(170, 170, 170)
-                                .addComponent(jlQEDezA)))
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelQEDezLayout.createSequentialGroup()
-                .addGap(0, 131, Short.MAX_VALUE)
-                .addGroup(PainelQEDezLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addGroup(PainelQEDezLayout.createSequentialGroup()
-                        .addComponent(btQEDezC, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btQEDezD, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(PainelQEDezLayout.createSequentialGroup()
-                        .addComponent(btQEDezA, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(82, 82, 82)
-                        .addComponent(btQEDezB, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(127, 127, 127))
-        );
-        PainelQEDezLayout.setVerticalGroup(
-            PainelQEDezLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelQEDezLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(PainelQEDezLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btPtDica2)
-                    .addComponent(btQEDezMenu))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
-                .addComponent(jlQEDezA)
-                .addGap(35, 35, 35)
-                .addGroup(PainelQEDezLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btQEDezA, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btQEDezB, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(30, 30, 30)
-                .addGroup(PainelQEDezLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btQEDezC, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btQEDezD, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(26, 26, 26)
-                .addComponent(btVoltarQE)
-                .addContainerGap())
-        );
+        PainelQEDez.add(btQEDica, new org.netbeans.lib.awtextra.AbsoluteConstraints(644, 6, 50, 40));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -177,7 +129,7 @@ public class QEDez extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(PainelQEDez, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(PainelQEDez, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -249,19 +201,19 @@ pontosQE=pontosQE+20;
      pontosQE=pontosQE-5;    // TODO add your handling code here:
     }//GEN-LAST:event_btQEDezDActionPerformed
 
-    private void btQEDezMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btQEDezMenuActionPerformed
+    private void btQEMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btQEMenuActionPerformed
         new menuPrincipal().show();
         dispose();
-    }//GEN-LAST:event_btQEDezMenuActionPerformed
+    }//GEN-LAST:event_btQEMenuActionPerformed
 
-    private void btVoltarQEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btVoltarQEActionPerformed
+    private void btQEVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btQEVoltarActionPerformed
 new QENove().show();
         dispose();        // TODO add your handling code here:
-    }//GEN-LAST:event_btVoltarQEActionPerformed
+    }//GEN-LAST:event_btQEVoltarActionPerformed
 
-    private void btPtDica2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPtDica2ActionPerformed
+    private void btQEDicaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btQEDicaActionPerformed
         JOptionPane.showMessageDialog(null,"É a mesma cor da água da piscina em um dia ensolarado!");
-    }//GEN-LAST:event_btPtDica2ActionPerformed
+    }//GEN-LAST:event_btQEDicaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -269,15 +221,13 @@ new QENove().show();
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel PainelQEDez;
-    private javax.swing.JButton btPtDica;
-    private javax.swing.JButton btPtDica1;
-    private javax.swing.JButton btPtDica2;
     private javax.swing.JButton btQEDezA;
     private javax.swing.JButton btQEDezB;
     private javax.swing.JButton btQEDezC;
     private javax.swing.JButton btQEDezD;
-    private javax.swing.JButton btQEDezMenu;
-    private javax.swing.JButton btVoltarQE;
-    private javax.swing.JLabel jlQEDezA;
+    private javax.swing.JButton btQEDica;
+    private javax.swing.JButton btQEMenu;
+    private javax.swing.JButton btQEVoltar;
+    private javax.swing.JLabel jlQEDez;
     // End of variables declaration//GEN-END:variables
 }

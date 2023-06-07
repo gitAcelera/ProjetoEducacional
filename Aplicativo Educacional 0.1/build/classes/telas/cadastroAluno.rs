@@ -1,9 +1,0 @@
-telas.cadastroAluno$2
-telas.cadastroAluno$1
-telas.cadastroAluno$6
-telas.cadastroAluno$5
-telas.cadastroAluno$4
-telas.cadastroAluno$3
-telas.cadastroAluno$8
-telas.cadastroAluno$7
-telas.cadastroAluno

@@ -40,20 +40,23 @@ public class QEQuatro extends javax.swing.JFrame {
     private void initComponents() {
 
         PainelQEQuatro = new javax.swing.JPanel();
-        jlQEQuatroA = new javax.swing.JLabel();
+        jlQEQuatro = new javax.swing.JLabel();
         btQEQuatroA = new javax.swing.JButton();
         btQEQuatroB = new javax.swing.JButton();
         btQEQuatroC = new javax.swing.JButton();
         btQEQuatroD = new javax.swing.JButton();
-        btAvancarQE = new javax.swing.JButton();
-        btQEQuatroMenu = new javax.swing.JButton();
-        btVoltarMt = new javax.swing.JButton();
-        btPtDica2 = new javax.swing.JButton();
+        btQEAvancar = new javax.swing.JButton();
+        btQEMenu = new javax.swing.JButton();
+        btQEVoltar = new javax.swing.JButton();
+        btQEDica = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jlQEQuatroA.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        jlQEQuatroA.setText("Qual é a cor da raposa?");
+        PainelQEQuatro.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jlQEQuatro.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        jlQEQuatro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/QEQuatro.png"))); // NOI18N
+        PainelQEQuatro.add(jlQEQuatro, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         btQEQuatroA.setBackground(new java.awt.Color(0, 0, 0));
         btQEQuatroA.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
@@ -62,6 +65,7 @@ public class QEQuatro extends javax.swing.JFrame {
                 btQEQuatroAActionPerformed(evt);
             }
         });
+        PainelQEQuatro.add(btQEQuatroA, new org.netbeans.lib.awtextra.AbsoluteConstraints(123, 138, 180, 80));
 
         btQEQuatroB.setBackground(new java.awt.Color(102, 153, 0));
         btQEQuatroB.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
@@ -70,6 +74,7 @@ public class QEQuatro extends javax.swing.JFrame {
                 btQEQuatroBActionPerformed(evt);
             }
         });
+        PainelQEQuatro.add(btQEQuatroB, new org.netbeans.lib.awtextra.AbsoluteConstraints(405, 138, 180, 80));
 
         btQEQuatroC.setBackground(new java.awt.Color(204, 102, 0));
         btQEQuatroC.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
@@ -78,6 +83,7 @@ public class QEQuatro extends javax.swing.JFrame {
                 btQEQuatroCActionPerformed(evt);
             }
         });
+        PainelQEQuatro.add(btQEQuatroC, new org.netbeans.lib.awtextra.AbsoluteConstraints(113, 258, 190, 80));
 
         btQEQuatroD.setBackground(new java.awt.Color(0, 102, 102));
         btQEQuatroD.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
@@ -86,97 +92,39 @@ public class QEQuatro extends javax.swing.JFrame {
                 btQEQuatroDActionPerformed(evt);
             }
         });
+        PainelQEQuatro.add(btQEQuatroD, new org.netbeans.lib.awtextra.AbsoluteConstraints(405, 258, 180, 80));
 
-        btAvancarQE.setText("AVANÇAR");
-        btAvancarQE.addActionListener(new java.awt.event.ActionListener() {
+        btQEAvancar.setText("AVANÇAR");
+        btQEAvancar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btAvancarQEActionPerformed(evt);
+                btQEAvancarActionPerformed(evt);
             }
         });
+        PainelQEQuatro.add(btQEAvancar, new org.netbeans.lib.awtextra.AbsoluteConstraints(603, 344, 90, 50));
 
-        btQEQuatroMenu.setText("MENU");
-        btQEQuatroMenu.addActionListener(new java.awt.event.ActionListener() {
+        btQEMenu.setText("MENU");
+        btQEMenu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btQEQuatroMenuActionPerformed(evt);
+                btQEMenuActionPerformed(evt);
             }
         });
+        PainelQEQuatro.add(btQEMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, 80, 40));
 
-        btVoltarMt.setText("Voltar");
-        btVoltarMt.addActionListener(new java.awt.event.ActionListener() {
+        btQEVoltar.setText("Voltar");
+        btQEVoltar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btVoltarMtActionPerformed(evt);
+                btQEVoltarActionPerformed(evt);
             }
         });
+        PainelQEQuatro.add(btQEVoltar, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 344, 80, 50));
 
-        btPtDica2.setText("?");
-        btPtDica2.addActionListener(new java.awt.event.ActionListener() {
+        btQEDica.setText("?");
+        btQEDica.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btPtDica2ActionPerformed(evt);
+                btQEDicaActionPerformed(evt);
             }
         });
-
-        javax.swing.GroupLayout PainelQEQuatroLayout = new javax.swing.GroupLayout(PainelQEQuatro);
-        PainelQEQuatro.setLayout(PainelQEQuatroLayout);
-        PainelQEQuatroLayout.setHorizontalGroup(
-            PainelQEQuatroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PainelQEQuatroLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(PainelQEQuatroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(PainelQEQuatroLayout.createSequentialGroup()
-                        .addGap(0, 127, Short.MAX_VALUE)
-                        .addGroup(PainelQEQuatroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelQEQuatroLayout.createSequentialGroup()
-                                .addGroup(PainelQEQuatroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addGroup(PainelQEQuatroLayout.createSequentialGroup()
-                                        .addComponent(btQEQuatroC, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(btQEQuatroD, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(PainelQEQuatroLayout.createSequentialGroup()
-                                        .addComponent(btQEQuatroA, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(82, 82, 82)
-                                        .addComponent(btQEQuatroB, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addGap(134, 134, 134))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelQEQuatroLayout.createSequentialGroup()
-                                .addComponent(jlQEQuatroA)
-                                .addGap(162, 162, 162))))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelQEQuatroLayout.createSequentialGroup()
-                        .addGroup(PainelQEQuatroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelQEQuatroLayout.createSequentialGroup()
-                                .addComponent(btVoltarMt)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(btAvancarQE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelQEQuatroLayout.createSequentialGroup()
-                                .addComponent(btQEQuatroMenu)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(btPtDica2)))
-                        .addContainerGap())))
-        );
-        PainelQEQuatroLayout.setVerticalGroup(
-            PainelQEQuatroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelQEQuatroLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(PainelQEQuatroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btPtDica2)
-                    .addComponent(btQEQuatroMenu))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 51, Short.MAX_VALUE)
-                .addGroup(PainelQEQuatroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelQEQuatroLayout.createSequentialGroup()
-                        .addComponent(jlQEQuatroA)
-                        .addGap(40, 40, 40)
-                        .addGroup(PainelQEQuatroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(btQEQuatroA, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btQEQuatroB, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(30, 30, 30)
-                        .addGroup(PainelQEQuatroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(btQEQuatroC, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btQEQuatroD, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(42, 42, 42))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelQEQuatroLayout.createSequentialGroup()
-                        .addGroup(PainelQEQuatroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(btVoltarMt)
-                            .addComponent(btAvancarQE))
-                        .addContainerGap())))
-        );
+        PainelQEQuatro.add(btQEDica, new org.netbeans.lib.awtextra.AbsoluteConstraints(643, 6, 50, 40));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -232,24 +180,24 @@ public class QEQuatro extends javax.swing.JFrame {
     pontosQE=pontosQE-5;     // TODO add your handling code here:
     }//GEN-LAST:event_btQEQuatroBActionPerformed
 
-    private void btQEQuatroMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btQEQuatroMenuActionPerformed
+    private void btQEMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btQEMenuActionPerformed
         new menuPrincipal().show();
         dispose();
-    }//GEN-LAST:event_btQEQuatroMenuActionPerformed
+    }//GEN-LAST:event_btQEMenuActionPerformed
 
-    private void btAvancarQEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btAvancarQEActionPerformed
+    private void btQEAvancarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btQEAvancarActionPerformed
      TelaQECinco.setVisible(true);
       dispose();    // TODO add your handling code here:
-    }//GEN-LAST:event_btAvancarQEActionPerformed
+    }//GEN-LAST:event_btQEAvancarActionPerformed
 
-    private void btVoltarMtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btVoltarMtActionPerformed
+    private void btQEVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btQEVoltarActionPerformed
         new QETres().show();
         dispose();
-    }//GEN-LAST:event_btVoltarMtActionPerformed
+    }//GEN-LAST:event_btQEVoltarActionPerformed
 
-    private void btPtDica2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPtDica2ActionPerformed
+    private void btQEDicaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btQEDicaActionPerformed
         JOptionPane.showMessageDialog(null,"Geralmente em determinados dias do ano, o pôr do sol é da mesma cor!");
-    }//GEN-LAST:event_btPtDica2ActionPerformed
+    }//GEN-LAST:event_btQEDicaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -257,14 +205,14 @@ public class QEQuatro extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel PainelQEQuatro;
-    private javax.swing.JButton btAvancarQE;
-    private javax.swing.JButton btPtDica2;
+    private javax.swing.JButton btQEAvancar;
+    private javax.swing.JButton btQEDica;
+    private javax.swing.JButton btQEMenu;
     private javax.swing.JButton btQEQuatroA;
     private javax.swing.JButton btQEQuatroB;
     private javax.swing.JButton btQEQuatroC;
     private javax.swing.JButton btQEQuatroD;
-    private javax.swing.JButton btQEQuatroMenu;
-    private javax.swing.JButton btVoltarMt;
-    private javax.swing.JLabel jlQEQuatroA;
+    private javax.swing.JButton btQEVoltar;
+    private javax.swing.JLabel jlQEQuatro;
     // End of variables declaration//GEN-END:variables
 }

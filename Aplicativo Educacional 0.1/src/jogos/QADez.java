@@ -39,23 +39,22 @@ int pontosQA = PontosAluno.getPontosQA();
     private void initComponents() {
 
         PainelQADez = new javax.swing.JPanel();
-        jlQADezA = new javax.swing.JLabel();
-        jlQADezB = new javax.swing.JLabel();
+        jlQADez = new javax.swing.JLabel();
         btQADezA = new javax.swing.JButton();
         btQADezB = new javax.swing.JButton();
         btQADezC = new javax.swing.JButton();
         btQADezD = new javax.swing.JButton();
-        btQEQuatroMenu = new javax.swing.JButton();
-        btVoltarQA = new javax.swing.JButton();
-        btPtDica = new javax.swing.JButton();
+        btQAMenu = new javax.swing.JButton();
+        btQAVoltar = new javax.swing.JButton();
+        btQADica = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jlQADezA.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        jlQADezA.setText("Qual dos animais à seguir vive");
+        PainelQADez.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jlQADezB.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        jlQADezB.setText("na agua?");
+        jlQADez.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        jlQADez.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/QADez.png"))); // NOI18N
+        PainelQADez.add(jlQADez, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         btQADezA.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btQADezA.setText("LAGARTO");
@@ -64,6 +63,7 @@ int pontosQA = PontosAluno.getPontosQA();
                 btQADezAActionPerformed(evt);
             }
         });
+        PainelQADez.add(btQADezA, new org.netbeans.lib.awtextra.AbsoluteConstraints(117, 138, 180, 80));
 
         btQADezB.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btQADezB.setText("PEIXE");
@@ -72,6 +72,7 @@ int pontosQA = PontosAluno.getPontosQA();
                 btQADezBActionPerformed(evt);
             }
         });
+        PainelQADez.add(btQADezB, new org.netbeans.lib.awtextra.AbsoluteConstraints(409, 138, 180, 90));
 
         btQADezC.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btQADezC.setText("CANGURU");
@@ -80,6 +81,7 @@ int pontosQA = PontosAluno.getPontosQA();
                 btQADezCActionPerformed(evt);
             }
         });
+        PainelQADez.add(btQADezC, new org.netbeans.lib.awtextra.AbsoluteConstraints(117, 258, 180, 80));
 
         btQADezD.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btQADezD.setText("CABRA");
@@ -88,86 +90,31 @@ int pontosQA = PontosAluno.getPontosQA();
                 btQADezDActionPerformed(evt);
             }
         });
+        PainelQADez.add(btQADezD, new org.netbeans.lib.awtextra.AbsoluteConstraints(399, 258, 190, 80));
 
-        btQEQuatroMenu.setText("MENU");
-        btQEQuatroMenu.addActionListener(new java.awt.event.ActionListener() {
+        btQAMenu.setText("MENU");
+        btQAMenu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btQEQuatroMenuActionPerformed(evt);
+                btQAMenuActionPerformed(evt);
             }
         });
+        PainelQADez.add(btQAMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, 80, 40));
 
-        btVoltarQA.setText("Voltar");
-        btVoltarQA.addActionListener(new java.awt.event.ActionListener() {
+        btQAVoltar.setText("Voltar");
+        btQAVoltar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btVoltarQAActionPerformed(evt);
+                btQAVoltarActionPerformed(evt);
             }
         });
+        PainelQADez.add(btQAVoltar, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 345, 80, 50));
 
-        btPtDica.setText("?");
-        btPtDica.addActionListener(new java.awt.event.ActionListener() {
+        btQADica.setText("?");
+        btQADica.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btPtDicaActionPerformed(evt);
+                btQADicaActionPerformed(evt);
             }
         });
-
-        javax.swing.GroupLayout PainelQADezLayout = new javax.swing.GroupLayout(PainelQADez);
-        PainelQADez.setLayout(PainelQADezLayout);
-        PainelQADezLayout.setHorizontalGroup(
-            PainelQADezLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PainelQADezLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(PainelQADezLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelQADezLayout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addGroup(PainelQADezLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelQADezLayout.createSequentialGroup()
-                                .addGroup(PainelQADezLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(btQADezA, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(btQADezC, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(82, 82, 82)
-                                .addGroup(PainelQADezLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(btQADezD, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(btQADezB, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(128, 128, 128))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelQADezLayout.createSequentialGroup()
-                                .addComponent(jlQADezB)
-                                .addGap(276, 276, 276))))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelQADezLayout.createSequentialGroup()
-                        .addComponent(btQEQuatroMenu)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btPtDica)
-                        .addContainerGap())
-                    .addGroup(PainelQADezLayout.createSequentialGroup()
-                        .addGroup(PainelQADezLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(PainelQADezLayout.createSequentialGroup()
-                                .addGap(109, 109, 109)
-                                .addComponent(jlQADezA))
-                            .addComponent(btVoltarQA))
-                        .addGap(0, 114, Short.MAX_VALUE))))
-        );
-        PainelQADezLayout.setVerticalGroup(
-            PainelQADezLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PainelQADezLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(PainelQADezLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btPtDica)
-                    .addComponent(btQEQuatroMenu))
-                .addGap(8, 8, 8)
-                .addComponent(jlQADezA)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jlQADezB)
-                .addGap(31, 31, 31)
-                .addGroup(PainelQADezLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btQADezA, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btQADezB, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(30, 30, 30)
-                .addGroup(PainelQADezLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btQADezC, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btQADezD, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btVoltarQA)
-                .addContainerGap())
-        );
+        PainelQADez.add(btQADica, new org.netbeans.lib.awtextra.AbsoluteConstraints(651, 6, 40, 40));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -249,19 +196,19 @@ int pontosQA = PontosAluno.getPontosQA();
        pontosQA=pontosQA-5;   // TODO add your handling code here:
     }//GEN-LAST:event_btQADezAActionPerformed
 
-    private void btQEQuatroMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btQEQuatroMenuActionPerformed
+    private void btQAMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btQAMenuActionPerformed
         new menuPrincipal().show();
         dispose();
-    }//GEN-LAST:event_btQEQuatroMenuActionPerformed
+    }//GEN-LAST:event_btQAMenuActionPerformed
 
-    private void btVoltarQAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btVoltarQAActionPerformed
+    private void btQAVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btQAVoltarActionPerformed
         new QANove().show();
         dispose();
-    }//GEN-LAST:event_btVoltarQAActionPerformed
+    }//GEN-LAST:event_btQAVoltarActionPerformed
 
-    private void btPtDicaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPtDicaActionPerformed
+    private void btQADicaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btQADicaActionPerformed
         JOptionPane.showMessageDialog(null,"Esse animal possui escamas!");
-    }//GEN-LAST:event_btPtDicaActionPerformed
+    }//GEN-LAST:event_btQADicaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -269,14 +216,13 @@ int pontosQA = PontosAluno.getPontosQA();
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel PainelQADez;
-    private javax.swing.JButton btPtDica;
     private javax.swing.JButton btQADezA;
     private javax.swing.JButton btQADezB;
     private javax.swing.JButton btQADezC;
     private javax.swing.JButton btQADezD;
-    private javax.swing.JButton btQEQuatroMenu;
-    private javax.swing.JButton btVoltarQA;
-    private javax.swing.JLabel jlQADezA;
-    private javax.swing.JLabel jlQADezB;
+    private javax.swing.JButton btQADica;
+    private javax.swing.JButton btQAMenu;
+    private javax.swing.JButton btQAVoltar;
+    private javax.swing.JLabel jlQADez;
     // End of variables declaration//GEN-END:variables
 }

@@ -38,23 +38,22 @@ public class QAUm extends javax.swing.JFrame {
     private void initComponents() {
 
         PainelQAUm = new javax.swing.JPanel();
-        jlQAUmA = new javax.swing.JLabel();
-        jlQAUmB = new javax.swing.JLabel();
+        jlQAUm = new javax.swing.JLabel();
         btQAUmA = new javax.swing.JButton();
         btQAUmB = new javax.swing.JButton();
         btQAUmC = new javax.swing.JButton();
         btQAUmD = new javax.swing.JButton();
-        btQAUmMenu = new javax.swing.JButton();
-        btAvanvarQA = new javax.swing.JButton();
-        btPtDica = new javax.swing.JButton();
+        btQAMenu = new javax.swing.JButton();
+        btQAAvancar = new javax.swing.JButton();
+        btQADica = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jlQAUmA.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        jlQAUmA.setText("Qual é o animal que voa e");
+        PainelQAUm.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jlQAUmB.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        jlQAUmB.setText("produz mel?");
+        jlQAUm.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        jlQAUm.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/QAUm.png"))); // NOI18N
+        PainelQAUm.add(jlQAUm, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         btQAUmA.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btQAUmA.setText("MOSQUITO");
@@ -63,6 +62,7 @@ public class QAUm extends javax.swing.JFrame {
                 btQAUmAActionPerformed(evt);
             }
         });
+        PainelQAUm.add(btQAUmA, new org.netbeans.lib.awtextra.AbsoluteConstraints(119, 135, 180, 90));
 
         btQAUmB.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btQAUmB.setText("BEIJA-FLOR");
@@ -71,6 +71,7 @@ public class QAUm extends javax.swing.JFrame {
                 btQAUmBActionPerformed(evt);
             }
         });
+        PainelQAUm.add(btQAUmB, new org.netbeans.lib.awtextra.AbsoluteConstraints(401, 255, 190, 90));
 
         btQAUmC.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btQAUmC.setText("ABELHA");
@@ -79,6 +80,7 @@ public class QAUm extends javax.swing.JFrame {
                 btQAUmCActionPerformed(evt);
             }
         });
+        PainelQAUm.add(btQAUmC, new org.netbeans.lib.awtextra.AbsoluteConstraints(119, 255, 180, 90));
 
         btQAUmD.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btQAUmD.setText("BESOURO");
@@ -87,88 +89,31 @@ public class QAUm extends javax.swing.JFrame {
                 btQAUmDActionPerformed(evt);
             }
         });
+        PainelQAUm.add(btQAUmD, new org.netbeans.lib.awtextra.AbsoluteConstraints(401, 135, 190, 90));
 
-        btQAUmMenu.setText("MENU");
-        btQAUmMenu.addActionListener(new java.awt.event.ActionListener() {
+        btQAMenu.setText("MENU");
+        btQAMenu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btQAUmMenuActionPerformed(evt);
+                btQAMenuActionPerformed(evt);
             }
         });
+        PainelQAUm.add(btQAMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, 80, 40));
 
-        btAvanvarQA.setText("AVANÇAR");
-        btAvanvarQA.addActionListener(new java.awt.event.ActionListener() {
+        btQAAvancar.setText("AVANÇAR");
+        btQAAvancar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btAvanvarQAActionPerformed(evt);
+                btQAAvancarActionPerformed(evt);
             }
         });
+        PainelQAUm.add(btQAAvancar, new org.netbeans.lib.awtextra.AbsoluteConstraints(604, 344, 90, 50));
 
-        btPtDica.setText("?");
-        btPtDica.addActionListener(new java.awt.event.ActionListener() {
+        btQADica.setText("?");
+        btQADica.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btPtDicaActionPerformed(evt);
+                btQADicaActionPerformed(evt);
             }
         });
-
-        javax.swing.GroupLayout PainelQAUmLayout = new javax.swing.GroupLayout(PainelQAUm);
-        PainelQAUm.setLayout(PainelQAUmLayout);
-        PainelQAUmLayout.setHorizontalGroup(
-            PainelQAUmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PainelQAUmLayout.createSequentialGroup()
-                .addGroup(PainelQAUmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelQAUmLayout.createSequentialGroup()
-                        .addContainerGap(129, Short.MAX_VALUE)
-                        .addGroup(PainelQAUmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btQAUmC, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btQAUmA, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(82, 82, 82)
-                        .addGroup(PainelQAUmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btQAUmD, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btQAUmB, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(123, 123, 123))
-                    .addGroup(PainelQAUmLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(PainelQAUmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(PainelQAUmLayout.createSequentialGroup()
-                                .addGap(0, 0, Short.MAX_VALUE)
-                                .addComponent(btAvanvarQA))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelQAUmLayout.createSequentialGroup()
-                                .addComponent(btQAUmMenu)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(btPtDica)))))
-                .addContainerGap())
-            .addGroup(PainelQAUmLayout.createSequentialGroup()
-                .addGap(139, 139, 139)
-                .addGroup(PainelQAUmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jlQAUmA)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelQAUmLayout.createSequentialGroup()
-                        .addGap(112, 112, 112)
-                        .addComponent(jlQAUmB)
-                        .addGap(105, 105, 105)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        PainelQAUmLayout.setVerticalGroup(
-            PainelQAUmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PainelQAUmLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(PainelQAUmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btPtDica)
-                    .addComponent(btQAUmMenu))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jlQAUmA)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jlQAUmB)
-                .addGap(18, 18, 18)
-                .addGroup(PainelQAUmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btQAUmA, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btQAUmD, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(30, 30, 30)
-                .addGroup(PainelQAUmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btQAUmC, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btQAUmB, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
-                .addComponent(btAvanvarQA)
-                .addContainerGap())
-        );
+        PainelQAUm.add(btQADica, new org.netbeans.lib.awtextra.AbsoluteConstraints(644, 6, 50, 40));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -218,19 +163,19 @@ public class QAUm extends javax.swing.JFrame {
         pontosQA=pontosQA-5;  // TODO add your handling code here:
     }//GEN-LAST:event_btQAUmBActionPerformed
 
-    private void btQAUmMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btQAUmMenuActionPerformed
+    private void btQAMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btQAMenuActionPerformed
         new menuPrincipal().show();
         dispose();
-    }//GEN-LAST:event_btQAUmMenuActionPerformed
+    }//GEN-LAST:event_btQAMenuActionPerformed
 
-    private void btAvanvarQAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btAvanvarQAActionPerformed
+    private void btQAAvancarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btQAAvancarActionPerformed
          TelaQADois.setVisible(true);
       dispose();  // TODO add your handling code here:
-    }//GEN-LAST:event_btAvanvarQAActionPerformed
+    }//GEN-LAST:event_btQAAvancarActionPerformed
 
-    private void btPtDicaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPtDicaActionPerformed
+    private void btQADicaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btQADicaActionPerformed
         JOptionPane.showMessageDialog(null,"Esse animal vive em uma colmeia");
-    }//GEN-LAST:event_btPtDicaActionPerformed
+    }//GEN-LAST:event_btQADicaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -238,14 +183,13 @@ public class QAUm extends javax.swing.JFrame {
    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel PainelQAUm;
-    private javax.swing.JButton btAvanvarQA;
-    private javax.swing.JButton btPtDica;
+    private javax.swing.JButton btQAAvancar;
+    private javax.swing.JButton btQADica;
+    private javax.swing.JButton btQAMenu;
     private javax.swing.JButton btQAUmA;
     private javax.swing.JButton btQAUmB;
     private javax.swing.JButton btQAUmC;
     private javax.swing.JButton btQAUmD;
-    private javax.swing.JButton btQAUmMenu;
-    private javax.swing.JLabel jlQAUmA;
-    private javax.swing.JLabel jlQAUmB;
+    private javax.swing.JLabel jlQAUm;
     // End of variables declaration//GEN-END:variables
 }

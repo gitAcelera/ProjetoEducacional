@@ -46,9 +46,9 @@ public class MtUm extends javax.swing.JFrame {
         btMtUmB = new javax.swing.JButton();
         btMtUmC = new javax.swing.JButton();
         btMtUmD = new javax.swing.JButton();
-        btMtUmMenu = new javax.swing.JButton();
+        btMtMenu = new javax.swing.JButton();
         btMtDica = new javax.swing.JButton();
-        btMtUmAvançar = new javax.swing.JButton();
+        btMtAvancar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(700, 420));
@@ -101,14 +101,14 @@ public class MtUm extends javax.swing.JFrame {
         });
         PainelMtUm.add(btMtUmD, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 265, 170, 70));
 
-        btMtUmMenu.setText("MENU");
-        btMtUmMenu.setFocusable(false);
-        btMtUmMenu.addActionListener(new java.awt.event.ActionListener() {
+        btMtMenu.setText("MENU");
+        btMtMenu.setFocusable(false);
+        btMtMenu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btMtUmMenuActionPerformed(evt);
+                btMtMenuActionPerformed(evt);
             }
         });
-        PainelMtUm.add(btMtUmMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, 80, 40));
+        PainelMtUm.add(btMtMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, 80, 40));
 
         btMtDica.setText("?");
         btMtDica.setFocusable(false);
@@ -119,14 +119,14 @@ public class MtUm extends javax.swing.JFrame {
         });
         PainelMtUm.add(btMtDica, new org.netbeans.lib.awtextra.AbsoluteConstraints(644, 6, 50, 40));
 
-        btMtUmAvançar.setText("Avançar");
-        btMtUmAvançar.setFocusable(false);
-        btMtUmAvançar.addActionListener(new java.awt.event.ActionListener() {
+        btMtAvancar.setText("Avançar");
+        btMtAvancar.setFocusable(false);
+        btMtAvancar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btMtUmAvançarActionPerformed(evt);
+                btMtAvancarActionPerformed(evt);
             }
         });
-        PainelMtUm.add(btMtUmAvançar, new org.netbeans.lib.awtextra.AbsoluteConstraints(614, 344, 70, 50));
+        PainelMtUm.add(btMtAvancar, new org.netbeans.lib.awtextra.AbsoluteConstraints(614, 344, 70, 50));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -168,15 +168,15 @@ pontosMt=pontosMt-5;         // TODO add your handling code here:
         dispose();
     }//GEN-LAST:event_btMtUmDActionPerformed
 
-    private void btMtUmAvançarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btMtUmAvançarActionPerformed
+    private void btMtAvancarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btMtAvancarActionPerformed
         TelaMtDois.setVisible(true);
         dispose();
-    }//GEN-LAST:event_btMtUmAvançarActionPerformed
+    }//GEN-LAST:event_btMtAvancarActionPerformed
 
-    private void btMtUmMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btMtUmMenuActionPerformed
+    private void btMtMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btMtMenuActionPerformed
         new menuPrincipal().show();
         dispose();
-    }//GEN-LAST:event_btMtUmMenuActionPerformed
+    }//GEN-LAST:event_btMtMenuActionPerformed
 
     private void btMtDicaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btMtDicaActionPerformed
         JOptionPane.showMessageDialog(null,"A operação é soma ou seja conte cada unidade na mão!");
@@ -197,13 +197,13 @@ pontosMt=pontosMt-5;         // TODO add your handling code here:
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel PainelMtUm;
+    private javax.swing.JButton btMtAvancar;
     private javax.swing.JButton btMtDica;
+    private javax.swing.JButton btMtMenu;
     private javax.swing.JButton btMtUmA;
-    private javax.swing.JButton btMtUmAvançar;
     private javax.swing.JButton btMtUmB;
     private javax.swing.JButton btMtUmC;
     private javax.swing.JButton btMtUmD;
-    private javax.swing.JButton btMtUmMenu;
     private javax.swing.JLabel jlMtUm;
     // End of variables declaration//GEN-END:variables
 }

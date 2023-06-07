@@ -1,9 +1,0 @@
-jogos.MtNove$1
-jogos.MtNove$2
-jogos.MtNove$3
-jogos.MtNove$4
-jogos.MtNove$5
-jogos.MtNove
-jogos.MtNove$6
-jogos.MtNove$7
-jogos.MtNove$8

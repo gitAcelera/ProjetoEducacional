@@ -1,9 +1,0 @@
-jogos.QETres$8
-jogos.QETres$4
-jogos.QETres$5
-jogos.QETres$6
-jogos.QETres$7
-jogos.QETres$1
-jogos.QETres$2
-jogos.QETres$3
-jogos.QETres

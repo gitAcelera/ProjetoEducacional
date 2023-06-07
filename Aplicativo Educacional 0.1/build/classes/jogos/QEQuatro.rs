@@ -1,9 +1,0 @@
-jogos.QEQuatro$3
-jogos.QEQuatro$2
-jogos.QEQuatro$1
-jogos.QEQuatro
-jogos.QEQuatro$8
-jogos.QEQuatro$7
-jogos.QEQuatro$6
-jogos.QEQuatro$5
-jogos.QEQuatro$4

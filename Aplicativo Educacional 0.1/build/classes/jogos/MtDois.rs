@@ -1,9 +1,0 @@
-jogos.MtDois$6
-jogos.MtDois$7
-jogos.MtDois$4
-jogos.MtDois$5
-jogos.MtDois$2
-jogos.MtDois$3
-jogos.MtDois$1
-jogos.MtDois
-jogos.MtDois$8

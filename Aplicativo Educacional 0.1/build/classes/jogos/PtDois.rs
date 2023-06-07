@@ -1,9 +1,0 @@
-jogos.PtDois$1
-jogos.PtDois$2
-jogos.PtDois$5
-jogos.PtDois$6
-jogos.PtDois$3
-jogos.PtDois$4
-jogos.PtDois
-jogos.PtDois$7
-jogos.PtDois$8

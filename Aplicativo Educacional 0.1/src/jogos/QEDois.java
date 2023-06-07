@@ -40,20 +40,23 @@ public class QEDois extends javax.swing.JFrame {
     private void initComponents() {
 
         PainelQEDois = new javax.swing.JPanel();
-        jlQEDoisA = new javax.swing.JLabel();
+        jlQEDois = new javax.swing.JLabel();
         btQEDoisA = new javax.swing.JButton();
         btQEDoisB = new javax.swing.JButton();
         btQEDoisC = new javax.swing.JButton();
         btQEDoisD = new javax.swing.JButton();
-        btavncarQE = new javax.swing.JButton();
-        btQEDoisMenu = new javax.swing.JButton();
-        btVoltarQE = new javax.swing.JButton();
-        btPtDica2 = new javax.swing.JButton();
+        btQEAvancar = new javax.swing.JButton();
+        btQEMenu = new javax.swing.JButton();
+        btQEVoltar = new javax.swing.JButton();
+        btQEDica = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jlQEDoisA.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        jlQEDoisA.setText("Qual é a cor do sol?");
+        PainelQEDois.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jlQEDois.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        jlQEDois.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/QEDois.png"))); // NOI18N
+        PainelQEDois.add(jlQEDois, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         btQEDoisA.setBackground(new java.awt.Color(255, 0, 0));
         btQEDoisA.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
@@ -62,6 +65,7 @@ public class QEDois extends javax.swing.JFrame {
                 btQEDoisAActionPerformed(evt);
             }
         });
+        PainelQEDois.add(btQEDoisA, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 136, 180, 90));
 
         btQEDoisB.setBackground(new java.awt.Color(255, 255, 0));
         btQEDoisB.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
@@ -70,6 +74,7 @@ public class QEDois extends javax.swing.JFrame {
                 btQEDoisBActionPerformed(evt);
             }
         });
+        PainelQEDois.add(btQEDoisB, new org.netbeans.lib.awtextra.AbsoluteConstraints(402, 136, 180, 90));
 
         btQEDoisC.setBackground(new java.awt.Color(0, 102, 255));
         btQEDoisC.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
@@ -78,6 +83,7 @@ public class QEDois extends javax.swing.JFrame {
                 btQEDoisCActionPerformed(evt);
             }
         });
+        PainelQEDois.add(btQEDoisC, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 256, 180, 90));
 
         btQEDoisD.setBackground(new java.awt.Color(0, 153, 0));
         btQEDoisD.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
@@ -86,92 +92,39 @@ public class QEDois extends javax.swing.JFrame {
                 btQEDoisDActionPerformed(evt);
             }
         });
+        PainelQEDois.add(btQEDoisD, new org.netbeans.lib.awtextra.AbsoluteConstraints(402, 256, 180, 90));
 
-        btavncarQE.setText("AVANÇAR");
-        btavncarQE.addActionListener(new java.awt.event.ActionListener() {
+        btQEAvancar.setText("AVANÇAR");
+        btQEAvancar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btavncarQEActionPerformed(evt);
+                btQEAvancarActionPerformed(evt);
             }
         });
+        PainelQEDois.add(btQEAvancar, new org.netbeans.lib.awtextra.AbsoluteConstraints(609, 344, 80, 50));
 
-        btQEDoisMenu.setText("MENU");
-        btQEDoisMenu.addActionListener(new java.awt.event.ActionListener() {
+        btQEMenu.setText("MENU");
+        btQEMenu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btQEDoisMenuActionPerformed(evt);
+                btQEMenuActionPerformed(evt);
             }
         });
+        PainelQEDois.add(btQEMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, 80, 40));
 
-        btVoltarQE.setText("Voltar");
-        btVoltarQE.addActionListener(new java.awt.event.ActionListener() {
+        btQEVoltar.setText("Voltar");
+        btQEVoltar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btVoltarQEActionPerformed(evt);
+                btQEVoltarActionPerformed(evt);
             }
         });
+        PainelQEDois.add(btQEVoltar, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 354, 80, 40));
 
-        btPtDica2.setText("?");
-        btPtDica2.addActionListener(new java.awt.event.ActionListener() {
+        btQEDica.setText("?");
+        btQEDica.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btPtDica2ActionPerformed(evt);
+                btQEDicaActionPerformed(evt);
             }
         });
-
-        javax.swing.GroupLayout PainelQEDoisLayout = new javax.swing.GroupLayout(PainelQEDois);
-        PainelQEDois.setLayout(PainelQEDoisLayout);
-        PainelQEDoisLayout.setHorizontalGroup(
-            PainelQEDoisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PainelQEDoisLayout.createSequentialGroup()
-                .addGroup(PainelQEDoisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(PainelQEDoisLayout.createSequentialGroup()
-                        .addContainerGap(130, Short.MAX_VALUE)
-                        .addGroup(PainelQEDoisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addGroup(PainelQEDoisLayout.createSequentialGroup()
-                                .addComponent(btQEDoisC, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(btQEDoisD, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(PainelQEDoisLayout.createSequentialGroup()
-                                .addComponent(btQEDoisA, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(82, 82, 82)
-                                .addComponent(btQEDoisB, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(122, 122, 122))
-                    .addGroup(PainelQEDoisLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(btVoltarQE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btavncarQE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelQEDoisLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(btQEDoisMenu)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btPtDica2)))
-                .addContainerGap())
-            .addGroup(PainelQEDoisLayout.createSequentialGroup()
-                .addGap(186, 186, 186)
-                .addComponent(jlQEDoisA)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        PainelQEDoisLayout.setVerticalGroup(
-            PainelQEDoisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelQEDoisLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(PainelQEDoisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btPtDica2)
-                    .addComponent(btQEDoisMenu))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 41, Short.MAX_VALUE)
-                .addComponent(jlQEDoisA)
-                .addGap(28, 28, 28)
-                .addGroup(PainelQEDoisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btQEDoisA, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btQEDoisB, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(30, 30, 30)
-                .addGroup(PainelQEDoisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btQEDoisC, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btQEDoisD, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
-                .addGroup(PainelQEDoisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btVoltarQE)
-                    .addComponent(btavncarQE))
-                .addContainerGap())
-        );
+        PainelQEDois.add(btQEDica, new org.netbeans.lib.awtextra.AbsoluteConstraints(644, 6, 50, 40));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -226,24 +179,24 @@ public class QEDois extends javax.swing.JFrame {
 pontosQE=pontosQE-5;        // TODO add your handling code here:
     }//GEN-LAST:event_btQEDoisDActionPerformed
 
-    private void btQEDoisMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btQEDoisMenuActionPerformed
+    private void btQEMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btQEMenuActionPerformed
         new menuPrincipal().show();
         dispose();
-    }//GEN-LAST:event_btQEDoisMenuActionPerformed
+    }//GEN-LAST:event_btQEMenuActionPerformed
 
-    private void btavncarQEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btavncarQEActionPerformed
+    private void btQEAvancarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btQEAvancarActionPerformed
        TelaQETres.setVisible(true);
       dispose(); // TODO add your handling code here:
-    }//GEN-LAST:event_btavncarQEActionPerformed
+    }//GEN-LAST:event_btQEAvancarActionPerformed
 
-    private void btVoltarQEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btVoltarQEActionPerformed
+    private void btQEVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btQEVoltarActionPerformed
         new QEUm().show();
         dispose();
-    }//GEN-LAST:event_btVoltarQEActionPerformed
+    }//GEN-LAST:event_btQEVoltarActionPerformed
 
-    private void btPtDica2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPtDica2ActionPerformed
+    private void btQEDicaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btQEDicaActionPerformed
         JOptionPane.showMessageDialog(null,"Essa cor é uma cor clara e brilhante!");
-    }//GEN-LAST:event_btPtDica2ActionPerformed
+    }//GEN-LAST:event_btQEDicaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -251,14 +204,14 @@ pontosQE=pontosQE-5;        // TODO add your handling code here:
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel PainelQEDois;
-    private javax.swing.JButton btPtDica2;
+    private javax.swing.JButton btQEAvancar;
+    private javax.swing.JButton btQEDica;
     private javax.swing.JButton btQEDoisA;
     private javax.swing.JButton btQEDoisB;
     private javax.swing.JButton btQEDoisC;
     private javax.swing.JButton btQEDoisD;
-    private javax.swing.JButton btQEDoisMenu;
-    private javax.swing.JButton btVoltarQE;
-    private javax.swing.JButton btavncarQE;
-    private javax.swing.JLabel jlQEDoisA;
+    private javax.swing.JButton btQEMenu;
+    private javax.swing.JButton btQEVoltar;
+    private javax.swing.JLabel jlQEDois;
     // End of variables declaration//GEN-END:variables
 }

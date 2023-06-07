@@ -1,9 +1,0 @@
-jogos.PtTres$1
-jogos.PtTres$2
-jogos.PtTres$3
-jogos.PtTres$4
-jogos.PtTres$5
-jogos.PtTres$6
-jogos.PtTres$7
-jogos.PtTres$8
-jogos.PtTres

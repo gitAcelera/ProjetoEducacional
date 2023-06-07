@@ -38,24 +38,27 @@ int pontosQA = PontosAluno.getPontosQA();
     private void initComponents() {
 
         PainelQACinco = new javax.swing.JPanel();
-        jlQACincoA = new javax.swing.JLabel();
-        jlQACincoB = new javax.swing.JLabel();
+        jlQACinco = new javax.swing.JLabel();
         btQACincoA = new javax.swing.JButton();
         btQACincoB = new javax.swing.JButton();
         btQACincoC = new javax.swing.JButton();
         btQACincoD = new javax.swing.JButton();
-        btQECincoMenu = new javax.swing.JButton();
-        btAvancarQA = new javax.swing.JButton();
-        btVoltarQA = new javax.swing.JButton();
-        btPtDica = new javax.swing.JButton();
+        btQAMenu = new javax.swing.JButton();
+        btQAAvancar = new javax.swing.JButton();
+        btQAVoltar = new javax.swing.JButton();
+        btQADica = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
 
-        jlQACincoA.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        jlQACincoA.setText("Qual animal é conhecido como");
+        PainelQACinco.setMaximumSize(new java.awt.Dimension(700, 400));
+        PainelQACinco.setMinimumSize(new java.awt.Dimension(700, 400));
+        PainelQACinco.setPreferredSize(new java.awt.Dimension(700, 400));
+        PainelQACinco.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jlQACincoB.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        jlQACincoB.setText("o rei da selva?");
+        jlQACinco.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        jlQACinco.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/QACinco.png"))); // NOI18N
+        PainelQACinco.add(jlQACinco, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 400));
 
         btQACincoA.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btQACincoA.setText("CACHORRO");
@@ -64,6 +67,7 @@ int pontosQA = PontosAluno.getPontosQA();
                 btQACincoAActionPerformed(evt);
             }
         });
+        PainelQACinco.add(btQACincoA, new org.netbeans.lib.awtextra.AbsoluteConstraints(116, 133, 180, 90));
 
         btQACincoB.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btQACincoB.setText("MACACO");
@@ -72,6 +76,7 @@ int pontosQA = PontosAluno.getPontosQA();
                 btQACincoBActionPerformed(evt);
             }
         });
+        PainelQACinco.add(btQACincoB, new org.netbeans.lib.awtextra.AbsoluteConstraints(408, 143, 180, 80));
 
         btQACincoC.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btQACincoC.setText("LEOPARDO");
@@ -80,6 +85,7 @@ int pontosQA = PontosAluno.getPontosQA();
                 btQACincoCActionPerformed(evt);
             }
         });
+        PainelQACinco.add(btQACincoC, new org.netbeans.lib.awtextra.AbsoluteConstraints(116, 263, 190, 80));
 
         btQACincoD.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btQACincoD.setText("LEÃO");
@@ -88,99 +94,39 @@ int pontosQA = PontosAluno.getPontosQA();
                 btQACincoDActionPerformed(evt);
             }
         });
+        PainelQACinco.add(btQACincoD, new org.netbeans.lib.awtextra.AbsoluteConstraints(408, 263, 180, 80));
 
-        btQECincoMenu.setText("MENU");
-        btQECincoMenu.addActionListener(new java.awt.event.ActionListener() {
+        btQAMenu.setText("MENU");
+        btQAMenu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btQECincoMenuActionPerformed(evt);
+                btQAMenuActionPerformed(evt);
             }
         });
+        PainelQACinco.add(btQAMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, 80, 40));
 
-        btAvancarQA.setText("AVANÇAR");
-        btAvancarQA.addActionListener(new java.awt.event.ActionListener() {
+        btQAAvancar.setText("AVANÇAR");
+        btQAAvancar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btAvancarQAActionPerformed(evt);
+                btQAAvancarActionPerformed(evt);
             }
         });
+        PainelQACinco.add(btQAAvancar, new org.netbeans.lib.awtextra.AbsoluteConstraints(605, 344, -1, 50));
 
-        btVoltarQA.setText("Voltar");
-        btVoltarQA.addActionListener(new java.awt.event.ActionListener() {
+        btQAVoltar.setText("Voltar");
+        btQAVoltar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btVoltarQAActionPerformed(evt);
+                btQAVoltarActionPerformed(evt);
             }
         });
+        PainelQACinco.add(btQAVoltar, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 354, 80, 40));
 
-        btPtDica.setText("?");
-        btPtDica.addActionListener(new java.awt.event.ActionListener() {
+        btQADica.setText("?");
+        btQADica.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btPtDicaActionPerformed(evt);
+                btQADicaActionPerformed(evt);
             }
         });
-
-        javax.swing.GroupLayout PainelQACincoLayout = new javax.swing.GroupLayout(PainelQACinco);
-        PainelQACinco.setLayout(PainelQACincoLayout);
-        PainelQACincoLayout.setHorizontalGroup(
-            PainelQACincoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PainelQACincoLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(PainelQACincoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelQACincoLayout.createSequentialGroup()
-                        .addGap(0, 105, Short.MAX_VALUE)
-                        .addGroup(PainelQACincoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelQACincoLayout.createSequentialGroup()
-                                .addComponent(jlQACincoB)
-                                .addGap(232, 232, 232))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelQACincoLayout.createSequentialGroup()
-                                .addComponent(jlQACincoA)
-                                .addGap(92, 92, 92))))
-                    .addGroup(PainelQACincoLayout.createSequentialGroup()
-                        .addGroup(PainelQACincoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelQACincoLayout.createSequentialGroup()
-                                .addGroup(PainelQACincoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(btQACincoA, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelQACincoLayout.createSequentialGroup()
-                                        .addComponent(btVoltarQA)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(btQACincoC, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addGap(82, 82, 82)
-                                .addGroup(PainelQACincoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(btQACincoB, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(btQACincoD, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(37, 37, 37)
-                                .addComponent(btAvancarQA))
-                            .addGroup(PainelQACincoLayout.createSequentialGroup()
-                                .addComponent(btQECincoMenu)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(btPtDica)))
-                        .addContainerGap())))
-        );
-        PainelQACincoLayout.setVerticalGroup(
-            PainelQACincoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PainelQACincoLayout.createSequentialGroup()
-                .addGap(51, 51, 51)
-                .addComponent(jlQACincoA, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jlQACincoB)
-                .addGap(24, 24, 24)
-                .addGroup(PainelQACincoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btQACincoA, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btQACincoB, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(30, 30, 30)
-                .addGroup(PainelQACincoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btQACincoC, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btQACincoD, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(27, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelQACincoLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(PainelQACincoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btPtDica)
-                    .addComponent(btQECincoMenu))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(PainelQACincoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btAvancarQA)
-                    .addComponent(btVoltarQA))
-                .addContainerGap())
-        );
+        PainelQACinco.add(btQADica, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 6, 40, 40));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -235,24 +181,24 @@ int pontosQA = PontosAluno.getPontosQA();
        pontosQA=pontosQA-5;     // TODO add your handling code here:
     }//GEN-LAST:event_btQACincoCActionPerformed
 
-    private void btQECincoMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btQECincoMenuActionPerformed
+    private void btQAMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btQAMenuActionPerformed
         new menuPrincipal().show();
         dispose();
-    }//GEN-LAST:event_btQECincoMenuActionPerformed
+    }//GEN-LAST:event_btQAMenuActionPerformed
 
-    private void btAvancarQAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btAvancarQAActionPerformed
+    private void btQAAvancarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btQAAvancarActionPerformed
         TelaQASeis.setVisible(true);
       dispose();  // TODO add your handling code here:
-    }//GEN-LAST:event_btAvancarQAActionPerformed
+    }//GEN-LAST:event_btQAAvancarActionPerformed
 
-    private void btVoltarQAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btVoltarQAActionPerformed
+    private void btQAVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btQAVoltarActionPerformed
         new QAQuatro().show();
         dispose();
-    }//GEN-LAST:event_btVoltarQAActionPerformed
+    }//GEN-LAST:event_btQAVoltarActionPerformed
 
-    private void btPtDicaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPtDicaActionPerformed
+    private void btQADicaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btQADicaActionPerformed
         JOptionPane.showMessageDialog(null,"Esse animal possui uma grande juba!");
-    }//GEN-LAST:event_btPtDicaActionPerformed
+    }//GEN-LAST:event_btQADicaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -261,15 +207,14 @@ int pontosQA = PontosAluno.getPontosQA();
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel PainelQACinco;
-    private javax.swing.JButton btAvancarQA;
-    private javax.swing.JButton btPtDica;
+    private javax.swing.JButton btQAAvancar;
     private javax.swing.JButton btQACincoA;
     private javax.swing.JButton btQACincoB;
     private javax.swing.JButton btQACincoC;
     private javax.swing.JButton btQACincoD;
-    private javax.swing.JButton btQECincoMenu;
-    private javax.swing.JButton btVoltarQA;
-    private javax.swing.JLabel jlQACincoA;
-    private javax.swing.JLabel jlQACincoB;
+    private javax.swing.JButton btQADica;
+    private javax.swing.JButton btQAMenu;
+    private javax.swing.JButton btQAVoltar;
+    private javax.swing.JLabel jlQACinco;
     // End of variables declaration//GEN-END:variables
 }

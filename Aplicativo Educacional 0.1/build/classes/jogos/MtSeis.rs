@@ -1,9 +1,0 @@
-jogos.MtSeis$3
-jogos.MtSeis$4
-jogos.MtSeis$1
-jogos.MtSeis$2
-jogos.MtSeis$7
-jogos.MtSeis$8
-jogos.MtSeis$5
-jogos.MtSeis
-jogos.MtSeis$6

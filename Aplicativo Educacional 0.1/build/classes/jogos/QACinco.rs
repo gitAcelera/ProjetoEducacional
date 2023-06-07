@@ -1,9 +1,0 @@
-jogos.QACinco$7
-jogos.QACinco
-jogos.QACinco$6
-jogos.QACinco$5
-jogos.QACinco$4
-jogos.QACinco$3
-jogos.QACinco$2
-jogos.QACinco$1
-jogos.QACinco$8

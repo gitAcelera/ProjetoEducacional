@@ -46,10 +46,10 @@ public class MtSete extends javax.swing.JFrame {
         btMtSeteB = new javax.swing.JButton();
         btMtSeteC = new javax.swing.JButton();
         btMtSeteD = new javax.swing.JButton();
-        btAvancar = new javax.swing.JButton();
-        btVoltarMenu = new javax.swing.JButton();
-        btVoltarMt = new javax.swing.JButton();
-        btPtDica = new javax.swing.JButton();
+        btMtAvancar = new javax.swing.JButton();
+        btMtMenu = new javax.swing.JButton();
+        btMtVoltar = new javax.swing.JButton();
+        btMtDica = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -99,37 +99,37 @@ public class MtSete extends javax.swing.JFrame {
         });
         PainelMtSete.add(btMtSeteD, new org.netbeans.lib.awtextra.AbsoluteConstraints(402, 263, 180, 80));
 
-        btAvancar.setText("Avançar");
-        btAvancar.addActionListener(new java.awt.event.ActionListener() {
+        btMtAvancar.setText("Avançar");
+        btMtAvancar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btAvancarActionPerformed(evt);
+                btMtAvancarActionPerformed(evt);
             }
         });
-        PainelMtSete.add(btAvancar, new org.netbeans.lib.awtextra.AbsoluteConstraints(604, 344, 90, 50));
+        PainelMtSete.add(btMtAvancar, new org.netbeans.lib.awtextra.AbsoluteConstraints(604, 344, 90, 50));
 
-        btVoltarMenu.setText(" MENU");
-        btVoltarMenu.addActionListener(new java.awt.event.ActionListener() {
+        btMtMenu.setText(" MENU");
+        btMtMenu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btVoltarMenuActionPerformed(evt);
+                btMtMenuActionPerformed(evt);
             }
         });
-        PainelMtSete.add(btVoltarMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, 80, 50));
+        PainelMtSete.add(btMtMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, 80, 50));
 
-        btVoltarMt.setText("Voltar");
-        btVoltarMt.addActionListener(new java.awt.event.ActionListener() {
+        btMtVoltar.setText("Voltar");
+        btMtVoltar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btVoltarMtActionPerformed(evt);
+                btMtVoltarActionPerformed(evt);
             }
         });
-        PainelMtSete.add(btVoltarMt, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 354, 80, 40));
+        PainelMtSete.add(btMtVoltar, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 354, 80, 40));
 
-        btPtDica.setText("?");
-        btPtDica.addActionListener(new java.awt.event.ActionListener() {
+        btMtDica.setText("?");
+        btMtDica.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btPtDicaActionPerformed(evt);
+                btMtDicaActionPerformed(evt);
             }
         });
-        PainelMtSete.add(btPtDica, new org.netbeans.lib.awtextra.AbsoluteConstraints(644, 6, 50, 40));
+        PainelMtSete.add(btMtDica, new org.netbeans.lib.awtextra.AbsoluteConstraints(644, 6, 50, 40));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -184,24 +184,24 @@ public class MtSete extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_btMtSeteCActionPerformed
 
-    private void btAvancarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btAvancarActionPerformed
+    private void btMtAvancarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btMtAvancarActionPerformed
         TelaMtOito.setVisible(true);
         dispose();
-    }//GEN-LAST:event_btAvancarActionPerformed
+    }//GEN-LAST:event_btMtAvancarActionPerformed
 
-    private void btVoltarMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btVoltarMenuActionPerformed
+    private void btMtMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btMtMenuActionPerformed
          new menuPrincipal().show();
         dispose();
-    }//GEN-LAST:event_btVoltarMenuActionPerformed
+    }//GEN-LAST:event_btMtMenuActionPerformed
 
-    private void btVoltarMtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btVoltarMtActionPerformed
+    private void btMtVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btMtVoltarActionPerformed
         new MtSeis ().show();
         dispose();
-    }//GEN-LAST:event_btVoltarMtActionPerformed
+    }//GEN-LAST:event_btMtVoltarActionPerformed
 
-    private void btPtDicaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPtDicaActionPerformed
+    private void btMtDicaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btMtDicaActionPerformed
         JOptionPane.showMessageDialog(null,"uma dica é entender que 2x3 é a mesma que 2+2+2...");
-    }//GEN-LAST:event_btPtDicaActionPerformed
+    }//GEN-LAST:event_btMtDicaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -210,14 +210,14 @@ public class MtSete extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel PainelMtSete;
-    private javax.swing.JButton btAvancar;
+    private javax.swing.JButton btMtAvancar;
+    private javax.swing.JButton btMtDica;
+    private javax.swing.JButton btMtMenu;
     private javax.swing.JButton btMtSeteA;
     private javax.swing.JButton btMtSeteB;
     private javax.swing.JButton btMtSeteC;
     private javax.swing.JButton btMtSeteD;
-    private javax.swing.JButton btPtDica;
-    private javax.swing.JButton btVoltarMenu;
-    private javax.swing.JButton btVoltarMt;
+    private javax.swing.JButton btMtVoltar;
     private javax.swing.JLabel jlMtSete;
     // End of variables declaration//GEN-END:variables
 }

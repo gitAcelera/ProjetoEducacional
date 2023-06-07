@@ -43,10 +43,10 @@ public class MtCinco extends javax.swing.JFrame {
         btMtCincoB = new javax.swing.JButton();
         btMtCincoC = new javax.swing.JButton();
         btMtCincoD = new javax.swing.JButton();
-        btVoltarMenu = new javax.swing.JButton();
-        btAvancar = new javax.swing.JButton();
-        btVoltarMt = new javax.swing.JButton();
-        btPtDica = new javax.swing.JButton();
+        btMtMenu = new javax.swing.JButton();
+        btMtAvancar = new javax.swing.JButton();
+        btMtVoltar = new javax.swing.JButton();
+        btMtDica = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(720, 420));
@@ -95,37 +95,37 @@ public class MtCinco extends javax.swing.JFrame {
         });
         PainelMtCinco.add(btMtCincoD, new org.netbeans.lib.awtextra.AbsoluteConstraints(404, 255, 180, 90));
 
-        btVoltarMenu.setText(" MENU");
-        btVoltarMenu.addActionListener(new java.awt.event.ActionListener() {
+        btMtMenu.setText(" MENU");
+        btMtMenu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btVoltarMenuActionPerformed(evt);
+                btMtMenuActionPerformed(evt);
             }
         });
-        PainelMtCinco.add(btVoltarMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, 80, 40));
+        PainelMtCinco.add(btMtMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, 80, 40));
 
-        btAvancar.setText("Avançar");
-        btAvancar.addActionListener(new java.awt.event.ActionListener() {
+        btMtAvancar.setText("Avançar");
+        btMtAvancar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btAvancarActionPerformed(evt);
+                btMtAvancarActionPerformed(evt);
             }
         });
-        PainelMtCinco.add(btAvancar, new org.netbeans.lib.awtextra.AbsoluteConstraints(604, 344, 90, 50));
+        PainelMtCinco.add(btMtAvancar, new org.netbeans.lib.awtextra.AbsoluteConstraints(604, 344, 90, 50));
 
-        btVoltarMt.setText("Voltar");
-        btVoltarMt.addActionListener(new java.awt.event.ActionListener() {
+        btMtVoltar.setText("Voltar");
+        btMtVoltar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btVoltarMtActionPerformed(evt);
+                btMtVoltarActionPerformed(evt);
             }
         });
-        PainelMtCinco.add(btVoltarMt, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 354, 80, 40));
+        PainelMtCinco.add(btMtVoltar, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 354, 80, 40));
 
-        btPtDica.setText("?");
-        btPtDica.addActionListener(new java.awt.event.ActionListener() {
+        btMtDica.setText("?");
+        btMtDica.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btPtDicaActionPerformed(evt);
+                btMtDicaActionPerformed(evt);
             }
         });
-        PainelMtCinco.add(btPtDica, new org.netbeans.lib.awtextra.AbsoluteConstraints(644, 6, 50, 40));
+        PainelMtCinco.add(btMtDica, new org.netbeans.lib.awtextra.AbsoluteConstraints(644, 6, 50, 40));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -150,11 +150,7 @@ public class MtCinco extends javax.swing.JFrame {
     }//GEN-LAST:event_btMtCincoBActionPerformed
 
     private void btMtCincoCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btMtCincoCActionPerformed
-      pontosMt=pontosMt-5;    // TODO add your handling code here:
-    }//GEN-LAST:event_btMtCincoCActionPerformed
-
-    private void btMtCincoDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btMtCincoDActionPerformed
-      pontosMt=pontosMt+20;
+        pontosMt=pontosMt+20;
         System.out.println(""+pontosMt);
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
@@ -178,26 +174,32 @@ public class MtCinco extends javax.swing.JFrame {
         }   
         TelaMtSeis.setVisible(true);
         dispose();
+                       
+
+    }//GEN-LAST:event_btMtCincoCActionPerformed
+
+    private void btMtCincoDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btMtCincoDActionPerformed
+        pontosMt=pontosMt-5;      // TODO add your handling code here:
     }//GEN-LAST:event_btMtCincoDActionPerformed
 
-    private void btAvancarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btAvancarActionPerformed
+    private void btMtAvancarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btMtAvancarActionPerformed
         TelaMtSeis.setVisible(true);
         dispose();
-    }//GEN-LAST:event_btAvancarActionPerformed
+    }//GEN-LAST:event_btMtAvancarActionPerformed
 
-    private void btVoltarMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btVoltarMenuActionPerformed
+    private void btMtMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btMtMenuActionPerformed
         new menuPrincipal().show();
         dispose();
-    }//GEN-LAST:event_btVoltarMenuActionPerformed
+    }//GEN-LAST:event_btMtMenuActionPerformed
 
-    private void btVoltarMtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btVoltarMtActionPerformed
+    private void btMtVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btMtVoltarActionPerformed
         new MtQuatro ().show();
         dispose();
-    }//GEN-LAST:event_btVoltarMtActionPerformed
+    }//GEN-LAST:event_btMtVoltarActionPerformed
 
-    private void btPtDicaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPtDicaActionPerformed
+    private void btMtDicaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btMtDicaActionPerformed
         JOptionPane.showMessageDialog(null,"Uma dica é voce tentar gritar a palavra em sua cabeça, a silaba que tiver mais ênfase é a sílaba tónica, exemplo: Abacaxiiii!");
-    }//GEN-LAST:event_btPtDicaActionPerformed
+    }//GEN-LAST:event_btMtDicaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -206,14 +208,14 @@ public class MtCinco extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel PainelMtCinco;
-    private javax.swing.JButton btAvancar;
+    private javax.swing.JButton btMtAvancar;
     private javax.swing.JButton btMtCincoA;
     private javax.swing.JButton btMtCincoB;
     private javax.swing.JButton btMtCincoC;
     private javax.swing.JButton btMtCincoD;
-    private javax.swing.JButton btPtDica;
-    private javax.swing.JButton btVoltarMenu;
-    private javax.swing.JButton btVoltarMt;
+    private javax.swing.JButton btMtDica;
+    private javax.swing.JButton btMtMenu;
+    private javax.swing.JButton btMtVoltar;
     private javax.swing.JLabel jlMtCinco;
     // End of variables declaration//GEN-END:variables
 }
