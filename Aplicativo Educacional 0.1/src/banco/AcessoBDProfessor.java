@@ -1,23 +1,36 @@
 
 package Banco;
+import telas.loginProfessor;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.ArrayList;
-
-import Dados.LoginAluno;
 import dados.LoginProfessor;
 
 
-
+/**
+ * Classe que permite o acesso do professor ao apicativo
+ * @deprecated  A classe para o método de verificar login do professor é outra agora
+ * @see loginProfessor#verificaLoginProfessor() 
+ * @author Mateus
+ */
 public class AcessoBDProfessor 
 {
    Connection connection = null;
+   /**
+    * Verificar o login do professor no banco de dados
+    * @deprecated Pelo fato de só aceitar o último cadastro, houve uma mudança de método para o login do professor
+    * @see verificaLoginProfessor
+    * @param loginProfessor O objeto loginProfessor contém as informações de login do professor
+    * @return status 
+    */
 
     public boolean verificaAcessoProfessor(LoginProfessor loginProfessor)
     {
-    	
+    	/**
+         * Método que verifica o acesso
+         * @param loginProfessor Possui as informações de login do professor
+         */ 
     	connection = Conexao.getInstance().getConnection();
         System.out.println("Conectado e verificando acesso");
         Statement stmt = null;
@@ -47,7 +60,7 @@ public class AcessoBDProfessor
         catch (SQLException e)
         {
             System.out.println(e.getMessage());
-            status = false;
+            status = false;// Não foi possível efeituar o login
         }
         finally
         {

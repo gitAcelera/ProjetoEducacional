@@ -3,13 +3,18 @@ package Banco;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
-
+/**
+ * Inicia classe Conexão para acesso ao banco de dados
+ * @author Mateus
+ */
 public class Conexao 
 {
 
     Connection con = null;
     private static Conexao instance = null;
-
+   /**
+     * Método construtor da classe "Conexão"
+     */
     public Conexao() 
     {
     	try 
@@ -23,7 +28,10 @@ public class Conexao
         }
     }
     
-   
+   /**
+     * Método get static da classe Conexão
+     * @return instância
+     */
     public static Conexao getInstance() 
     {
         if (instance == null) 
@@ -32,7 +40,10 @@ public class Conexao
         }
         return instance;
     }
-
+     /**
+     * Metódo get que inicia a conexão no banco de dados
+     * @return connection
+     */
     public Connection getConnection() 
     {
         try 
@@ -49,7 +60,9 @@ public class Conexao
         }
         return con;
     }
-
+    /**
+     * Método que retorna pro void
+     */
     public void destroy() 
     {
         try 

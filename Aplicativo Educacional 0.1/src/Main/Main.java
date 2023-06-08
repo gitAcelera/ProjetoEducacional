@@ -2,11 +2,15 @@
 package Main;
 import telas.Inicio;
 /**
- *
- * @author ADM
+ * Classe principal que inicia o aplicativo
+ * @author Mateus
  */
 public class Main
 {
+    /**
+     * Instancia a classe
+     * @param args Argumentos da linha de comando fornecidas 
+     */
  
     public static void main(String[] args)
     {

@@ -5,11 +5,19 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
-
 import Dados.Pessoa;
-
+/**
+ * Inicia classe PessoaBD
+ * @author Izabelle
+ */
 public class PessoaBD
 {
+    /**
+     * Método que atribui valores gerais para a classe pessoa, englobando atributos do aluno e do professor
+     * @param pessoa Há a utilização do encapsulamento realizado na Classe Pessoa. Enviando os valores ao banco. 
+     * @see Pessoa#Pessoa()  
+     * @return true (CREATE)
+     */
 
     Connection connection = null;
 
@@ -37,7 +45,7 @@ public class PessoaBD
         catch (SQLException e)
         {
             System.out.println(e.getMessage());
-            return false;
+            return false;//não foi possível a realização do Create
         } 
         finally 
         {
@@ -53,7 +61,12 @@ public class PessoaBD
         }
     } 
 
-    
+    /**
+     * Método que permite alterar dados
+     * @param pessoa Recebe os valores  das variáveis da qual o usuário deseja mudar 
+     * @param nomeAlterar Parametro utilizado para que o comando UPDATE no MYSQL seja possível
+     * @return true (UPDATE)
+     */
     public boolean atualizarPessoa(Pessoa pessoa, String nomeAlterar) 
     {
         System.out.println("Atualizar Pessoa");
@@ -65,9 +78,6 @@ public class PessoaBD
         try
         {
             stmt = connection.createStatement();
-
-            //String sql = "UPDATE pessoa SET nome = '" + pessoa.getNome() + "' WHERE codaluno = " + pessoa.getCodigo() + ";";
-            
             String sql = "UPDATE aluno SET nome="+ "'"+pessoa.getNome()+"'," +
                          "ra='"+pessoa.getRa()+"', idade='"+pessoa.getIdade()+"'," +
                          "cpf='"+pessoa.getCpf()+"', senha='"+pessoa.getSenha()+" WHERE nome='"+nomeAlterar+"';";
@@ -80,7 +90,7 @@ public class PessoaBD
         catch (SQLException e)
         {
             System.out.println(e.getMessage());
-            return false;
+            return false; //não foi possível a realização do UPDATE
         }
         finally
         {
@@ -97,7 +107,10 @@ public class PessoaBD
         }
     }
     
-    
+    /**
+     * Método que exibe classificação das pontuações dos alunos
+     * @return classificacao (READ)
+     */    
     public String relatorioPessoas()
     {
     	String classificacao = "";
@@ -113,7 +126,6 @@ public class PessoaBD
             while (res.next())
             {
             	classificacao+= "\n"+res.getString("nome");
-			//classificacao += "\n"+res.getString("idade");
 				classificacao += "\n"+res.getString("ra");
 				classificacao += "\n"+res.getString("total");
 				classificacao += "\n-----------------------------------------";				
@@ -123,7 +135,7 @@ public class PessoaBD
         catch (SQLException e)
         {
             System.out.println(e.getMessage());
-            return null;
+            return null;//não foi possível a realização do READ
         }
         finally
         {
@@ -142,7 +154,11 @@ public class PessoaBD
     	return classificacao;
     }
     
-
+   /**
+     * Método para listar os alunos
+     * @deprecated Uma alternativa para o metodo de classificação dos alunos que foi descartada
+     * @return listaPessoas
+     */
     public ArrayList<Pessoa> getListaPessoas() 
     {
         ArrayList<Pessoa> listaPessoas = new ArrayList<Pessoa>();
@@ -185,6 +201,11 @@ public class PessoaBD
         return listaPessoas;
     } 
     
+    /**
+     * Método que permite deletar dados
+     * @param pessoa Recebe um valor válido(já cadastrado) de ra. Parametro necessário para que haja o êxito do comando deletar no MYSQL
+     * @return status (delete)
+     */
     public boolean excluirAluno(Pessoa pessoa) 
     {
     	boolean status = true;
@@ -216,7 +237,7 @@ public class PessoaBD
         catch (SQLException e)
         {
             System.out.println(e.getMessage());
-            status = false;
+            status = false;//não foi possível a realização do DELETE
         }
         finally 
         {
@@ -235,7 +256,11 @@ public class PessoaBD
     }
 
 
-
+/**
+ * Método que permite deletar dados
+ * @param pessoa Recebe um valor válido(já cadastrado) de CPF. Parametro necessário para que haja o êxito do comando deletar no MYSQL
+ * @return stataus (delete)
+ */
 public boolean excluirProfessor(Pessoa pessoa) 
     {
     	boolean status = true;
@@ -267,7 +292,7 @@ public boolean excluirProfessor(Pessoa pessoa)
         catch (SQLException e)
         {
             System.out.println(e.getMessage());
-            status = false;
+            status = false; //não foi possível a realização do Delete
         }
         finally 
         {
@@ -285,6 +310,10 @@ public boolean excluirProfessor(Pessoa pessoa)
         return status;
   
     }
+/**
+ * Método que permite iniciar jogo personalizado
+ * @return jogo (busca do jogo personalizado)
+ */
 public String buscarJogo()
     {
     	String jogo = "";
@@ -310,7 +339,7 @@ public String buscarJogo()
         catch (SQLException e)
         {
             System.out.println(e.getMessage());
-            return null;
+            return null;//não foi possível a realização do jogo personalizado
         }
         finally
         {
