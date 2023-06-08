@@ -1,7 +1,7 @@
 
 package jogos;
 
-import dados.PontosAluno;
+import Dados.PontosAluno;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -9,9 +9,9 @@ import java.sql.Statement;
 import javax.swing.JOptionPane;
 import telas.menuPrincipal;
 /**
- *
+ * Classe responsável pelo jogo Qual é a cor 
  * @author Felipe
- *  Classe responsável pelo jogo Qual é a cor 
+ *  
  */
 public class QEUm extends javax.swing.JFrame {
     private QEDois TelaQEDois;
@@ -188,7 +188,8 @@ public class QEUm extends javax.swing.JFrame {
     // End of variables declaration//GEN-END:variables
  
     /**
-         * Método que inicia a contagem dos pontos do jogo Qual é a cor
+         * Método que inicia a contagem dos pontos do jogo Qual é a cor;
+         * Insere os valores iniciais da pontuação no banco de dados
          */
  public void iniciaPontuacaoQE()
  {

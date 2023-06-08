@@ -1,6 +1,6 @@
 
 package jogos;
-import dados.PontosAluno;
+import Dados.PontosAluno;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -9,9 +9,9 @@ import javax.swing.JOptionPane;
 import telas.menuPrincipal;
 
 /**
- *
- * @author Felipe
- * Classe responsável pelo jogo Português
+ *Classe responsável pelo jogo Qual é a cor 
+ *@author Felipe
+ * 
  */
 public class PtUm extends javax.swing.JFrame {
     private PtDois TelaPtDois;
@@ -187,7 +187,8 @@ public class PtUm extends javax.swing.JFrame {
     // End of variables declaration//GEN-END:variables
 
 /**
-         * Método que inicia a contagem dos pontos do jogo Português
+         * Método que inicia a contagem dos pontos do jogo Português;
+         * Insere os valores iniciais da pontuação no banco de dados
          */
    public void iniciaPontuacaoPt()
    {

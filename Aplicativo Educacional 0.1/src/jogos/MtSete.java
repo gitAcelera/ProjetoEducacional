@@ -1,6 +1,6 @@
 
 package jogos;
-import dados.PontosAluno;
+import Dados.PontosAluno;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -10,9 +10,9 @@ import javax.swing.JOptionPane;
 import telas.menuPrincipal;
 
 /**
- *
+ *Classe responsável pelo jogo Matemática
  * @author Pedro
- * Classe responsável pelo jogo Matemática
+ *
  */
 public class MtSete extends javax.swing.JFrame {
  

@@ -238,6 +238,10 @@ else
     private javax.swing.JPasswordField senhaLoginProf;
     // End of variables declaration//GEN-END:variables
 
+    
+    /**
+     * Método responsável pela validação do login do professor
+     */
    public void verificaLoginProfessor()
    {
        int status;

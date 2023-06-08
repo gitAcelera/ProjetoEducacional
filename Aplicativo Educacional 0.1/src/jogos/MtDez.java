@@ -1,6 +1,6 @@
 
 package jogos;
-import dados.PontosAluno;
+import Dados.PontosAluno;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -11,9 +11,9 @@ import javax.swing.JOptionPane;
 import telas.menuPrincipal;
 
 /**
- *
+ *Classe responsável pelo jogo Matemática
  * @author Pedro
- * Classe responsável pelo jogo Matemática
+ *
  */
 public class MtDez extends javax.swing.JFrame {
 int pontosMt = PontosAluno.getPontosMt();
@@ -181,7 +181,8 @@ int pontosMt = PontosAluno.getPontosMt();
 
    
     /**
-     * Método responsável pela soma de pontuação do jogo Matemáttica
+     * Método responsável pela soma de pontuação do jogo Matemáttica;
+     * Ocorre a soma de todas as questões, é salva no banco e apresentada ao aluno
      */
     public void somarPontuacaoMt()
    {

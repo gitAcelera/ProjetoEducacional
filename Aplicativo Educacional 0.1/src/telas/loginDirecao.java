@@ -172,6 +172,9 @@ String userAtual,senhaAtual,userBanco,senhaBanco;
     private javax.swing.JTextField userLoginDirecao;
     // End of variables declaration//GEN-END:variables
 
+     /**
+      * Método responsável pela validação do login da direção
+      */
    public void direcaoLogin()
    {
        int status;

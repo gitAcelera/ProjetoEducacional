@@ -1,5 +1,5 @@
 
-package dados;
+package Dados;
 /**
  * Inicia classe LoginProfessor
  * @author Pedro

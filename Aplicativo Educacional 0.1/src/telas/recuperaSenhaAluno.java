@@ -9,7 +9,7 @@ import javax.swing.JOptionPane;
 
 /**
  * Inicia a classe recuperaSenhaAluno
- * @author Felipe
+ * @author Izabelle
  */
 public class recuperaSenhaAluno extends javax.swing.JFrame {
   private String consultaRa = " ";

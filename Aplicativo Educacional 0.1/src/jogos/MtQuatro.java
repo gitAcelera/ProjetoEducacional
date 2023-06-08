@@ -1,6 +1,6 @@
 
 package jogos;
-import dados.PontosAluno;
+import Dados.PontosAluno;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -9,9 +9,9 @@ import java.sql.Statement;
 import javax.swing.JOptionPane;
 import telas.menuPrincipal;
 /**
- *
+ *Classe responsável pelo jogo Matemática
  * @author Pedro
- * Classe responsável pelo jogo Matemática
+ *
  */
 public class MtQuatro extends javax.swing.JFrame {
  private MtCinco TelaMtCinco;

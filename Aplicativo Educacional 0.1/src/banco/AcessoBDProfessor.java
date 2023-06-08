@@ -5,7 +5,7 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import dados.LoginProfessor;
+import Dados.LoginProfessor;
 
 
 /**
@@ -20,7 +20,7 @@ public class AcessoBDProfessor
    /**
     * Verificar o login do professor no banco de dados
     * @deprecated Pelo fato de só aceitar o último cadastro, houve uma mudança de método para o login do professor
-    * @see verificaLoginProfessor
+    * @see loginProfessor#verificaLoginProfessor()
     * @param loginProfessor O objeto loginProfessor contém as informações de login do professor
     * @return status 
     */

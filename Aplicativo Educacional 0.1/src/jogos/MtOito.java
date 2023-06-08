@@ -1,10 +1,6 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package jogos;
-import dados.PontosAluno;
+import Dados.PontosAluno;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -14,9 +10,9 @@ import javax.swing.JOptionPane;
 import telas.menuPrincipal;
 
 /**
- *
+ *Classe responsável pelo jogo Matemática
  * @author Pedro
- * Classe responsável pelo jogo Matemática
+ *
  */
 public class MtOito extends javax.swing.JFrame {
   private MtNove TelaMtNove;

@@ -1,6 +1,6 @@
 
 package jogos;
-import dados.PontosAluno;
+import Dados.PontosAluno;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -8,9 +8,9 @@ import java.sql.Statement;
 import telas.menuPrincipal;
 import javax.swing.JOptionPane;
 /**
- *
+ *Classe responsável pelo jogo Matemática
  * @author Pedro
- * Classe responsável pelo jogo Matemática
+ *
  */
 public class MtUm extends javax.swing.JFrame {
   private MtDois TelaMtDois;
@@ -190,7 +190,8 @@ pontosMt=pontosMt-5;         // TODO add your handling code here:
     // End of variables declaration//GEN-END:variables
 
     /**
-         * Método que inicia a contagem dos pontos do jogo Matemática
+         * Método que inicia a contagem dos pontos do jogo Matemática;
+         * Insere os valores iniciais da pontuação no banco de dados
          */
           public void iniciaPontuacaoMt()
           {

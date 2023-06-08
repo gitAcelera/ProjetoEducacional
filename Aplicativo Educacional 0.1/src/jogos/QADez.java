@@ -1,7 +1,7 @@
 
 package jogos;
 
-import dados.PontosAluno;
+import Dados.PontosAluno;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -12,9 +12,9 @@ import javax.swing.JOptionPane;
 import telas.menuPrincipal;
 
 /**
- *
- * @author Felipe
- * Classe responsável pelo jogo Qual é o animal
+ *Classe responsável pelo jogo Qual é a cor 
+ *@author Felipe
+ * 
  */
 public class QADez extends javax.swing.JFrame {
 int pontosQA = PontosAluno.getPontosQA();
@@ -179,7 +179,8 @@ int pontosQA = PontosAluno.getPontosQA();
     // End of variables declaration//GEN-END:variables
 
    /**
-     * Método responsável pela soma de pontuação do jogo Qual é o animal
+     * Método responsável pela soma de pontuação do jogo Qual é o animal;
+     * Ocorre a soma de todas as questões, é salva no banco e apresentada ao aluno
      */  
     public void somarPontuacaoQA()
     {

@@ -197,7 +197,7 @@ else
     // End of variables declaration//GEN-END:variables
 
      /**
-      * Método responsável pela validação do login
+      * Método responsável pela validação do login do aluno
       */
 
 public void verificaLoginAluno ()

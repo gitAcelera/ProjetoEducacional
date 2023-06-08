@@ -25,7 +25,7 @@ public class AcessoBDaluno
     /**
      * Método para verificar login do aluno
      * @deprecated Pelo fato de só aceitar o último cadastro, houve uma mudança de método para o login do aluno
-     * @see verificaLoginAluno
+     * @see loginAluno#verificaLoginAluno()
      * @param login O objeto login contém as informações de login do aluno
      * @return  status
      */

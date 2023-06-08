@@ -1,7 +1,7 @@
 
 package jogos;
 
-import dados.PontosAluno;
+import Dados.PontosAluno;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -10,9 +10,9 @@ import java.sql.Statement;
 import javax.swing.JOptionPane;
 import telas.menuPrincipal;
 /**
- *
- * @author Felipe
- *  Classe responsável pelo jogo Qual é a cor 
+ *Classe responsável pelo jogo Qual é a cor 
+ *@author Felipe
+ * 
  */
 public class QETres extends javax.swing.JFrame {
     private QEQuatro TelaQEQuatro;
