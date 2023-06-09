@@ -26,131 +26,101 @@ public class recuperaSenhaAluno extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
-        btVoltar = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
-        campoRaSenha = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
-        campoRecuperaSenhaAluno = new javax.swing.JTextField();
-        btRecuperar = new javax.swing.JButton();
+        PainelrecuperarSenhaAluno = new javax.swing.JPanel();
+        jlrecuperarSenhaAluno = new javax.swing.JLabel();
+        recuperarSenhaAlunoRA = new javax.swing.JTextField();
+        recuperarSenhaAlunoSenha = new javax.swing.JTextField();
+        btrecuperarSenhaAlunoVoltar = new javax.swing.JButton();
+        btrecuperarSenhaAlunoRecuperar = new javax.swing.JButton();
+        btrecuperarSenhaAlunoInformacao = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMaximumSize(new java.awt.Dimension(700, 400));
+        setPreferredSize(new java.awt.Dimension(700, 400));
 
-        jPanel1.setPreferredSize(new java.awt.Dimension(720, 420));
+        PainelrecuperarSenhaAluno.setPreferredSize(new java.awt.Dimension(700, 400));
+        PainelrecuperarSenhaAluno.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        btVoltar.setText("VOLTAR");
-        btVoltar.addActionListener(new java.awt.event.ActionListener() {
+        jlrecuperarSenhaAluno.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/recuperarSenhaAluno.png"))); // NOI18N
+        PainelrecuperarSenhaAluno.add(jlrecuperarSenhaAluno, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 400));
+
+        recuperarSenhaAlunoRA.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btVoltarActionPerformed(evt);
+                recuperarSenhaAlunoRAActionPerformed(evt);
             }
         });
+        PainelrecuperarSenhaAluno.add(recuperarSenhaAlunoRA, new org.netbeans.lib.awtextra.AbsoluteConstraints(216, 138, 280, 30));
 
-        jLabel1.setText("DIGITE SEU RA");
-
-        campoRaSenha.addActionListener(new java.awt.event.ActionListener() {
+        recuperarSenhaAlunoSenha.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                campoRaSenhaActionPerformed(evt);
+                recuperarSenhaAlunoSenhaActionPerformed(evt);
             }
         });
+        PainelrecuperarSenhaAluno.add(recuperarSenhaAlunoSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(216, 206, 280, 30));
 
-        jLabel2.setText("DIGITE A PALAVRA-CHAVE DE RECUPERAÇÃO DA SENHA");
-
-        campoRecuperaSenhaAluno.addActionListener(new java.awt.event.ActionListener() {
+        btrecuperarSenhaAlunoVoltar.setText("VOLTAR");
+        btrecuperarSenhaAlunoVoltar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                campoRecuperaSenhaAlunoActionPerformed(evt);
+                btrecuperarSenhaAlunoVoltarActionPerformed(evt);
             }
         });
+        PainelrecuperarSenhaAluno.add(btrecuperarSenhaAlunoVoltar, new org.netbeans.lib.awtextra.AbsoluteConstraints(13, 350, 80, 40));
 
-        btRecuperar.setText("Recuperar");
-        btRecuperar.addActionListener(new java.awt.event.ActionListener() {
+        btrecuperarSenhaAlunoRecuperar.setText("Recuperar");
+        btrecuperarSenhaAlunoRecuperar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btRecuperarActionPerformed(evt);
+                btrecuperarSenhaAlunoRecuperarActionPerformed(evt);
             }
         });
+        PainelrecuperarSenhaAluno.add(btrecuperarSenhaAlunoRecuperar, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 267, 150, 30));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(btVoltar))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(216, 216, 216)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(campoRaSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel1)
-                            .addComponent(jLabel2)
-                            .addComponent(campoRecuperaSenhaAluno, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(285, 285, 285)
-                        .addComponent(btRecuperar)))
-                .addContainerGap(228, Short.MAX_VALUE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(btVoltar)
-                .addGap(60, 60, 60)
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(campoRaSenha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30)
-                .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(campoRecuperaSenhaAluno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(61, 61, 61)
-                .addComponent(btRecuperar)
-                .addContainerGap(112, Short.MAX_VALUE))
-        );
+        btrecuperarSenhaAlunoInformacao.setText("jButton1");
+        PainelrecuperarSenhaAluno.add(btrecuperarSenhaAlunoInformacao, new org.netbeans.lib.awtextra.AbsoluteConstraints(648, 10, 40, 40));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(PainelrecuperarSenhaAluno, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 400, Short.MAX_VALUE)
+            .addComponent(PainelrecuperarSenhaAluno, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btVoltarActionPerformed
+    private void btrecuperarSenhaAlunoVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btrecuperarSenhaAlunoVoltarActionPerformed
         new loginAluno().show();
         dispose();
-    }//GEN-LAST:event_btVoltarActionPerformed
+    }//GEN-LAST:event_btrecuperarSenhaAlunoVoltarActionPerformed
 
-    private void campoRaSenhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoRaSenhaActionPerformed
+    private void recuperarSenhaAlunoRAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_recuperarSenhaAlunoRAActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_campoRaSenhaActionPerformed
+    }//GEN-LAST:event_recuperarSenhaAlunoRAActionPerformed
 
-    private void campoRecuperaSenhaAlunoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoRecuperaSenhaAlunoActionPerformed
+    private void recuperarSenhaAlunoSenhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_recuperarSenhaAlunoSenhaActionPerformed
 
-    }//GEN-LAST:event_campoRecuperaSenhaAlunoActionPerformed
+    }//GEN-LAST:event_recuperarSenhaAlunoSenhaActionPerformed
 
-    private void btRecuperarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btRecuperarActionPerformed
+    private void btrecuperarSenhaAlunoRecuperarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btrecuperarSenhaAlunoRecuperarActionPerformed
 
        recuperarAluno();
 
-    }//GEN-LAST:event_btRecuperarActionPerformed
+    }//GEN-LAST:event_btrecuperarSenhaAlunoRecuperarActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btRecuperar;
-    private javax.swing.JButton btVoltar;
-    private javax.swing.JTextField campoRaSenha;
-    private javax.swing.JTextField campoRecuperaSenhaAluno;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel PainelrecuperarSenhaAluno;
+    private javax.swing.JButton btrecuperarSenhaAlunoInformacao;
+    private javax.swing.JButton btrecuperarSenhaAlunoRecuperar;
+    private javax.swing.JButton btrecuperarSenhaAlunoVoltar;
+    private javax.swing.JLabel jlrecuperarSenhaAluno;
+    private javax.swing.JTextField recuperarSenhaAlunoRA;
+    private javax.swing.JTextField recuperarSenhaAlunoSenha;
     // End of variables declaration//GEN-END:variables
 
    /**
@@ -168,8 +138,8 @@ public class recuperaSenhaAluno extends javax.swing.JFrame {
             ResultSet res = stm.executeQuery("SELECT * from aluno");
            
               // pega os valores do ra e recuperação digitados pelo aluno
-            consultaRa = campoRaSenha.getText();
-            consultaPergunta = campoRecuperaSenhaAluno.getText();
+            consultaRa = recuperarSenhaAlunoRA.getText();
+            consultaPergunta = recuperarSenhaAlunoSenha.getText();
 
             status =0;
             while(res.next())

@@ -24,106 +24,81 @@ public class telaAluno extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        PaineltelaAluno = new javax.swing.JPanel();
+        jltelaAluno = new javax.swing.JLabel();
+        bttelaAlunoCadastrar = new javax.swing.JButton();
+        bttelaAlunoEntrar = new javax.swing.JButton();
+        bttelaAlunoVoltar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(700, 420));
 
-        jPanel1.setPreferredSize(new java.awt.Dimension(700, 420));
+        PaineltelaAluno.setPreferredSize(new java.awt.Dimension(700, 420));
+        PaineltelaAluno.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton1.setText("CADASTRAR");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        jltelaAluno.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/TelaAluno.png"))); // NOI18N
+        jltelaAluno.setText("Voce deseja: ");
+        PaineltelaAluno.add(jltelaAluno, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 400));
+
+        bttelaAlunoCadastrar.setText("CADASTRAR");
+        bttelaAlunoCadastrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                bttelaAlunoCadastrarActionPerformed(evt);
             }
         });
+        PaineltelaAluno.add(bttelaAlunoCadastrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(483, 140, 180, 60));
 
-        jButton2.setText("ENTRAR");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        bttelaAlunoEntrar.setText("ENTRAR");
+        bttelaAlunoEntrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                bttelaAlunoEntrarActionPerformed(evt);
             }
         });
+        PaineltelaAluno.add(bttelaAlunoEntrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(483, 217, 180, 60));
 
-        jButton3.setText("VOLTAR");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        bttelaAlunoVoltar.setText("VOLTAR");
+        bttelaAlunoVoltar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                bttelaAlunoVoltarActionPerformed(evt);
             }
         });
-
-        jLabel1.setText("Voce deseja: ");
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap(403, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(97, 97, 97))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(30, 30, 30)
-                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(96, 96, 96)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(35, 35, 35)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 68, Short.MAX_VALUE)
-                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(27, 27, 27))
-        );
+        PaineltelaAluno.add(bttelaAlunoVoltar, new org.netbeans.lib.awtextra.AbsoluteConstraints(7, 353, 80, 40));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(PaineltelaAluno, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(PaineltelaAluno, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void bttelaAlunoCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bttelaAlunoCadastrarActionPerformed
         cadAl.setVisible(true);
         dispose();
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_bttelaAlunoCadastrarActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void bttelaAlunoEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bttelaAlunoEntrarActionPerformed
         logAl.setVisible(true);
         dispose();
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_bttelaAlunoEntrarActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void bttelaAlunoVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bttelaAlunoVoltarActionPerformed
         new Inicio().show();
         dispose();
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_bttelaAlunoVoltarActionPerformed
 
    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel PaineltelaAluno;
+    private javax.swing.JButton bttelaAlunoCadastrar;
+    private javax.swing.JButton bttelaAlunoEntrar;
+    private javax.swing.JButton bttelaAlunoVoltar;
+    private javax.swing.JLabel jltelaAluno;
     // End of variables declaration//GEN-END:variables
 }

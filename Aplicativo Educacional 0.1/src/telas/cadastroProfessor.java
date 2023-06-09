@@ -22,206 +22,134 @@ public class cadastroProfessor extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
-        label_nome_prof = new javax.swing.JLabel();
-        nomeProf = new javax.swing.JTextField();
-        label_ra_prof = new javax.swing.JLabel();
-        raProf = new javax.swing.JTextField();
-        label_cpf_prof = new javax.swing.JLabel();
-        cpfProf = new javax.swing.JFormattedTextField();
-        label_senha_prof = new javax.swing.JLabel();
-        senhaProf = new javax.swing.JTextField();
-        voltarProf = new javax.swing.JButton();
-        cadastrarProf = new javax.swing.JButton();
-        recuperaSenhaProfessor = new javax.swing.JTextField();
-        jLabel1 = new javax.swing.JLabel();
+        PainelCadastroProfessor = new javax.swing.JPanel();
+        jlcadastroProfessor = new javax.swing.JLabel();
+        cadastroProfessorNome = new javax.swing.JTextField();
+        cadastroProfessorRA = new javax.swing.JTextField();
+        cadastroProfessorCPF = new javax.swing.JFormattedTextField();
+        cadastroProfessorSenha = new javax.swing.JTextField();
+        cadastroProfessorRecuperaSenha = new javax.swing.JTextField();
+        cadastroProfessorVoltar = new javax.swing.JButton();
+        cadastroProfessorCadastrar = new javax.swing.JButton();
+        cadastroProfessorInformacao = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(700, 420));
 
-        jPanel1.setPreferredSize(new java.awt.Dimension(700, 420));
+        PainelCadastroProfessor.setPreferredSize(new java.awt.Dimension(700, 420));
+        PainelCadastroProfessor.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        label_nome_prof.setText("NOME:");
+        jlcadastroProfessor.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/CadastroProfessor.png"))); // NOI18N
+        jlcadastroProfessor.setText("NOME:");
+        PainelCadastroProfessor.add(jlcadastroProfessor, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 400));
 
-        nomeProf.addActionListener(new java.awt.event.ActionListener() {
+        cadastroProfessorNome.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                nomeProfActionPerformed(evt);
+                cadastroProfessorNomeActionPerformed(evt);
             }
         });
-
-        label_ra_prof.setText("REGISTRO ACADÊMICO:");
-
-        label_cpf_prof.setText("CPF:");
+        PainelCadastroProfessor.add(cadastroProfessorNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(185, 81, 330, 30));
+        PainelCadastroProfessor.add(cadastroProfessorRA, new org.netbeans.lib.awtextra.AbsoluteConstraints(185, 140, 140, 30));
 
         try {
-            cpfProf.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("###.###.###-##")));
+            cadastroProfessorCPF.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("###.###.###-##")));
         } catch (java.text.ParseException ex) {
             ex.printStackTrace();
         }
-        cpfProf.addActionListener(new java.awt.event.ActionListener() {
+        cadastroProfessorCPF.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cpfProfActionPerformed(evt);
+                cadastroProfessorCPFActionPerformed(evt);
             }
         });
+        PainelCadastroProfessor.add(cadastroProfessorCPF, new org.netbeans.lib.awtextra.AbsoluteConstraints(378, 139, 140, 30));
 
-        label_senha_prof.setText("CRIAR SENHA:");
-
-        senhaProf.addActionListener(new java.awt.event.ActionListener() {
+        cadastroProfessorSenha.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                senhaProfActionPerformed(evt);
+                cadastroProfessorSenhaActionPerformed(evt);
             }
         });
+        PainelCadastroProfessor.add(cadastroProfessorSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(185, 260, 140, 30));
 
-        voltarProf.setText("VOLTAR");
-        voltarProf.addActionListener(new java.awt.event.ActionListener() {
+        cadastroProfessorRecuperaSenha.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                voltarProfActionPerformed(evt);
+                cadastroProfessorRecuperaSenhaActionPerformed(evt);
             }
         });
+        PainelCadastroProfessor.add(cadastroProfessorRecuperaSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(185, 200, 330, 30));
 
-        cadastrarProf.setText("CADASTRAR");
-        cadastrarProf.addActionListener(new java.awt.event.ActionListener() {
+        cadastroProfessorVoltar.setText("VOLTAR");
+        cadastroProfessorVoltar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cadastrarProfActionPerformed(evt);
+                cadastroProfessorVoltarActionPerformed(evt);
             }
         });
+        PainelCadastroProfessor.add(cadastroProfessorVoltar, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 350, 90, 40));
 
-        recuperaSenhaProfessor.addActionListener(new java.awt.event.ActionListener() {
+        cadastroProfessorCadastrar.setText("CADASTRAR");
+        cadastroProfessorCadastrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                recuperaSenhaProfessorActionPerformed(evt);
+                cadastroProfessorCadastrarActionPerformed(evt);
             }
         });
+        PainelCadastroProfessor.add(cadastroProfessorCadastrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(372, 260, 150, 30));
 
-        jLabel1.setText("PALAVRA-CHAVE PARA A RECUPERAÇÃO DA SENHA");
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(voltarProf, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(39, 39, 39)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel1)
-                                .addGap(0, 0, Short.MAX_VALUE))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(label_senha_prof, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(label_nome_prof)
-                                    .addComponent(nomeProf, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(raProf, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(label_ra_prof, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGap(33, 33, 33)
-                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addComponent(cpfProf, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(label_cpf_prof, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addGap(11, 11, 11)
-                                        .addComponent(recuperaSenhaProfessor, javax.swing.GroupLayout.PREFERRED_SIZE, 242, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addComponent(senhaProf, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addContainerGap(148, Short.MAX_VALUE))))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(cadastrarProf, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(48, 48, 48))))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(label_nome_prof, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(nomeProf, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(31, 31, 31)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(label_cpf_prof, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(cpfProf, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(label_ra_prof, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(raProf, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(16, 16, 16)
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(recuperaSenhaProfessor, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(label_senha_prof, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(senhaProf, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(24, 76, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(voltarProf, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cadastrarProf, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
-        );
+        cadastroProfessorInformacao.setText("jButton1");
+        PainelCadastroProfessor.add(cadastroProfessorInformacao, new org.netbeans.lib.awtextra.AbsoluteConstraints(648, 10, 40, 40));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(PainelCadastroProfessor, javax.swing.GroupLayout.PREFERRED_SIZE, 700, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(PainelCadastroProfessor, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void voltarProfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_voltarProfActionPerformed
+    private void cadastroProfessorVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cadastroProfessorVoltarActionPerformed
         new telaProfessor().show();
         dispose();
-    }//GEN-LAST:event_voltarProfActionPerformed
+    }//GEN-LAST:event_cadastroProfessorVoltarActionPerformed
 
-    private void cadastrarProfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cadastrarProfActionPerformed
+    private void cadastroProfessorCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cadastroProfessorCadastrarActionPerformed
         cadastrarProf();
-    }//GEN-LAST:event_cadastrarProfActionPerformed
+    }//GEN-LAST:event_cadastroProfessorCadastrarActionPerformed
 
-    private void cpfProfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cpfProfActionPerformed
+    private void cadastroProfessorCPFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cadastroProfessorCPFActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_cpfProfActionPerformed
+    }//GEN-LAST:event_cadastroProfessorCPFActionPerformed
 
-    private void nomeProfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nomeProfActionPerformed
+    private void cadastroProfessorNomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cadastroProfessorNomeActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_nomeProfActionPerformed
+    }//GEN-LAST:event_cadastroProfessorNomeActionPerformed
 
-    private void recuperaSenhaProfessorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_recuperaSenhaProfessorActionPerformed
+    private void cadastroProfessorRecuperaSenhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cadastroProfessorRecuperaSenhaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_recuperaSenhaProfessorActionPerformed
+    }//GEN-LAST:event_cadastroProfessorRecuperaSenhaActionPerformed
 
-    private void senhaProfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_senhaProfActionPerformed
+    private void cadastroProfessorSenhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cadastroProfessorSenhaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_senhaProfActionPerformed
+    }//GEN-LAST:event_cadastroProfessorSenhaActionPerformed
 
 
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton cadastrarProf;
-    private javax.swing.JFormattedTextField cpfProf;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JLabel label_cpf_prof;
-    private javax.swing.JLabel label_nome_prof;
-    private javax.swing.JLabel label_ra_prof;
-    private javax.swing.JLabel label_senha_prof;
-    private javax.swing.JTextField nomeProf;
-    private javax.swing.JTextField raProf;
-    private javax.swing.JTextField recuperaSenhaProfessor;
-    private javax.swing.JTextField senhaProf;
-    private javax.swing.JButton voltarProf;
+    private javax.swing.JPanel PainelCadastroProfessor;
+    private javax.swing.JFormattedTextField cadastroProfessorCPF;
+    private javax.swing.JButton cadastroProfessorCadastrar;
+    private javax.swing.JButton cadastroProfessorInformacao;
+    private javax.swing.JTextField cadastroProfessorNome;
+    private javax.swing.JTextField cadastroProfessorRA;
+    private javax.swing.JTextField cadastroProfessorRecuperaSenha;
+    private javax.swing.JTextField cadastroProfessorSenha;
+    private javax.swing.JButton cadastroProfessorVoltar;
+    private javax.swing.JLabel jlcadastroProfessor;
     // End of variables declaration//GEN-END:variables
 
  
@@ -231,11 +159,11 @@ public class cadastroProfessor extends javax.swing.JFrame {
      */
     public void cadastrarProf()
     {
-        nome = nomeProf.getText();
-        ra = raProf.getText();
-        cpf = cpfProf.getText();
-        senha = senhaProf.getText();
-        recuperar = recuperaSenhaProfessor.getText();
+        nome = cadastroProfessorNome.getText();
+        ra = cadastroProfessorRA.getText();
+        cpf = cadastroProfessorCPF.getText();
+        senha = cadastroProfessorSenha.getText();
+        recuperar = cadastroProfessorRecuperaSenha.getText();
         
         try {
             /**
@@ -253,11 +181,11 @@ public class cadastroProfessor extends javax.swing.JFrame {
              *  //cadastro realizado com sucesso e a limpeza dos campos 
              */
                 JOptionPane.showMessageDialog(null,"Cadastro realizado com sucesso!!!","Sucesso",JOptionPane.INFORMATION_MESSAGE);
-                nomeProf.setText("");
-                raProf.setText("");
-                cpfProf.setText("");
-                senhaProf.setText("");
-                recuperaSenhaProfessor.setText("");
+                cadastroProfessorNome.setText("");
+                cadastroProfessorRA.setText("");
+                cadastroProfessorCPF.setText("");
+                cadastroProfessorSenha.setText("");
+                cadastroProfessorRecuperaSenha.setText("");
                 new loginProfessor (). show();
                 dispose();
             } else{

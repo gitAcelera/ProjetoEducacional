@@ -26,150 +26,117 @@ String userAtual,senhaAtual,userBanco,senhaBanco;
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        userLoginDirecao = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
-        senhaLoginDirecao = new javax.swing.JPasswordField();
-        mostrarSenha = new javax.swing.JCheckBox();
-        jButton2 = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
+        PainelloginDirecao = new javax.swing.JPanel();
+        jlloginDirecao = new javax.swing.JLabel();
+        loginDirecaoUsuario = new javax.swing.JTextField();
+        loginDirecaoSenha = new javax.swing.JPasswordField();
+        loginDirecaoMostrarSenha = new javax.swing.JCheckBox();
+        btloginDirecaoEntrar = new javax.swing.JButton();
+        btloginDirecaoVoltar = new javax.swing.JButton();
+        btloginDirecaoInformacao = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(700, 400));
+        setResizable(false);
 
-        jLabel1.setText("USUÁRIO");
+        PainelloginDirecao.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        userLoginDirecao.addActionListener(new java.awt.event.ActionListener() {
+        jlloginDirecao.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/loginDirecao.png"))); // NOI18N
+        PainelloginDirecao.add(jlloginDirecao, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 400));
+
+        loginDirecaoUsuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                userLoginDirecaoActionPerformed(evt);
+                loginDirecaoUsuarioActionPerformed(evt);
             }
         });
+        PainelloginDirecao.add(loginDirecaoUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(217, 138, 280, 30));
 
-        jLabel2.setText("SENHA");
-
-        senhaLoginDirecao.addActionListener(new java.awt.event.ActionListener() {
+        loginDirecaoSenha.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                senhaLoginDirecaoActionPerformed(evt);
+                loginDirecaoSenhaActionPerformed(evt);
             }
         });
+        PainelloginDirecao.add(loginDirecaoSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(217, 207, 280, 30));
 
-        mostrarSenha.setText(" Mostrar senha ");
-        mostrarSenha.addActionListener(new java.awt.event.ActionListener() {
+        loginDirecaoMostrarSenha.setText(" Mostrar senha ");
+        loginDirecaoMostrarSenha.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                mostrarSenhaActionPerformed(evt);
+                loginDirecaoMostrarSenhaActionPerformed(evt);
             }
         });
+        PainelloginDirecao.add(loginDirecaoMostrarSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(203, 259, 130, 30));
 
-        jButton2.setText("VOLTAR");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        btloginDirecaoEntrar.setText("ENTRAR");
+        btloginDirecaoEntrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                btloginDirecaoEntrarActionPerformed(evt);
             }
         });
+        PainelloginDirecao.add(btloginDirecaoEntrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(609, 348, 80, 40));
 
-        jButton1.setText("ENTRAR");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btloginDirecaoVoltar.setText("VOLTAR");
+        btloginDirecaoVoltar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btloginDirecaoVoltarActionPerformed(evt);
             }
         });
+        PainelloginDirecao.add(btloginDirecaoVoltar, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 349, 80, 40));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(143, 143, 143)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(mostrarSenha)
-                    .addComponent(senhaLoginDirecao, javax.swing.GroupLayout.PREFERRED_SIZE, 252, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(userLoginDirecao, javax.swing.GroupLayout.PREFERRED_SIZE, 252, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(306, Short.MAX_VALUE))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(20, 20, 20)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(57, 57, 57))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(57, 57, 57)
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(userLoginDirecao, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(26, 26, 26)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(senhaLoginDirecao, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(33, 33, 33)
-                .addComponent(mostrarSenha)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 67, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap())
-        );
+        btloginDirecaoInformacao.setText("jButton1");
+        PainelloginDirecao.add(btloginDirecaoInformacao, new org.netbeans.lib.awtextra.AbsoluteConstraints(649, 10, 40, 40));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(PainelloginDirecao, javax.swing.GroupLayout.PREFERRED_SIZE, 700, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 2, Short.MAX_VALUE))
+            .addComponent(PainelloginDirecao, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void userLoginDirecaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_userLoginDirecaoActionPerformed
+    private void loginDirecaoUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginDirecaoUsuarioActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_userLoginDirecaoActionPerformed
+    }//GEN-LAST:event_loginDirecaoUsuarioActionPerformed
 
-    private void senhaLoginDirecaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_senhaLoginDirecaoActionPerformed
+    private void loginDirecaoSenhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginDirecaoSenhaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_senhaLoginDirecaoActionPerformed
+    }//GEN-LAST:event_loginDirecaoSenhaActionPerformed
 
-    private void mostrarSenhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mostrarSenhaActionPerformed
-        if(mostrarSenha.isSelected())
+    private void loginDirecaoMostrarSenhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginDirecaoMostrarSenhaActionPerformed
+        if(loginDirecaoMostrarSenha.isSelected())
         {
-            senhaLoginDirecao.setEchoChar((char)0);
+            loginDirecaoSenha.setEchoChar((char)0);
         }
         else
         {
-            senhaLoginDirecao.setEchoChar('*');
+            loginDirecaoSenha.setEchoChar('*');
         }
-    }//GEN-LAST:event_mostrarSenhaActionPerformed
+    }//GEN-LAST:event_loginDirecaoMostrarSenhaActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btloginDirecaoEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btloginDirecaoEntrarActionPerformed
         direcaoLogin();
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_btloginDirecaoEntrarActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void btloginDirecaoVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btloginDirecaoVoltarActionPerformed
         new loginProfessor().show();
         dispose();
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_btloginDirecaoVoltarActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JCheckBox mostrarSenha;
-    private javax.swing.JPasswordField senhaLoginDirecao;
-    private javax.swing.JTextField userLoginDirecao;
+    private javax.swing.JPanel PainelloginDirecao;
+    private javax.swing.JButton btloginDirecaoEntrar;
+    private javax.swing.JButton btloginDirecaoInformacao;
+    private javax.swing.JButton btloginDirecaoVoltar;
+    private javax.swing.JLabel jlloginDirecao;
+    private javax.swing.JCheckBox loginDirecaoMostrarSenha;
+    private javax.swing.JPasswordField loginDirecaoSenha;
+    private javax.swing.JTextField loginDirecaoUsuario;
     // End of variables declaration//GEN-END:variables
 
      /**
@@ -188,8 +155,8 @@ String userAtual,senhaAtual,userBanco,senhaBanco;
               
             // pega os valores do usuário e senha digitadas pela direção
             
-            userAtual = userLoginDirecao.getText();
-            senhaAtual = senhaLoginDirecao.getText();
+            userAtual = loginDirecaoUsuario.getText();
+            senhaAtual = loginDirecaoSenha.getText();
             // os dados referentess a direção já são salvos no banco, sem a necessidade de cadastro
 
             status =0;

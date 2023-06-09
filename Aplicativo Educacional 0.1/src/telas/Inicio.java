@@ -23,27 +23,27 @@ public class Inicio extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
-        telaInicioImagem = new javax.swing.JLabel();
-        btProf = new javax.swing.JButton();
+        PainelInicio = new javax.swing.JPanel();
+        jlInicio = new javax.swing.JLabel();
+        btProfessor = new javax.swing.JButton();
         btAluno = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        PainelInicio.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        telaInicioImagem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Inicio.png"))); // NOI18N
-        telaInicioImagem.setText("jLabel1");
-        jPanel1.add(telaInicioImagem, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 690, -1));
+        jlInicio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Inicio.png"))); // NOI18N
+        jlInicio.setText("jLabel1");
+        PainelInicio.add(jlInicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 690, -1));
 
-        btProf.setText("PROFESSOR");
-        btProf.setContentAreaFilled(false);
-        btProf.addActionListener(new java.awt.event.ActionListener() {
+        btProfessor.setText("PROFESSOR");
+        btProfessor.setContentAreaFilled(false);
+        btProfessor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btProfActionPerformed(evt);
+                btProfessorActionPerformed(evt);
             }
         });
-        jPanel1.add(btProf, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 160, 170, 49));
+        PainelInicio.add(btProfessor, new org.netbeans.lib.awtextra.AbsoluteConstraints(482, 181, 180, 60));
 
         btAluno.setText("ALUNO");
         btAluno.setContentAreaFilled(false);
@@ -52,7 +52,7 @@ public class Inicio extends javax.swing.JFrame {
                 btAlunoActionPerformed(evt);
             }
         });
-        jPanel1.add(btAluno, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 230, 170, 50));
+        PainelInicio.add(btAluno, new org.netbeans.lib.awtextra.AbsoluteConstraints(482, 258, 180, 60));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -60,21 +60,21 @@ public class Inicio extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(0, 0, 0)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(PainelInicio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 399, Short.MAX_VALUE)
+            .addComponent(PainelInicio, javax.swing.GroupLayout.PREFERRED_SIZE, 399, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btProfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btProfActionPerformed
+    private void btProfessorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btProfessorActionPerformed
       cadLogPr.setVisible(true);
         dispose();
-    }//GEN-LAST:event_btProfActionPerformed
+    }//GEN-LAST:event_btProfessorActionPerformed
 
     private void btAlunoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btAlunoActionPerformed
         
@@ -85,9 +85,9 @@ public class Inicio extends javax.swing.JFrame {
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel PainelInicio;
     private javax.swing.JButton btAluno;
-    private javax.swing.JButton btProf;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JLabel telaInicioImagem;
+    private javax.swing.JButton btProfessor;
+    private javax.swing.JLabel jlInicio;
     // End of variables declaration//GEN-END:variables
 }

@@ -23,112 +23,97 @@ private classiAluno clasAlu;
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        btLogoff = new javax.swing.JButton();
+        PainelmenuPrincipalProfessor = new javax.swing.JPanel();
+        jlmenuPrincipalProfessor = new javax.swing.JLabel();
+        btmenuPrincipalProfessorPJ = new javax.swing.JButton();
+        btmenuPrincipalProfessorCA = new javax.swing.JButton();
+        btmenuPrincipalProfessorSair = new javax.swing.JButton();
+        btmenuPrincipalProfessorEncerrar = new javax.swing.JButton();
+        btmenuPrincipalProfessorInformacao = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jButton1.setText("Personalizar Jogos");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        PainelmenuPrincipalProfessor.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jlmenuPrincipalProfessor.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/menuPrincipalProfessor.png"))); // NOI18N
+        PainelmenuPrincipalProfessor.add(jlmenuPrincipalProfessor, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
+        btmenuPrincipalProfessorPJ.setText("Personalizar Jogos");
+        btmenuPrincipalProfessorPJ.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btmenuPrincipalProfessorPJActionPerformed(evt);
             }
         });
+        PainelmenuPrincipalProfessor.add(btmenuPrincipalProfessorPJ, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 147, 300, 40));
 
-        jButton2.setText("Classificação dos Alunos");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        btmenuPrincipalProfessorCA.setText("Classificação dos Alunos");
+        btmenuPrincipalProfessorCA.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                btmenuPrincipalProfessorCAActionPerformed(evt);
             }
         });
+        PainelmenuPrincipalProfessor.add(btmenuPrincipalProfessorCA, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 203, 300, 40));
 
-        jButton3.setText("Sair da Conta");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        btmenuPrincipalProfessorSair.setText("Sair da Conta");
+        btmenuPrincipalProfessorSair.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                btmenuPrincipalProfessorSairActionPerformed(evt);
             }
         });
+        PainelmenuPrincipalProfessor.add(btmenuPrincipalProfessorSair, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 269, 140, 40));
 
-        btLogoff.setText("Encerrar");
-        btLogoff.addActionListener(new java.awt.event.ActionListener() {
+        btmenuPrincipalProfessorEncerrar.setText("Encerrar");
+        btmenuPrincipalProfessorEncerrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btLogoffActionPerformed(evt);
+                btmenuPrincipalProfessorEncerrarActionPerformed(evt);
             }
         });
+        PainelmenuPrincipalProfessor.add(btmenuPrincipalProfessorEncerrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 269, 150, 40));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(241, 241, 241)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, 209, Short.MAX_VALUE))
-                .addContainerGap(250, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(27, 27, 27)
-                .addComponent(btLogoff)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton3)
-                .addContainerGap())
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(42, 42, 42)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton3)
-                    .addComponent(btLogoff))
-                .addGap(88, 88, 88)
-                .addComponent(jButton1)
-                .addGap(36, 36, 36)
-                .addComponent(jButton2)
-                .addContainerGap(165, Short.MAX_VALUE))
-        );
+        btmenuPrincipalProfessorInformacao.setText("jButton4");
+        PainelmenuPrincipalProfessor.add(btmenuPrincipalProfessorInformacao, new org.netbeans.lib.awtextra.AbsoluteConstraints(648, 10, 40, 40));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(PainelmenuPrincipalProfessor, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(PainelmenuPrincipalProfessor, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btmenuPrincipalProfessorPJActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmenuPrincipalProfessorPJActionPerformed
  jogoPer.setVisible(true);       
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_btmenuPrincipalProfessorPJActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void btmenuPrincipalProfessorSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmenuPrincipalProfessorSairActionPerformed
         new loginProfessor().show();
         dispose();
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_btmenuPrincipalProfessorSairActionPerformed
 
-    private void btLogoffActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btLogoffActionPerformed
+    private void btmenuPrincipalProfessorEncerrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmenuPrincipalProfessorEncerrarActionPerformed
 
         System.exit(0);
-    }//GEN-LAST:event_btLogoffActionPerformed
+    }//GEN-LAST:event_btmenuPrincipalProfessorEncerrarActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void btmenuPrincipalProfessorCAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmenuPrincipalProfessorCAActionPerformed
   clasAlu.setVisible(true);      
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_btmenuPrincipalProfessorCAActionPerformed
 
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btLogoff;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel PainelmenuPrincipalProfessor;
+    private javax.swing.JButton btmenuPrincipalProfessorCA;
+    private javax.swing.JButton btmenuPrincipalProfessorEncerrar;
+    private javax.swing.JButton btmenuPrincipalProfessorInformacao;
+    private javax.swing.JButton btmenuPrincipalProfessorPJ;
+    private javax.swing.JButton btmenuPrincipalProfessorSair;
+    private javax.swing.JLabel jlmenuPrincipalProfessor;
     // End of variables declaration//GEN-END:variables
 }

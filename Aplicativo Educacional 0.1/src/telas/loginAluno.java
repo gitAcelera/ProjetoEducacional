@@ -30,170 +30,133 @@ public class loginAluno extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        raLoginAluno = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        senhaLoginAluno = new javax.swing.JPasswordField();
-        mostrarSenha = new javax.swing.JCheckBox();
-        btRecuperarSenhaAluno = new javax.swing.JButton();
+        PainelloginAluno = new javax.swing.JPanel();
+        jlloginAluno = new javax.swing.JLabel();
+        loginAlunoRA = new javax.swing.JTextField();
+        loginAlunoSenha = new javax.swing.JPasswordField();
+        loginAlunoMostrarSenha = new javax.swing.JCheckBox();
+        btloginAlunoEntrar = new javax.swing.JButton();
+        btloginAlunoVoltar = new javax.swing.JButton();
+        btloginAlunoRecuperarSenha = new javax.swing.JButton();
+        btloginAlunoInformacao = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(700, 420));
 
-        jPanel1.setPreferredSize(new java.awt.Dimension(700, 420));
+        PainelloginAluno.setPreferredSize(new java.awt.Dimension(700, 420));
+        PainelloginAluno.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setText("RA");
+        jlloginAluno.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/loginAluno.png"))); // NOI18N
+        jlloginAluno.setText("RA");
+        PainelloginAluno.add(jlloginAluno, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 400));
 
-        raLoginAluno.addActionListener(new java.awt.event.ActionListener() {
+        loginAlunoRA.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                raLoginAlunoActionPerformed(evt);
+                loginAlunoRAActionPerformed(evt);
             }
         });
+        PainelloginAluno.add(loginAlunoRA, new org.netbeans.lib.awtextra.AbsoluteConstraints(217, 138, 280, 30));
 
-        jLabel2.setText("SENHA");
-
-        jButton1.setText("ENTRAR");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        loginAlunoSenha.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                loginAlunoSenhaActionPerformed(evt);
             }
         });
+        PainelloginAluno.add(loginAlunoSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(217, 207, 280, 30));
 
-        jButton2.setText("VOLTAR");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        loginAlunoMostrarSenha.setText(" Mostrar senha ");
+        loginAlunoMostrarSenha.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                loginAlunoMostrarSenhaActionPerformed(evt);
             }
         });
+        PainelloginAluno.add(loginAlunoMostrarSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(205, 260, 130, 30));
 
-        senhaLoginAluno.addActionListener(new java.awt.event.ActionListener() {
+        btloginAlunoEntrar.setText("ENTRAR");
+        btloginAlunoEntrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                senhaLoginAlunoActionPerformed(evt);
+                btloginAlunoEntrarActionPerformed(evt);
             }
         });
+        PainelloginAluno.add(btloginAlunoEntrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(609, 349, 80, 40));
 
-        mostrarSenha.setText(" Mostrar senha ");
-        mostrarSenha.addActionListener(new java.awt.event.ActionListener() {
+        btloginAlunoVoltar.setText("VOLTAR");
+        btloginAlunoVoltar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                mostrarSenhaActionPerformed(evt);
+                btloginAlunoVoltarActionPerformed(evt);
             }
         });
+        PainelloginAluno.add(btloginAlunoVoltar, new org.netbeans.lib.awtextra.AbsoluteConstraints(13, 350, 80, 40));
 
-        btRecuperarSenhaAluno.setText("Esqueci a Senha");
-        btRecuperarSenhaAluno.addActionListener(new java.awt.event.ActionListener() {
+        btloginAlunoRecuperarSenha.setText("Esqueci a Senha");
+        btloginAlunoRecuperarSenha.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btRecuperarSenhaAlunoActionPerformed(evt);
+                btloginAlunoRecuperarSenhaActionPerformed(evt);
             }
         });
+        PainelloginAluno.add(btloginAlunoRecuperarSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 260, 160, 30));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(15, 15, 15)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(16, 16, 16))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(233, 233, 233)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(senhaLoginAluno, javax.swing.GroupLayout.PREFERRED_SIZE, 252, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(raLoginAluno, javax.swing.GroupLayout.PREFERRED_SIZE, 252, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(mostrarSenha)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(215, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btRecuperarSenhaAluno)
-                .addGap(150, 150, 150))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(52, 52, 52)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(raLoginAluno, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(senhaLoginAluno, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(btRecuperarSenhaAluno)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
-                .addComponent(mostrarSenha)
-                .addGap(33, 33, 33)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(15, 15, 15))
-        );
+        btloginAlunoInformacao.setText("jButton3");
+        PainelloginAluno.add(btloginAlunoInformacao, new org.netbeans.lib.awtextra.AbsoluteConstraints(649, 10, 40, 40));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(PainelloginAluno, javax.swing.GroupLayout.PREFERRED_SIZE, 700, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(PainelloginAluno, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void btloginAlunoVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btloginAlunoVoltarActionPerformed
         new telaAluno().show();
         dispose();
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_btloginAlunoVoltarActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btloginAlunoEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btloginAlunoEntrarActionPerformed
         verificaLoginAluno();
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_btloginAlunoEntrarActionPerformed
 
-    private void raLoginAlunoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_raLoginAlunoActionPerformed
+    private void loginAlunoRAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginAlunoRAActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_raLoginAlunoActionPerformed
+    }//GEN-LAST:event_loginAlunoRAActionPerformed
 
-    private void mostrarSenhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mostrarSenhaActionPerformed
-if(mostrarSenha.isSelected()) 
+    private void loginAlunoMostrarSenhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginAlunoMostrarSenhaActionPerformed
+if(loginAlunoMostrarSenha.isSelected()) 
 {
-    senhaLoginAluno.setEchoChar((char)0);
+    loginAlunoSenha.setEchoChar((char)0);
 }
 else 
 {
- senhaLoginAluno.setEchoChar('*');   
+ loginAlunoSenha.setEchoChar('*');   
 }
-    }//GEN-LAST:event_mostrarSenhaActionPerformed
+    }//GEN-LAST:event_loginAlunoMostrarSenhaActionPerformed
 
-    private void senhaLoginAlunoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_senhaLoginAlunoActionPerformed
+    private void loginAlunoSenhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginAlunoSenhaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_senhaLoginAlunoActionPerformed
+    }//GEN-LAST:event_loginAlunoSenhaActionPerformed
 
-    private void btRecuperarSenhaAlunoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btRecuperarSenhaAlunoActionPerformed
+    private void btloginAlunoRecuperarSenhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btloginAlunoRecuperarSenhaActionPerformed
         
         rs.setVisible(true); 
         dispose();
-    }//GEN-LAST:event_btRecuperarSenhaAlunoActionPerformed
+    }//GEN-LAST:event_btloginAlunoRecuperarSenhaActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btRecuperarSenhaAluno;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JCheckBox mostrarSenha;
-    private javax.swing.JTextField raLoginAluno;
-    private javax.swing.JPasswordField senhaLoginAluno;
+    private javax.swing.JPanel PainelloginAluno;
+    private javax.swing.JButton btloginAlunoEntrar;
+    private javax.swing.JButton btloginAlunoInformacao;
+    private javax.swing.JButton btloginAlunoRecuperarSenha;
+    private javax.swing.JButton btloginAlunoVoltar;
+    private javax.swing.JLabel jlloginAluno;
+    private javax.swing.JCheckBox loginAlunoMostrarSenha;
+    private javax.swing.JTextField loginAlunoRA;
+    private javax.swing.JPasswordField loginAlunoSenha;
     // End of variables declaration//GEN-END:variables
 
      /**
@@ -212,8 +175,8 @@ public void verificaLoginAluno ()
             ResultSet res = stm.executeQuery("SELECT * from aluno");
             
  // pega os valores do ra e senha digitadas pelo aluno
-            raAtual = raLoginAluno.getText();
-            senhaAtual = senhaLoginAluno.getText();
+            raAtual = loginAlunoRA.getText();
+            senhaAtual = loginAlunoSenha.getText();
 
             status =0;
             while(res.next())

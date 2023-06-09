@@ -24,209 +24,145 @@ public class cadastroAluno extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
-        label_nome_aluno = new javax.swing.JLabel();
-        nomeAluno = new javax.swing.JTextField();
-        label_idade_aluno = new javax.swing.JLabel();
-        idadeAluno = new javax.swing.JTextField();
-        label_ra_aluno = new javax.swing.JLabel();
-        raAluno = new javax.swing.JTextField();
-        label_senha_aluno = new javax.swing.JLabel();
-        senhaAluno = new javax.swing.JTextField();
-        voltarAluno = new javax.swing.JButton();
-        cadastrarAluno = new javax.swing.JButton();
-        recuperaSenhaAluno = new javax.swing.JTextField();
-        jLabel1 = new javax.swing.JLabel();
+        PainelCadastroAluno = new javax.swing.JPanel();
+        jlcadastroAluno = new javax.swing.JLabel();
+        cadastroAlunoNome = new javax.swing.JTextField();
+        cadastroAlunoIdade = new javax.swing.JTextField();
+        cadastroAlunoRA = new javax.swing.JTextField();
+        cadastroAlunoSenha = new javax.swing.JTextField();
+        cadastroAlunoRecuperaSenha = new javax.swing.JTextField();
+        cadastroAlunoVoltar = new javax.swing.JButton();
+        cadastrarAlunoCadastrar = new javax.swing.JButton();
+        cadastrarAlunoInformacao = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setPreferredSize(new java.awt.Dimension(700, 420));
+        PainelCadastroAluno.setPreferredSize(new java.awt.Dimension(700, 400));
+        PainelCadastroAluno.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        label_nome_aluno.setText("NOME:");
+        jlcadastroAluno.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/CadastroAluno.png"))); // NOI18N
+        jlcadastroAluno.setText("NOME:");
+        PainelCadastroAluno.add(jlcadastroAluno, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 400));
 
-        nomeAluno.addActionListener(new java.awt.event.ActionListener() {
+        cadastroAlunoNome.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                nomeAlunoActionPerformed(evt);
+                cadastroAlunoNomeActionPerformed(evt);
             }
         });
+        PainelCadastroAluno.add(cadastroAlunoNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(185, 82, 330, 30));
 
-        label_idade_aluno.setText("IDADE:");
-
-        idadeAluno.addActionListener(new java.awt.event.ActionListener() {
+        cadastroAlunoIdade.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                idadeAlunoActionPerformed(evt);
+                cadastroAlunoIdadeActionPerformed(evt);
             }
         });
+        PainelCadastroAluno.add(cadastroAlunoIdade, new org.netbeans.lib.awtextra.AbsoluteConstraints(182, 139, 140, 30));
 
-        label_ra_aluno.setText("REGISTRO DE MATRICULA (RA):");
-
-        raAluno.addActionListener(new java.awt.event.ActionListener() {
+        cadastroAlunoRA.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                raAlunoActionPerformed(evt);
+                cadastroAlunoRAActionPerformed(evt);
             }
         });
+        PainelCadastroAluno.add(cadastroAlunoRA, new org.netbeans.lib.awtextra.AbsoluteConstraints(377, 138, 140, 30));
 
-        label_senha_aluno.setText("CRIAR SENHA:");
-
-        senhaAluno.addActionListener(new java.awt.event.ActionListener() {
+        cadastroAlunoSenha.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                senhaAlunoActionPerformed(evt);
+                cadastroAlunoSenhaActionPerformed(evt);
             }
         });
+        PainelCadastroAluno.add(cadastroAlunoSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(186, 260, 140, 30));
 
-        voltarAluno.setText("VOLTAR");
-        voltarAluno.addMouseListener(new java.awt.event.MouseAdapter() {
+        cadastroAlunoRecuperaSenha.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cadastroAlunoRecuperaSenhaActionPerformed(evt);
+            }
+        });
+        PainelCadastroAluno.add(cadastroAlunoRecuperaSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(182, 200, 340, 30));
+
+        cadastroAlunoVoltar.setText("VOLTAR");
+        cadastroAlunoVoltar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                voltarAlunoMouseClicked(evt);
+                cadastroAlunoVoltarMouseClicked(evt);
             }
         });
-        voltarAluno.addActionListener(new java.awt.event.ActionListener() {
+        cadastroAlunoVoltar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                voltarAlunoActionPerformed(evt);
+                cadastroAlunoVoltarActionPerformed(evt);
             }
         });
+        PainelCadastroAluno.add(cadastroAlunoVoltar, new org.netbeans.lib.awtextra.AbsoluteConstraints(14, 350, 80, 40));
 
-        cadastrarAluno.setText("CONFIRMAR");
-        cadastrarAluno.addActionListener(new java.awt.event.ActionListener() {
+        cadastrarAlunoCadastrar.setText("CONFIRMAR");
+        cadastrarAlunoCadastrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cadastrarAlunoActionPerformed(evt);
+                cadastrarAlunoCadastrarActionPerformed(evt);
             }
         });
+        PainelCadastroAluno.add(cadastrarAlunoCadastrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(376, 261, 150, 30));
 
-        recuperaSenhaAluno.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                recuperaSenhaAlunoActionPerformed(evt);
-            }
-        });
-
-        jLabel1.setText("PALAVRA-CHAVE PARA A RECUPERAÇÃO DA SENHA");
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(17, 17, 17)
-                .addComponent(voltarAluno, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(15, 15, 15)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(label_senha_aluno)
-                            .addComponent(label_nome_aluno, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(nomeAluno, javax.swing.GroupLayout.PREFERRED_SIZE, 353, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(label_idade_aluno, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(idadeAluno, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(35, 35, 35)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(label_ra_aluno)
-                                    .addComponent(raAluno, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addComponent(jLabel1)
-                            .addComponent(recuperaSenhaAluno, javax.swing.GroupLayout.PREFERRED_SIZE, 355, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(senhaAluno, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addContainerGap(163, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(cadastrarAluno, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(74, 74, 74))))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(24, 24, 24)
-                .addComponent(label_nome_aluno, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(nomeAluno, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(label_ra_aluno, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(raAluno, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(label_idade_aluno, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(idadeAluno, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(recuperaSenhaAluno, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(label_senha_aluno, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(senhaAluno, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(37, 37, 37)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(voltarAluno, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cadastrarAluno, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(9, 9, 9))
-        );
+        cadastrarAlunoInformacao.setText("jButton1");
+        PainelCadastroAluno.add(cadastrarAlunoInformacao, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 10, 40, 40));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(PainelCadastroAluno, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 447, Short.MAX_VALUE)
+            .addComponent(PainelCadastroAluno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void nomeAlunoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nomeAlunoActionPerformed
+    private void cadastroAlunoNomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cadastroAlunoNomeActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_nomeAlunoActionPerformed
+    }//GEN-LAST:event_cadastroAlunoNomeActionPerformed
 
-    private void idadeAlunoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_idadeAlunoActionPerformed
+    private void cadastroAlunoIdadeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cadastroAlunoIdadeActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_idadeAlunoActionPerformed
+    }//GEN-LAST:event_cadastroAlunoIdadeActionPerformed
 
-    private void raAlunoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_raAlunoActionPerformed
+    private void cadastroAlunoRAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cadastroAlunoRAActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_raAlunoActionPerformed
+    }//GEN-LAST:event_cadastroAlunoRAActionPerformed
 
-    private void voltarAlunoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_voltarAlunoActionPerformed
+    private void cadastroAlunoVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cadastroAlunoVoltarActionPerformed
         new telaAluno().show();
         dispose();
-    }//GEN-LAST:event_voltarAlunoActionPerformed
+    }//GEN-LAST:event_cadastroAlunoVoltarActionPerformed
 
-    private void voltarAlunoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_voltarAlunoMouseClicked
+    private void cadastroAlunoVoltarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cadastroAlunoVoltarMouseClicked
         
-    }//GEN-LAST:event_voltarAlunoMouseClicked
+    }//GEN-LAST:event_cadastroAlunoVoltarMouseClicked
 
-    private void cadastrarAlunoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cadastrarAlunoActionPerformed
+    private void cadastrarAlunoCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cadastrarAlunoCadastrarActionPerformed
       cadastrarAluno();
-    }//GEN-LAST:event_cadastrarAlunoActionPerformed
+    }//GEN-LAST:event_cadastrarAlunoCadastrarActionPerformed
 
-    private void senhaAlunoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_senhaAlunoActionPerformed
+    private void cadastroAlunoSenhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cadastroAlunoSenhaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_senhaAlunoActionPerformed
+    }//GEN-LAST:event_cadastroAlunoSenhaActionPerformed
 
-    private void recuperaSenhaAlunoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_recuperaSenhaAlunoActionPerformed
+    private void cadastroAlunoRecuperaSenhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cadastroAlunoRecuperaSenhaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_recuperaSenhaAlunoActionPerformed
+    }//GEN-LAST:event_cadastroAlunoRecuperaSenhaActionPerformed
 
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton cadastrarAluno;
-    private javax.swing.JTextField idadeAluno;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JLabel label_idade_aluno;
-    private javax.swing.JLabel label_nome_aluno;
-    private javax.swing.JLabel label_ra_aluno;
-    private javax.swing.JLabel label_senha_aluno;
-    private javax.swing.JTextField nomeAluno;
-    private javax.swing.JTextField raAluno;
-    private javax.swing.JTextField recuperaSenhaAluno;
-    private javax.swing.JTextField senhaAluno;
-    private javax.swing.JButton voltarAluno;
+    private javax.swing.JPanel PainelCadastroAluno;
+    private javax.swing.JButton cadastrarAlunoCadastrar;
+    private javax.swing.JButton cadastrarAlunoInformacao;
+    private javax.swing.JTextField cadastroAlunoIdade;
+    private javax.swing.JTextField cadastroAlunoNome;
+    private javax.swing.JTextField cadastroAlunoRA;
+    private javax.swing.JTextField cadastroAlunoRecuperaSenha;
+    private javax.swing.JTextField cadastroAlunoSenha;
+    private javax.swing.JButton cadastroAlunoVoltar;
+    private javax.swing.JLabel jlcadastroAluno;
     // End of variables declaration//GEN-END:variables
 
     
@@ -235,11 +171,11 @@ public class cadastroAluno extends javax.swing.JFrame {
      */
    public void cadastrarAluno()
    {
-       nome = nomeAluno.getText();
-        idade = idadeAluno.getText();
-        ra = raAluno.getText();
-        senha = senhaAluno.getText();
-        recuperar = recuperaSenhaAluno.getText();
+       nome = cadastroAlunoNome.getText();
+        idade = cadastroAlunoIdade.getText();
+        ra = cadastroAlunoRA.getText();
+        senha = cadastroAlunoSenha.getText();
+        recuperar = cadastroAlunoRecuperaSenha.getText();
         try {
             /**
              *  //conexão com o banco de dados
@@ -256,11 +192,11 @@ public class cadastroAluno extends javax.swing.JFrame {
              *  //cadastro realizado com sucesso e a limpeza dos campos 
              */
                 JOptionPane.showMessageDialog(null,"Cadastro realizado com sucesso!!!","Sucesso",JOptionPane.INFORMATION_MESSAGE);
-                nomeAluno.setText("");
-                idadeAluno.setText("");
-                raAluno.setText("");
-                senhaAluno.setText("");
-                recuperaSenhaAluno.setText("");
+                cadastroAlunoNome.setText("");
+                cadastroAlunoIdade.setText("");
+                cadastroAlunoRA.setText("");
+                cadastroAlunoSenha.setText("");
+                cadastroAlunoRecuperaSenha.setText("");
                 new loginAluno (). show();
                 dispose();
             } else{

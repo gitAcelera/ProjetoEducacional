@@ -142,7 +142,12 @@ public class QESeis extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btQESeisAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btQESeisAActionPerformed
-    pontosQE=pontosQE+20;
+    pontosQE=pontosQE-5;   // TODO add your handling code here:
+    }//GEN-LAST:event_btQESeisAActionPerformed
+
+    private void btQESeisDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btQESeisDActionPerformed
+
+     pontosQE=pontosQE+20;
         System.out.println(""+pontosQE);
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
@@ -165,11 +170,7 @@ public class QESeis extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null,ex.getMessage(),"Erro",JOptionPane.ERROR_MESSAGE);
         }   
         TelaQESete.setVisible(true);
-     dispose();
-    }//GEN-LAST:event_btQESeisAActionPerformed
-
-    private void btQESeisDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btQESeisDActionPerformed
-     pontosQE=pontosQE-5;   // TODO add your handling code here:
+     dispose();  
     }//GEN-LAST:event_btQESeisDActionPerformed
 
     private void btQESeisCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btQESeisCActionPerformed

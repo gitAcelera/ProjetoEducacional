@@ -26,137 +26,102 @@ private String cpfAtual,senhaAtual,recuperaProfAtual;
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        campoCPFSenha = new javax.swing.JFormattedTextField();
-        btVoltar = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
-        campoRecuperaSenhaProfessor = new javax.swing.JTextField();
-        btRecuperar = new javax.swing.JButton();
+        PainelrecuperarSenhaProfessor = new javax.swing.JPanel();
+        jlrecuperarSenhaProfessor = new javax.swing.JLabel();
+        recuperarSenhaProfessorCPF = new javax.swing.JFormattedTextField();
+        recuperarSenhaProfessorRecuperarSenha = new javax.swing.JTextField();
+        btrecuperarSenhaProfessorVoltar = new javax.swing.JButton();
+        btrecuperarSenhaProfessorRecuperar = new javax.swing.JButton();
+        btrecuperarSenhaProfessorInformacao = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(720, 400));
 
-        jLabel1.setText("DIGITE SEU CPF");
+        PainelrecuperarSenhaProfessor.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jlrecuperarSenhaProfessor.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/recuperarSenhaProfessor.png"))); // NOI18N
+        PainelrecuperarSenhaProfessor.add(jlrecuperarSenhaProfessor, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 400));
 
         try {
-            campoCPFSenha.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("###.###.###-##")));
+            recuperarSenhaProfessorCPF.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("###.###.###-##")));
         } catch (java.text.ParseException ex) {
             ex.printStackTrace();
         }
-        campoCPFSenha.addActionListener(new java.awt.event.ActionListener() {
+        recuperarSenhaProfessorCPF.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                campoCPFSenhaActionPerformed(evt);
+                recuperarSenhaProfessorCPFActionPerformed(evt);
             }
         });
+        PainelrecuperarSenhaProfessor.add(recuperarSenhaProfessorCPF, new org.netbeans.lib.awtextra.AbsoluteConstraints(212, 137, 290, 30));
 
-        btVoltar.setText("VOLTAR");
-        btVoltar.addActionListener(new java.awt.event.ActionListener() {
+        recuperarSenhaProfessorRecuperarSenha.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btVoltarActionPerformed(evt);
+                recuperarSenhaProfessorRecuperarSenhaActionPerformed(evt);
             }
         });
+        PainelrecuperarSenhaProfessor.add(recuperarSenhaProfessorRecuperarSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(218, 207, 280, 30));
 
-        jLabel2.setText("DIGITE A PALAVRA-CHAVE DE RECUPERAÇÃO DA SENHA");
-
-        campoRecuperaSenhaProfessor.addActionListener(new java.awt.event.ActionListener() {
+        btrecuperarSenhaProfessorVoltar.setText("VOLTAR");
+        btrecuperarSenhaProfessorVoltar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                campoRecuperaSenhaProfessorActionPerformed(evt);
+                btrecuperarSenhaProfessorVoltarActionPerformed(evt);
             }
         });
+        PainelrecuperarSenhaProfessor.add(btrecuperarSenhaProfessorVoltar, new org.netbeans.lib.awtextra.AbsoluteConstraints(13, 350, 80, 40));
 
-        btRecuperar.setText("Recuperar");
-        btRecuperar.addActionListener(new java.awt.event.ActionListener() {
+        btrecuperarSenhaProfessorRecuperar.setText("Recuperar");
+        btrecuperarSenhaProfessorRecuperar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btRecuperarActionPerformed(evt);
+                btrecuperarSenhaProfessorRecuperarActionPerformed(evt);
             }
         });
+        PainelrecuperarSenhaProfessor.add(btrecuperarSenhaProfessorRecuperar, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 266, 150, 30));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(btVoltar))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(174, 174, 174)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel2)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(campoRecuperaSenhaProfessor, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGroup(jPanel1Layout.createSequentialGroup()
-                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(jLabel1)
-                                        .addComponent(campoCPFSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGap(51, 51, 51)))))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(218, 218, 218)
-                        .addComponent(btRecuperar)))
-                .addContainerGap(270, Short.MAX_VALUE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(23, 23, 23)
-                .addComponent(btVoltar)
-                .addGap(35, 35, 35)
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(campoCPFSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(25, 25, 25)
-                .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(campoRecuperaSenhaProfessor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(48, 48, 48)
-                .addComponent(btRecuperar)
-                .addContainerGap(118, Short.MAX_VALUE))
-        );
+        btrecuperarSenhaProfessorInformacao.setText("jButton1");
+        PainelrecuperarSenhaProfessor.add(btrecuperarSenhaProfessorInformacao, new org.netbeans.lib.awtextra.AbsoluteConstraints(649, 10, 40, 40));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(PainelrecuperarSenhaProfessor, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(PainelrecuperarSenhaProfessor, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void campoCPFSenhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoCPFSenhaActionPerformed
+    private void recuperarSenhaProfessorCPFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_recuperarSenhaProfessorCPFActionPerformed
 
-    }//GEN-LAST:event_campoCPFSenhaActionPerformed
+    }//GEN-LAST:event_recuperarSenhaProfessorCPFActionPerformed
 
-    private void btVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btVoltarActionPerformed
+    private void btrecuperarSenhaProfessorVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btrecuperarSenhaProfessorVoltarActionPerformed
         new loginProfessor().show();
         dispose();
-    }//GEN-LAST:event_btVoltarActionPerformed
+    }//GEN-LAST:event_btrecuperarSenhaProfessorVoltarActionPerformed
 
-    private void campoRecuperaSenhaProfessorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoRecuperaSenhaProfessorActionPerformed
+    private void recuperarSenhaProfessorRecuperarSenhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_recuperarSenhaProfessorRecuperarSenhaActionPerformed
 
-    }//GEN-LAST:event_campoRecuperaSenhaProfessorActionPerformed
+    }//GEN-LAST:event_recuperarSenhaProfessorRecuperarSenhaActionPerformed
 
-    private void btRecuperarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btRecuperarActionPerformed
+    private void btrecuperarSenhaProfessorRecuperarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btrecuperarSenhaProfessorRecuperarActionPerformed
         recuperarProfessor();
-    }//GEN-LAST:event_btRecuperarActionPerformed
+    }//GEN-LAST:event_btrecuperarSenhaProfessorRecuperarActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btRecuperar;
-    private javax.swing.JButton btVoltar;
-    private javax.swing.JFormattedTextField campoCPFSenha;
-    private javax.swing.JTextField campoRecuperaSenhaProfessor;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel PainelrecuperarSenhaProfessor;
+    private javax.swing.JButton btrecuperarSenhaProfessorInformacao;
+    private javax.swing.JButton btrecuperarSenhaProfessorRecuperar;
+    private javax.swing.JButton btrecuperarSenhaProfessorVoltar;
+    private javax.swing.JLabel jlrecuperarSenhaProfessor;
+    private javax.swing.JFormattedTextField recuperarSenhaProfessorCPF;
+    private javax.swing.JTextField recuperarSenhaProfessorRecuperarSenha;
     // End of variables declaration//GEN-END:variables
 
 
@@ -175,8 +140,8 @@ private String cpfAtual,senhaAtual,recuperaProfAtual;
             ResultSet res = stm.executeQuery("SELECT * from professor");
                   
             // pega os valores do cpf e recuperação digitados pelo professor
-            consultaCpf = campoCPFSenha.getText();
-            consultaPergunta = campoRecuperaSenhaProfessor.getText();
+            consultaCpf = recuperarSenhaProfessorCPF.getText();
+            consultaPergunta = recuperarSenhaProfessorRecuperarSenha.getText();
 
             status =0;
             while(res.next())

@@ -19,70 +19,57 @@ public class classiAluno extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jScrollPane1 = new javax.swing.JScrollPane();
+        PainelclassiAluno = new javax.swing.JPanel();
+        jsclassiAluno = new javax.swing.JScrollPane();
         campoClassificacao = new javax.swing.JTextArea();
+        jlclassiAluno = new javax.swing.JLabel();
+        btclassiAlunoConsultar = new javax.swing.JButton();
+        btclassiLimpar = new javax.swing.JButton();
+        btclassiAlunoSair = new javax.swing.JButton();
+        btclassiAlunoInformacao = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setName("frame1"); // NOI18N
+        setPreferredSize(new java.awt.Dimension(700, 400));
+        setResizable(false);
 
-        jButton1.setText("Consultar");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-
-        jButton2.setText("Limpar");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
-
-        jButton3.setText("Sair");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
-            }
-        });
+        PainelclassiAluno.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         campoClassificacao.setColumns(20);
         campoClassificacao.setRows(5);
-        jScrollPane1.setViewportView(campoClassificacao);
+        jsclassiAluno.setViewportView(campoClassificacao);
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(39, 39, 39)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 597, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(54, Short.MAX_VALUE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jButton3)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton2)
-                        .addGap(204, 204, 204)
-                        .addComponent(jButton1)
-                        .addGap(34, 34, 34))))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 327, Short.MAX_VALUE)
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2)
-                    .addComponent(jButton3))
-                .addGap(21, 21, 21))
-        );
+        PainelclassiAluno.add(jsclassiAluno, new org.netbeans.lib.awtextra.AbsoluteConstraints(54, 6, 590, 310));
+
+        jlclassiAluno.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/classiAluno.png"))); // NOI18N
+        PainelclassiAluno.add(jlclassiAluno, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
+        btclassiAlunoConsultar.setText("Consultar");
+        btclassiAlunoConsultar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btclassiAlunoConsultarActionPerformed(evt);
+            }
+        });
+        PainelclassiAluno.add(btclassiAlunoConsultar, new org.netbeans.lib.awtextra.AbsoluteConstraints(528, 342, 120, 40));
+
+        btclassiLimpar.setText("Limpar");
+        btclassiLimpar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btclassiLimparActionPerformed(evt);
+            }
+        });
+        PainelclassiAluno.add(btclassiLimpar, new org.netbeans.lib.awtextra.AbsoluteConstraints(288, 342, 120, 40));
+
+        btclassiAlunoSair.setText("Sair");
+        btclassiAlunoSair.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btclassiAlunoSairActionPerformed(evt);
+            }
+        });
+        PainelclassiAluno.add(btclassiAlunoSair, new org.netbeans.lib.awtextra.AbsoluteConstraints(49, 342, 120, 40));
+
+        btclassiAlunoInformacao.setText("jButton1");
+        PainelclassiAluno.add(btclassiAlunoInformacao, new org.netbeans.lib.awtextra.AbsoluteConstraints(654, 10, 40, 40));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -90,40 +77,42 @@ public class classiAluno extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(PainelclassiAluno, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(PainelclassiAluno, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btclassiAlunoConsultarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btclassiAlunoConsultarActionPerformed
         
         classificaAlu();
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_btclassiAlunoConsultarActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void btclassiAlunoSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btclassiAlunoSairActionPerformed
       
         new menuPrincipalProfessor().show();
         dispose();
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_btclassiAlunoSairActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void btclassiLimparActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btclassiLimparActionPerformed
        campoClassificacao.setText("");
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_btclassiLimparActionPerformed
 
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel PainelclassiAluno;
+    private javax.swing.JButton btclassiAlunoConsultar;
+    private javax.swing.JButton btclassiAlunoInformacao;
+    private javax.swing.JButton btclassiAlunoSair;
+    private javax.swing.JButton btclassiLimpar;
     private javax.swing.JTextArea campoClassificacao;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JLabel jlclassiAluno;
+    private javax.swing.JScrollPane jsclassiAluno;
     // End of variables declaration//GEN-END:variables
 
 

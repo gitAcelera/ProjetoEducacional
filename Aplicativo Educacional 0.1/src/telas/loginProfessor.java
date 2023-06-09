@@ -36,206 +36,154 @@ public class loginProfessor extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        senhaLoginProf = new javax.swing.JPasswordField();
-        mostrarSenha = new javax.swing.JCheckBox();
-        cpfLoginProf = new javax.swing.JFormattedTextField();
-        btRecuperarSenhaAluno = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        PainelloginProfessor = new javax.swing.JPanel();
+        jlloginProfessor = new javax.swing.JLabel();
+        loginProfessorSenha = new javax.swing.JPasswordField();
+        loginProfessorCPF = new javax.swing.JFormattedTextField();
+        loginProfessorMostrarSenha = new javax.swing.JCheckBox();
+        btloginProfessorEntrar = new javax.swing.JButton();
+        btloginProfessorVoltar = new javax.swing.JButton();
+        btloginProfessorRecuperarSenha = new javax.swing.JButton();
+        btloginProfessorDirecao = new javax.swing.JButton();
+        btloginProfessorInformacao = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(700, 420));
 
-        jPanel1.setPreferredSize(new java.awt.Dimension(700, 420));
+        PainelloginProfessor.setPreferredSize(new java.awt.Dimension(700, 420));
+        PainelloginProfessor.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setText("CPF");
+        jlloginProfessor.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/loginProfessor.png"))); // NOI18N
+        jlloginProfessor.setText("CPF");
+        PainelloginProfessor.add(jlloginProfessor, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 400));
 
-        jLabel2.setText("SENHA");
-
-        jButton1.setText("ENTRAR");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        loginProfessorSenha.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                loginProfessorSenhaActionPerformed(evt);
             }
         });
-
-        jButton2.setText("VOLTAR");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
-
-        senhaLoginProf.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                senhaLoginProfActionPerformed(evt);
-            }
-        });
-
-        mostrarSenha.setText("Mostrar senha");
-        mostrarSenha.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                mostrarSenhaActionPerformed(evt);
-            }
-        });
+        PainelloginProfessor.add(loginProfessorSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(218, 207, 280, 30));
 
         try {
-            cpfLoginProf.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("###.###.###-##")));
+            loginProfessorCPF.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("###.###.###-##")));
         } catch (java.text.ParseException ex) {
             ex.printStackTrace();
         }
-        cpfLoginProf.addActionListener(new java.awt.event.ActionListener() {
+        loginProfessorCPF.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cpfLoginProfActionPerformed(evt);
+                loginProfessorCPFActionPerformed(evt);
             }
         });
+        PainelloginProfessor.add(loginProfessorCPF, new org.netbeans.lib.awtextra.AbsoluteConstraints(221, 138, 270, 30));
 
-        btRecuperarSenhaAluno.setText("Esqueci a Senha");
-        btRecuperarSenhaAluno.addActionListener(new java.awt.event.ActionListener() {
+        loginProfessorMostrarSenha.setText("Mostrar senha");
+        loginProfessorMostrarSenha.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btRecuperarSenhaAlunoActionPerformed(evt);
+                loginProfessorMostrarSenhaActionPerformed(evt);
             }
         });
+        PainelloginProfessor.add(loginProfessorMostrarSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(199, 260, 140, 27));
 
-        jButton3.setText("DIREÇÃO");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        btloginProfessorEntrar.setText("ENTRAR");
+        btloginProfessorEntrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                btloginProfessorEntrarActionPerformed(evt);
             }
         });
+        PainelloginProfessor.add(btloginProfessorEntrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(608, 350, 80, 40));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(15, 15, 15)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(121, 121, 121))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(124, 124, 124)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addContainerGap(402, Short.MAX_VALUE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 415, Short.MAX_VALUE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(mostrarSenha)
-                        .addGap(128, 128, 128)
-                        .addComponent(btRecuperarSenhaAluno)
-                        .addContainerGap(101, Short.MAX_VALUE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(senhaLoginProf, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(cpfLoginProf, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 0, Short.MAX_VALUE))))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(42, 42, 42)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(21, 21, 21)
-                        .addComponent(jButton3)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(cpfLoginProf, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(senhaLoginProf, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(41, 41, 41)
-                        .addComponent(mostrarSenha)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(27, 27, 27))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(77, 77, 77)
-                        .addComponent(btRecuperarSenhaAluno)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-        );
+        btloginProfessorVoltar.setText("VOLTAR");
+        btloginProfessorVoltar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btloginProfessorVoltarActionPerformed(evt);
+            }
+        });
+        PainelloginProfessor.add(btloginProfessorVoltar, new org.netbeans.lib.awtextra.AbsoluteConstraints(14, 350, 80, 40));
+
+        btloginProfessorRecuperarSenha.setText("Esqueci a Senha");
+        btloginProfessorRecuperarSenha.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btloginProfessorRecuperarSenhaActionPerformed(evt);
+            }
+        });
+        PainelloginProfessor.add(btloginProfessorRecuperarSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(353, 260, 153, 30));
+
+        btloginProfessorDirecao.setText("DIREÇÃO");
+        btloginProfessorDirecao.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btloginProfessorDirecaoActionPerformed(evt);
+            }
+        });
+        PainelloginProfessor.add(btloginProfessorDirecao, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 10, 80, 40));
+
+        btloginProfessorInformacao.setText("jButton1");
+        PainelloginProfessor.add(btloginProfessorInformacao, new org.netbeans.lib.awtextra.AbsoluteConstraints(648, 10, 40, 40));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 847, Short.MAX_VALUE)
+            .addComponent(PainelloginProfessor, javax.swing.GroupLayout.PREFERRED_SIZE, 700, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 422, Short.MAX_VALUE)
+            .addComponent(PainelloginProfessor, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void btloginProfessorVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btloginProfessorVoltarActionPerformed
         new telaProfessor().show();
         dispose();
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_btloginProfessorVoltarActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btloginProfessorEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btloginProfessorEntrarActionPerformed
        verificaLoginProfessor();
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_btloginProfessorEntrarActionPerformed
 
-    private void senhaLoginProfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_senhaLoginProfActionPerformed
+    private void loginProfessorSenhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginProfessorSenhaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_senhaLoginProfActionPerformed
+    }//GEN-LAST:event_loginProfessorSenhaActionPerformed
 
-    private void mostrarSenhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mostrarSenhaActionPerformed
-       if(mostrarSenha.isSelected()) 
+    private void loginProfessorMostrarSenhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginProfessorMostrarSenhaActionPerformed
+       if(loginProfessorMostrarSenha.isSelected()) 
 {
-    senhaLoginProf.setEchoChar((char)0);
+    loginProfessorSenha.setEchoChar((char)0);
 }
 else 
 {
- senhaLoginProf.setEchoChar('*');   
+ loginProfessorSenha.setEchoChar('*');   
 }
-    }//GEN-LAST:event_mostrarSenhaActionPerformed
+    }//GEN-LAST:event_loginProfessorMostrarSenhaActionPerformed
 
-    private void cpfLoginProfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cpfLoginProfActionPerformed
+    private void loginProfessorCPFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginProfessorCPFActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_cpfLoginProfActionPerformed
+    }//GEN-LAST:event_loginProfessorCPFActionPerformed
 
-    private void btRecuperarSenhaAlunoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btRecuperarSenhaAlunoActionPerformed
+    private void btloginProfessorRecuperarSenhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btloginProfessorRecuperarSenhaActionPerformed
 
        rsp.setVisible(true);
        dispose();
-    }//GEN-LAST:event_btRecuperarSenhaAlunoActionPerformed
+    }//GEN-LAST:event_btloginProfessorRecuperarSenhaActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void btloginProfessorDirecaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btloginProfessorDirecaoActionPerformed
  lD.setVisible(true); 
  dispose();// TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_btloginProfessorDirecaoActionPerformed
 
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btRecuperarSenhaAluno;
-    private javax.swing.JFormattedTextField cpfLoginProf;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JCheckBox mostrarSenha;
-    private javax.swing.JPasswordField senhaLoginProf;
+    private javax.swing.JPanel PainelloginProfessor;
+    private javax.swing.JButton btloginProfessorDirecao;
+    private javax.swing.JButton btloginProfessorEntrar;
+    private javax.swing.JButton btloginProfessorInformacao;
+    private javax.swing.JButton btloginProfessorRecuperarSenha;
+    private javax.swing.JButton btloginProfessorVoltar;
+    private javax.swing.JLabel jlloginProfessor;
+    private javax.swing.JFormattedTextField loginProfessorCPF;
+    private javax.swing.JCheckBox loginProfessorMostrarSenha;
+    private javax.swing.JPasswordField loginProfessorSenha;
     // End of variables declaration//GEN-END:variables
 
     
@@ -254,8 +202,8 @@ else
             ResultSet res = stm.executeQuery("SELECT * from professor");
   
             // pega os valores do cpf e senha digitadas pelo professor
-            cpfAtual = cpfLoginProf.getText();
-            senhaAtual = senhaLoginProf.getText();
+            cpfAtual = loginProfessorCPF.getText();
+            senhaAtual = loginProfessorSenha.getText();
 
             status =0;
             while(res.next())
