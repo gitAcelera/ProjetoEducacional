@@ -59,6 +59,7 @@
         <Component class="javax.swing.JButton" name="bttelaProfessorCadastrar">
           <Properties>
             <Property name="text" type="java.lang.String" value="CADASTRAR-SE"/>
+            <Property name="contentAreaFilled" type="boolean" value="false"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bttelaProfessorCadastrarActionPerformed"/>
@@ -72,6 +73,7 @@
         <Component class="javax.swing.JButton" name="bttelaProfessorEntrar">
           <Properties>
             <Property name="text" type="java.lang.String" value="ENTRAR"/>
+            <Property name="contentAreaFilled" type="boolean" value="false"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bttelaProfessorEntrarActionPerformed"/>
@@ -85,6 +87,7 @@
         <Component class="javax.swing.JButton" name="bttelaProfessorVoltar">
           <Properties>
             <Property name="text" type="java.lang.String" value="VOLTAR"/>
+            <Property name="contentAreaFilled" type="boolean" value="false"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bttelaProfessorVoltarActionPerformed"/>

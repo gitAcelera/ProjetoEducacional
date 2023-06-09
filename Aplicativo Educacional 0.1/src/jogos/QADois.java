@@ -142,6 +142,7 @@ public class QADois extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btQADoisDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btQADoisDActionPerformed
+   JOptionPane.showMessageDialog(null,"OOPS!!! Resposta errada ^⁠_⁠^ \nQue tal dar uma olhada na Dica?"  );
    pontosQA=pontosQA-5;        // TODO add your handling code here:
     }//GEN-LAST:event_btQADoisDActionPerformed
 
@@ -173,11 +174,13 @@ public class QADois extends javax.swing.JFrame {
     }//GEN-LAST:event_btQADoisCActionPerformed
 
     private void btQADoisAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btQADoisAActionPerformed
-     pontosQA=pontosQA-5;      // TODO add your handling code here:
+      JOptionPane.showMessageDialog(null,"OOPS!!! Resposta errada ^⁠_⁠^ \nQue tal dar uma olhada na Dica?"  );
+      pontosQA=pontosQA-5;      // TODO add your handling code here:
     }//GEN-LAST:event_btQADoisAActionPerformed
 
     private void btQADoisBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btQADoisBActionPerformed
- pontosQA=pontosQA-5;          // TODO add your handling code here:
+  JOptionPane.showMessageDialog(null,"OOPS!!! Resposta errada ^⁠_⁠^ \nQue tal dar uma olhada na Dica?"  );
+  pontosQA=pontosQA-5;          // TODO add your handling code here:
     }//GEN-LAST:event_btQADoisBActionPerformed
 
     private void btQAMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btQAMenuActionPerformed

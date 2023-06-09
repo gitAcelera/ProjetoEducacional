@@ -146,11 +146,13 @@ public class MtSeis extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btMtSeisAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btMtSeisAActionPerformed
+      JOptionPane.showMessageDialog(null,"OOPS!!! Resposta errada ^⁠_⁠^ \nQue tal dar uma olhada na Dica?"  );
       pontosMt=pontosMt-5;    // TODO add your handling code here:
     }//GEN-LAST:event_btMtSeisAActionPerformed
 
     private void btMtSeisBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btMtSeisBActionPerformed
-     pontosMt=pontosMt-5;     // TODO add your handling code here:
+    JOptionPane.showMessageDialog(null,"OOPS!!! Resposta errada ^⁠_⁠^ \nQue tal dar uma olhada na Dica?"  );
+    pontosMt=pontosMt-5;     // TODO add your handling code here:
     }//GEN-LAST:event_btMtSeisBActionPerformed
 
     private void btMtSeisCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btMtSeisCActionPerformed
@@ -181,7 +183,8 @@ public class MtSeis extends javax.swing.JFrame {
     }//GEN-LAST:event_btMtSeisCActionPerformed
 
     private void btMtSeisDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btMtSeisDActionPerformed
-      pontosMt=pontosMt-5;    // TODO add your handling code here:
+     JOptionPane.showMessageDialog(null,"OOPS!!! Resposta errada ^⁠_⁠^ \nQue tal dar uma olhada na Dica?"  );
+     pontosMt=pontosMt-5;    // TODO add your handling code here:
     }//GEN-LAST:event_btMtSeisDActionPerformed
 
     private void btMtAvancarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btMtAvancarActionPerformed

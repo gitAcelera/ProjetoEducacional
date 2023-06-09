@@ -168,15 +168,18 @@ public class QANove extends javax.swing.JFrame {
     }//GEN-LAST:event_btQANoveAActionPerformed
 
     private void btQANoveBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btQANoveBActionPerformed
-    pontosQA=pontosQA-5;       // TODO add your handling code here:
+     JOptionPane.showMessageDialog(null,"OOPS!!! Resposta errada ^⁠_⁠^ \nQue tal dar uma olhada na Dica?"  );
+     pontosQA=pontosQA-5;       // TODO add your handling code here:
     }//GEN-LAST:event_btQANoveBActionPerformed
 
     private void btQANoveDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btQANoveDActionPerformed
-    pontosQA=pontosQA-5;       // TODO add your handling code here:
+   JOptionPane.showMessageDialog(null,"OOPS!!! Resposta errada ^⁠_⁠^ \nQue tal dar uma olhada na Dica?"  );
+   pontosQA=pontosQA-5;       // TODO add your handling code here:
     }//GEN-LAST:event_btQANoveDActionPerformed
 
     private void btQANoveCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btQANoveCActionPerformed
-     pontosQA=pontosQA-5;      // TODO add your handling code here:
+      JOptionPane.showMessageDialog(null,"OOPS!!! Resposta errada ^⁠_⁠^ \nQue tal dar uma olhada na Dica?"  );
+      pontosQA=pontosQA-5;      // TODO add your handling code here:
     }//GEN-LAST:event_btQANoveCActionPerformed
 
     private void btQAMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btQAMenuActionPerformed

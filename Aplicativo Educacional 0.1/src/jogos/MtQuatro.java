@@ -168,15 +168,18 @@ public class MtQuatro extends javax.swing.JFrame {
     }//GEN-LAST:event_btMtQuatroAActionPerformed
 
     private void btMtQuatroCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btMtQuatroCActionPerformed
+   JOptionPane.showMessageDialog(null,"OOPS!!! Resposta errada ^⁠_⁠^ \nQue tal dar uma olhada na Dica?"  );
    pontosMt=pontosMt-5;       // TODO add your handling code here:
     }//GEN-LAST:event_btMtQuatroCActionPerformed
 
     private void btMtQuatroDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btMtQuatroDActionPerformed
-  pontosMt=pontosMt-5;  
+   JOptionPane.showMessageDialog(null,"OOPS!!! Resposta errada ^⁠_⁠^ \nQue tal dar uma olhada na Dica?"  );
+   pontosMt=pontosMt-5;  
     }//GEN-LAST:event_btMtQuatroDActionPerformed
 
     private void btMtQuatroBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btMtQuatroBActionPerformed
-     pontosMt=pontosMt-5;     // TODO add your handling code here:
+    JOptionPane.showMessageDialog(null,"OOPS!!! Resposta errada ^⁠_⁠^ \nQue tal dar uma olhada na Dica?"  );
+    pontosMt=pontosMt-5;     // TODO add your handling code here:
     }//GEN-LAST:event_btMtQuatroBActionPerformed
 
     private void btMtAvancarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btMtAvancarActionPerformed

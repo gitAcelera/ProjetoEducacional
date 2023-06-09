@@ -142,7 +142,8 @@ public class MtUm extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btMtUmBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btMtUmBActionPerformed
-pontosMt=pontosMt-5;         // TODO add your handling code here:
+ JOptionPane.showMessageDialog(null,"OOPS!!! Resposta errada ^⁠_⁠^ \nQue tal dar uma olhada na Dica?"  );
+        pontosMt=pontosMt-5;         // TODO add your handling code here:
     }//GEN-LAST:event_btMtUmBActionPerformed
 
     private void btMtUmDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btMtUmDActionPerformed
@@ -168,11 +169,13 @@ pontosMt=pontosMt-5;         // TODO add your handling code here:
     }//GEN-LAST:event_btMtDicaActionPerformed
 
     private void btMtUmAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btMtUmAActionPerformed
-pontosMt=pontosMt-5;         // TODO add your handling code here:
+ JOptionPane.showMessageDialog(null,"OOPS!!! Resposta errada ^⁠_⁠^ \nQue tal dar uma olhada na Dica?"  );
+        pontosMt=pontosMt-5;         // TODO add your handling code here:
     }//GEN-LAST:event_btMtUmAActionPerformed
 
     private void btMtUmCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btMtUmCActionPerformed
-pontosMt=pontosMt-5;         // TODO add your handling code here:
+ JOptionPane.showMessageDialog(null,"OOPS!!! Resposta errada ^⁠_⁠^ \nQue tal dar uma olhada na Dica?"  ); 
+ pontosMt=pontosMt-5;         // TODO add your handling code here:
     }//GEN-LAST:event_btMtUmCActionPerformed
 
     

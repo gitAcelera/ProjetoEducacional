@@ -148,15 +148,18 @@ int pontosPt = PontosAluno.getPontosPt();
     }//GEN-LAST:event_btPtDicaActionPerformed
 
     private void btPtDezAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPtDezAActionPerformed
-pontosPt=pontosPt-5;         // TODO add your handling code here:
+ JOptionPane.showMessageDialog(null,"OOPS!!! Resposta errada ^⁠_⁠^ \nQue tal dar uma olhada na Dica?"  );
+        pontosPt=pontosPt-5;         // TODO add your handling code here:
     }//GEN-LAST:event_btPtDezAActionPerformed
 
     private void btPtDezBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPtDezBActionPerformed
-pontosPt=pontosPt-5;         // TODO add your handling code here:
+ JOptionPane.showMessageDialog(null,"OOPS!!! Resposta errada ^⁠_⁠^ \nQue tal dar uma olhada na Dica?"  );
+        pontosPt=pontosPt-5;         // TODO add your handling code here:
     }//GEN-LAST:event_btPtDezBActionPerformed
 
     private void btPtDezDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPtDezDActionPerformed
-pontosPt=pontosPt-5;         // TODO add your handling code here:
+ JOptionPane.showMessageDialog(null,"OOPS!!! Resposta errada ^⁠_⁠^ \nQue tal dar uma olhada na Dica?"  );
+        pontosPt=pontosPt-5;         // TODO add your handling code here:
     }//GEN-LAST:event_btPtDezDActionPerformed
 
     private void btPtVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPtVoltarActionPerformed

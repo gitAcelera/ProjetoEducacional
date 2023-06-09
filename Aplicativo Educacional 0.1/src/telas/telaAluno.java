@@ -40,6 +40,7 @@ public class telaAluno extends javax.swing.JFrame {
         PaineltelaAluno.add(jltelaAluno, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 400));
 
         bttelaAlunoCadastrar.setText("CADASTRAR");
+        bttelaAlunoCadastrar.setContentAreaFilled(false);
         bttelaAlunoCadastrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bttelaAlunoCadastrarActionPerformed(evt);
@@ -48,6 +49,7 @@ public class telaAluno extends javax.swing.JFrame {
         PaineltelaAluno.add(bttelaAlunoCadastrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(483, 140, 180, 60));
 
         bttelaAlunoEntrar.setText("ENTRAR");
+        bttelaAlunoEntrar.setContentAreaFilled(false);
         bttelaAlunoEntrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bttelaAlunoEntrarActionPerformed(evt);
@@ -56,6 +58,7 @@ public class telaAluno extends javax.swing.JFrame {
         PaineltelaAluno.add(bttelaAlunoEntrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(483, 217, 180, 60));
 
         bttelaAlunoVoltar.setText("VOLTAR");
+        bttelaAlunoVoltar.setContentAreaFilled(false);
         bttelaAlunoVoltar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bttelaAlunoVoltarActionPerformed(evt);

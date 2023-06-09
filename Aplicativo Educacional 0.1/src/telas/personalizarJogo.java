@@ -37,38 +37,72 @@ public class personalizarJogo extends javax.swing.JFrame {
         PersonalizarJogoInformacao = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
 
         PainelPersonalizarJogo.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jlpersonalizarJogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/personalizarJogo.png"))); // NOI18N
         PainelPersonalizarJogo.add(jlpersonalizarJogo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 400));
 
+        personalizarJogoDisciplina.setBackground(new java.awt.Color(162, 96, 171));
+        personalizarJogoDisciplina.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        personalizarJogoDisciplina.setForeground(new java.awt.Color(255, 255, 255));
+        personalizarJogoDisciplina.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         personalizarJogoDisciplina.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 personalizarJogoDisciplinaActionPerformed(evt);
             }
         });
-        PainelPersonalizarJogo.add(personalizarJogoDisciplina, new org.netbeans.lib.awtextra.AbsoluteConstraints(397, 36, 170, 40));
-        PainelPersonalizarJogo.add(personalizarJogoQuestao, new org.netbeans.lib.awtextra.AbsoluteConstraints(168, 150, 380, 40));
-        PainelPersonalizarJogo.add(personalizarJogoQuestaoCJ, new org.netbeans.lib.awtextra.AbsoluteConstraints(162, 37, 150, 40));
-        PainelPersonalizarJogo.add(personalizarJogoA, new org.netbeans.lib.awtextra.AbsoluteConstraints(172, 250, 130, 40));
+        PainelPersonalizarJogo.add(personalizarJogoDisciplina, new org.netbeans.lib.awtextra.AbsoluteConstraints(407, 46, 140, 30));
 
+        personalizarJogoQuestao.setBackground(new java.awt.Color(162, 96, 171));
+        personalizarJogoQuestao.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        personalizarJogoQuestao.setForeground(new java.awt.Color(255, 255, 255));
+        personalizarJogoQuestao.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        PainelPersonalizarJogo.add(personalizarJogoQuestao, new org.netbeans.lib.awtextra.AbsoluteConstraints(178, 150, 350, 40));
+
+        personalizarJogoQuestaoCJ.setBackground(new java.awt.Color(162, 96, 171));
+        personalizarJogoQuestaoCJ.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        personalizarJogoQuestaoCJ.setForeground(new java.awt.Color(255, 255, 255));
+        personalizarJogoQuestaoCJ.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        PainelPersonalizarJogo.add(personalizarJogoQuestaoCJ, new org.netbeans.lib.awtextra.AbsoluteConstraints(172, 47, 130, 30));
+
+        personalizarJogoA.setBackground(new java.awt.Color(162, 96, 171));
+        personalizarJogoA.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        personalizarJogoA.setForeground(new java.awt.Color(255, 255, 255));
+        personalizarJogoA.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        PainelPersonalizarJogo.add(personalizarJogoA, new org.netbeans.lib.awtextra.AbsoluteConstraints(172, 260, 120, 30));
+
+        personalizarJogoB.setBackground(new java.awt.Color(162, 96, 171));
+        personalizarJogoB.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        personalizarJogoB.setForeground(new java.awt.Color(255, 255, 255));
+        personalizarJogoB.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         personalizarJogoB.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 personalizarJogoBActionPerformed(evt);
             }
         });
-        PainelPersonalizarJogo.add(personalizarJogoB, new org.netbeans.lib.awtextra.AbsoluteConstraints(408, 250, 140, 40));
+        PainelPersonalizarJogo.add(personalizarJogoB, new org.netbeans.lib.awtextra.AbsoluteConstraints(418, 260, 120, 30));
 
+        personalizarJogoC.setBackground(new java.awt.Color(162, 96, 171));
+        personalizarJogoC.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        personalizarJogoC.setForeground(new java.awt.Color(255, 255, 255));
+        personalizarJogoC.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         personalizarJogoC.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 personalizarJogoCActionPerformed(evt);
             }
         });
-        PainelPersonalizarJogo.add(personalizarJogoC, new org.netbeans.lib.awtextra.AbsoluteConstraints(168, 330, 130, 40));
-        PainelPersonalizarJogo.add(personalizarJogoD, new org.netbeans.lib.awtextra.AbsoluteConstraints(411, 325, 140, 40));
+        PainelPersonalizarJogo.add(personalizarJogoC, new org.netbeans.lib.awtextra.AbsoluteConstraints(178, 340, 120, 30));
+
+        personalizarJogoD.setBackground(new java.awt.Color(162, 96, 171));
+        personalizarJogoD.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        personalizarJogoD.setForeground(new java.awt.Color(255, 255, 255));
+        personalizarJogoD.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        PainelPersonalizarJogo.add(personalizarJogoD, new org.netbeans.lib.awtextra.AbsoluteConstraints(421, 335, 120, 30));
 
         personalizarJogoConfirmar.setText("confirmar");
+        personalizarJogoConfirmar.setContentAreaFilled(false);
         personalizarJogoConfirmar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 personalizarJogoConfirmarActionPerformed(evt);
@@ -77,6 +111,7 @@ public class personalizarJogo extends javax.swing.JFrame {
         PainelPersonalizarJogo.add(personalizarJogoConfirmar, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 340, 80, 40));
 
         personalizarJogoVoltar.setText("voltar");
+        personalizarJogoVoltar.setContentAreaFilled(false);
         personalizarJogoVoltar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 personalizarJogoVoltarActionPerformed(evt);
@@ -85,6 +120,8 @@ public class personalizarJogo extends javax.swing.JFrame {
         PainelPersonalizarJogo.add(personalizarJogoVoltar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 340, 80, 40));
 
         PersonalizarJogoInformacao.setText("jButton1");
+        PersonalizarJogoInformacao.setContentAreaFilled(false);
+        PersonalizarJogoInformacao.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         PainelPersonalizarJogo.add(PersonalizarJogoInformacao, new org.netbeans.lib.awtextra.AbsoluteConstraints(648, 10, 40, 40));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -168,6 +205,7 @@ public class personalizarJogo extends javax.swing.JFrame {
                 personalizarJogoQuestao.setText("");
                 personalizarJogoA.setText("");
                 personalizarJogoB.setText("");
+                personalizarJogoC.setText("");
                 personalizarJogoD.setText("");
             } else{
                 JOptionPane.showMessageDialog(null,"Erro para realizar a alteração!!!","Erro",JOptionPane.ERROR_MESSAGE);   

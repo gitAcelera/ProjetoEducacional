@@ -29,14 +29,14 @@ String userAtual,senhaAtual,userBanco,senhaBanco;
         PainelloginDirecao = new javax.swing.JPanel();
         jlloginDirecao = new javax.swing.JLabel();
         loginDirecaoUsuario = new javax.swing.JTextField();
-        loginDirecaoSenha = new javax.swing.JPasswordField();
         loginDirecaoMostrarSenha = new javax.swing.JCheckBox();
+        loginDirecaoSenha = new javax.swing.JPasswordField();
         btloginDirecaoEntrar = new javax.swing.JButton();
         btloginDirecaoVoltar = new javax.swing.JButton();
         btloginDirecaoInformacao = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(700, 400));
+        setBackground(new java.awt.Color(184, 135, 191));
         setResizable(false);
 
         PainelloginDirecao.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -44,21 +44,19 @@ String userAtual,senhaAtual,userBanco,senhaBanco;
         jlloginDirecao.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/loginDirecao.png"))); // NOI18N
         PainelloginDirecao.add(jlloginDirecao, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 400));
 
+        loginDirecaoUsuario.setBackground(new java.awt.Color(184, 135, 191));
+        loginDirecaoUsuario.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        loginDirecaoUsuario.setForeground(new java.awt.Color(255, 255, 255));
+        loginDirecaoUsuario.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         loginDirecaoUsuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 loginDirecaoUsuarioActionPerformed(evt);
             }
         });
-        PainelloginDirecao.add(loginDirecaoUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(217, 138, 280, 30));
-
-        loginDirecaoSenha.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                loginDirecaoSenhaActionPerformed(evt);
-            }
-        });
-        PainelloginDirecao.add(loginDirecaoSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(217, 207, 280, 30));
+        PainelloginDirecao.add(loginDirecaoUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(217, 142, 280, 20));
 
         loginDirecaoMostrarSenha.setText(" Mostrar senha ");
+        loginDirecaoMostrarSenha.setContentAreaFilled(false);
         loginDirecaoMostrarSenha.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 loginDirecaoMostrarSenhaActionPerformed(evt);
@@ -66,7 +64,19 @@ String userAtual,senhaAtual,userBanco,senhaBanco;
         });
         PainelloginDirecao.add(loginDirecaoMostrarSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(203, 259, 130, 30));
 
+        loginDirecaoSenha.setBackground(new java.awt.Color(184, 135, 191));
+        loginDirecaoSenha.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        loginDirecaoSenha.setForeground(new java.awt.Color(255, 255, 255));
+        loginDirecaoSenha.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        loginDirecaoSenha.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                loginDirecaoSenhaActionPerformed(evt);
+            }
+        });
+        PainelloginDirecao.add(loginDirecaoSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(217, 211, 280, 20));
+
         btloginDirecaoEntrar.setText("ENTRAR");
+        btloginDirecaoEntrar.setContentAreaFilled(false);
         btloginDirecaoEntrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btloginDirecaoEntrarActionPerformed(evt);
@@ -75,6 +85,7 @@ String userAtual,senhaAtual,userBanco,senhaBanco;
         PainelloginDirecao.add(btloginDirecaoEntrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(609, 348, 80, 40));
 
         btloginDirecaoVoltar.setText("VOLTAR");
+        btloginDirecaoVoltar.setContentAreaFilled(false);
         btloginDirecaoVoltar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btloginDirecaoVoltarActionPerformed(evt);
@@ -83,6 +94,7 @@ String userAtual,senhaAtual,userBanco,senhaBanco;
         PainelloginDirecao.add(btloginDirecaoVoltar, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 349, 80, 40));
 
         btloginDirecaoInformacao.setText("jButton1");
+        btloginDirecaoInformacao.setContentAreaFilled(false);
         PainelloginDirecao.add(btloginDirecaoInformacao, new org.netbeans.lib.awtextra.AbsoluteConstraints(649, 10, 40, 40));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());

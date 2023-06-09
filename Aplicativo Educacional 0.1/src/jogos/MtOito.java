@@ -170,15 +170,18 @@ public class MtOito extends javax.swing.JFrame {
     }//GEN-LAST:event_btMtOitoAActionPerformed
 
     private void btMtOitoBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btMtOitoBActionPerformed
-    pontosMt=pontosMt-5;    // TODO add your handling code here:
+    JOptionPane.showMessageDialog(null,"OOPS!!! Resposta errada ^⁠_⁠^ \nQue tal dar uma olhada na Dica?"  );
+        pontosMt=pontosMt-5;    // TODO add your handling code here:
     }//GEN-LAST:event_btMtOitoBActionPerformed
 
     private void btMtOitoCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btMtOitoCActionPerformed
-      pontosMt=pontosMt-5;  // TODO add your handling code here:
+    JOptionPane.showMessageDialog(null,"OOPS!!! Resposta errada ^⁠_⁠^ \nQue tal dar uma olhada na Dica?"  );
+    pontosMt=pontosMt-5;  // TODO add your handling code here:
     }//GEN-LAST:event_btMtOitoCActionPerformed
 
     private void btMtOitoDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btMtOitoDActionPerformed
-      pontosMt=pontosMt-5;  // TODO add your handling code here:
+     JOptionPane.showMessageDialog(null,"OOPS!!! Resposta errada ^⁠_⁠^ \nQue tal dar uma olhada na Dica?"  );
+     pontosMt=pontosMt-5;  // TODO add your handling code here:
     }//GEN-LAST:event_btMtOitoDActionPerformed
 
     private void btMtAvancarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btMtAvancarActionPerformed

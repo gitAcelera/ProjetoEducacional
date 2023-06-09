@@ -141,7 +141,8 @@ public class MtDois extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btMtDoisAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btMtDoisAActionPerformed
-     pontosMt=pontosMt-5;    // TODO add your handling code here:
+     JOptionPane.showMessageDialog(null,"OOPS!!! Resposta errada ^⁠_⁠^ \nQue tal dar uma olhada na Dica?"  );
+        pontosMt=pontosMt-5;   
     }//GEN-LAST:event_btMtDoisAActionPerformed
 
     private void btMDoisBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btMDoisBActionPerformed
@@ -172,11 +173,13 @@ public class MtDois extends javax.swing.JFrame {
     }//GEN-LAST:event_btMDoisBActionPerformed
 
     private void btMtDoisCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btMtDoisCActionPerformed
-    pontosMt=pontosMt-5;     // TODO add your handling code here:
+    JOptionPane.showMessageDialog(null,"OOPS!!! Resposta errada ^⁠_⁠^ \nQue tal dar uma olhada na Dica?"  );
+        pontosMt=pontosMt-5;   
     }//GEN-LAST:event_btMtDoisCActionPerformed
 
     private void btMtDoisDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btMtDoisDActionPerformed
-      pontosMt=pontosMt-5;   // TODO add your handling code here:
+     JOptionPane.showMessageDialog(null,"OOPS!!! Resposta errada ^⁠_⁠^ \nQue tal dar uma olhada na Dica?"  );
+        pontosMt=pontosMt-5;   
     }//GEN-LAST:event_btMtDoisDActionPerformed
 
     private void btMtAvancarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btMtAvancarActionPerformed

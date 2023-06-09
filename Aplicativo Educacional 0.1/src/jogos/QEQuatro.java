@@ -170,14 +170,17 @@ public class QEQuatro extends javax.swing.JFrame {
     }//GEN-LAST:event_btQEQuatroCActionPerformed
 
     private void btQEQuatroDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btQEQuatroDActionPerformed
+   JOptionPane.showMessageDialog(null,"OOPS!!! Resposta errada ^⁠_⁠^ \nQue tal dar uma olhada na Dica?"  );
    pontosQE=pontosQE-5;      // TODO add your handling code here:
     }//GEN-LAST:event_btQEQuatroDActionPerformed
 
     private void btQEQuatroAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btQEQuatroAActionPerformed
+   JOptionPane.showMessageDialog(null,"OOPS!!! Resposta errada ^⁠_⁠^ \nQue tal dar uma olhada na Dica?"  );
    pontosQE=pontosQE-5;      // TODO add your handling code here:
     }//GEN-LAST:event_btQEQuatroAActionPerformed
 
     private void btQEQuatroBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btQEQuatroBActionPerformed
+    JOptionPane.showMessageDialog(null,"OOPS!!! Resposta errada ^⁠_⁠^ \nQue tal dar uma olhada na Dica?"  );
     pontosQE=pontosQE-5;     // TODO add your handling code here:
     }//GEN-LAST:event_btQEQuatroBActionPerformed
 

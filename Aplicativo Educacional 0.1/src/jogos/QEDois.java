@@ -170,15 +170,18 @@ public class QEDois extends javax.swing.JFrame {
     }//GEN-LAST:event_btQEDoisBActionPerformed
 
     private void btQEDoisAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btQEDoisAActionPerformed
+  JOptionPane.showMessageDialog(null,"OOPS!!! Resposta errada ^⁠_⁠^ \nQue tal dar uma olhada na Dica?"  );
   pontosQE=pontosQE-5;        // TODO add your handling code here:
     }//GEN-LAST:event_btQEDoisAActionPerformed
 
     private void btQEDoisCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btQEDoisCActionPerformed
-  pontosQE=pontosQE-5;         // TODO add your handling code here:
+   JOptionPane.showMessageDialog(null,"OOPS!!! Resposta errada ^⁠_⁠^ \nQue tal dar uma olhada na Dica?"  );
+   pontosQE=pontosQE-5;         // TODO add your handling code here:
     }//GEN-LAST:event_btQEDoisCActionPerformed
 
     private void btQEDoisDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btQEDoisDActionPerformed
-pontosQE=pontosQE-5;        // TODO add your handling code here:
+ JOptionPane.showMessageDialog(null,"OOPS!!! Resposta errada ^⁠_⁠^ \nQue tal dar uma olhada na Dica?"  );
+        pontosQE=pontosQE-5;        // TODO add your handling code here:
     }//GEN-LAST:event_btQEDoisDActionPerformed
 
     private void btQEMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btQEMenuActionPerformed

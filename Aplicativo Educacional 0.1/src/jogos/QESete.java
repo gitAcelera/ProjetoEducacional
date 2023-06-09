@@ -169,15 +169,18 @@ public class QESete extends javax.swing.JFrame {
     }//GEN-LAST:event_btQESeteDActionPerformed
 
     private void btQESeteAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btQESeteAActionPerformed
-  pontosQE=pontosQE-5;         // TODO add your handling code here:
+   JOptionPane.showMessageDialog(null,"OOPS!!! Resposta errada ^⁠_⁠^ \nQue tal dar uma olhada na Dica?"  );
+   pontosQE=pontosQE-5;         // TODO add your handling code here:
     }//GEN-LAST:event_btQESeteAActionPerformed
 
     private void btQESeteBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btQESeteBActionPerformed
-     pontosQE=pontosQE-5;      // TODO add your handling code here:
+     JOptionPane.showMessageDialog(null,"OOPS!!! Resposta errada ^⁠_⁠^ \nQue tal dar uma olhada na Dica?"  );
+        pontosQE=pontosQE-5;      // TODO add your handling code here:
     }//GEN-LAST:event_btQESeteBActionPerformed
 
     private void btQESeteCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btQESeteCActionPerformed
-      pontosQE=pontosQE-5;     // TODO add your handling code here:
+      JOptionPane.showMessageDialog(null,"OOPS!!! Resposta errada ^⁠_⁠^ \nQue tal dar uma olhada na Dica?"  );
+        pontosQE=pontosQE-5;     // TODO add your handling code here:
     }//GEN-LAST:event_btQESeteCActionPerformed
 
     private void btQEAvancarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btQEAvancarActionPerformed

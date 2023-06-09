@@ -145,14 +145,17 @@ pontosQE=pontosQE+20;
     }//GEN-LAST:event_btQEDezBActionPerformed
 
     private void btQEDezAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btQEDezAActionPerformed
+      JOptionPane.showMessageDialog(null,"OOPS!!! Resposta errada ^⁠_⁠^ \nQue tal dar uma olhada na Dica?"  );
       pontosQE=pontosQE-5;   // TODO add your handling code here:
     }//GEN-LAST:event_btQEDezAActionPerformed
 
     private void btQEDezCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btQEDezCActionPerformed
+      JOptionPane.showMessageDialog(null,"OOPS!!! Resposta errada ^⁠_⁠^ \nQue tal dar uma olhada na Dica?"  );
       pontosQE=pontosQE-5;   // TODO add your handling code here:
     }//GEN-LAST:event_btQEDezCActionPerformed
 
     private void btQEDezDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btQEDezDActionPerformed
+     JOptionPane.showMessageDialog(null,"OOPS!!! Resposta errada ^⁠_⁠^ \nQue tal dar uma olhada na Dica?"  );
      pontosQE=pontosQE-5;    // TODO add your handling code here:
     }//GEN-LAST:event_btQEDezDActionPerformed
 

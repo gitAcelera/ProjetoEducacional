@@ -36,6 +36,7 @@ public class classiAluno extends javax.swing.JFrame {
         PainelclassiAluno.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         campoClassificacao.setColumns(20);
+        campoClassificacao.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         campoClassificacao.setRows(5);
         jsclassiAluno.setViewportView(campoClassificacao);
 
@@ -45,6 +46,7 @@ public class classiAluno extends javax.swing.JFrame {
         PainelclassiAluno.add(jlclassiAluno, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         btclassiAlunoConsultar.setText("Consultar");
+        btclassiAlunoConsultar.setContentAreaFilled(false);
         btclassiAlunoConsultar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btclassiAlunoConsultarActionPerformed(evt);
@@ -53,6 +55,7 @@ public class classiAluno extends javax.swing.JFrame {
         PainelclassiAluno.add(btclassiAlunoConsultar, new org.netbeans.lib.awtextra.AbsoluteConstraints(528, 342, 120, 40));
 
         btclassiLimpar.setText("Limpar");
+        btclassiLimpar.setContentAreaFilled(false);
         btclassiLimpar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btclassiLimparActionPerformed(evt);
@@ -61,6 +64,7 @@ public class classiAluno extends javax.swing.JFrame {
         PainelclassiAluno.add(btclassiLimpar, new org.netbeans.lib.awtextra.AbsoluteConstraints(288, 342, 120, 40));
 
         btclassiAlunoSair.setText("Sair");
+        btclassiAlunoSair.setContentAreaFilled(false);
         btclassiAlunoSair.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btclassiAlunoSairActionPerformed(evt);
@@ -69,6 +73,12 @@ public class classiAluno extends javax.swing.JFrame {
         PainelclassiAluno.add(btclassiAlunoSair, new org.netbeans.lib.awtextra.AbsoluteConstraints(49, 342, 120, 40));
 
         btclassiAlunoInformacao.setText("jButton1");
+        btclassiAlunoInformacao.setContentAreaFilled(false);
+        btclassiAlunoInformacao.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btclassiAlunoInformacaoActionPerformed(evt);
+            }
+        });
         PainelclassiAluno.add(btclassiAlunoInformacao, new org.netbeans.lib.awtextra.AbsoluteConstraints(654, 10, 40, 40));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -101,6 +111,10 @@ public class classiAluno extends javax.swing.JFrame {
     private void btclassiLimparActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btclassiLimparActionPerformed
        campoClassificacao.setText("");
     }//GEN-LAST:event_btclassiLimparActionPerformed
+
+    private void btclassiAlunoInformacaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btclassiAlunoInformacaoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btclassiAlunoInformacaoActionPerformed
 
     
 

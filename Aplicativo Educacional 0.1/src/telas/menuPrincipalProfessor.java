@@ -39,6 +39,7 @@ private classiAluno clasAlu;
         PainelmenuPrincipalProfessor.add(jlmenuPrincipalProfessor, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         btmenuPrincipalProfessorPJ.setText("Personalizar Jogos");
+        btmenuPrincipalProfessorPJ.setContentAreaFilled(false);
         btmenuPrincipalProfessorPJ.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btmenuPrincipalProfessorPJActionPerformed(evt);
@@ -47,6 +48,7 @@ private classiAluno clasAlu;
         PainelmenuPrincipalProfessor.add(btmenuPrincipalProfessorPJ, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 147, 300, 40));
 
         btmenuPrincipalProfessorCA.setText("Classificação dos Alunos");
+        btmenuPrincipalProfessorCA.setContentAreaFilled(false);
         btmenuPrincipalProfessorCA.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btmenuPrincipalProfessorCAActionPerformed(evt);
@@ -55,6 +57,7 @@ private classiAluno clasAlu;
         PainelmenuPrincipalProfessor.add(btmenuPrincipalProfessorCA, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 203, 300, 40));
 
         btmenuPrincipalProfessorSair.setText("Sair da Conta");
+        btmenuPrincipalProfessorSair.setContentAreaFilled(false);
         btmenuPrincipalProfessorSair.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btmenuPrincipalProfessorSairActionPerformed(evt);
@@ -63,6 +66,7 @@ private classiAluno clasAlu;
         PainelmenuPrincipalProfessor.add(btmenuPrincipalProfessorSair, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 269, 140, 40));
 
         btmenuPrincipalProfessorEncerrar.setText("Encerrar");
+        btmenuPrincipalProfessorEncerrar.setContentAreaFilled(false);
         btmenuPrincipalProfessorEncerrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btmenuPrincipalProfessorEncerrarActionPerformed(evt);
@@ -71,6 +75,7 @@ private classiAluno clasAlu;
         PainelmenuPrincipalProfessor.add(btmenuPrincipalProfessorEncerrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 269, 150, 40));
 
         btmenuPrincipalProfessorInformacao.setText("jButton4");
+        btmenuPrincipalProfessorInformacao.setContentAreaFilled(false);
         PainelmenuPrincipalProfessor.add(btmenuPrincipalProfessorInformacao, new org.netbeans.lib.awtextra.AbsoluteConstraints(648, 10, 40, 40));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -88,7 +93,8 @@ private classiAluno clasAlu;
     }// </editor-fold>//GEN-END:initComponents
 
     private void btmenuPrincipalProfessorPJActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmenuPrincipalProfessorPJActionPerformed
- jogoPer.setVisible(true);       
+ jogoPer.setVisible(true); 
+ dispose();
     }//GEN-LAST:event_btmenuPrincipalProfessorPJActionPerformed
 
     private void btmenuPrincipalProfessorSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmenuPrincipalProfessorSairActionPerformed
@@ -102,7 +108,8 @@ private classiAluno clasAlu;
     }//GEN-LAST:event_btmenuPrincipalProfessorEncerrarActionPerformed
 
     private void btmenuPrincipalProfessorCAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmenuPrincipalProfessorCAActionPerformed
-  clasAlu.setVisible(true);      
+  clasAlu.setVisible(true); 
+  dispose();
     }//GEN-LAST:event_btmenuPrincipalProfessorCAActionPerformed
 
     

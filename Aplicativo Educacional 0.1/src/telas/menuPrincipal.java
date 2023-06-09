@@ -107,6 +107,11 @@ public class menuPrincipal extends javax.swing.JFrame
         });
 
         btLogoff.setText("Encerrar");
+        btLogoff.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btLogoffActionPerformed(evt);
+            }
+        });
 
         jButton3.setText("Alterar Dados");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -215,6 +220,10 @@ public class menuPrincipal extends javax.swing.JFrame
       altSen.setVisible(true);
       dispose();
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void btLogoffActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btLogoffActionPerformed
+          System.exit(0);     
+    }//GEN-LAST:event_btLogoffActionPerformed
 
     
     

@@ -142,6 +142,7 @@ public class QESeis extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btQESeisAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btQESeisAActionPerformed
+    JOptionPane.showMessageDialog(null,"OOPS!!! Resposta errada ^⁠_⁠^ \nQue tal dar uma olhada na Dica?"  );
     pontosQE=pontosQE-5;   // TODO add your handling code here:
     }//GEN-LAST:event_btQESeisAActionPerformed
 
@@ -174,11 +175,13 @@ public class QESeis extends javax.swing.JFrame {
     }//GEN-LAST:event_btQESeisDActionPerformed
 
     private void btQESeisCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btQESeisCActionPerformed
-   pontosQE=pontosQE-5;        // TODO add your handling code here:
+    JOptionPane.showMessageDialog(null,"OOPS!!! Resposta errada ^⁠_⁠^ \nQue tal dar uma olhada na Dica?"  );
+    pontosQE=pontosQE-5;        // TODO add your handling code here:
     }//GEN-LAST:event_btQESeisCActionPerformed
 
     private void btQESeisBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btQESeisBActionPerformed
-       pontosQE=pontosQE-5;    // TODO add your handling code here:
+      JOptionPane.showMessageDialog(null,"OOPS!!! Resposta errada ^⁠_⁠^ \nQue tal dar uma olhada na Dica?"  );
+      pontosQE=pontosQE-5;    // TODO add your handling code here:
     }//GEN-LAST:event_btQESeisBActionPerformed
 
     private void btQEAvancarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btQEAvancarActionPerformed

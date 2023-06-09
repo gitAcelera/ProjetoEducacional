@@ -146,14 +146,17 @@ public class MtSete extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btMtSeteAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btMtSeteAActionPerformed
+      JOptionPane.showMessageDialog(null,"OOPS!!! Resposta errada ^⁠_⁠^ \nQue tal dar uma olhada na Dica?"  );
       pontosMt=pontosMt-5;   // TODO add your handling code here:
     }//GEN-LAST:event_btMtSeteAActionPerformed
 
     private void btMtSeteBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btMtSeteBActionPerformed
+        JOptionPane.showMessageDialog(null,"OOPS!!! Resposta errada ^⁠_⁠^ \nQue tal dar uma olhada na Dica?"  );
         pontosMt=pontosMt-5; // TODO add your handling code here:
     }//GEN-LAST:event_btMtSeteBActionPerformed
 
     private void btMtSeteDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btMtSeteDActionPerformed
+        JOptionPane.showMessageDialog(null,"OOPS!!! Resposta errada ^⁠_⁠^ \nQue tal dar uma olhada na Dica?"  );
         pontosMt=pontosMt-5; // TODO add your handling code here:
     }//GEN-LAST:event_btMtSeteDActionPerformed
 

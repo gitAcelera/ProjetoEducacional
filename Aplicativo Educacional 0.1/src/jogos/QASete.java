@@ -141,7 +141,8 @@ public class QASete extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btQASeteCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btQASeteCActionPerformed
-pontosQA=pontosQA-5;         // TODO add your handling code here:
+ JOptionPane.showMessageDialog(null,"OOPS!!! Resposta errada ^⁠_⁠^ \nQue tal dar uma olhada na Dica?"  );
+ pontosQA=pontosQA-5;         // TODO add your handling code here:
     }//GEN-LAST:event_btQASeteCActionPerformed
 
     private void btQASeteBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btQASeteBActionPerformed
@@ -172,11 +173,13 @@ pontosQA=pontosQA-5;         // TODO add your handling code here:
     }//GEN-LAST:event_btQASeteBActionPerformed
 
     private void btQASeteAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btQASeteAActionPerformed
-    pontosQA=pontosQA-5;     // TODO add your handling code here:
+     JOptionPane.showMessageDialog(null,"OOPS!!! Resposta errada ^⁠_⁠^ \nQue tal dar uma olhada na Dica?"  );
+     pontosQA=pontosQA-5;     // TODO add your handling code here:
     }//GEN-LAST:event_btQASeteAActionPerformed
 
     private void btQASeteDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btQASeteDActionPerformed
-    pontosQA=pontosQA-5;     // TODO add your handling code here:
+     JOptionPane.showMessageDialog(null,"OOPS!!! Resposta errada ^⁠_⁠^ \nQue tal dar uma olhada na Dica?"  );
+        pontosQA=pontosQA-5;     // TODO add your handling code here:
     }//GEN-LAST:event_btQASeteDActionPerformed
 
     private void btQAMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btQAMenuActionPerformed

@@ -170,15 +170,18 @@ public class QECinco extends javax.swing.JFrame {
     }//GEN-LAST:event_btQECincoAActionPerformed
 
     private void btQECincoBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btQECincoBActionPerformed
-    pontosQE=pontosQE-5;     // TODO add your handling code here:
+     JOptionPane.showMessageDialog(null,"OOPS!!! Resposta errada ^⁠_⁠^ \nQue tal dar uma olhada na Dica?"  );
+     pontosQE=pontosQE-5;     // TODO add your handling code here:
     }//GEN-LAST:event_btQECincoBActionPerformed
 
     private void btQECincoDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btQECincoDActionPerformed
-    pontosQE=pontosQE-5;     // TODO add your handling code here:
+     JOptionPane.showMessageDialog(null,"OOPS!!! Resposta errada ^⁠_⁠^ \nQue tal dar uma olhada na Dica?"  );
+     pontosQE=pontosQE-5;     // TODO add your handling code here:
     }//GEN-LAST:event_btQECincoDActionPerformed
 
     private void btQECincoCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btQECincoCActionPerformed
-     pontosQE=pontosQE-5;    // TODO add your handling code here:
+      JOptionPane.showMessageDialog(null,"OOPS!!! Resposta errada ^⁠_⁠^ \nQue tal dar uma olhada na Dica?"  );
+      pontosQE=pontosQE-5;    // TODO add your handling code here:
     }//GEN-LAST:event_btQECincoCActionPerformed
 
     private void btQEMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btQEMenuActionPerformed

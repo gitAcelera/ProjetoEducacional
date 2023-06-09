@@ -140,14 +140,17 @@ int pontosQA = PontosAluno.getPontosQA();
     }//GEN-LAST:event_btQADezBActionPerformed
 
     private void btQADezDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btQADezDActionPerformed
-     pontosQA=pontosQA-5;     // TODO add your handling code here:
+    JOptionPane.showMessageDialog(null,"OOPS!!! Resposta errada ^⁠_⁠^ \nQue tal dar uma olhada na Dica?"  );
+    pontosQA=pontosQA-5;     // TODO add your handling code here:
     }//GEN-LAST:event_btQADezDActionPerformed
 
     private void btQADezCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btQADezCActionPerformed
-     pontosQA=pontosQA-5;     // TODO add your handling code here:
+    JOptionPane.showMessageDialog(null,"OOPS!!! Resposta errada ^⁠_⁠^ \nQue tal dar uma olhada na Dica?"  );
+    pontosQA=pontosQA-5;     // TODO add your handling code here:
     }//GEN-LAST:event_btQADezCActionPerformed
 
     private void btQADezAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btQADezAActionPerformed
+       JOptionPane.showMessageDialog(null,"OOPS!!! Resposta errada ^⁠_⁠^ \nQue tal dar uma olhada na Dica?"  );
        pontosQA=pontosQA-5;   // TODO add your handling code here:
     }//GEN-LAST:event_btQADezAActionPerformed
 

@@ -153,7 +153,9 @@ public class PtSeis extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btPtSeisCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPtSeisCActionPerformed
-pontosPt=pontosPt-5;        // TODO add your handling code here:
+
+         JOptionPane.showMessageDialog(null,"OOPS!!! Resposta errada ^⁠_⁠^ \nQue tal dar uma olhada na Dica?"  );
+         pontosPt=pontosPt-5;        // TODO add your handling code here:
     }//GEN-LAST:event_btPtSeisCActionPerformed
 
     private void btPtSeisDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPtSeisDActionPerformed
@@ -178,7 +180,6 @@ pontosPt=pontosPt-5;        // TODO add your handling code here:
         catch (SQLException ex) {
             JOptionPane.showMessageDialog(null,ex.getMessage(),"Erro",JOptionPane.ERROR_MESSAGE);
         }   
-        
         TelaPtSete.setVisible(true);
       dispose();
     }//GEN-LAST:event_btPtSeisDActionPerformed
@@ -200,11 +201,13 @@ pontosPt=pontosPt-5;        // TODO add your handling code here:
     }//GEN-LAST:event_btPtAvancarActionPerformed
 
     private void btPtSeisAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPtSeisAActionPerformed
-pontosPt=pontosPt-5;        // TODO add your handling code here:
+ JOptionPane.showMessageDialog(null,"OOPS!!! Resposta errada ^⁠_⁠^ \nQue tal dar uma olhada na Dica?"  );
+        pontosPt=pontosPt-5;        // TODO add your handling code here:
     }//GEN-LAST:event_btPtSeisAActionPerformed
 
     private void btPtSeisBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPtSeisBActionPerformed
-pontosPt=pontosPt-5;        // TODO add your handling code here:
+ JOptionPane.showMessageDialog(null,"OOPS!!! Resposta errada ^⁠_⁠^ \nQue tal dar uma olhada na Dica?"  );
+        pontosPt=pontosPt-5;        // TODO add your handling code here:
     }//GEN-LAST:event_btPtSeisBActionPerformed
 
     private void btPtVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPtVoltarActionPerformed

@@ -44,42 +44,64 @@ public class cadastroAluno extends javax.swing.JFrame {
         jlcadastroAluno.setText("NOME:");
         PainelCadastroAluno.add(jlcadastroAluno, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 400));
 
+        cadastroAlunoNome.setBackground(new java.awt.Color(184, 135, 191));
+        cadastroAlunoNome.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        cadastroAlunoNome.setForeground(new java.awt.Color(255, 255, 255));
+        cadastroAlunoNome.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        cadastroAlunoNome.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         cadastroAlunoNome.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cadastroAlunoNomeActionPerformed(evt);
             }
         });
-        PainelCadastroAluno.add(cadastroAlunoNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(185, 82, 330, 30));
+        PainelCadastroAluno.add(cadastroAlunoNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(185, 86, 330, 20));
 
+        cadastroAlunoIdade.setBackground(new java.awt.Color(184, 135, 191));
+        cadastroAlunoIdade.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        cadastroAlunoIdade.setForeground(new java.awt.Color(255, 255, 255));
+        cadastroAlunoIdade.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         cadastroAlunoIdade.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cadastroAlunoIdadeActionPerformed(evt);
             }
         });
-        PainelCadastroAluno.add(cadastroAlunoIdade, new org.netbeans.lib.awtextra.AbsoluteConstraints(182, 139, 140, 30));
+        PainelCadastroAluno.add(cadastroAlunoIdade, new org.netbeans.lib.awtextra.AbsoluteConstraints(182, 145, 140, 20));
 
+        cadastroAlunoRA.setBackground(new java.awt.Color(184, 135, 191));
+        cadastroAlunoRA.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        cadastroAlunoRA.setForeground(new java.awt.Color(255, 255, 255));
+        cadastroAlunoRA.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         cadastroAlunoRA.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cadastroAlunoRAActionPerformed(evt);
             }
         });
-        PainelCadastroAluno.add(cadastroAlunoRA, new org.netbeans.lib.awtextra.AbsoluteConstraints(377, 138, 140, 30));
+        PainelCadastroAluno.add(cadastroAlunoRA, new org.netbeans.lib.awtextra.AbsoluteConstraints(387, 142, 120, 20));
 
+        cadastroAlunoSenha.setBackground(new java.awt.Color(184, 135, 191));
+        cadastroAlunoSenha.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        cadastroAlunoSenha.setForeground(new java.awt.Color(255, 255, 255));
+        cadastroAlunoSenha.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         cadastroAlunoSenha.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cadastroAlunoSenhaActionPerformed(evt);
             }
         });
-        PainelCadastroAluno.add(cadastroAlunoSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(186, 260, 140, 30));
+        PainelCadastroAluno.add(cadastroAlunoSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(186, 264, 140, 20));
 
+        cadastroAlunoRecuperaSenha.setBackground(new java.awt.Color(184, 135, 191));
+        cadastroAlunoRecuperaSenha.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        cadastroAlunoRecuperaSenha.setForeground(new java.awt.Color(255, 255, 255));
+        cadastroAlunoRecuperaSenha.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         cadastroAlunoRecuperaSenha.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cadastroAlunoRecuperaSenhaActionPerformed(evt);
             }
         });
-        PainelCadastroAluno.add(cadastroAlunoRecuperaSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(182, 200, 340, 30));
+        PainelCadastroAluno.add(cadastroAlunoRecuperaSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(182, 204, 330, 20));
 
         cadastroAlunoVoltar.setText("VOLTAR");
+        cadastroAlunoVoltar.setContentAreaFilled(false);
         cadastroAlunoVoltar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 cadastroAlunoVoltarMouseClicked(evt);
@@ -93,6 +115,7 @@ public class cadastroAluno extends javax.swing.JFrame {
         PainelCadastroAluno.add(cadastroAlunoVoltar, new org.netbeans.lib.awtextra.AbsoluteConstraints(14, 350, 80, 40));
 
         cadastrarAlunoCadastrar.setText("CONFIRMAR");
+        cadastrarAlunoCadastrar.setContentAreaFilled(false);
         cadastrarAlunoCadastrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cadastrarAlunoCadastrarActionPerformed(evt);
@@ -101,6 +124,7 @@ public class cadastroAluno extends javax.swing.JFrame {
         PainelCadastroAluno.add(cadastrarAlunoCadastrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(376, 261, 150, 30));
 
         cadastrarAlunoInformacao.setText("jButton1");
+        cadastrarAlunoInformacao.setContentAreaFilled(false);
         PainelCadastroAluno.add(cadastrarAlunoInformacao, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 10, 40, 40));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());

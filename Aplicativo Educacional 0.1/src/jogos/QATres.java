@@ -141,11 +141,13 @@ int pontosQA = PontosAluno.getPontosQA();
     }// </editor-fold>//GEN-END:initComponents
 
     private void btQATresCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btQATresCActionPerformed
-      pontosQA=pontosQA-5;      // TODO add your handling code here:
+     JOptionPane.showMessageDialog(null,"OOPS!!! Resposta errada ^⁠_⁠^ \nQue tal dar uma olhada na Dica?"  );
+     pontosQA=pontosQA-5;      // TODO add your handling code here:
     }//GEN-LAST:event_btQATresCActionPerformed
 
     private void btQATresBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btQATresBActionPerformed
-       pontosQA=pontosQA-5;   
+      JOptionPane.showMessageDialog(null,"OOPS!!! Resposta errada ^⁠_⁠^ \nQue tal dar uma olhada na Dica?"  );  
+      pontosQA=pontosQA-5;   
     }//GEN-LAST:event_btQATresBActionPerformed
 
     private void btQATresAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btQATresAActionPerformed
@@ -176,6 +178,7 @@ int pontosQA = PontosAluno.getPontosQA();
     }//GEN-LAST:event_btQATresAActionPerformed
 
     private void btQATresDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btQATresDActionPerformed
+      JOptionPane.showMessageDialog(null,"OOPS!!! Resposta errada ^⁠_⁠^ \nQue tal dar uma olhada na Dica?"  );
       pontosQA=pontosQA-5;      // TODO add your handling code here:
     }//GEN-LAST:event_btQATresDActionPerformed
 

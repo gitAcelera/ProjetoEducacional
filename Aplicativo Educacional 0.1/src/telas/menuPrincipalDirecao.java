@@ -43,6 +43,7 @@ public class menuPrincipalDirecao extends javax.swing.JFrame {
         PainelmenuPrincipalDirecao.add(jlmenuPrincipalDirecao, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         btmenuPrincipalDirecaoDeletarProfessor.setText("Deletar Professor");
+        btmenuPrincipalDirecaoDeletarProfessor.setContentAreaFilled(false);
         btmenuPrincipalDirecaoDeletarProfessor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btmenuPrincipalDirecaoDeletarProfessorActionPerformed(evt);
@@ -51,6 +52,7 @@ public class menuPrincipalDirecao extends javax.swing.JFrame {
         PainelmenuPrincipalDirecao.add(btmenuPrincipalDirecaoDeletarProfessor, new org.netbeans.lib.awtextra.AbsoluteConstraints(208, 145, 300, 50));
 
         btmenuPrincipalDirecaoDeletarAluno.setText("Deletar Aluno");
+        btmenuPrincipalDirecaoDeletarAluno.setContentAreaFilled(false);
         btmenuPrincipalDirecaoDeletarAluno.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btmenuPrincipalDirecaoDeletarAlunoActionPerformed(evt);
@@ -59,6 +61,7 @@ public class menuPrincipalDirecao extends javax.swing.JFrame {
         PainelmenuPrincipalDirecao.add(btmenuPrincipalDirecaoDeletarAluno, new org.netbeans.lib.awtextra.AbsoluteConstraints(209, 202, 300, 50));
 
         btmenuPrincipalDirecaoEncerrarSessao.setText("Encerrar");
+        btmenuPrincipalDirecaoEncerrarSessao.setContentAreaFilled(false);
         btmenuPrincipalDirecaoEncerrarSessao.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btmenuPrincipalDirecaoEncerrarSessaoActionPerformed(evt);
@@ -67,6 +70,7 @@ public class menuPrincipalDirecao extends javax.swing.JFrame {
         PainelmenuPrincipalDirecao.add(btmenuPrincipalDirecaoEncerrarSessao, new org.netbeans.lib.awtextra.AbsoluteConstraints(211, 270, 150, 40));
 
         btmenuPrincipalDirecaoSairDaConta.setText("Sair da Conta");
+        btmenuPrincipalDirecaoSairDaConta.setContentAreaFilled(false);
         btmenuPrincipalDirecaoSairDaConta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btmenuPrincipalDirecaoSairDaContaActionPerformed(evt);
@@ -75,6 +79,7 @@ public class menuPrincipalDirecao extends javax.swing.JFrame {
         PainelmenuPrincipalDirecao.add(btmenuPrincipalDirecaoSairDaConta, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 270, 140, 40));
 
         btmenuPrincipalDirecaoInformacao.setText("jButton1");
+        btmenuPrincipalDirecaoInformacao.setContentAreaFilled(false);
         PainelmenuPrincipalDirecao.add(btmenuPrincipalDirecaoInformacao, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 10, 40, 40));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());

@@ -44,21 +44,30 @@ public class recuperaSenhaAluno extends javax.swing.JFrame {
         jlrecuperarSenhaAluno.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/recuperarSenhaAluno.png"))); // NOI18N
         PainelrecuperarSenhaAluno.add(jlrecuperarSenhaAluno, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 400));
 
+        recuperarSenhaAlunoRA.setBackground(new java.awt.Color(184, 135, 191));
+        recuperarSenhaAlunoRA.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        recuperarSenhaAlunoRA.setForeground(new java.awt.Color(255, 255, 255));
+        recuperarSenhaAlunoRA.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         recuperarSenhaAlunoRA.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 recuperarSenhaAlunoRAActionPerformed(evt);
             }
         });
-        PainelrecuperarSenhaAluno.add(recuperarSenhaAlunoRA, new org.netbeans.lib.awtextra.AbsoluteConstraints(216, 138, 280, 30));
+        PainelrecuperarSenhaAluno.add(recuperarSenhaAlunoRA, new org.netbeans.lib.awtextra.AbsoluteConstraints(216, 144, 280, 20));
 
+        recuperarSenhaAlunoSenha.setBackground(new java.awt.Color(184, 135, 191));
+        recuperarSenhaAlunoSenha.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        recuperarSenhaAlunoSenha.setForeground(new java.awt.Color(255, 255, 255));
+        recuperarSenhaAlunoSenha.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         recuperarSenhaAlunoSenha.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 recuperarSenhaAlunoSenhaActionPerformed(evt);
             }
         });
-        PainelrecuperarSenhaAluno.add(recuperarSenhaAlunoSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(216, 206, 280, 30));
+        PainelrecuperarSenhaAluno.add(recuperarSenhaAlunoSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(216, 212, 280, 20));
 
         btrecuperarSenhaAlunoVoltar.setText("VOLTAR");
+        btrecuperarSenhaAlunoVoltar.setContentAreaFilled(false);
         btrecuperarSenhaAlunoVoltar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btrecuperarSenhaAlunoVoltarActionPerformed(evt);
@@ -67,6 +76,7 @@ public class recuperaSenhaAluno extends javax.swing.JFrame {
         PainelrecuperarSenhaAluno.add(btrecuperarSenhaAlunoVoltar, new org.netbeans.lib.awtextra.AbsoluteConstraints(13, 350, 80, 40));
 
         btrecuperarSenhaAlunoRecuperar.setText("Recuperar");
+        btrecuperarSenhaAlunoRecuperar.setContentAreaFilled(false);
         btrecuperarSenhaAlunoRecuperar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btrecuperarSenhaAlunoRecuperarActionPerformed(evt);
@@ -75,6 +85,7 @@ public class recuperaSenhaAluno extends javax.swing.JFrame {
         PainelrecuperarSenhaAluno.add(btrecuperarSenhaAlunoRecuperar, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 267, 150, 30));
 
         btrecuperarSenhaAlunoInformacao.setText("jButton1");
+        btrecuperarSenhaAlunoInformacao.setContentAreaFilled(false);
         PainelrecuperarSenhaAluno.add(btrecuperarSenhaAlunoInformacao, new org.netbeans.lib.awtextra.AbsoluteConstraints(648, 10, 40, 40));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());

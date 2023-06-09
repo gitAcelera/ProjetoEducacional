@@ -146,7 +146,8 @@ public class PtQuatro extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btPtQuatroCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPtQuatroCActionPerformed
-pontosPt=pontosPt-5;        // TODO add your handling code here:
+ JOptionPane.showMessageDialog(null,"OOPS!!! Resposta errada ^⁠_⁠^ \nQue tal dar uma olhada na Dica?"  );
+ pontosPt=pontosPt-5;        // TODO add your handling code here:
     }//GEN-LAST:event_btPtQuatroCActionPerformed
 
     private void btPtQuatroBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPtQuatroBActionPerformed
@@ -193,11 +194,13 @@ pontosPt=pontosPt-5;        // TODO add your handling code here:
     }//GEN-LAST:event_btPtAvancarActionPerformed
 
     private void btPtQuatroAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPtQuatroAActionPerformed
-pontosPt=pontosPt-5;        // TODO add your handling code here:
+ JOptionPane.showMessageDialog(null,"OOPS!!! Resposta errada ^⁠_⁠^ \nQue tal dar uma olhada na Dica?"  );
+        pontosPt=pontosPt-5;        // TODO add your handling code here:
     }//GEN-LAST:event_btPtQuatroAActionPerformed
 
     private void btPtQuatroDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPtQuatroDActionPerformed
-pontosPt=pontosPt-5;        // TODO add your handling code here:
+ JOptionPane.showMessageDialog(null,"OOPS!!! Resposta errada ^⁠_⁠^ \nQue tal dar uma olhada na Dica?"  );
+        pontosPt=pontosPt-5;        // TODO add your handling code here:
     }//GEN-LAST:event_btPtQuatroDActionPerformed
 
     private void btPtVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPtVoltarActionPerformed

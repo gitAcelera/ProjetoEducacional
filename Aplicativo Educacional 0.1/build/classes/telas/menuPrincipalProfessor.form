@@ -54,6 +54,7 @@
         <Component class="javax.swing.JButton" name="btmenuPrincipalProfessorPJ">
           <Properties>
             <Property name="text" type="java.lang.String" value="Personalizar Jogos"/>
+            <Property name="contentAreaFilled" type="boolean" value="false"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btmenuPrincipalProfessorPJActionPerformed"/>
@@ -67,6 +68,7 @@
         <Component class="javax.swing.JButton" name="btmenuPrincipalProfessorCA">
           <Properties>
             <Property name="text" type="java.lang.String" value="Classifica&#xe7;&#xe3;o dos Alunos"/>
+            <Property name="contentAreaFilled" type="boolean" value="false"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btmenuPrincipalProfessorCAActionPerformed"/>
@@ -80,6 +82,7 @@
         <Component class="javax.swing.JButton" name="btmenuPrincipalProfessorSair">
           <Properties>
             <Property name="text" type="java.lang.String" value="Sair da Conta"/>
+            <Property name="contentAreaFilled" type="boolean" value="false"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btmenuPrincipalProfessorSairActionPerformed"/>
@@ -93,6 +96,7 @@
         <Component class="javax.swing.JButton" name="btmenuPrincipalProfessorEncerrar">
           <Properties>
             <Property name="text" type="java.lang.String" value="Encerrar"/>
+            <Property name="contentAreaFilled" type="boolean" value="false"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btmenuPrincipalProfessorEncerrarActionPerformed"/>
@@ -106,6 +110,7 @@
         <Component class="javax.swing.JButton" name="btmenuPrincipalProfessorInformacao">
           <Properties>
             <Property name="text" type="java.lang.String" value="jButton4"/>
+            <Property name="contentAreaFilled" type="boolean" value="false"/>
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">

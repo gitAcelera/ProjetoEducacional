@@ -172,15 +172,18 @@ public class QETres extends javax.swing.JFrame {
     }//GEN-LAST:event_btQETresCActionPerformed
 
     private void btQETresAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btQETresAActionPerformed
+  JOptionPane.showMessageDialog(null,"OOPS!!! Resposta errada ^⁠_⁠^ \nQue tal dar uma olhada na Dica?"  );
   pontosQE=pontosQE-5;       // TODO add your handling code here:
     }//GEN-LAST:event_btQETresAActionPerformed
 
     private void btQETresBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btQETresBActionPerformed
-  pontosQE=pontosQE-5;       // TODO add your handling code here:
+ JOptionPane.showMessageDialog(null,"OOPS!!! Resposta errada ^⁠_⁠^ \nQue tal dar uma olhada na Dica?"  );
+ pontosQE=pontosQE-5;       // TODO add your handling code here:
     }//GEN-LAST:event_btQETresBActionPerformed
 
     private void btQETresDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btQETresDActionPerformed
-  pontosQE=pontosQE-5;       // TODO add your handling code here:
+   JOptionPane.showMessageDialog(null,"OOPS!!! Resposta errada ^⁠_⁠^ \nQue tal dar uma olhada na Dica?"  );
+   pontosQE=pontosQE-5;       // TODO add your handling code here:
     }//GEN-LAST:event_btQETresDActionPerformed
 
     private void btQEMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btQEMenuActionPerformed

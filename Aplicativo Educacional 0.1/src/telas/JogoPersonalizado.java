@@ -35,8 +35,6 @@ public class JogoPersonalizado extends javax.swing.JFrame {
         BuscarJogos = new javax.swing.JButton();
         codigo = new javax.swing.JLabel();
         consultaCodigo = new javax.swing.JTextField();
-        DisciPlina = new javax.swing.JLabel();
-        consultaDis = new javax.swing.JTextField();
         btConsult = new javax.swing.JButton();
         campoAltA = new javax.swing.JButton();
         campoAltC = new javax.swing.JButton();
@@ -59,8 +57,6 @@ public class JogoPersonalizado extends javax.swing.JFrame {
         });
 
         codigo.setText("Código");
-
-        DisciPlina.setText("Disciplina");
 
         btConsult.setText("Jogar");
         btConsult.addActionListener(new java.awt.event.ActionListener() {
@@ -91,26 +87,14 @@ public class JogoPersonalizado extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addContainerGap()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(BuscarJogos)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 463, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(66, 66, 66)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addGap(31, 31, 31)
-                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addComponent(codigo)
-                                            .addComponent(consultaCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                                .addGap(57, 57, 57)
-                                                .addComponent(DisciPlina))
-                                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                                .addGap(18, 18, 18)
-                                                .addComponent(consultaDis, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(btConsult)
-                                        .addGap(59, 59, 59))))
-                            .addComponent(BuscarJogos)))
+                                    .addComponent(consultaCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(btConsult)
+                                    .addComponent(codigo)))))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(btVoltar)
@@ -127,25 +111,19 @@ public class JogoPersonalizado extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(165, 165, 165)
                         .addComponent(campoQuestao, javax.swing.GroupLayout.PREFERRED_SIZE, 335, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(16, Short.MAX_VALUE))
+                .addContainerGap(102, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(40, 40, 40)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(codigo)
-                            .addComponent(DisciPlina))
-                        .addGap(3, 3, 3)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(consultaCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(consultaDis, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(codigo)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(consultaCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
                         .addComponent(btConsult)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(BuscarJogos)
@@ -202,7 +180,6 @@ JOptionPane.showMessageDialog(null," CERTA RESPOSTA !! !!!");
                         campoAltB.setText("");
                         campoAltC.setText ("");
                         campoAltD.setText("");  
-                        consultaDis.setText("");
                         consultaCodigo.setText("");
     }//GEN-LAST:event_campoAltAActionPerformed
 
@@ -215,7 +192,6 @@ JOptionPane.showMessageDialog(null," CERTA RESPOSTA !! !!!");
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BuscarJogos;
-    private javax.swing.JLabel DisciPlina;
     private javax.swing.JButton btConsult;
     private javax.swing.JButton btVoltar;
     private javax.swing.JButton campoAltA;
@@ -226,7 +202,6 @@ JOptionPane.showMessageDialog(null," CERTA RESPOSTA !! !!!");
     private javax.swing.JLabel campoQuestao;
     private javax.swing.JLabel codigo;
     private javax.swing.JTextField consultaCodigo;
-    private javax.swing.JTextField consultaDis;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
@@ -259,7 +234,7 @@ JOptionPane.showMessageDialog(null," CERTA RESPOSTA !! !!!");
                 */
               
                 consultaCodigos = consultaCodigo.getText();
-                consultaDisciplina = consultaDis.getText();
+                
                 status = 0;
 		while(res.next())
 		{
@@ -275,7 +250,7 @@ JOptionPane.showMessageDialog(null," CERTA RESPOSTA !! !!!");
                    *  // faz a comparação dos valores digitados pelo aluno com as armazenadas no banco de dados
                    */
                   
-                   if(disciplinaAtual.compareTo(consultaDisciplina)==0 && codigoAtual.compareTo(consultaCodigos)==0)
+                   if(codigoAtual.compareTo(consultaCodigos)==0)
 		   {
                        // se os dados estão de acordo, é pego a questão e suas alternativas
 			  questaoAtual = res.getString("questao");

@@ -34,6 +34,9 @@ public class deletarProfessor extends javax.swing.JFrame {
         jldeletarProfessor.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/deletarProfessor.png"))); // NOI18N
         PaineldeletarProfessor.add(jldeletarProfessor, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
+        deletarProfessorDeletar.setBackground(new java.awt.Color(184, 135, 191));
+        deletarProfessorDeletar.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        deletarProfessorDeletar.setForeground(new java.awt.Color(255, 255, 255));
         try {
             deletarProfessorDeletar.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("###.###.###-##")));
         } catch (java.text.ParseException ex) {
@@ -44,9 +47,10 @@ public class deletarProfessor extends javax.swing.JFrame {
                 deletarProfessorDeletarActionPerformed(evt);
             }
         });
-        PaineldeletarProfessor.add(deletarProfessorDeletar, new org.netbeans.lib.awtextra.AbsoluteConstraints(213, 172, 285, 30));
+        PaineldeletarProfessor.add(deletarProfessorDeletar, new org.netbeans.lib.awtextra.AbsoluteConstraints(213, 176, 280, 20));
 
         btdeletarProfessorVoltar.setText("Voltar");
+        btdeletarProfessorVoltar.setContentAreaFilled(false);
         btdeletarProfessorVoltar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btdeletarProfessorVoltarActionPerformed(evt);
@@ -55,6 +59,7 @@ public class deletarProfessor extends javax.swing.JFrame {
         PaineldeletarProfessor.add(btdeletarProfessorVoltar, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 350, 80, 40));
 
         btdeletarProfessorDeletar.setText("Confirmar");
+        btdeletarProfessorDeletar.setContentAreaFilled(false);
         btdeletarProfessorDeletar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btdeletarProfessorDeletarActionPerformed(evt);
@@ -63,6 +68,7 @@ public class deletarProfessor extends javax.swing.JFrame {
         PaineldeletarProfessor.add(btdeletarProfessorDeletar, new org.netbeans.lib.awtextra.AbsoluteConstraints(279, 228, 152, 30));
 
         btdeletarProfessorInformacao.setText("jButton1");
+        btdeletarProfessorInformacao.setContentAreaFilled(false);
         PaineldeletarProfessor.add(btdeletarProfessorInformacao, new org.netbeans.lib.awtextra.AbsoluteConstraints(648, 10, 40, 40));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());

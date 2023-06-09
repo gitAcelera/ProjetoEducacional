@@ -142,15 +142,18 @@ int pontosMt = PontosAluno.getPontosMt();
     }// </editor-fold>//GEN-END:initComponents
 
     private void btMtNoveAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btMtNoveAActionPerformed
-     pontosMt=pontosMt-5;   // TODO add your handling code here:
+      JOptionPane.showMessageDialog(null,"OOPS!!! Resposta errada ^⁠_⁠^ \nQue tal dar uma olhada na Dica?"  );
+        pontosMt=pontosMt-5;   // TODO add your handling code here:
     }//GEN-LAST:event_btMtNoveAActionPerformed
 
     private void btMtNoveBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btMtNoveBActionPerformed
-    pontosMt=pontosMt-5;    // TODO add your handling code here:
+     JOptionPane.showMessageDialog(null,"OOPS!!! Resposta errada ^⁠_⁠^ \nQue tal dar uma olhada na Dica?"  );
+        pontosMt=pontosMt-5;    // TODO add your handling code here:
     }//GEN-LAST:event_btMtNoveBActionPerformed
 
     private void btMtNoveCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btMtNoveCActionPerformed
-    pontosMt=pontosMt-5;    // TODO add your handling code here:
+    JOptionPane.showMessageDialog(null,"OOPS!!! Resposta errada ^⁠_⁠^ \nQue tal dar uma olhada na Dica?"  );
+        pontosMt=pontosMt-5;    // TODO add your handling code here:
     }//GEN-LAST:event_btMtNoveCActionPerformed
 
     private void btMtNoveDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btMtNoveDActionPerformed

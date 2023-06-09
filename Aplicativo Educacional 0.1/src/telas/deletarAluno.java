@@ -35,14 +35,19 @@ public class deletarAluno extends javax.swing.JFrame {
         jldeletarAluno.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/deletarAluno.png"))); // NOI18N
         PainelDeletarAluno.add(jldeletarAluno, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
+        deletarAlunoDeletar.setBackground(new java.awt.Color(184, 135, 191));
+        deletarAlunoDeletar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        deletarAlunoDeletar.setForeground(new java.awt.Color(255, 255, 255));
+        deletarAlunoDeletar.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         deletarAlunoDeletar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 deletarAlunoDeletarActionPerformed(evt);
             }
         });
-        PainelDeletarAluno.add(deletarAlunoDeletar, new org.netbeans.lib.awtextra.AbsoluteConstraints(215, 173, 285, 28));
+        PainelDeletarAluno.add(deletarAlunoDeletar, new org.netbeans.lib.awtextra.AbsoluteConstraints(215, 177, 280, 20));
 
         btdeletarAlunoDeletar.setText("Confirmar");
+        btdeletarAlunoDeletar.setContentAreaFilled(false);
         btdeletarAlunoDeletar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btdeletarAlunoDeletarActionPerformed(evt);
@@ -51,6 +56,7 @@ public class deletarAluno extends javax.swing.JFrame {
         PainelDeletarAluno.add(btdeletarAlunoDeletar, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 228, 150, 30));
 
         btdeletarAlunoVoltar.setText("Voltar");
+        btdeletarAlunoVoltar.setContentAreaFilled(false);
         btdeletarAlunoVoltar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btdeletarAlunoVoltarActionPerformed(evt);
@@ -59,6 +65,7 @@ public class deletarAluno extends javax.swing.JFrame {
         PainelDeletarAluno.add(btdeletarAlunoVoltar, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 350, 80, 40));
 
         btdeletarAlunoInformacao.setText("jButton1");
+        btdeletarAlunoInformacao.setContentAreaFilled(false);
         btdeletarAlunoInformacao.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btdeletarAlunoInformacaoActionPerformed(evt);

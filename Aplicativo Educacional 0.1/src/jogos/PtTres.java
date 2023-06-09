@@ -183,15 +183,18 @@ private PtQuatro TelaPtQuatro;
     }//GEN-LAST:event_btPtAvancarActionPerformed
 
     private void btPtTresAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPtTresAActionPerformed
+        JOptionPane.showMessageDialog(null,"OOPS!!! Resposta errada ^⁠_⁠^ \nQue tal dar uma olhada na Dica?"  );
         pontosPt=pontosPt-5;    // TODO add your handling code here:
     }//GEN-LAST:event_btPtTresAActionPerformed
 
     private void btPtTresDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPtTresDActionPerformed
- pontosPt=pontosPt-5;           // TODO add your handling code here:
+  JOptionPane.showMessageDialog(null,"OOPS!!! Resposta errada ^⁠_⁠^ \nQue tal dar uma olhada na Dica?"  );
+  pontosPt=pontosPt-5;           // TODO add your handling code here:
     }//GEN-LAST:event_btPtTresDActionPerformed
 
     private void btPtTresBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPtTresBActionPerformed
- pontosPt=pontosPt-5;           // TODO add your handling code here:
+  JOptionPane.showMessageDialog(null,"OOPS!!! Resposta errada ^⁠_⁠^ \nQue tal dar uma olhada na Dica?"  );
+  pontosPt=pontosPt-5;           // TODO add your handling code here:
     }//GEN-LAST:event_btPtTresBActionPerformed
 
     private void btPtVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPtVoltarActionPerformed

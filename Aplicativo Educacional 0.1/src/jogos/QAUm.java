@@ -138,14 +138,17 @@ public class QAUm extends javax.swing.JFrame {
     }//GEN-LAST:event_btQAUmCActionPerformed
 
     private void btQAUmAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btQAUmAActionPerformed
+        JOptionPane.showMessageDialog(null,"OOPS!!! Resposta errada ^⁠_⁠^ \nQue tal dar uma olhada na Dica?"  );
         pontosQA=pontosQA-5;  // TODO add your handling code here:
     }//GEN-LAST:event_btQAUmAActionPerformed
 
     private void btQAUmDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btQAUmDActionPerformed
+      JOptionPane.showMessageDialog(null,"OOPS!!! Resposta errada ^⁠_⁠^ \nQue tal dar uma olhada na Dica?"  );
       pontosQA=pontosQA-5;    // TODO add your handling code here:
     }//GEN-LAST:event_btQAUmDActionPerformed
 
     private void btQAUmBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btQAUmBActionPerformed
+        JOptionPane.showMessageDialog(null,"OOPS!!! Resposta errada ^⁠_⁠^ \nQue tal dar uma olhada na Dica?"  );
         pontosQA=pontosQA-5;  // TODO add your handling code here:
     }//GEN-LAST:event_btQAUmBActionPerformed
 

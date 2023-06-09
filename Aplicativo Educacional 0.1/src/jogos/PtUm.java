@@ -139,6 +139,7 @@ public class PtUm extends javax.swing.JFrame {
          
         pontosPt=pontosPt+20;
          System.out.println(""+pontosPt);
+         iniciaPontuacaoPt();
         
    
         TelaPtDois.setVisible(true);
@@ -161,15 +162,18 @@ public class PtUm extends javax.swing.JFrame {
     }//GEN-LAST:event_btPtAvancarActionPerformed
 
     private void btPtUmBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPtUmBActionPerformed
-     pontosPt=pontosPt-5;   // TODO add your handling code here:
+     JOptionPane.showMessageDialog(null,"OOPS!!! Resposta errada ^⁠_⁠^ \nQue tal dar uma olhada na Dica?"  );
+        pontosPt=pontosPt-5;   // TODO add your handling code here:
     }//GEN-LAST:event_btPtUmBActionPerformed
 
     private void btPtUmDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPtUmDActionPerformed
+    JOptionPane.showMessageDialog(null,"OOPS!!! Resposta errada ^⁠_⁠^ \nQue tal dar uma olhada na Dica?"  );
     pontosPt=pontosPt-5;    // TODO add your handling code here:
     }//GEN-LAST:event_btPtUmDActionPerformed
 
     private void btPtUmCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPtUmCActionPerformed
-      pontosPt=pontosPt-5;  // TODO add your handling code here:
+     JOptionPane.showMessageDialog(null,"OOPS!!! Resposta errada ^⁠_⁠^ \nQue tal dar uma olhada na Dica?"  );
+     pontosPt=pontosPt-5;  // TODO add your handling code here:
     }//GEN-LAST:event_btPtUmCActionPerformed
 
    

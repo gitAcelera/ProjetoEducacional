@@ -144,11 +144,13 @@ public class MtCinco extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btMtCincoAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btMtCincoAActionPerformed
+     JOptionPane.showMessageDialog(null,"OOPS!!! Resposta errada ^⁠_⁠^ \nQue tal dar uma olhada na Dica?"  );
      pontosMt=pontosMt-5;     // TODO add your handling code here:
     }//GEN-LAST:event_btMtCincoAActionPerformed
 
     private void btMtCincoBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btMtCincoBActionPerformed
-    pontosMt=pontosMt-5;      // TODO add your handling code here:
+     JOptionPane.showMessageDialog(null,"OOPS!!! Resposta errada ^⁠_⁠^ \nQue tal dar uma olhada na Dica?"  );
+        pontosMt=pontosMt-5;      // TODO add your handling code here:
     }//GEN-LAST:event_btMtCincoBActionPerformed
 
     private void btMtCincoCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btMtCincoCActionPerformed
@@ -181,7 +183,8 @@ public class MtCinco extends javax.swing.JFrame {
     }//GEN-LAST:event_btMtCincoCActionPerformed
 
     private void btMtCincoDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btMtCincoDActionPerformed
-        pontosMt=pontosMt-5;      // TODO add your handling code here:
+      JOptionPane.showMessageDialog(null,"OOPS!!! Resposta errada ^⁠_⁠^ \nQue tal dar uma olhada na Dica?"  );
+      pontosMt=pontosMt-5;      // TODO add your handling code here:
     }//GEN-LAST:event_btMtCincoDActionPerformed
 
     private void btMtAvancarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btMtAvancarActionPerformed

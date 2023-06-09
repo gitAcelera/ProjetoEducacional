@@ -145,7 +145,8 @@ public class PtSete extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btPtSeteAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPtSeteAActionPerformed
-pontosPt=pontosPt-5;         // TODO add your handling code here:
+ JOptionPane.showMessageDialog(null,"OOPS!!! Resposta errada ^⁠_⁠^ \nQue tal dar uma olhada na Dica?"  );
+ pontosPt=pontosPt-5;         // TODO add your handling code here:
     }//GEN-LAST:event_btPtSeteAActionPerformed
 
     private void btPtSeteBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPtSeteBActionPerformed
@@ -191,11 +192,13 @@ pontosPt=pontosPt-5;         // TODO add your handling code here:
     }//GEN-LAST:event_btPtDicaActionPerformed
 
     private void btPtSeteCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPtSeteCActionPerformed
-pontosPt=pontosPt-5;         // TODO add your handling code here:
+ JOptionPane.showMessageDialog(null,"OOPS!!! Resposta errada ^⁠_⁠^ \nQue tal dar uma olhada na Dica?"  );
+ pontosPt=pontosPt-5;         // TODO add your handling code here:
     }//GEN-LAST:event_btPtSeteCActionPerformed
 
     private void btPtSeteDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPtSeteDActionPerformed
-pontosPt=pontosPt-5;         // TODO add your handling code here:
+ JOptionPane.showMessageDialog(null,"OOPS!!! Resposta errada ^⁠_⁠^ \nQue tal dar uma olhada na Dica?"  );
+ pontosPt=pontosPt-5;         // TODO add your handling code here:
     }//GEN-LAST:event_btPtSeteDActionPerformed
 
     private void btPtVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPtVoltarActionPerformed

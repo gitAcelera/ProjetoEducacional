@@ -49,21 +49,30 @@ public class loginAluno extends javax.swing.JFrame {
         jlloginAluno.setText("RA");
         PainelloginAluno.add(jlloginAluno, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 400));
 
+        loginAlunoRA.setBackground(new java.awt.Color(184, 135, 191));
+        loginAlunoRA.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        loginAlunoRA.setForeground(new java.awt.Color(255, 255, 255));
+        loginAlunoRA.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         loginAlunoRA.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 loginAlunoRAActionPerformed(evt);
             }
         });
-        PainelloginAluno.add(loginAlunoRA, new org.netbeans.lib.awtextra.AbsoluteConstraints(217, 138, 280, 30));
+        PainelloginAluno.add(loginAlunoRA, new org.netbeans.lib.awtextra.AbsoluteConstraints(217, 142, 270, 20));
 
+        loginAlunoSenha.setBackground(new java.awt.Color(184, 135, 191));
+        loginAlunoSenha.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        loginAlunoSenha.setForeground(new java.awt.Color(255, 255, 255));
+        loginAlunoSenha.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         loginAlunoSenha.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 loginAlunoSenhaActionPerformed(evt);
             }
         });
-        PainelloginAluno.add(loginAlunoSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(217, 207, 280, 30));
+        PainelloginAluno.add(loginAlunoSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(217, 211, 270, 20));
 
         loginAlunoMostrarSenha.setText(" Mostrar senha ");
+        loginAlunoMostrarSenha.setContentAreaFilled(false);
         loginAlunoMostrarSenha.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 loginAlunoMostrarSenhaActionPerformed(evt);
@@ -72,6 +81,7 @@ public class loginAluno extends javax.swing.JFrame {
         PainelloginAluno.add(loginAlunoMostrarSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(205, 260, 130, 30));
 
         btloginAlunoEntrar.setText("ENTRAR");
+        btloginAlunoEntrar.setContentAreaFilled(false);
         btloginAlunoEntrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btloginAlunoEntrarActionPerformed(evt);
@@ -80,6 +90,7 @@ public class loginAluno extends javax.swing.JFrame {
         PainelloginAluno.add(btloginAlunoEntrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(609, 349, 80, 40));
 
         btloginAlunoVoltar.setText("VOLTAR");
+        btloginAlunoVoltar.setContentAreaFilled(false);
         btloginAlunoVoltar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btloginAlunoVoltarActionPerformed(evt);
@@ -88,6 +99,7 @@ public class loginAluno extends javax.swing.JFrame {
         PainelloginAluno.add(btloginAlunoVoltar, new org.netbeans.lib.awtextra.AbsoluteConstraints(13, 350, 80, 40));
 
         btloginAlunoRecuperarSenha.setText("Esqueci a Senha");
+        btloginAlunoRecuperarSenha.setContentAreaFilled(false);
         btloginAlunoRecuperarSenha.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btloginAlunoRecuperarSenhaActionPerformed(evt);
@@ -96,6 +108,7 @@ public class loginAluno extends javax.swing.JFrame {
         PainelloginAluno.add(btloginAlunoRecuperarSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 260, 160, 30));
 
         btloginAlunoInformacao.setText("jButton3");
+        btloginAlunoInformacao.setContentAreaFilled(false);
         PainelloginAluno.add(btloginAlunoInformacao, new org.netbeans.lib.awtextra.AbsoluteConstraints(649, 10, 40, 40));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());

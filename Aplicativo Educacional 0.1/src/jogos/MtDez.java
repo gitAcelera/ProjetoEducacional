@@ -134,11 +134,13 @@ int pontosMt = PontosAluno.getPontosMt();
     }// </editor-fold>//GEN-END:initComponents
 
     private void btMtDezAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btMtDezAActionPerformed
-   pontosMt=pontosMt-5;     
+         JOptionPane.showMessageDialog(null,"OOPS!!! Resposta errada ^⁠_⁠^ \nQue tal dar uma olhada na Dica?"  ); 
+         pontosMt=pontosMt-5;     
     }//GEN-LAST:event_btMtDezAActionPerformed
 
     private void btMtDezBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btMtDezBActionPerformed
-    pontosMt=pontosMt-5;      
+     JOptionPane.showMessageDialog(null,"OOPS!!! Resposta errada ^⁠_⁠^ \nQue tal dar uma olhada na Dica?"  );
+        pontosMt=pontosMt-5;      
     }//GEN-LAST:event_btMtDezBActionPerformed
 
     private void btMtDezCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btMtDezCActionPerformed
@@ -151,7 +153,8 @@ int pontosMt = PontosAluno.getPontosMt();
     }//GEN-LAST:event_btMtDezCActionPerformed
 
     private void btMtDezDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btMtDezDActionPerformed
-   pontosMt=pontosMt-5;     
+    JOptionPane.showMessageDialog(null,"OOPS!!! Resposta errada ^⁠_⁠^ \nQue tal dar uma olhada na Dica?"  );
+        pontosMt=pontosMt-5;     
     }//GEN-LAST:event_btMtDezDActionPerformed
 
     private void btMtVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btMtVoltarActionPerformed

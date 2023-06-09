@@ -186,15 +186,18 @@ public class PtCinco extends javax.swing.JFrame {
     }//GEN-LAST:event_btPtAvancarActionPerformed
 
     private void btPtCincoCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPtCincoCActionPerformed
-      pontosPt=pontosPt-5;      // TODO add your handling code here:
+      JOptionPane.showMessageDialog(null,"OOPS!!! Resposta errada ^⁠_⁠^ \nQue tal dar uma olhada na Dica?"  );
+        pontosPt=pontosPt-5;      // TODO add your handling code here:
     }//GEN-LAST:event_btPtCincoCActionPerformed
 
     private void btPtCincoBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPtCincoBActionPerformed
-     pontosPt=pontosPt-5;       // TODO add your handling code here:
+     JOptionPane.showMessageDialog(null,"OOPS!!! Resposta errada ^⁠_⁠^ \nQue tal dar uma olhada na Dica?"  );
+        pontosPt=pontosPt-5;       // TODO add your handling code here:
     }//GEN-LAST:event_btPtCincoBActionPerformed
 
     private void btPtCincoDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPtCincoDActionPerformed
-       pontosPt=pontosPt-5;     // TODO add your handling code here:
+       JOptionPane.showMessageDialog(null,"OOPS!!! Resposta errada ^⁠_⁠^ \nQue tal dar uma olhada na Dica?"  );
+        pontosPt=pontosPt-5;     // TODO add your handling code here:
     }//GEN-LAST:event_btPtCincoDActionPerformed
 
     private void btPtVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPtVoltarActionPerformed

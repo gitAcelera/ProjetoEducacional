@@ -141,10 +141,12 @@ public class MtTres extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btMtTresAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btMtTresAActionPerformed
-    pontosMt=pontosMt-5;     // TODO add your handling code here:
+     JOptionPane.showMessageDialog(null,"OOPS!!! Resposta errada ^⁠_⁠^ \nQue tal dar uma olhada na Dica?"  );
+     pontosMt=pontosMt-5;     // TODO add your handling code here:
     }//GEN-LAST:event_btMtTresAActionPerformed
 
     private void btMtTresBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btMtTresBActionPerformed
+     JOptionPane.showMessageDialog(null,"OOPS!!! Resposta errada ^⁠_⁠^ \nQue tal dar uma olhada na Dica?"  );
      pontosMt=pontosMt-5;    // TODO add your handling code here:
     }//GEN-LAST:event_btMtTresBActionPerformed
 
@@ -177,7 +179,9 @@ public class MtTres extends javax.swing.JFrame {
     }//GEN-LAST:event_btMtTresCActionPerformed
 
     private void btMtTresDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btMtTresDActionPerformed
-    pontosMt=pontosMt-5;     // TODO add your handling code here:
+    
+         JOptionPane.showMessageDialog(null,"OOPS!!! Resposta errada ^⁠_⁠^ \nQue tal dar uma olhada na Dica?"  );
+         pontosMt=pontosMt-5;     // TODO add your handling code here:
     }//GEN-LAST:event_btMtTresDActionPerformed
 
     private void btMtAvancarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btMtAvancarActionPerformed

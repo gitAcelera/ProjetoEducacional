@@ -57,13 +57,20 @@ public class loginProfessor extends javax.swing.JFrame {
         jlloginProfessor.setText("CPF");
         PainelloginProfessor.add(jlloginProfessor, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 400));
 
+        loginProfessorSenha.setBackground(new java.awt.Color(184, 135, 191));
+        loginProfessorSenha.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        loginProfessorSenha.setForeground(new java.awt.Color(255, 255, 255));
+        loginProfessorSenha.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         loginProfessorSenha.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 loginProfessorSenhaActionPerformed(evt);
             }
         });
-        PainelloginProfessor.add(loginProfessorSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(218, 207, 280, 30));
+        PainelloginProfessor.add(loginProfessorSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(218, 213, 280, 20));
 
+        loginProfessorCPF.setBackground(new java.awt.Color(184, 135, 191));
+        loginProfessorCPF.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        loginProfessorCPF.setForeground(new java.awt.Color(255, 255, 255));
         try {
             loginProfessorCPF.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("###.###.###-##")));
         } catch (java.text.ParseException ex) {
@@ -74,9 +81,10 @@ public class loginProfessor extends javax.swing.JFrame {
                 loginProfessorCPFActionPerformed(evt);
             }
         });
-        PainelloginProfessor.add(loginProfessorCPF, new org.netbeans.lib.awtextra.AbsoluteConstraints(221, 138, 270, 30));
+        PainelloginProfessor.add(loginProfessorCPF, new org.netbeans.lib.awtextra.AbsoluteConstraints(221, 142, 270, 20));
 
         loginProfessorMostrarSenha.setText("Mostrar senha");
+        loginProfessorMostrarSenha.setContentAreaFilled(false);
         loginProfessorMostrarSenha.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 loginProfessorMostrarSenhaActionPerformed(evt);
@@ -85,6 +93,7 @@ public class loginProfessor extends javax.swing.JFrame {
         PainelloginProfessor.add(loginProfessorMostrarSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(199, 260, 140, 27));
 
         btloginProfessorEntrar.setText("ENTRAR");
+        btloginProfessorEntrar.setContentAreaFilled(false);
         btloginProfessorEntrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btloginProfessorEntrarActionPerformed(evt);
@@ -93,6 +102,7 @@ public class loginProfessor extends javax.swing.JFrame {
         PainelloginProfessor.add(btloginProfessorEntrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(608, 350, 80, 40));
 
         btloginProfessorVoltar.setText("VOLTAR");
+        btloginProfessorVoltar.setContentAreaFilled(false);
         btloginProfessorVoltar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btloginProfessorVoltarActionPerformed(evt);
@@ -101,6 +111,7 @@ public class loginProfessor extends javax.swing.JFrame {
         PainelloginProfessor.add(btloginProfessorVoltar, new org.netbeans.lib.awtextra.AbsoluteConstraints(14, 350, 80, 40));
 
         btloginProfessorRecuperarSenha.setText("Esqueci a Senha");
+        btloginProfessorRecuperarSenha.setContentAreaFilled(false);
         btloginProfessorRecuperarSenha.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btloginProfessorRecuperarSenhaActionPerformed(evt);
@@ -109,6 +120,7 @@ public class loginProfessor extends javax.swing.JFrame {
         PainelloginProfessor.add(btloginProfessorRecuperarSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(353, 260, 153, 30));
 
         btloginProfessorDirecao.setText("DIREÇÃO");
+        btloginProfessorDirecao.setContentAreaFilled(false);
         btloginProfessorDirecao.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btloginProfessorDirecaoActionPerformed(evt);
@@ -117,6 +129,7 @@ public class loginProfessor extends javax.swing.JFrame {
         PainelloginProfessor.add(btloginProfessorDirecao, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 10, 80, 40));
 
         btloginProfessorInformacao.setText("jButton1");
+        btloginProfessorInformacao.setContentAreaFilled(false);
         PainelloginProfessor.add(btloginProfessorInformacao, new org.netbeans.lib.awtextra.AbsoluteConstraints(648, 10, 40, 40));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());

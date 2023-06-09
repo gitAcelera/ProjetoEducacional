@@ -42,6 +42,9 @@ private String cpfAtual,senhaAtual,recuperaProfAtual;
         jlrecuperarSenhaProfessor.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/recuperarSenhaProfessor.png"))); // NOI18N
         PainelrecuperarSenhaProfessor.add(jlrecuperarSenhaProfessor, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 400));
 
+        recuperarSenhaProfessorCPF.setBackground(new java.awt.Color(184, 135, 191));
+        recuperarSenhaProfessorCPF.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        recuperarSenhaProfessorCPF.setForeground(new java.awt.Color(255, 255, 255));
         try {
             recuperarSenhaProfessorCPF.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("###.###.###-##")));
         } catch (java.text.ParseException ex) {
@@ -52,16 +55,22 @@ private String cpfAtual,senhaAtual,recuperaProfAtual;
                 recuperarSenhaProfessorCPFActionPerformed(evt);
             }
         });
-        PainelrecuperarSenhaProfessor.add(recuperarSenhaProfessorCPF, new org.netbeans.lib.awtextra.AbsoluteConstraints(212, 137, 290, 30));
+        PainelrecuperarSenhaProfessor.add(recuperarSenhaProfessorCPF, new org.netbeans.lib.awtextra.AbsoluteConstraints(212, 141, 290, 20));
 
+        recuperarSenhaProfessorRecuperarSenha.setBackground(new java.awt.Color(184, 135, 191));
+        recuperarSenhaProfessorRecuperarSenha.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        recuperarSenhaProfessorRecuperarSenha.setForeground(new java.awt.Color(255, 255, 255));
+        recuperarSenhaProfessorRecuperarSenha.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         recuperarSenhaProfessorRecuperarSenha.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 recuperarSenhaProfessorRecuperarSenhaActionPerformed(evt);
             }
         });
-        PainelrecuperarSenhaProfessor.add(recuperarSenhaProfessorRecuperarSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(218, 207, 280, 30));
+        PainelrecuperarSenhaProfessor.add(recuperarSenhaProfessorRecuperarSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(218, 211, 280, 20));
 
         btrecuperarSenhaProfessorVoltar.setText("VOLTAR");
+        btrecuperarSenhaProfessorVoltar.setContentAreaFilled(false);
+        btrecuperarSenhaProfessorVoltar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btrecuperarSenhaProfessorVoltar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btrecuperarSenhaProfessorVoltarActionPerformed(evt);
@@ -70,6 +79,7 @@ private String cpfAtual,senhaAtual,recuperaProfAtual;
         PainelrecuperarSenhaProfessor.add(btrecuperarSenhaProfessorVoltar, new org.netbeans.lib.awtextra.AbsoluteConstraints(13, 350, 80, 40));
 
         btrecuperarSenhaProfessorRecuperar.setText("Recuperar");
+        btrecuperarSenhaProfessorRecuperar.setContentAreaFilled(false);
         btrecuperarSenhaProfessorRecuperar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btrecuperarSenhaProfessorRecuperarActionPerformed(evt);
@@ -78,6 +88,8 @@ private String cpfAtual,senhaAtual,recuperaProfAtual;
         PainelrecuperarSenhaProfessor.add(btrecuperarSenhaProfessorRecuperar, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 266, 150, 30));
 
         btrecuperarSenhaProfessorInformacao.setText("jButton1");
+        btrecuperarSenhaProfessorInformacao.setContentAreaFilled(false);
+        btrecuperarSenhaProfessorInformacao.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         PainelrecuperarSenhaProfessor.add(btrecuperarSenhaProfessorInformacao, new org.netbeans.lib.awtextra.AbsoluteConstraints(649, 10, 40, 40));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());

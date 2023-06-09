@@ -175,14 +175,17 @@ public class PtOito extends javax.swing.JFrame {
     }//GEN-LAST:event_btPtOitoBActionPerformed
 
     private void btPtOitoAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPtOitoAActionPerformed
+     JOptionPane.showMessageDialog(null,"OOPS!!! Resposta errada ^⁠_⁠^ \nQue tal dar uma olhada na Dica?"  );
      pontosPt=pontosPt-5;   // TODO add your handling code here:
     }//GEN-LAST:event_btPtOitoAActionPerformed
 
     private void btPtOitoCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPtOitoCActionPerformed
+      JOptionPane.showMessageDialog(null,"OOPS!!! Resposta errada ^⁠_⁠^ \nQue tal dar uma olhada na Dica?"  );
       pontosPt=pontosPt-5;  // TODO add your handling code here:
     }//GEN-LAST:event_btPtOitoCActionPerformed
 
     private void btPtOitoDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPtOitoDActionPerformed
+     JOptionPane.showMessageDialog(null,"OOPS!!! Resposta errada ^⁠_⁠^ \nQue tal dar uma olhada na Dica?"  );
      pontosPt=pontosPt-5;   // TODO add your handling code here:
     }//GEN-LAST:event_btPtOitoDActionPerformed
 

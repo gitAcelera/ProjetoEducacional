@@ -172,14 +172,17 @@ public class QEOito extends javax.swing.JFrame {
     }//GEN-LAST:event_btQEOitoDActionPerformed
 
     private void btQEOitoBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btQEOitoBActionPerformed
-      pontosQE=pontosQE-5;     // TODO add your handling code here:
+ JOptionPane.showMessageDialog(null,"OOPS!!! Resposta errada ^⁠_⁠^ \nQue tal dar uma olhada na Dica?"  );
+ pontosQE=pontosQE-5;     // TODO add your handling code here:
     }//GEN-LAST:event_btQEOitoBActionPerformed
 
     private void btQEOitoCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btQEOitoCActionPerformed
-     pontosQE=pontosQE-5;      // TODO add your handling code here:
+   JOptionPane.showMessageDialog(null,"OOPS!!! Resposta errada ^⁠_⁠^ \nQue tal dar uma olhada na Dica?"  );
+   pontosQE=pontosQE-5;      // TODO add your handling code here:
     }//GEN-LAST:event_btQEOitoCActionPerformed
 
     private void btQEOitoAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btQEOitoAActionPerformed
+    JOptionPane.showMessageDialog(null,"OOPS!!! Resposta errada ^⁠_⁠^ \nQue tal dar uma olhada na Dica?"  );
     pontosQE=pontosQE-5;       // TODO add your handling code here:
     }//GEN-LAST:event_btQEOitoAActionPerformed
 

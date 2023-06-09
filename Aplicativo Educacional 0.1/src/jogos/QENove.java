@@ -167,14 +167,17 @@ public class QENove extends javax.swing.JFrame {
     }//GEN-LAST:event_btQENoveAActionPerformed
 
     private void btQENoveBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btQENoveBActionPerformed
+     JOptionPane.showMessageDialog(null,"OOPS!!! Resposta errada ^⁠_⁠^ \nQue tal dar uma olhada na Dica?"  );
      pontosQE=pontosQE-5;      // TODO add your handling code here:
     }//GEN-LAST:event_btQENoveBActionPerformed
 
     private void btQENoveDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btQENoveDActionPerformed
+      JOptionPane.showMessageDialog(null,"OOPS!!! Resposta errada ^⁠_⁠^ \nQue tal dar uma olhada na Dica?"  );
       pontosQE=pontosQE-5;     // TODO add your handling code here:
     }//GEN-LAST:event_btQENoveDActionPerformed
 
     private void btQENoveCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btQENoveCActionPerformed
+     JOptionPane.showMessageDialog(null,"OOPS!!! Resposta errada ^⁠_⁠^ \nQue tal dar uma olhada na Dica?"  );
      pontosQE=pontosQE-5;      // TODO add your handling code here:
     }//GEN-LAST:event_btQENoveCActionPerformed
 

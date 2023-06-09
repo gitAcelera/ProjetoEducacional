@@ -39,6 +39,7 @@ public class telaProfessor extends javax.swing.JFrame {
         PaineltelaProfessor.add(jltelaProfessor, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 400));
 
         bttelaProfessorCadastrar.setText("CADASTRAR-SE");
+        bttelaProfessorCadastrar.setContentAreaFilled(false);
         bttelaProfessorCadastrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bttelaProfessorCadastrarActionPerformed(evt);
@@ -47,6 +48,7 @@ public class telaProfessor extends javax.swing.JFrame {
         PaineltelaProfessor.add(bttelaProfessorCadastrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(482, 138, 180, 60));
 
         bttelaProfessorEntrar.setText("ENTRAR");
+        bttelaProfessorEntrar.setContentAreaFilled(false);
         bttelaProfessorEntrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bttelaProfessorEntrarActionPerformed(evt);
@@ -55,6 +57,7 @@ public class telaProfessor extends javax.swing.JFrame {
         PaineltelaProfessor.add(bttelaProfessorEntrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(482, 218, 180, 60));
 
         bttelaProfessorVoltar.setText("VOLTAR");
+        bttelaProfessorVoltar.setContentAreaFilled(false);
         bttelaProfessorVoltar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bttelaProfessorVoltarActionPerformed(evt);
