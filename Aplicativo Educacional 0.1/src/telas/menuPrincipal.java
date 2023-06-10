@@ -38,15 +38,15 @@ public class menuPrincipal extends javax.swing.JFrame
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu2 = new javax.swing.JMenu();
         jMenu5 = new javax.swing.JMenu();
-        jPanel2 = new javax.swing.JPanel();
-        btPt = new javax.swing.JButton();
-        btMt = new javax.swing.JButton();
-        btQA = new javax.swing.JButton();
-        btQC = new javax.swing.JButton();
-        btJp = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        btLogoff = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        PainelmenuPrincipal = new javax.swing.JPanel();
+        jlmenuPrincipal = new javax.swing.JLabel();
+        btmenuPrincipalPt = new javax.swing.JButton();
+        btmenuPrincipalMt = new javax.swing.JButton();
+        btmenuPrincipalQC = new javax.swing.JButton();
+        btmenuPrincipalQA = new javax.swing.JButton();
+        btmenuPrincipalQP = new javax.swing.JButton();
+        btmenuPrincipalSair = new javax.swing.JButton();
+        btmenuPrincipalAlterarDados = new javax.swing.JButton();
 
         jMenu2.setText("File");
         jMenuBar1.add(jMenu2);
@@ -57,117 +57,72 @@ public class menuPrincipal extends javax.swing.JFrame
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(700, 420));
 
-        jPanel2.setPreferredSize(new java.awt.Dimension(700, 420));
+        PainelmenuPrincipal.setPreferredSize(new java.awt.Dimension(700, 420));
+        PainelmenuPrincipal.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        btPt.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        btPt.setText("Português");
-        btPt.addActionListener(new java.awt.event.ActionListener() {
+        jlmenuPrincipal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/menuPrincipal.png"))); // NOI18N
+        PainelmenuPrincipal.add(jlmenuPrincipal, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
+        btmenuPrincipalPt.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        btmenuPrincipalPt.setText("Português");
+        btmenuPrincipalPt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btPtActionPerformed(evt);
+                btmenuPrincipalPtActionPerformed(evt);
             }
         });
+        PainelmenuPrincipal.add(btmenuPrincipalPt, new org.netbeans.lib.awtextra.AbsoluteConstraints(174, 105, 350, 47));
 
-        btMt.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        btMt.setText("Matemática");
-        btMt.addActionListener(new java.awt.event.ActionListener() {
+        btmenuPrincipalMt.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        btmenuPrincipalMt.setText("Matemática");
+        btmenuPrincipalMt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btMtActionPerformed(evt);
+                btmenuPrincipalMtActionPerformed(evt);
             }
         });
+        PainelmenuPrincipal.add(btmenuPrincipalMt, new org.netbeans.lib.awtextra.AbsoluteConstraints(174, 162, 350, 47));
 
-        btQA.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        btQA.setText("Qual é o animal?");
-        btQA.addActionListener(new java.awt.event.ActionListener() {
+        btmenuPrincipalQC.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        btmenuPrincipalQC.setText("Qual é a cor?");
+        btmenuPrincipalQC.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btQAActionPerformed(evt);
+                btmenuPrincipalQCActionPerformed(evt);
             }
         });
+        PainelmenuPrincipal.add(btmenuPrincipalQC, new org.netbeans.lib.awtextra.AbsoluteConstraints(174, 219, 350, 47));
 
-        btQC.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        btQC.setText("Qual é a cor?");
-        btQC.addActionListener(new java.awt.event.ActionListener() {
+        btmenuPrincipalQA.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        btmenuPrincipalQA.setText("Qual é o animal?");
+        btmenuPrincipalQA.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btQCActionPerformed(evt);
+                btmenuPrincipalQAActionPerformed(evt);
             }
         });
+        PainelmenuPrincipal.add(btmenuPrincipalQA, new org.netbeans.lib.awtextra.AbsoluteConstraints(175, 278, 350, 46));
 
-        btJp.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        btJp.setText("Jogo Personalizado");
-        btJp.addActionListener(new java.awt.event.ActionListener() {
+        btmenuPrincipalQP.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        btmenuPrincipalQP.setText("Jogo Personalizado");
+        btmenuPrincipalQP.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btJpActionPerformed(evt);
+                btmenuPrincipalQPActionPerformed(evt);
             }
         });
+        PainelmenuPrincipal.add(btmenuPrincipalQP, new org.netbeans.lib.awtextra.AbsoluteConstraints(174, 337, 350, 47));
 
-        jButton2.setText("Sair da Conta");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        btmenuPrincipalSair.setText("Sair da Conta");
+        btmenuPrincipalSair.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                btmenuPrincipalSairActionPerformed(evt);
             }
         });
+        PainelmenuPrincipal.add(btmenuPrincipalSair, new org.netbeans.lib.awtextra.AbsoluteConstraints(609, 11, 80, 40));
 
-        btLogoff.setText("Encerrar");
-        btLogoff.addActionListener(new java.awt.event.ActionListener() {
+        btmenuPrincipalAlterarDados.setText("Alterar Dados");
+        btmenuPrincipalAlterarDados.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btLogoffActionPerformed(evt);
+                btmenuPrincipalAlterarDadosActionPerformed(evt);
             }
         });
-
-        jButton3.setText("Alterar Dados");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(136, 136, 136)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btJp, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btQA, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btPt, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btQC, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btMt, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addContainerGap(136, Short.MAX_VALUE))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addGap(0, 0, Short.MAX_VALUE)
-                                .addComponent(jButton3))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                                .addComponent(btLogoff)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jButton2)))
-                        .addGap(41, 41, 41))))
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(21, 21, 21)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton2)
-                    .addComponent(btLogoff))
-                .addGap(22, 22, 22)
-                .addComponent(jButton3)
-                .addGap(44, 44, 44)
-                .addComponent(btPt, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btMt, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btQA, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btQC, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btJp, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(43, Short.MAX_VALUE))
-        );
+        PainelmenuPrincipal.add(btmenuPrincipalAlterarDados, new org.netbeans.lib.awtextra.AbsoluteConstraints(9, 8, 80, 50));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -175,71 +130,67 @@ public class menuPrincipal extends javax.swing.JFrame
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 690, Short.MAX_VALUE))
+                .addComponent(PainelmenuPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 400, Short.MAX_VALUE)
+            .addComponent(PainelmenuPrincipal, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 400, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btPtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPtActionPerformed
+    private void btmenuPrincipalPtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmenuPrincipalPtActionPerformed
       TelaPtUm.setVisible(true);
       dispose();
         
-    }//GEN-LAST:event_btPtActionPerformed
+    }//GEN-LAST:event_btmenuPrincipalPtActionPerformed
 
-    private void btQCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btQCActionPerformed
+    private void btmenuPrincipalQCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmenuPrincipalQCActionPerformed
      TelaQEUm.setVisible(true);
      dispose();
-    }//GEN-LAST:event_btQCActionPerformed
+    }//GEN-LAST:event_btmenuPrincipalQCActionPerformed
 
-    private void btQAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btQAActionPerformed
+    private void btmenuPrincipalQAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmenuPrincipalQAActionPerformed
       TelaQAUm.setVisible(true);
       dispose();
-    }//GEN-LAST:event_btQAActionPerformed
+    }//GEN-LAST:event_btmenuPrincipalQAActionPerformed
 
-    private void btMtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btMtActionPerformed
+    private void btmenuPrincipalMtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmenuPrincipalMtActionPerformed
       TelaMtUm.setVisible(true);
       dispose();
-    }//GEN-LAST:event_btMtActionPerformed
+    }//GEN-LAST:event_btmenuPrincipalMtActionPerformed
 
-    private void btJpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btJpActionPerformed
+    private void btmenuPrincipalQPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmenuPrincipalQPActionPerformed
         TelaJpUm.setVisible(true);
         dispose();
-    }//GEN-LAST:event_btJpActionPerformed
+    }//GEN-LAST:event_btmenuPrincipalQPActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void btmenuPrincipalSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmenuPrincipalSairActionPerformed
         new loginAluno().show();
         dispose();
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_btmenuPrincipalSairActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void btmenuPrincipalAlterarDadosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmenuPrincipalAlterarDadosActionPerformed
       altSen.setVisible(true);
       dispose();
-    }//GEN-LAST:event_jButton3ActionPerformed
-
-    private void btLogoffActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btLogoffActionPerformed
-          System.exit(0);     
-    }//GEN-LAST:event_btLogoffActionPerformed
+    }//GEN-LAST:event_btmenuPrincipalAlterarDadosActionPerformed
 
     
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btJp;
-    private javax.swing.JButton btLogoff;
-    private javax.swing.JButton btMt;
-    private javax.swing.JButton btPt;
-    private javax.swing.JButton btQA;
-    private javax.swing.JButton btQC;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
+    private javax.swing.JPanel PainelmenuPrincipal;
+    private javax.swing.JButton btmenuPrincipalAlterarDados;
+    private javax.swing.JButton btmenuPrincipalMt;
+    private javax.swing.JButton btmenuPrincipalPt;
+    private javax.swing.JButton btmenuPrincipalQA;
+    private javax.swing.JButton btmenuPrincipalQC;
+    private javax.swing.JButton btmenuPrincipalQP;
+    private javax.swing.JButton btmenuPrincipalSair;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu5;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JPanel jPanel2;
+    private javax.swing.JLabel jlmenuPrincipal;
     // End of variables declaration//GEN-END:variables
 }

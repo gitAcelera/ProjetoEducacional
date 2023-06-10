@@ -29,7 +29,6 @@ public class classiAluno extends javax.swing.JFrame {
         btclassiAlunoInformacao = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setName("frame1"); // NOI18N
         setPreferredSize(new java.awt.Dimension(700, 400));
         setResizable(false);
 

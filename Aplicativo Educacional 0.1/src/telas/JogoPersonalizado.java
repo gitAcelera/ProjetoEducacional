@@ -29,181 +29,129 @@ public class JogoPersonalizado extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
+        PainelJogoPersonalizado = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         campoBuscaJogo = new javax.swing.JTextArea();
-        BuscarJogos = new javax.swing.JButton();
-        codigo = new javax.swing.JLabel();
-        consultaCodigo = new javax.swing.JTextField();
-        btConsult = new javax.swing.JButton();
-        campoAltA = new javax.swing.JButton();
-        campoAltC = new javax.swing.JButton();
-        campoAltB = new javax.swing.JButton();
-        campoAltD = new javax.swing.JButton();
-        campoQuestao = new javax.swing.JLabel();
-        btVoltar = new javax.swing.JButton();
+        jlJogoPersonalizado = new javax.swing.JLabel();
+        JogoPersonalizadoConsultarCodigo = new javax.swing.JTextField();
+        btJogoPersonalizadoBuscarJogo = new javax.swing.JButton();
+        btJogoPersonalizadoJogar = new javax.swing.JButton();
+        btJogoPersonalizadoA = new javax.swing.JButton();
+        btJogoPersonalizadoB = new javax.swing.JButton();
+        btJogoPersonalizadoC = new javax.swing.JButton();
+        btJogoPersonalizadoD = new javax.swing.JButton();
+        btJogoPersonalizadoVoltar = new javax.swing.JButton();
+        btJogoPersonalizadoInformacao = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        PainelJogoPersonalizado.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         campoBuscaJogo.setColumns(20);
         campoBuscaJogo.setRows(5);
         jScrollPane1.setViewportView(campoBuscaJogo);
 
-        BuscarJogos.setText("Buscar Jogos");
-        BuscarJogos.addActionListener(new java.awt.event.ActionListener() {
+        PainelJogoPersonalizado.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 20, 390, 140));
+
+        jlJogoPersonalizado.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/JogoPersonalizado.png"))); // NOI18N
+        PainelJogoPersonalizado.add(jlJogoPersonalizado, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        PainelJogoPersonalizado.add(JogoPersonalizadoConsultarCodigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(46, 110, 160, 33));
+
+        btJogoPersonalizadoBuscarJogo.setText("Buscar Jogos");
+        btJogoPersonalizadoBuscarJogo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BuscarJogosActionPerformed(evt);
+                btJogoPersonalizadoBuscarJogoActionPerformed(evt);
             }
         });
+        PainelJogoPersonalizado.add(btJogoPersonalizadoBuscarJogo, new org.netbeans.lib.awtextra.AbsoluteConstraints(386, 175, 120, 40));
 
-        codigo.setText("Código");
-
-        btConsult.setText("Jogar");
-        btConsult.addActionListener(new java.awt.event.ActionListener() {
+        btJogoPersonalizadoJogar.setText("Jogar");
+        btJogoPersonalizadoJogar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btConsultActionPerformed(evt);
+                btJogoPersonalizadoJogarActionPerformed(evt);
             }
         });
+        PainelJogoPersonalizado.add(btJogoPersonalizadoJogar, new org.netbeans.lib.awtextra.AbsoluteConstraints(71, 171, 120, 40));
 
-        campoAltA.addActionListener(new java.awt.event.ActionListener() {
+        btJogoPersonalizadoA.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                campoAltAActionPerformed(evt);
+                btJogoPersonalizadoAActionPerformed(evt);
             }
         });
+        PainelJogoPersonalizado.add(btJogoPersonalizadoA, new org.netbeans.lib.awtextra.AbsoluteConstraints(266, 243, 120, 39));
+        PainelJogoPersonalizado.add(btJogoPersonalizadoB, new org.netbeans.lib.awtextra.AbsoluteConstraints(506, 243, 120, 39));
+        PainelJogoPersonalizado.add(btJogoPersonalizadoC, new org.netbeans.lib.awtextra.AbsoluteConstraints(264, 329, 120, 40));
+        PainelJogoPersonalizado.add(btJogoPersonalizadoD, new org.netbeans.lib.awtextra.AbsoluteConstraints(512, 333, 120, 40));
 
-        btVoltar.setText("voltar");
-        btVoltar.addActionListener(new java.awt.event.ActionListener() {
+        btJogoPersonalizadoVoltar.setText("voltar");
+        btJogoPersonalizadoVoltar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btVoltarActionPerformed(evt);
+                btJogoPersonalizadoVoltarActionPerformed(evt);
             }
         });
+        PainelJogoPersonalizado.add(btJogoPersonalizadoVoltar, new org.netbeans.lib.awtextra.AbsoluteConstraints(18, 341, 80, 40));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(BuscarJogos)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 463, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(66, 66, 66)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(consultaCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(btConsult)
-                                    .addComponent(codigo)))))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(btVoltar)
-                        .addGap(143, 143, 143)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(campoAltC, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(campoAltD, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(campoAltA, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(94, 94, 94)
-                                .addComponent(campoAltB, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(165, 165, 165)
-                        .addComponent(campoQuestao, javax.swing.GroupLayout.PREFERRED_SIZE, 335, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(102, Short.MAX_VALUE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(codigo)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(consultaCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(btConsult)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(BuscarJogos)
-                .addGap(55, 55, 55)
-                .addComponent(campoQuestao, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(campoAltA, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(campoAltB, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(30, 30, 30)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(campoAltD, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(campoAltC, javax.swing.GroupLayout.DEFAULT_SIZE, 35, Short.MAX_VALUE))
-                        .addGap(31, 31, 31))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btVoltar)
-                        .addGap(21, 21, 21))))
-        );
+        btJogoPersonalizadoInformacao.setText("jButton1");
+        PainelJogoPersonalizado.add(btJogoPersonalizadoInformacao, new org.netbeans.lib.awtextra.AbsoluteConstraints(655, 10, 40, 40));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(PainelJogoPersonalizado, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(PainelJogoPersonalizado, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void BuscarJogosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BuscarJogosActionPerformed
+    private void btJogoPersonalizadoBuscarJogoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btJogoPersonalizadoBuscarJogoActionPerformed
         PessoaBD pessoaBD = new PessoaBD();
 
         String jogo = pessoaBD.buscarJogo();
 
         campoBuscaJogo.setText(jogo);        // TODO add your handling code here:
-    }//GEN-LAST:event_BuscarJogosActionPerformed
+    }//GEN-LAST:event_btJogoPersonalizadoBuscarJogoActionPerformed
 
-    private void btConsultActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btConsultActionPerformed
+    private void btJogoPersonalizadoJogarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btJogoPersonalizadoJogarActionPerformed
 
         alterarJogo();
-    }//GEN-LAST:event_btConsultActionPerformed
+    }//GEN-LAST:event_btJogoPersonalizadoJogarActionPerformed
 
-    private void campoAltAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoAltAActionPerformed
+    private void btJogoPersonalizadoAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btJogoPersonalizadoAActionPerformed
 JOptionPane.showMessageDialog(null," CERTA RESPOSTA !! !!!");
        campoQuestao.setText("");
-			campoAltA.setText("");
-                        campoAltB.setText("");
-                        campoAltC.setText ("");
-                        campoAltD.setText("");  
-                        consultaCodigo.setText("");
-    }//GEN-LAST:event_campoAltAActionPerformed
+			btJogoPersonalizadoA.setText("");
+                        btJogoPersonalizadoB.setText("");
+                        btJogoPersonalizadoC.setText ("");
+                        btJogoPersonalizadoD.setText("");  
+                        JogoPersonalizadoConsultarCodigo.setText("");
+    }//GEN-LAST:event_btJogoPersonalizadoAActionPerformed
 
-    private void btVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btVoltarActionPerformed
+    private void btJogoPersonalizadoVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btJogoPersonalizadoVoltarActionPerformed
         new menuPrincipal().show();
         dispose(); // TODO add your handling code here:
-    }//GEN-LAST:event_btVoltarActionPerformed
+    }//GEN-LAST:event_btJogoPersonalizadoVoltarActionPerformed
 
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton BuscarJogos;
-    private javax.swing.JButton btConsult;
-    private javax.swing.JButton btVoltar;
-    private javax.swing.JButton campoAltA;
-    private javax.swing.JButton campoAltB;
-    private javax.swing.JButton campoAltC;
-    private javax.swing.JButton campoAltD;
+    private javax.swing.JTextField JogoPersonalizadoConsultarCodigo;
+    private javax.swing.JPanel PainelJogoPersonalizado;
+    private javax.swing.JButton btJogoPersonalizadoA;
+    private javax.swing.JButton btJogoPersonalizadoB;
+    private javax.swing.JButton btJogoPersonalizadoBuscarJogo;
+    private javax.swing.JButton btJogoPersonalizadoC;
+    private javax.swing.JButton btJogoPersonalizadoD;
+    private javax.swing.JButton btJogoPersonalizadoInformacao;
+    private javax.swing.JButton btJogoPersonalizadoJogar;
+    private javax.swing.JButton btJogoPersonalizadoVoltar;
     private javax.swing.JTextArea campoBuscaJogo;
-    private javax.swing.JLabel campoQuestao;
-    private javax.swing.JLabel codigo;
-    private javax.swing.JTextField consultaCodigo;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JLabel jlJogoPersonalizado;
     // End of variables declaration//GEN-END:variables
 
     
@@ -233,7 +181,7 @@ JOptionPane.showMessageDialog(null," CERTA RESPOSTA !! !!!");
                 * // pega os valores do codigo e discplina digitadas pelo aluno
                 */
               
-                consultaCodigos = consultaCodigo.getText();
+                consultaCodigos = JogoPersonalizadoConsultarCodigo.getText();
                 
                 status = 0;
 		while(res.next())
@@ -268,14 +216,14 @@ JOptionPane.showMessageDialog(null," CERTA RESPOSTA !! !!!");
                      * // envia os valores pegos e envia aos respectivos campos
                      */
 			campoQuestao.setText (questaoAtual);
-			campoAltA.setText(altA);
-                        campoAltB.setText(altB);
-                        campoAltC.setText (altC);
-                        campoAltD.setText(altD);
+			btJogoPersonalizadoA.setText(altA);
+                        btJogoPersonalizadoB.setText(altB);
+                        btJogoPersonalizadoC.setText (altC);
+                        btJogoPersonalizadoD.setText(altD);
 		}
 		if(status == 0)
 		{
-			JOptionPane.showMessageDialog(null," "+consultaCodigo+" não encontrado!!!","Erro",JOptionPane.ERROR_MESSAGE);
+			JOptionPane.showMessageDialog(null," "+JogoPersonalizadoConsultarCodigo+" não encontrado!!!","Erro",JOptionPane.ERROR_MESSAGE);
 		}
 	}
 	catch(ClassNotFoundException ex)

@@ -25,211 +25,147 @@ public class alterarSenhaAluno extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
-        btVoltarMenu = new javax.swing.JButton();
-        RaConsulta = new javax.swing.JLabel();
-        consultaCampo = new javax.swing.JTextField();
-        jLabel1 = new javax.swing.JLabel();
-        campoPalavraChave = new javax.swing.JTextField();
-        btConsult = new javax.swing.JButton();
-        nomeConsulta = new javax.swing.JLabel();
-        campoNomeBanco = new javax.swing.JTextField();
-        idadeConsulta = new javax.swing.JLabel();
-        campoIdadeBanco = new javax.swing.JTextField();
-        raConsulta = new javax.swing.JLabel();
-        campoRaBanco = new javax.swing.JTextField();
-        novaSenha = new javax.swing.JLabel();
-        campoSenhaNovo = new javax.swing.JTextField();
-        btConfirmarAlteracaoAluno = new javax.swing.JButton();
+        PainelalterarSenhaAluno = new javax.swing.JPanel();
+        jlalterarSenhaAluno = new javax.swing.JLabel();
+        alterarSenhaAlunoRA = new javax.swing.JTextField();
+        alterarSenhaAlunoPalavraChave = new javax.swing.JTextField();
+        alterarSenhaAlunoNomeNovo = new javax.swing.JTextField();
+        alterarSenhaAlunoIdadeNovo = new javax.swing.JTextField();
+        alterarSenhaAlunoRANovo = new javax.swing.JTextField();
+        alterarSenhaAlunoSenhaNovo = new javax.swing.JTextField();
+        alterarSenhaAlunoMenu = new javax.swing.JButton();
+        btalterarSenhaAlunoConfirmar = new javax.swing.JButton();
+        btalterarSenhaAlunoAlterar = new javax.swing.JButton();
+        btalterarSenhaAlunoInformacao = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(700, 400));
 
-        btVoltarMenu.setText(" MENU");
-        btVoltarMenu.addActionListener(new java.awt.event.ActionListener() {
+        PainelalterarSenhaAluno.setMaximumSize(new java.awt.Dimension(700, 400));
+        PainelalterarSenhaAluno.setMinimumSize(new java.awt.Dimension(700, 400));
+        PainelalterarSenhaAluno.setPreferredSize(new java.awt.Dimension(700, 400));
+        PainelalterarSenhaAluno.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jlalterarSenhaAluno.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/alterarSenhaAluno.png"))); // NOI18N
+        PainelalterarSenhaAluno.add(jlalterarSenhaAluno, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 400));
+
+        alterarSenhaAlunoRA.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btVoltarMenuActionPerformed(evt);
+                alterarSenhaAlunoRAActionPerformed(evt);
             }
         });
+        PainelalterarSenhaAluno.add(alterarSenhaAlunoRA, new org.netbeans.lib.awtextra.AbsoluteConstraints(35, 156, 140, 26));
 
-        RaConsulta.setText("Digite seu R.A");
-
-        consultaCampo.addActionListener(new java.awt.event.ActionListener() {
+        alterarSenhaAlunoPalavraChave.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                consultaCampoActionPerformed(evt);
+                alterarSenhaAlunoPalavraChaveActionPerformed(evt);
             }
         });
+        PainelalterarSenhaAluno.add(alterarSenhaAlunoPalavraChave, new org.netbeans.lib.awtextra.AbsoluteConstraints(34, 208, 290, 30));
 
-        jLabel1.setText("Digite sua Palavra-Chave");
+        alterarSenhaAlunoNomeNovo.setEditable(false);
+        PainelalterarSenhaAluno.add(alterarSenhaAlunoNomeNovo, new org.netbeans.lib.awtextra.AbsoluteConstraints(378, 150, 280, 30));
 
-        campoPalavraChave.addActionListener(new java.awt.event.ActionListener() {
+        alterarSenhaAlunoIdadeNovo.setEditable(false);
+        PainelalterarSenhaAluno.add(alterarSenhaAlunoIdadeNovo, new org.netbeans.lib.awtextra.AbsoluteConstraints(375, 208, 120, 30));
+
+        alterarSenhaAlunoRANovo.setEditable(false);
+        PainelalterarSenhaAluno.add(alterarSenhaAlunoRANovo, new org.netbeans.lib.awtextra.AbsoluteConstraints(533, 209, 130, 30));
+
+        alterarSenhaAlunoSenhaNovo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                campoPalavraChaveActionPerformed(evt);
+                alterarSenhaAlunoSenhaNovoActionPerformed(evt);
             }
         });
+        PainelalterarSenhaAluno.add(alterarSenhaAlunoSenhaNovo, new org.netbeans.lib.awtextra.AbsoluteConstraints(375, 269, 130, 30));
 
-        btConsult.setText("EDITAR");
-        btConsult.addActionListener(new java.awt.event.ActionListener() {
+        alterarSenhaAlunoMenu.setText(" MENU");
+        alterarSenhaAlunoMenu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btConsultActionPerformed(evt);
+                alterarSenhaAlunoMenuActionPerformed(evt);
             }
         });
+        PainelalterarSenhaAluno.add(alterarSenhaAlunoMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(13, 13, 80, 40));
 
-        nomeConsulta.setText("Nome");
-
-        campoNomeBanco.setEditable(false);
-
-        idadeConsulta.setText("Idade");
-
-        campoIdadeBanco.setEditable(false);
-
-        raConsulta.setText(" R.A");
-
-        campoRaBanco.setEditable(false);
-
-        novaSenha.setText("Nova Senha");
-
-        campoSenhaNovo.addActionListener(new java.awt.event.ActionListener() {
+        btalterarSenhaAlunoConfirmar.setText("EDITAR");
+        btalterarSenhaAlunoConfirmar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                campoSenhaNovoActionPerformed(evt);
+                btalterarSenhaAlunoConfirmarActionPerformed(evt);
             }
         });
+        PainelalterarSenhaAluno.add(btalterarSenhaAlunoConfirmar, new org.netbeans.lib.awtextra.AbsoluteConstraints(183, 300, 140, 30));
 
-        btConfirmarAlteracaoAluno.setText("CONFIRMAR");
-        btConfirmarAlteracaoAluno.addActionListener(new java.awt.event.ActionListener() {
+        btalterarSenhaAlunoAlterar.setText("CONFIRMAR");
+        btalterarSenhaAlunoAlterar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btConfirmarAlteracaoAlunoActionPerformed(evt);
+                btalterarSenhaAlunoAlterarActionPerformed(evt);
             }
         });
+        PainelalterarSenhaAluno.add(btalterarSenhaAlunoAlterar, new org.netbeans.lib.awtextra.AbsoluteConstraints(537, 348, 140, 30));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(btVoltarMenu)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(164, 164, 164)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(campoSenhaNovo, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 174, Short.MAX_VALUE)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btConsult)
-                            .addComponent(btConfirmarAlteracaoAluno)))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(RaConsulta)
-                            .addComponent(consultaCampo, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(nomeConsulta))
-                        .addGap(59, 59, 59)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(campoPalavraChave, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel1)))
-                    .addComponent(campoNomeBanco, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(idadeConsulta)
-                    .addComponent(campoIdadeBanco, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(raConsulta)
-                    .addComponent(campoRaBanco, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(novaSenha))
-                .addGap(99, 99, 99))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(btVoltarMenu)
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(RaConsulta)
-                    .addComponent(jLabel1))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(consultaCampo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(campoPalavraChave, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btConsult)
-                .addGap(18, 18, 18)
-                .addComponent(nomeConsulta)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(campoNomeBanco, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(idadeConsulta)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(campoIdadeBanco, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(raConsulta)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(campoRaBanco, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(novaSenha)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(campoSenhaNovo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btConfirmarAlteracaoAluno))
-                .addContainerGap(43, Short.MAX_VALUE))
-        );
+        btalterarSenhaAlunoInformacao.setText("jButton1");
+        PainelalterarSenhaAluno.add(btalterarSenhaAlunoInformacao, new org.netbeans.lib.awtextra.AbsoluteConstraints(648, 10, 40, 40));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(PainelalterarSenhaAluno, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(PainelalterarSenhaAluno, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btVoltarMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btVoltarMenuActionPerformed
+    private void alterarSenhaAlunoMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_alterarSenhaAlunoMenuActionPerformed
         new menuPrincipal().show();
         dispose();       
-    }//GEN-LAST:event_btVoltarMenuActionPerformed
+    }//GEN-LAST:event_alterarSenhaAlunoMenuActionPerformed
 
-    private void consultaCampoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_consultaCampoActionPerformed
+    private void alterarSenhaAlunoRAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_alterarSenhaAlunoRAActionPerformed
        
-    }//GEN-LAST:event_consultaCampoActionPerformed
+    }//GEN-LAST:event_alterarSenhaAlunoRAActionPerformed
 
-    private void campoPalavraChaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoPalavraChaveActionPerformed
+    private void alterarSenhaAlunoPalavraChaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_alterarSenhaAlunoPalavraChaveActionPerformed
 
-    }//GEN-LAST:event_campoPalavraChaveActionPerformed
+    }//GEN-LAST:event_alterarSenhaAlunoPalavraChaveActionPerformed
 
-    private void btConsultActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btConsultActionPerformed
+    private void btalterarSenhaAlunoConfirmarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btalterarSenhaAlunoConfirmarActionPerformed
       consultaAlu();
-    }//GEN-LAST:event_btConsultActionPerformed
+    }//GEN-LAST:event_btalterarSenhaAlunoConfirmarActionPerformed
 
-    private void campoSenhaNovoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoSenhaNovoActionPerformed
+    private void alterarSenhaAlunoSenhaNovoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_alterarSenhaAlunoSenhaNovoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_campoSenhaNovoActionPerformed
+    }//GEN-LAST:event_alterarSenhaAlunoSenhaNovoActionPerformed
 
-    private void btConfirmarAlteracaoAlunoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btConfirmarAlteracaoAlunoActionPerformed
+    private void btalterarSenhaAlunoAlterarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btalterarSenhaAlunoAlterarActionPerformed
         confirmarAlteracao();
-    }//GEN-LAST:event_btConfirmarAlteracaoAlunoActionPerformed
+    }//GEN-LAST:event_btalterarSenhaAlunoAlterarActionPerformed
 
    
    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel RaConsulta;
-    private javax.swing.JButton btConfirmarAlteracaoAluno;
-    private javax.swing.JButton btConsult;
-    private javax.swing.JButton btVoltarMenu;
-    private javax.swing.JTextField campoIdadeBanco;
-    private javax.swing.JTextField campoNomeBanco;
-    private javax.swing.JTextField campoPalavraChave;
-    private javax.swing.JTextField campoRaBanco;
-    private javax.swing.JTextField campoSenhaNovo;
-    private javax.swing.JTextField consultaCampo;
-    private javax.swing.JLabel idadeConsulta;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JLabel nomeConsulta;
-    private javax.swing.JLabel novaSenha;
-    private javax.swing.JLabel raConsulta;
+    private javax.swing.JPanel PainelalterarSenhaAluno;
+    private javax.swing.JTextField alterarSenhaAlunoIdadeNovo;
+    private javax.swing.JButton alterarSenhaAlunoMenu;
+    private javax.swing.JTextField alterarSenhaAlunoNomeNovo;
+    private javax.swing.JTextField alterarSenhaAlunoPalavraChave;
+    private javax.swing.JTextField alterarSenhaAlunoRA;
+    private javax.swing.JTextField alterarSenhaAlunoRANovo;
+    private javax.swing.JTextField alterarSenhaAlunoSenhaNovo;
+    private javax.swing.JButton btalterarSenhaAlunoAlterar;
+    private javax.swing.JButton btalterarSenhaAlunoConfirmar;
+    private javax.swing.JButton btalterarSenhaAlunoInformacao;
+    private javax.swing.JLabel jlalterarSenhaAluno;
     // End of variables declaration//GEN-END:variables
    
     /**
@@ -253,8 +189,8 @@ public class alterarSenhaAluno extends javax.swing.JFrame {
            
             // pega os valores do ra e palavra de recuperação digitadas pelo aluno
                 
-            consultaRa = consultaCampo.getText();
-            consultaPalavra = campoPalavraChave.getText();
+            consultaRa = alterarSenhaAlunoRA.getText();
+            consultaPalavra = alterarSenhaAlunoPalavraChave.getText();
             status = 0;
             while(res.next())
             {
@@ -285,10 +221,10 @@ public class alterarSenhaAluno extends javax.swing.JFrame {
                  
                       // envia os valores puxados e envia aos respectivos campos
                      
-                campoIdadeBanco.setText(idadeAtual);
-                campoNomeBanco.setText(nomeAtual);
-                campoSenhaNovo.setText(senhaAtual);
-                campoRaBanco.setText(raAtual);
+                alterarSenhaAlunoIdadeNovo.setText(idadeAtual);
+                alterarSenhaAlunoNomeNovo.setText(nomeAtual);
+                alterarSenhaAlunoSenhaNovo.setText(senhaAtual);
+                alterarSenhaAlunoRANovo.setText(raAtual);
             }
             if(status == 0)
             {
@@ -317,7 +253,7 @@ public class alterarSenhaAluno extends javax.swing.JFrame {
         Connection con;
         String sql;
 
-        senhaNovo = campoSenhaNovo.getText();
+        senhaNovo = alterarSenhaAlunoSenhaNovo.getText();
         con = null;
 
         sql = "SELECT *From aluno";
