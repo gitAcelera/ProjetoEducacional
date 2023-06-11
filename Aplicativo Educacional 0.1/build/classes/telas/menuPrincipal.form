@@ -88,6 +88,7 @@
               <Font name="Segoe UI" size="24" style="0"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Portugu&#xea;s"/>
+            <Property name="contentAreaFilled" type="boolean" value="false"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btmenuPrincipalPtActionPerformed"/>
@@ -104,6 +105,7 @@
               <Font name="Segoe UI" size="24" style="0"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Matem&#xe1;tica"/>
+            <Property name="contentAreaFilled" type="boolean" value="false"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btmenuPrincipalMtActionPerformed"/>
@@ -120,6 +122,7 @@
               <Font name="Segoe UI" size="24" style="0"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Qual &#xe9; a cor?"/>
+            <Property name="contentAreaFilled" type="boolean" value="false"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btmenuPrincipalQCActionPerformed"/>
@@ -136,6 +139,7 @@
               <Font name="Segoe UI" size="24" style="0"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Qual &#xe9; o animal?"/>
+            <Property name="contentAreaFilled" type="boolean" value="false"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btmenuPrincipalQAActionPerformed"/>
@@ -152,6 +156,7 @@
               <Font name="Segoe UI" size="24" style="0"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Jogo Personalizado"/>
+            <Property name="contentAreaFilled" type="boolean" value="false"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btmenuPrincipalQPActionPerformed"/>
@@ -165,6 +170,7 @@
         <Component class="javax.swing.JButton" name="btmenuPrincipalSair">
           <Properties>
             <Property name="text" type="java.lang.String" value="Sair da Conta"/>
+            <Property name="contentAreaFilled" type="boolean" value="false"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btmenuPrincipalSairActionPerformed"/>
@@ -178,6 +184,7 @@
         <Component class="javax.swing.JButton" name="btmenuPrincipalAlterarDados">
           <Properties>
             <Property name="text" type="java.lang.String" value="Alterar Dados"/>
+            <Property name="contentAreaFilled" type="boolean" value="false"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btmenuPrincipalAlterarDadosActionPerformed"/>

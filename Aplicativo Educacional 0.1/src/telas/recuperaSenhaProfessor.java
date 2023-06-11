@@ -90,6 +90,11 @@ private String cpfAtual,senhaAtual,recuperaProfAtual;
         btrecuperarSenhaProfessorInformacao.setText("jButton1");
         btrecuperarSenhaProfessorInformacao.setContentAreaFilled(false);
         btrecuperarSenhaProfessorInformacao.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        btrecuperarSenhaProfessorInformacao.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btrecuperarSenhaProfessorInformacaoActionPerformed(evt);
+            }
+        });
         PainelrecuperarSenhaProfessor.add(btrecuperarSenhaProfessorInformacao, new org.netbeans.lib.awtextra.AbsoluteConstraints(649, 10, 40, 40));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -124,6 +129,10 @@ private String cpfAtual,senhaAtual,recuperaProfAtual;
     private void btrecuperarSenhaProfessorRecuperarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btrecuperarSenhaProfessorRecuperarActionPerformed
         recuperarProfessor();
     }//GEN-LAST:event_btrecuperarSenhaProfessorRecuperarActionPerformed
+
+    private void btrecuperarSenhaProfessorInformacaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btrecuperarSenhaProfessorInformacaoActionPerformed
+        JOptionPane.showMessageDialog(null,"Esqueceu a sua senha? (⁠☉⁠｡⁠☉⁠) \nSem problemas! Digite seu CPF e a sua Palavra de Recuperação. (⁠◠⁠‿⁠◕⁠)"  );
+    }//GEN-LAST:event_btrecuperarSenhaProfessorInformacaoActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

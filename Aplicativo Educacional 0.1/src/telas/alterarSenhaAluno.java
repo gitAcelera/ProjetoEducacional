@@ -49,37 +49,62 @@ public class alterarSenhaAluno extends javax.swing.JFrame {
         jlalterarSenhaAluno.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/alterarSenhaAluno.png"))); // NOI18N
         PainelalterarSenhaAluno.add(jlalterarSenhaAluno, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 400));
 
+        alterarSenhaAlunoRA.setBackground(new java.awt.Color(184, 135, 191));
+        alterarSenhaAlunoRA.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        alterarSenhaAlunoRA.setForeground(new java.awt.Color(255, 255, 255));
+        alterarSenhaAlunoRA.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         alterarSenhaAlunoRA.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 alterarSenhaAlunoRAActionPerformed(evt);
             }
         });
-        PainelalterarSenhaAluno.add(alterarSenhaAlunoRA, new org.netbeans.lib.awtextra.AbsoluteConstraints(35, 156, 140, 26));
+        PainelalterarSenhaAluno.add(alterarSenhaAlunoRA, new org.netbeans.lib.awtextra.AbsoluteConstraints(35, 162, 140, -1));
 
+        alterarSenhaAlunoPalavraChave.setBackground(new java.awt.Color(184, 135, 191));
+        alterarSenhaAlunoPalavraChave.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        alterarSenhaAlunoPalavraChave.setForeground(new java.awt.Color(255, 255, 255));
+        alterarSenhaAlunoPalavraChave.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         alterarSenhaAlunoPalavraChave.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 alterarSenhaAlunoPalavraChaveActionPerformed(evt);
             }
         });
-        PainelalterarSenhaAluno.add(alterarSenhaAlunoPalavraChave, new org.netbeans.lib.awtextra.AbsoluteConstraints(34, 208, 290, 30));
+        PainelalterarSenhaAluno.add(alterarSenhaAlunoPalavraChave, new org.netbeans.lib.awtextra.AbsoluteConstraints(34, 218, 290, -1));
 
         alterarSenhaAlunoNomeNovo.setEditable(false);
-        PainelalterarSenhaAluno.add(alterarSenhaAlunoNomeNovo, new org.netbeans.lib.awtextra.AbsoluteConstraints(378, 150, 280, 30));
+        alterarSenhaAlunoNomeNovo.setBackground(new java.awt.Color(184, 135, 191));
+        alterarSenhaAlunoNomeNovo.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        alterarSenhaAlunoNomeNovo.setForeground(new java.awt.Color(255, 255, 255));
+        alterarSenhaAlunoNomeNovo.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        PainelalterarSenhaAluno.add(alterarSenhaAlunoNomeNovo, new org.netbeans.lib.awtextra.AbsoluteConstraints(378, 156, 280, 20));
 
         alterarSenhaAlunoIdadeNovo.setEditable(false);
-        PainelalterarSenhaAluno.add(alterarSenhaAlunoIdadeNovo, new org.netbeans.lib.awtextra.AbsoluteConstraints(375, 208, 120, 30));
+        alterarSenhaAlunoIdadeNovo.setBackground(new java.awt.Color(184, 135, 191));
+        alterarSenhaAlunoIdadeNovo.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        alterarSenhaAlunoIdadeNovo.setForeground(new java.awt.Color(255, 255, 255));
+        alterarSenhaAlunoIdadeNovo.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        PainelalterarSenhaAluno.add(alterarSenhaAlunoIdadeNovo, new org.netbeans.lib.awtextra.AbsoluteConstraints(375, 218, 120, -1));
 
         alterarSenhaAlunoRANovo.setEditable(false);
-        PainelalterarSenhaAluno.add(alterarSenhaAlunoRANovo, new org.netbeans.lib.awtextra.AbsoluteConstraints(533, 209, 130, 30));
+        alterarSenhaAlunoRANovo.setBackground(new java.awt.Color(184, 135, 191));
+        alterarSenhaAlunoRANovo.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        alterarSenhaAlunoRANovo.setForeground(new java.awt.Color(255, 255, 255));
+        alterarSenhaAlunoRANovo.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        PainelalterarSenhaAluno.add(alterarSenhaAlunoRANovo, new org.netbeans.lib.awtextra.AbsoluteConstraints(533, 215, 130, 20));
 
+        alterarSenhaAlunoSenhaNovo.setBackground(new java.awt.Color(184, 135, 191));
+        alterarSenhaAlunoSenhaNovo.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        alterarSenhaAlunoSenhaNovo.setForeground(new java.awt.Color(255, 255, 255));
+        alterarSenhaAlunoSenhaNovo.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         alterarSenhaAlunoSenhaNovo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 alterarSenhaAlunoSenhaNovoActionPerformed(evt);
             }
         });
-        PainelalterarSenhaAluno.add(alterarSenhaAlunoSenhaNovo, new org.netbeans.lib.awtextra.AbsoluteConstraints(375, 269, 130, 30));
+        PainelalterarSenhaAluno.add(alterarSenhaAlunoSenhaNovo, new org.netbeans.lib.awtextra.AbsoluteConstraints(385, 269, 110, 30));
 
         alterarSenhaAlunoMenu.setText(" MENU");
+        alterarSenhaAlunoMenu.setContentAreaFilled(false);
         alterarSenhaAlunoMenu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 alterarSenhaAlunoMenuActionPerformed(evt);
@@ -88,6 +113,7 @@ public class alterarSenhaAluno extends javax.swing.JFrame {
         PainelalterarSenhaAluno.add(alterarSenhaAlunoMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(13, 13, 80, 40));
 
         btalterarSenhaAlunoConfirmar.setText("EDITAR");
+        btalterarSenhaAlunoConfirmar.setContentAreaFilled(false);
         btalterarSenhaAlunoConfirmar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btalterarSenhaAlunoConfirmarActionPerformed(evt);
@@ -96,6 +122,7 @@ public class alterarSenhaAluno extends javax.swing.JFrame {
         PainelalterarSenhaAluno.add(btalterarSenhaAlunoConfirmar, new org.netbeans.lib.awtextra.AbsoluteConstraints(183, 300, 140, 30));
 
         btalterarSenhaAlunoAlterar.setText("CONFIRMAR");
+        btalterarSenhaAlunoAlterar.setContentAreaFilled(false);
         btalterarSenhaAlunoAlterar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btalterarSenhaAlunoAlterarActionPerformed(evt);
@@ -104,6 +131,12 @@ public class alterarSenhaAluno extends javax.swing.JFrame {
         PainelalterarSenhaAluno.add(btalterarSenhaAlunoAlterar, new org.netbeans.lib.awtextra.AbsoluteConstraints(537, 348, 140, 30));
 
         btalterarSenhaAlunoInformacao.setText("jButton1");
+        btalterarSenhaAlunoInformacao.setContentAreaFilled(false);
+        btalterarSenhaAlunoInformacao.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btalterarSenhaAlunoInformacaoActionPerformed(evt);
+            }
+        });
         PainelalterarSenhaAluno.add(btalterarSenhaAlunoInformacao, new org.netbeans.lib.awtextra.AbsoluteConstraints(648, 10, 40, 40));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -149,6 +182,10 @@ public class alterarSenhaAluno extends javax.swing.JFrame {
     private void btalterarSenhaAlunoAlterarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btalterarSenhaAlunoAlterarActionPerformed
         confirmarAlteracao();
     }//GEN-LAST:event_btalterarSenhaAlunoAlterarActionPerformed
+
+    private void btalterarSenhaAlunoInformacaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btalterarSenhaAlunoInformacaoActionPerformed
+      JOptionPane.showMessageDialog(null,"Nesta sessão é possível alterar sua Senha!!\nMas lembre-se: Com Grandes Poderes, Vem Grandes Responsalidades. (⁠◠⁠‿⁠◕⁠)"  );
+    }//GEN-LAST:event_btalterarSenhaAlunoInformacaoActionPerformed
 
    
    

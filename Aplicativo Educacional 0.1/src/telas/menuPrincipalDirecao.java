@@ -5,6 +5,8 @@
  */
 package telas;
 
+import javax.swing.JOptionPane;
+
 
 /**
  * Inicia a classe menuPrincipalDirecao
@@ -80,6 +82,11 @@ public class menuPrincipalDirecao extends javax.swing.JFrame {
 
         btmenuPrincipalDirecaoInformacao.setText("jButton1");
         btmenuPrincipalDirecaoInformacao.setContentAreaFilled(false);
+        btmenuPrincipalDirecaoInformacao.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btmenuPrincipalDirecaoInformacaoActionPerformed(evt);
+            }
+        });
         PainelmenuPrincipalDirecao.add(btmenuPrincipalDirecaoInformacao, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 10, 40, 40));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -116,6 +123,10 @@ public class menuPrincipalDirecao extends javax.swing.JFrame {
         new loginProfessor().show();
         dispose();
     }//GEN-LAST:event_btmenuPrincipalDirecaoSairDaContaActionPerformed
+
+    private void btmenuPrincipalDirecaoInformacaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmenuPrincipalDirecaoInformacaoActionPerformed
+      JOptionPane.showMessageDialog(null,"Capitão,  você decide quem continua na nave..." );
+    }//GEN-LAST:event_btmenuPrincipalDirecaoInformacaoActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel PainelmenuPrincipalDirecao;

@@ -29,10 +29,10 @@ public class JogoPersonalizado extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jlJogoPersonalizado = new javax.swing.JLabel();
         PainelJogoPersonalizado = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         campoBuscaJogo = new javax.swing.JTextArea();
-        jlJogoPersonalizado = new javax.swing.JLabel();
         JogoPersonalizadoConsultarCodigo = new javax.swing.JTextField();
         btJogoPersonalizadoBuscarJogo = new javax.swing.JButton();
         btJogoPersonalizadoJogar = new javax.swing.JButton();
@@ -42,6 +42,9 @@ public class JogoPersonalizado extends javax.swing.JFrame {
         btJogoPersonalizadoD = new javax.swing.JButton();
         btJogoPersonalizadoVoltar = new javax.swing.JButton();
         btJogoPersonalizadoInformacao = new javax.swing.JButton();
+        campoQuestao = new javax.swing.JTextField();
+
+        jlJogoPersonalizado.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/JogoPersonalizado.png"))); // NOI18N
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -51,11 +54,8 @@ public class JogoPersonalizado extends javax.swing.JFrame {
         campoBuscaJogo.setRows(5);
         jScrollPane1.setViewportView(campoBuscaJogo);
 
-        PainelJogoPersonalizado.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 20, 390, 140));
-
-        jlJogoPersonalizado.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/JogoPersonalizado.png"))); // NOI18N
-        PainelJogoPersonalizado.add(jlJogoPersonalizado, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
-        PainelJogoPersonalizado.add(JogoPersonalizadoConsultarCodigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(46, 110, 160, 33));
+        PainelJogoPersonalizado.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 390, 140));
+        PainelJogoPersonalizado.add(JogoPersonalizadoConsultarCodigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 50, 70, 33));
 
         btJogoPersonalizadoBuscarJogo.setText("Buscar Jogos");
         btJogoPersonalizadoBuscarJogo.addActionListener(new java.awt.event.ActionListener() {
@@ -63,7 +63,7 @@ public class JogoPersonalizado extends javax.swing.JFrame {
                 btJogoPersonalizadoBuscarJogoActionPerformed(evt);
             }
         });
-        PainelJogoPersonalizado.add(btJogoPersonalizadoBuscarJogo, new org.netbeans.lib.awtextra.AbsoluteConstraints(386, 175, 120, 40));
+        PainelJogoPersonalizado.add(btJogoPersonalizadoBuscarJogo, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 160, 120, 40));
 
         btJogoPersonalizadoJogar.setText("Jogar");
         btJogoPersonalizadoJogar.addActionListener(new java.awt.event.ActionListener() {
@@ -71,17 +71,17 @@ public class JogoPersonalizado extends javax.swing.JFrame {
                 btJogoPersonalizadoJogarActionPerformed(evt);
             }
         });
-        PainelJogoPersonalizado.add(btJogoPersonalizadoJogar, new org.netbeans.lib.awtextra.AbsoluteConstraints(71, 171, 120, 40));
+        PainelJogoPersonalizado.add(btJogoPersonalizadoJogar, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 100, 120, 40));
 
         btJogoPersonalizadoA.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btJogoPersonalizadoAActionPerformed(evt);
             }
         });
-        PainelJogoPersonalizado.add(btJogoPersonalizadoA, new org.netbeans.lib.awtextra.AbsoluteConstraints(266, 243, 120, 39));
-        PainelJogoPersonalizado.add(btJogoPersonalizadoB, new org.netbeans.lib.awtextra.AbsoluteConstraints(506, 243, 120, 39));
-        PainelJogoPersonalizado.add(btJogoPersonalizadoC, new org.netbeans.lib.awtextra.AbsoluteConstraints(264, 329, 120, 40));
-        PainelJogoPersonalizado.add(btJogoPersonalizadoD, new org.netbeans.lib.awtextra.AbsoluteConstraints(512, 333, 120, 40));
+        PainelJogoPersonalizado.add(btJogoPersonalizadoA, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 290, 120, 39));
+        PainelJogoPersonalizado.add(btJogoPersonalizadoB, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 290, 120, 39));
+        PainelJogoPersonalizado.add(btJogoPersonalizadoC, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 350, 120, 40));
+        PainelJogoPersonalizado.add(btJogoPersonalizadoD, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 350, 120, 40));
 
         btJogoPersonalizadoVoltar.setText("voltar");
         btJogoPersonalizadoVoltar.addActionListener(new java.awt.event.ActionListener() {
@@ -89,10 +89,11 @@ public class JogoPersonalizado extends javax.swing.JFrame {
                 btJogoPersonalizadoVoltarActionPerformed(evt);
             }
         });
-        PainelJogoPersonalizado.add(btJogoPersonalizadoVoltar, new org.netbeans.lib.awtextra.AbsoluteConstraints(18, 341, 80, 40));
+        PainelJogoPersonalizado.add(btJogoPersonalizadoVoltar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 340, 80, 40));
 
         btJogoPersonalizadoInformacao.setText("jButton1");
         PainelJogoPersonalizado.add(btJogoPersonalizadoInformacao, new org.netbeans.lib.awtextra.AbsoluteConstraints(655, 10, 40, 40));
+        PainelJogoPersonalizado.add(campoQuestao, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 240, 290, 30));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -150,6 +151,7 @@ JOptionPane.showMessageDialog(null," CERTA RESPOSTA !! !!!");
     private javax.swing.JButton btJogoPersonalizadoJogar;
     private javax.swing.JButton btJogoPersonalizadoVoltar;
     private javax.swing.JTextArea campoBuscaJogo;
+    private javax.swing.JTextField campoQuestao;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel jlJogoPersonalizado;
     // End of variables declaration//GEN-END:variables

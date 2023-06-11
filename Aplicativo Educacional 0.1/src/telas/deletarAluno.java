@@ -102,7 +102,7 @@ public class deletarAluno extends javax.swing.JFrame {
     }//GEN-LAST:event_deletarAlunoDeletarActionPerformed
 
     private void btdeletarAlunoInformacaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btdeletarAlunoInformacaoActionPerformed
-        // TODO add your handling code here:
+        JOptionPane.showMessageDialog(null,"É a hora de dizer adeus? ʕ⁠´⁠•⁠ ⁠ᴥ⁠•̥⁠`⁠ʔ\nDigite o R.A do Aluno pra deletar a conta ");
     }//GEN-LAST:event_btdeletarAlunoInformacaoActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

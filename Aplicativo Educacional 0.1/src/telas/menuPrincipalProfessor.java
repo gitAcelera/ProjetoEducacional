@@ -1,6 +1,8 @@
 
 package telas;
 
+import javax.swing.JOptionPane;
+
 /**
  * Inicia a classe menuPrincipalProfessor
  * @author Izabelle
@@ -76,6 +78,11 @@ private classiAluno clasAlu;
 
         btmenuPrincipalProfessorInformacao.setText("jButton4");
         btmenuPrincipalProfessorInformacao.setContentAreaFilled(false);
+        btmenuPrincipalProfessorInformacao.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btmenuPrincipalProfessorInformacaoActionPerformed(evt);
+            }
+        });
         PainelmenuPrincipalProfessor.add(btmenuPrincipalProfessorInformacao, new org.netbeans.lib.awtextra.AbsoluteConstraints(648, 10, 40, 40));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -111,6 +118,10 @@ private classiAluno clasAlu;
   clasAlu.setVisible(true); 
   dispose();
     }//GEN-LAST:event_btmenuPrincipalProfessorCAActionPerformed
+
+    private void btmenuPrincipalProfessorInformacaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmenuPrincipalProfessorInformacaoActionPerformed
+       JOptionPane.showMessageDialog(null,"Prof, que tal ver a Pontuação dos Alunos? \nOu criar um Quiz personalizado? Você decide.(⁠◠⁠‿⁠◕⁠)");
+    }//GEN-LAST:event_btmenuPrincipalProfessorInformacaoActionPerformed
 
     
 

@@ -65,6 +65,7 @@ public class menuPrincipal extends javax.swing.JFrame
 
         btmenuPrincipalPt.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btmenuPrincipalPt.setText("Português");
+        btmenuPrincipalPt.setContentAreaFilled(false);
         btmenuPrincipalPt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btmenuPrincipalPtActionPerformed(evt);
@@ -74,6 +75,7 @@ public class menuPrincipal extends javax.swing.JFrame
 
         btmenuPrincipalMt.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btmenuPrincipalMt.setText("Matemática");
+        btmenuPrincipalMt.setContentAreaFilled(false);
         btmenuPrincipalMt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btmenuPrincipalMtActionPerformed(evt);
@@ -83,6 +85,7 @@ public class menuPrincipal extends javax.swing.JFrame
 
         btmenuPrincipalQC.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btmenuPrincipalQC.setText("Qual é a cor?");
+        btmenuPrincipalQC.setContentAreaFilled(false);
         btmenuPrincipalQC.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btmenuPrincipalQCActionPerformed(evt);
@@ -92,6 +95,7 @@ public class menuPrincipal extends javax.swing.JFrame
 
         btmenuPrincipalQA.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btmenuPrincipalQA.setText("Qual é o animal?");
+        btmenuPrincipalQA.setContentAreaFilled(false);
         btmenuPrincipalQA.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btmenuPrincipalQAActionPerformed(evt);
@@ -101,6 +105,7 @@ public class menuPrincipal extends javax.swing.JFrame
 
         btmenuPrincipalQP.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btmenuPrincipalQP.setText("Jogo Personalizado");
+        btmenuPrincipalQP.setContentAreaFilled(false);
         btmenuPrincipalQP.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btmenuPrincipalQPActionPerformed(evt);
@@ -109,6 +114,7 @@ public class menuPrincipal extends javax.swing.JFrame
         PainelmenuPrincipal.add(btmenuPrincipalQP, new org.netbeans.lib.awtextra.AbsoluteConstraints(174, 337, 350, 47));
 
         btmenuPrincipalSair.setText("Sair da Conta");
+        btmenuPrincipalSair.setContentAreaFilled(false);
         btmenuPrincipalSair.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btmenuPrincipalSairActionPerformed(evt);
@@ -117,6 +123,7 @@ public class menuPrincipal extends javax.swing.JFrame
         PainelmenuPrincipal.add(btmenuPrincipalSair, new org.netbeans.lib.awtextra.AbsoluteConstraints(609, 11, 80, 40));
 
         btmenuPrincipalAlterarDados.setText("Alterar Dados");
+        btmenuPrincipalAlterarDados.setContentAreaFilled(false);
         btmenuPrincipalAlterarDados.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btmenuPrincipalAlterarDadosActionPerformed(evt);
@@ -167,7 +174,7 @@ public class menuPrincipal extends javax.swing.JFrame
     }//GEN-LAST:event_btmenuPrincipalQPActionPerformed
 
     private void btmenuPrincipalSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmenuPrincipalSairActionPerformed
-        new loginAluno().show();
+        new Inicio().show();
         dispose();
     }//GEN-LAST:event_btmenuPrincipalSairActionPerformed
 

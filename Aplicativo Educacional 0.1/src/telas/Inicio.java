@@ -27,6 +27,7 @@ public class Inicio extends javax.swing.JFrame {
         jlInicio = new javax.swing.JLabel();
         btProfessor = new javax.swing.JButton();
         btAluno = new javax.swing.JButton();
+        btEncerrarPrograma = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -53,6 +54,14 @@ public class Inicio extends javax.swing.JFrame {
             }
         });
         PainelInicio.add(btAluno, new org.netbeans.lib.awtextra.AbsoluteConstraints(482, 258, 180, 60));
+
+        btEncerrarPrograma.setText("ENCERRAR SESSÃO");
+        btEncerrarPrograma.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btEncerrarProgramaActionPerformed(evt);
+            }
+        });
+        PainelInicio.add(btEncerrarPrograma, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 340, 180, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -82,11 +91,16 @@ public class Inicio extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_btAlunoActionPerformed
 
+    private void btEncerrarProgramaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btEncerrarProgramaActionPerformed
+       System.exit(0);
+    }//GEN-LAST:event_btEncerrarProgramaActionPerformed
+
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel PainelInicio;
     private javax.swing.JButton btAluno;
+    private javax.swing.JButton btEncerrarPrograma;
     private javax.swing.JButton btProfessor;
     private javax.swing.JLabel jlInicio;
     // End of variables declaration//GEN-END:variables

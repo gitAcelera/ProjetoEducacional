@@ -1,6 +1,7 @@
 
 package telas;
 import Banco.PessoaBD;
+import javax.swing.JOptionPane;
 
 /**
  * Inicia a classe classiAluno
@@ -112,7 +113,7 @@ public class classiAluno extends javax.swing.JFrame {
     }//GEN-LAST:event_btclassiLimparActionPerformed
 
     private void btclassiAlunoInformacaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btclassiAlunoInformacaoActionPerformed
-        // TODO add your handling code here:
+      JOptionPane.showMessageDialog(null,"Olá Prof, bora ver a pontuação dos alunos? \nBasta clicar em 'Consultar'! (⁠◠⁠‿⁠◕⁠)");
     }//GEN-LAST:event_btclassiAlunoInformacaoActionPerformed
 
     

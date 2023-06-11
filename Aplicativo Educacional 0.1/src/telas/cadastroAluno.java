@@ -125,6 +125,11 @@ public class cadastroAluno extends javax.swing.JFrame {
 
         cadastrarAlunoInformacao.setText("jButton1");
         cadastrarAlunoInformacao.setContentAreaFilled(false);
+        cadastrarAlunoInformacao.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cadastrarAlunoInformacaoActionPerformed(evt);
+            }
+        });
         PainelCadastroAluno.add(cadastrarAlunoInformacao, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 10, 40, 40));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -173,6 +178,10 @@ public class cadastroAluno extends javax.swing.JFrame {
     private void cadastroAlunoRecuperaSenhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cadastroAlunoRecuperaSenhaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_cadastroAlunoRecuperaSenhaActionPerformed
+
+    private void cadastrarAlunoInformacaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cadastrarAlunoInformacaoActionPerformed
+        JOptionPane.showMessageDialog(null,"OII Aluno,vamos iniciar uma jornada espacial? \nMas antes,insira os dados pedidos e lembre-se: Não compartilhe sua Senha.(⁠◠⁠‿⁠◕⁠)");
+    }//GEN-LAST:event_cadastrarAlunoInformacaoActionPerformed
 
     
 

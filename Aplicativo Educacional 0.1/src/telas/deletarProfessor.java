@@ -69,6 +69,11 @@ public class deletarProfessor extends javax.swing.JFrame {
 
         btdeletarProfessorInformacao.setText("jButton1");
         btdeletarProfessorInformacao.setContentAreaFilled(false);
+        btdeletarProfessorInformacao.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btdeletarProfessorInformacaoActionPerformed(evt);
+            }
+        });
         PaineldeletarProfessor.add(btdeletarProfessorInformacao, new org.netbeans.lib.awtextra.AbsoluteConstraints(648, 10, 40, 40));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -98,6 +103,10 @@ public class deletarProfessor extends javax.swing.JFrame {
     private void deletarProfessorDeletarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deletarProfessorDeletarActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_deletarProfessorDeletarActionPerformed
+
+    private void btdeletarProfessorInformacaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btdeletarProfessorInformacaoActionPerformed
+         JOptionPane.showMessageDialog(null,"É a hora de dizer adeus? ʕ⁠´⁠•⁠ ⁠ᴥ⁠•̥⁠`⁠ʔ\nDigite o CPF do Professor pra deletar a conta ");
+    }//GEN-LAST:event_btdeletarProfessorInformacaoActionPerformed
 
     
 

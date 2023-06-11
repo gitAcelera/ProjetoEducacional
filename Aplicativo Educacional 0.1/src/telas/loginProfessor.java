@@ -130,6 +130,11 @@ public class loginProfessor extends javax.swing.JFrame {
 
         btloginProfessorInformacao.setText("jButton1");
         btloginProfessorInformacao.setContentAreaFilled(false);
+        btloginProfessorInformacao.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btloginProfessorInformacaoActionPerformed(evt);
+            }
+        });
         PainelloginProfessor.add(btloginProfessorInformacao, new org.netbeans.lib.awtextra.AbsoluteConstraints(648, 10, 40, 40));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -184,6 +189,10 @@ else
  lD.setVisible(true); 
  dispose();// TODO add your handling code here:
     }//GEN-LAST:event_btloginProfessorDirecaoActionPerformed
+
+    private void btloginProfessorInformacaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btloginProfessorInformacaoActionPerformed
+    JOptionPane.showMessageDialog(null,"Fala Prof, beleza? \nLembra dos dados que acabou de cadastrar? Então,insira novamente seu CPF e Senha.(⁠◠⁠‿⁠◕⁠)");
+    }//GEN-LAST:event_btloginProfessorInformacaoActionPerformed
 
     
     // Variables declaration - do not modify//GEN-BEGIN:variables

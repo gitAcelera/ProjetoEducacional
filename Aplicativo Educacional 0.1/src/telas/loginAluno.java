@@ -109,6 +109,11 @@ public class loginAluno extends javax.swing.JFrame {
 
         btloginAlunoInformacao.setText("jButton3");
         btloginAlunoInformacao.setContentAreaFilled(false);
+        btloginAlunoInformacao.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btloginAlunoInformacaoActionPerformed(evt);
+            }
+        });
         PainelloginAluno.add(btloginAlunoInformacao, new org.netbeans.lib.awtextra.AbsoluteConstraints(649, 10, 40, 40));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -158,6 +163,10 @@ else
         rs.setVisible(true); 
         dispose();
     }//GEN-LAST:event_btloginAlunoRecuperarSenhaActionPerformed
+
+    private void btloginAlunoInformacaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btloginAlunoInformacaoActionPerformed
+       JOptionPane.showMessageDialog(null,"Agora a aventura começa \\⁠0⁠/⁠ \nDigite seu R.A e Senha recém cadastrados.");
+    }//GEN-LAST:event_btloginAlunoInformacaoActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

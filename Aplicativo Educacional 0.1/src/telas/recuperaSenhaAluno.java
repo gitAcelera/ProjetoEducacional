@@ -86,6 +86,11 @@ public class recuperaSenhaAluno extends javax.swing.JFrame {
 
         btrecuperarSenhaAlunoInformacao.setText("jButton1");
         btrecuperarSenhaAlunoInformacao.setContentAreaFilled(false);
+        btrecuperarSenhaAlunoInformacao.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btrecuperarSenhaAlunoInformacaoActionPerformed(evt);
+            }
+        });
         PainelrecuperarSenhaAluno.add(btrecuperarSenhaAlunoInformacao, new org.netbeans.lib.awtextra.AbsoluteConstraints(648, 10, 40, 40));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -122,6 +127,10 @@ public class recuperaSenhaAluno extends javax.swing.JFrame {
        recuperarAluno();
 
     }//GEN-LAST:event_btrecuperarSenhaAlunoRecuperarActionPerformed
+
+    private void btrecuperarSenhaAlunoInformacaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btrecuperarSenhaAlunoInformacaoActionPerformed
+      JOptionPane.showMessageDialog(null,"Esqueceu a sua senha? (⁠☉⁠｡⁠☉⁠) \nSem problemas! Digite seu R.A e a sua Palavra de Recuperação. (⁠◠⁠‿⁠◕⁠)"  );
+    }//GEN-LAST:event_btrecuperarSenhaAlunoInformacaoActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

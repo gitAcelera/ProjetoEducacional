@@ -122,6 +122,11 @@ public class personalizarJogo extends javax.swing.JFrame {
         PersonalizarJogoInformacao.setText("jButton1");
         PersonalizarJogoInformacao.setContentAreaFilled(false);
         PersonalizarJogoInformacao.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        PersonalizarJogoInformacao.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PersonalizarJogoInformacaoActionPerformed(evt);
+            }
+        });
         PainelPersonalizarJogo.add(PersonalizarJogoInformacao, new org.netbeans.lib.awtextra.AbsoluteConstraints(648, 10, 40, 40));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -159,6 +164,10 @@ public class personalizarJogo extends javax.swing.JFrame {
     private void personalizarJogoBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_personalizarJogoBActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_personalizarJogoBActionPerformed
+
+    private void PersonalizarJogoInformacaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PersonalizarJogoInformacaoActionPerformed
+        JOptionPane.showMessageDialog(null,"Prof,aqui voce personaliza seu prórpio Quiz. Insira uma Pergunta e as alternativas.\nNão esqueça do código do jogo, pois através dele, os alunos jogam.(⁠◠⁠‿⁠◕⁠)");
+    }//GEN-LAST:event_PersonalizarJogoInformacaoActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel PainelPersonalizarJogo;

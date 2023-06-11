@@ -56,6 +56,7 @@ String userAtual,senhaAtual,userBanco,senhaBanco;
         PainelloginDirecao.add(loginDirecaoUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(217, 142, 280, 20));
 
         loginDirecaoMostrarSenha.setText(" Mostrar senha ");
+        loginDirecaoMostrarSenha.setBorderPainted(true);
         loginDirecaoMostrarSenha.setContentAreaFilled(false);
         loginDirecaoMostrarSenha.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -95,6 +96,11 @@ String userAtual,senhaAtual,userBanco,senhaBanco;
 
         btloginDirecaoInformacao.setText("jButton1");
         btloginDirecaoInformacao.setContentAreaFilled(false);
+        btloginDirecaoInformacao.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btloginDirecaoInformacaoActionPerformed(evt);
+            }
+        });
         PainelloginDirecao.add(btloginDirecaoInformacao, new org.netbeans.lib.awtextra.AbsoluteConstraints(649, 10, 40, 40));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -138,6 +144,10 @@ String userAtual,senhaAtual,userBanco,senhaBanco;
         new loginProfessor().show();
         dispose();
     }//GEN-LAST:event_btloginDirecaoVoltarActionPerformed
+
+    private void btloginDirecaoInformacaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btloginDirecaoInformacaoActionPerformed
+       JOptionPane.showMessageDialog(null,"Fala capitão, beleza? \nSomente um capitão como você tem o acesso para esta sessão.(⁠◠⁠‿⁠◕⁠)");
+    }//GEN-LAST:event_btloginDirecaoInformacaoActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

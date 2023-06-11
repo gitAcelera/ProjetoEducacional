@@ -116,6 +116,11 @@ public class cadastroProfessor extends javax.swing.JFrame {
 
         cadastroProfessorInformacao.setText("jButton1");
         cadastroProfessorInformacao.setContentAreaFilled(false);
+        cadastroProfessorInformacao.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cadastroProfessorInformacaoActionPerformed(evt);
+            }
+        });
         PainelCadastroProfessor.add(cadastroProfessorInformacao, new org.netbeans.lib.awtextra.AbsoluteConstraints(648, 10, 40, 40));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -158,6 +163,10 @@ public class cadastroProfessor extends javax.swing.JFrame {
     private void cadastroProfessorSenhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cadastroProfessorSenhaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_cadastroProfessorSenhaActionPerformed
+
+    private void cadastroProfessorInformacaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cadastroProfessorInformacaoActionPerformed
+     JOptionPane.showMessageDialog(null,"Prof, não tem segredo,segue a comanda e use uma Senha bem elaborada.(⁠◠⁠‿⁠◕⁠)");
+    }//GEN-LAST:event_cadastroProfessorInformacaoActionPerformed
 
 
     
