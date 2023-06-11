@@ -61,7 +61,7 @@ public class Inicio extends javax.swing.JFrame {
                 btEncerrarProgramaActionPerformed(evt);
             }
         });
-        PainelInicio.add(btEncerrarPrograma, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 340, 180, -1));
+        PainelInicio.add(btEncerrarPrograma, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 333, 200, 30));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
