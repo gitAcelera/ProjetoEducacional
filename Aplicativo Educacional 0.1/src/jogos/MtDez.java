@@ -18,6 +18,7 @@ import telas.menuPrincipal;
 public class MtDez extends javax.swing.JFrame {
 int pontosMt = PontosAluno.getPontosMt();
      int idAluno=0;
+     //int novoidAluno=idAluno-1;
      Integer total=null;
     /**
      * Método construtor da classe MtDez
@@ -199,7 +200,8 @@ int pontosMt = PontosAluno.getPontosMt();
                 //idNew=("SELECT MAX(idAluno) AS idAluno FROM jogos");
                 idAluno= res.getInt("idAluno");
             }
-           stm.executeUpdate("UPDATE jogos set q10="+pontosMt+" WHERE idAluno="+idAluno);
+             System.out.println(" id aluno no q10:"+idAluno);
+           stm.executeUpdate("UPDATE jogos SET q10="+pontosMt+" WHERE idAluno="+idAluno);
           
         }
                 catch(ClassNotFoundException ex)
@@ -210,6 +212,7 @@ int pontosMt = PontosAluno.getPontosMt();
         catch (SQLException ex) {
             JOptionPane.showMessageDialog(null,ex.getMessage(),"Erro",JOptionPane.ERROR_MESSAGE);
             
+         
         }    
         
       
@@ -227,9 +230,13 @@ int pontosMt = PontosAluno.getPontosMt();
 		{
 		  total=res.getInt(1);
                 }
+               // novoidAluno=idAluno-1;
+                 //System.out.println("id aluno soma"+idAluno);
+                Statement stm = con.createStatement();
+                  stm.executeUpdate("UPDATE jogos SET total ="+total+" WHERE idAluno="+idAluno);
+                   stm.executeUpdate("UPDATE  aluno SET total="+total+" WHERE idAluno="+idAluno);
         JOptionPane.showMessageDialog(null,"SUA PONTUAÇÃO FOI: "+total+"PONTOS" );
-        Statement stm = con.createStatement();
-          stm.executeUpdate("INSERT into jogos (total) values ("+total+")");
+          
         }
         
         

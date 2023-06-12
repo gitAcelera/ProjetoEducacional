@@ -203,7 +203,7 @@ public class MtCinco extends javax.swing.JFrame {
     }//GEN-LAST:event_btMtVoltarActionPerformed
 
     private void btMtDicaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btMtDicaActionPerformed
-        JOptionPane.showMessageDialog(null,"Uma dica é voce tentar gritar a palavra em sua cabeça, a silaba que tiver mais ênfase é a sílaba tónica, exemplo: Abacaxiiii!");
+        JOptionPane.showMessageDialog(null,"Primeiro realiza a subtração. Com o resultado da subtração, soma 4!");
     }//GEN-LAST:event_btMtDicaActionPerformed
 
    

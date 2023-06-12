@@ -56,6 +56,7 @@ public class Inicio extends javax.swing.JFrame {
         PainelInicio.add(btAluno, new org.netbeans.lib.awtextra.AbsoluteConstraints(482, 258, 180, 60));
 
         btEncerrarPrograma.setText("ENCERRAR SESSÃO");
+        btEncerrarPrograma.setContentAreaFilled(false);
         btEncerrarPrograma.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btEncerrarProgramaActionPerformed(evt);

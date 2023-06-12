@@ -166,7 +166,7 @@ public class personalizarJogo extends javax.swing.JFrame {
     }//GEN-LAST:event_personalizarJogoBActionPerformed
 
     private void PersonalizarJogoInformacaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PersonalizarJogoInformacaoActionPerformed
-        JOptionPane.showMessageDialog(null,"Prof,aqui voce personaliza seu prórpio Quiz. Insira uma Pergunta e as alternativas.\nNão esqueça do código do jogo, pois através dele, os alunos jogam.(⁠◠⁠‿⁠◕⁠)");
+        JOptionPane.showMessageDialog(null,"Prof,aqui você personaliza seu prórpio Quiz. Insira uma Pergunta e as alternativas.\nNão esqueça do código do jogo, pois através dele, os alunos jogam.(⁠◠⁠‿⁠◕⁠)");
     }//GEN-LAST:event_PersonalizarJogoInformacaoActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

@@ -87,6 +87,7 @@
         <Component class="javax.swing.JButton" name="btEncerrarPrograma">
           <Properties>
             <Property name="text" type="java.lang.String" value="ENCERRAR SESS&#xc3;O"/>
+            <Property name="contentAreaFilled" type="boolean" value="false"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btEncerrarProgramaActionPerformed"/>

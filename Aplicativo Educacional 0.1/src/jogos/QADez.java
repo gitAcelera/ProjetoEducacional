@@ -198,6 +198,7 @@ int pontosQA = PontosAluno.getPontosQA();
                 idAluno= res.getInt("idAluno");
             }
            stm.executeUpdate("UPDATE jogos set q10="+pontosQA+" WHERE idAluno="+idAluno);
+           
           
         }
                 catch(ClassNotFoundException ex)
@@ -223,9 +224,10 @@ int pontosQA = PontosAluno.getPontosQA();
 		{
 		  total=res.getInt(1);
                 }
+                 Statement stm = con.createStatement();
+                  stm.executeUpdate("UPDATE jogos SET total ="+total+" WHERE idAluno="+idAluno);
+                  stm.executeUpdate("UPDATE  aluno SET total="+total+" WHERE idAluno="+idAluno);
         JOptionPane.showMessageDialog(null,"SUA PONTUAÇÃO FOI: "+total+ " PONTOS");
-         Statement stm = con.createStatement();
-          stm.executeUpdate("INSERT into jogos (total) values ("+total+")");
         }
         
         

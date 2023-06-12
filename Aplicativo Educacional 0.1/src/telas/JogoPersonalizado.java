@@ -52,52 +52,96 @@ public class JogoPersonalizado extends javax.swing.JFrame {
         PainelJogoPersonalizado.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         campoBuscaJogo.setColumns(20);
+        campoBuscaJogo.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         campoBuscaJogo.setRows(5);
         jScrollPane1.setViewportView(campoBuscaJogo);
 
-        PainelJogoPersonalizado.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 43, 293, 94));
+        PainelJogoPersonalizado.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 37, 300, 110));
 
         jlJogoPersnalizado.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/JogoPersonalizado.png"))); // NOI18N
-        PainelJogoPersonalizado.add(jlJogoPersnalizado, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
-        PainelJogoPersonalizado.add(JogoPersonalizadoConsultarCodigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 200, 70, 33));
-        PainelJogoPersonalizado.add(JogoPersonalizadoQuestao, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 114, 320, 39));
+        PainelJogoPersonalizado.add(jlJogoPersnalizado, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, -1, -1));
+
+        JogoPersonalizadoConsultarCodigo.setBackground(new java.awt.Color(162, 96, 171));
+        JogoPersonalizadoConsultarCodigo.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        JogoPersonalizadoConsultarCodigo.setForeground(new java.awt.Color(255, 255, 255));
+        JogoPersonalizadoConsultarCodigo.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        PainelJogoPersonalizado.add(JogoPersonalizadoConsultarCodigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 280, 140, 30));
+
+        JogoPersonalizadoQuestao.setBackground(new java.awt.Color(162, 96, 171));
+        JogoPersonalizadoQuestao.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        JogoPersonalizadoQuestao.setForeground(new java.awt.Color(255, 255, 255));
+        JogoPersonalizadoQuestao.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        PainelJogoPersonalizado.add(JogoPersonalizadoQuestao, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 133, 300, 30));
 
         btJogoPersonalizadoBuscarJogo.setText("Buscar Jogos");
+        btJogoPersonalizadoBuscarJogo.setContentAreaFilled(false);
         btJogoPersonalizadoBuscarJogo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btJogoPersonalizadoBuscarJogoActionPerformed(evt);
             }
         });
-        PainelJogoPersonalizado.add(btJogoPersonalizadoBuscarJogo, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 150, 280, 40));
+        PainelJogoPersonalizado.add(btJogoPersonalizadoBuscarJogo, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 167, 280, -1));
 
         btJogoPersonalizadoJogar.setText("Jogar");
+        btJogoPersonalizadoJogar.setContentAreaFilled(false);
         btJogoPersonalizadoJogar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btJogoPersonalizadoJogarActionPerformed(evt);
             }
         });
-        PainelJogoPersonalizado.add(btJogoPersonalizadoJogar, new org.netbeans.lib.awtextra.AbsoluteConstraints(52, 336, 210, 40));
+        PainelJogoPersonalizado.add(btJogoPersonalizadoJogar, new org.netbeans.lib.awtextra.AbsoluteConstraints(52, 346, 210, 30));
 
+        btJogoPersonalizadoA.setBackground(new java.awt.Color(162, 96, 171));
+        btJogoPersonalizadoA.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btJogoPersonalizadoA.setForeground(new java.awt.Color(255, 255, 255));
+        btJogoPersonalizadoA.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         btJogoPersonalizadoA.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btJogoPersonalizadoAActionPerformed(evt);
             }
         });
-        PainelJogoPersonalizado.add(btJogoPersonalizadoA, new org.netbeans.lib.awtextra.AbsoluteConstraints(347, 205, 120, 40));
-        PainelJogoPersonalizado.add(btJogoPersonalizadoB, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 205, 120, 40));
-        PainelJogoPersonalizado.add(btJogoPersonalizadoC, new org.netbeans.lib.awtextra.AbsoluteConstraints(346, 284, 120, 40));
-        PainelJogoPersonalizado.add(btJogoPersonalizadoD, new org.netbeans.lib.awtextra.AbsoluteConstraints(562, 284, 120, 40));
+        PainelJogoPersonalizado.add(btJogoPersonalizadoA, new org.netbeans.lib.awtextra.AbsoluteConstraints(357, 225, 100, 20));
+
+        btJogoPersonalizadoB.setBackground(new java.awt.Color(162, 96, 171));
+        btJogoPersonalizadoB.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btJogoPersonalizadoB.setForeground(new java.awt.Color(255, 255, 255));
+        btJogoPersonalizadoB.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        btJogoPersonalizadoB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btJogoPersonalizadoBActionPerformed(evt);
+            }
+        });
+        PainelJogoPersonalizado.add(btJogoPersonalizadoB, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 225, 100, 20));
+
+        btJogoPersonalizadoC.setBackground(new java.awt.Color(162, 96, 171));
+        btJogoPersonalizadoC.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btJogoPersonalizadoC.setForeground(new java.awt.Color(255, 255, 255));
+        btJogoPersonalizadoC.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        PainelJogoPersonalizado.add(btJogoPersonalizadoC, new org.netbeans.lib.awtextra.AbsoluteConstraints(356, 304, 100, 20));
+
+        btJogoPersonalizadoD.setBackground(new java.awt.Color(162, 96, 171));
+        btJogoPersonalizadoD.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btJogoPersonalizadoD.setForeground(new java.awt.Color(255, 255, 255));
+        btJogoPersonalizadoD.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        PainelJogoPersonalizado.add(btJogoPersonalizadoD, new org.netbeans.lib.awtextra.AbsoluteConstraints(572, 304, 100, 20));
 
         btJogoPersonalizadoVoltar.setText("voltar");
+        btJogoPersonalizadoVoltar.setContentAreaFilled(false);
         btJogoPersonalizadoVoltar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btJogoPersonalizadoVoltarActionPerformed(evt);
             }
         });
-        PainelJogoPersonalizado.add(btJogoPersonalizadoVoltar, new org.netbeans.lib.awtextra.AbsoluteConstraints(599, 350, 80, 40));
+        PainelJogoPersonalizado.add(btJogoPersonalizadoVoltar, new org.netbeans.lib.awtextra.AbsoluteConstraints(599, 367, 80, -1));
 
         btJogoPersonalizadoInformacao.setText("jButton1");
-        PainelJogoPersonalizado.add(btJogoPersonalizadoInformacao, new org.netbeans.lib.awtextra.AbsoluteConstraints(645, 8, 40, 40));
+        btJogoPersonalizadoInformacao.setContentAreaFilled(false);
+        btJogoPersonalizadoInformacao.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btJogoPersonalizadoInformacaoActionPerformed(evt);
+            }
+        });
+        PainelJogoPersonalizado.add(btJogoPersonalizadoInformacao, new org.netbeans.lib.awtextra.AbsoluteConstraints(645, 18, 40, 40));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -140,6 +184,14 @@ JOptionPane.showMessageDialog(null," CERTA RESPOSTA !! !!!");
         new menuPrincipal().show();
         dispose(); // TODO add your handling code here:
     }//GEN-LAST:event_btJogoPersonalizadoVoltarActionPerformed
+
+    private void btJogoPersonalizadoInformacaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btJogoPersonalizadoInformacaoActionPerformed
+  JOptionPane.showMessageDialog(null,"Aluno,aqui você joga o Quiz que o seu professor criou. \nInsira o código do Quiz e o jogue!1 Divirta-se.(⁠◠⁠‿⁠◕⁠)");
+    }//GEN-LAST:event_btJogoPersonalizadoInformacaoActionPerformed
+
+    private void btJogoPersonalizadoBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btJogoPersonalizadoBActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btJogoPersonalizadoBActionPerformed
 
     
 

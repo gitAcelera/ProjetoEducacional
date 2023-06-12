@@ -56,6 +56,7 @@ int pontosQA = PontosAluno.getPontosQA();
 
         btQACincoA.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btQACincoA.setText("CACHORRO");
+        btQACincoA.setContentAreaFilled(false);
         btQACincoA.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btQACincoAActionPerformed(evt);
@@ -65,6 +66,7 @@ int pontosQA = PontosAluno.getPontosQA();
 
         btQACincoB.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btQACincoB.setText("MACACO");
+        btQACincoB.setContentAreaFilled(false);
         btQACincoB.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btQACincoBActionPerformed(evt);
@@ -74,6 +76,7 @@ int pontosQA = PontosAluno.getPontosQA();
 
         btQACincoC.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btQACincoC.setText("LEOPARDO");
+        btQACincoC.setContentAreaFilled(false);
         btQACincoC.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btQACincoCActionPerformed(evt);
@@ -83,6 +86,7 @@ int pontosQA = PontosAluno.getPontosQA();
 
         btQACincoD.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btQACincoD.setText("LEÃO");
+        btQACincoD.setContentAreaFilled(false);
         btQACincoD.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btQACincoDActionPerformed(evt);
@@ -91,6 +95,7 @@ int pontosQA = PontosAluno.getPontosQA();
         PainelQACinco.add(btQACincoD, new org.netbeans.lib.awtextra.AbsoluteConstraints(408, 263, 180, 80));
 
         btQAMenu.setText("MENU");
+        btQAMenu.setContentAreaFilled(false);
         btQAMenu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btQAMenuActionPerformed(evt);
@@ -99,6 +104,7 @@ int pontosQA = PontosAluno.getPontosQA();
         PainelQACinco.add(btQAMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, 80, 40));
 
         btQAAvancar.setText("AVANÇAR");
+        btQAAvancar.setContentAreaFilled(false);
         btQAAvancar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btQAAvancarActionPerformed(evt);
@@ -107,6 +113,7 @@ int pontosQA = PontosAluno.getPontosQA();
         PainelQACinco.add(btQAAvancar, new org.netbeans.lib.awtextra.AbsoluteConstraints(605, 344, -1, 50));
 
         btQAVoltar.setText("Voltar");
+        btQAVoltar.setContentAreaFilled(false);
         btQAVoltar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btQAVoltarActionPerformed(evt);
@@ -115,6 +122,7 @@ int pontosQA = PontosAluno.getPontosQA();
         PainelQACinco.add(btQAVoltar, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 354, 80, 40));
 
         btQADica.setText("?");
+        btQADica.setContentAreaFilled(false);
         btQADica.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btQADicaActionPerformed(evt);
