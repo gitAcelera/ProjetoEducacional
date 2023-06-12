@@ -1,0 +1,7 @@
+O javadoc está disponível tanto no código (botão direito no projeto e gerar javadoc) ou na pasta dist/javadoc//index
+
+
+As classes de testes estão localizados em :Pacotes de Códigos-Fonte // package Testes
+
+
+Já os executáves dos testes estão localizados em: Pacotes de Teste package Testes
