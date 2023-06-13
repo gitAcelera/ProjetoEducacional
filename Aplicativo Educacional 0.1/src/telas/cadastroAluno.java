@@ -219,7 +219,7 @@ public class cadastroAluno extends javax.swing.JFrame {
              /**
              *  //condição para que o aluno possa se cadastrar
              */
-             if(stm.executeUpdate("INSERT into aluno values('"+nome+"','"+idade+"','"+ra+"','"+senha+"','"+recuperar+"')")!=0)
+             if(stm.executeUpdate("INSERT into aluno(nome,idade,ra,senha,recuperar) values('"+nome+"','"+idade+"','"+ra+"','"+senha+"','"+recuperar+"')")!=0)
             {
                  /**
              *  //cadastro realizado com sucesso e a limpeza dos campos 
