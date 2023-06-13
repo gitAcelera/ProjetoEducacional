@@ -125,9 +125,9 @@ public class PessoaBD
  ResultSet res = stmt.executeQuery("SELECT aluno.nome,aluno.ra,jogos.total FROM aluno JOIN jogos ON aluno.idAluno=jogos.IdAluno");            
             while (res.next())
             {
-            	classificacao+= "\n"+res.getString("nome");
-				classificacao += "\n"+res.getString("ra");
-				classificacao += "\n"+res.getString("total");
+            	classificacao+= "\n Nome : "+res.getString("nome");
+				classificacao += "\n R.A: "+res.getString("ra");
+				classificacao += "\n Total de Pontos: "+res.getString("total");
 				classificacao += "\n-----------------------------------------";				
             }
             

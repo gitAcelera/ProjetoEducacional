@@ -117,12 +117,22 @@ public class JogoPersonalizado extends javax.swing.JFrame {
         btJogoPersonalizadoC.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btJogoPersonalizadoC.setForeground(new java.awt.Color(255, 255, 255));
         btJogoPersonalizadoC.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        btJogoPersonalizadoC.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btJogoPersonalizadoCActionPerformed(evt);
+            }
+        });
         PainelJogoPersonalizado.add(btJogoPersonalizadoC, new org.netbeans.lib.awtextra.AbsoluteConstraints(356, 304, 100, 20));
 
         btJogoPersonalizadoD.setBackground(new java.awt.Color(162, 96, 171));
         btJogoPersonalizadoD.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btJogoPersonalizadoD.setForeground(new java.awt.Color(255, 255, 255));
         btJogoPersonalizadoD.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        btJogoPersonalizadoD.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btJogoPersonalizadoDActionPerformed(evt);
+            }
+        });
         PainelJogoPersonalizado.add(btJogoPersonalizadoD, new org.netbeans.lib.awtextra.AbsoluteConstraints(572, 304, 100, 20));
 
         btJogoPersonalizadoVoltar.setText("voltar");
@@ -190,8 +200,31 @@ JOptionPane.showMessageDialog(null," CERTA RESPOSTA !! !!!");
     }//GEN-LAST:event_btJogoPersonalizadoInformacaoActionPerformed
 
     private void btJogoPersonalizadoBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btJogoPersonalizadoBActionPerformed
-        // TODO add your handling code here:
+JogoPersonalizadoQuestao.setText("");
+			btJogoPersonalizadoA.setText("");
+                        btJogoPersonalizadoB.setText("");
+                        btJogoPersonalizadoC.setText ("");
+                        btJogoPersonalizadoD.setText("");  
+                        JogoPersonalizadoConsultarCodigo.setText("");         // TODO add your handling code here:
     }//GEN-LAST:event_btJogoPersonalizadoBActionPerformed
+
+    private void btJogoPersonalizadoCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btJogoPersonalizadoCActionPerformed
+JogoPersonalizadoQuestao.setText("");
+			btJogoPersonalizadoA.setText("");
+                        btJogoPersonalizadoB.setText("");
+                        btJogoPersonalizadoC.setText ("");
+                        btJogoPersonalizadoD.setText("");  
+                        JogoPersonalizadoConsultarCodigo.setText("");         // TODO add your handling code here:
+    }//GEN-LAST:event_btJogoPersonalizadoCActionPerformed
+
+    private void btJogoPersonalizadoDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btJogoPersonalizadoDActionPerformed
+JogoPersonalizadoQuestao.setText("");
+			btJogoPersonalizadoA.setText("");
+                        btJogoPersonalizadoB.setText("");
+                        btJogoPersonalizadoC.setText ("");
+                        btJogoPersonalizadoD.setText("");  
+                        JogoPersonalizadoConsultarCodigo.setText("");         // TODO add your handling code here:
+    }//GEN-LAST:event_btJogoPersonalizadoDActionPerformed
 
     
 
