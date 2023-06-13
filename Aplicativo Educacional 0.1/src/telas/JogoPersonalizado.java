@@ -59,13 +59,13 @@ public class JogoPersonalizado extends javax.swing.JFrame {
         PainelJogoPersonalizado.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 37, 300, 110));
 
         jlJogoPersnalizado.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/JogoPersonalizado.png"))); // NOI18N
-        PainelJogoPersonalizado.add(jlJogoPersnalizado, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, -1, -1));
+        PainelJogoPersonalizado.add(jlJogoPersnalizado, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         JogoPersonalizadoConsultarCodigo.setBackground(new java.awt.Color(162, 96, 171));
         JogoPersonalizadoConsultarCodigo.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         JogoPersonalizadoConsultarCodigo.setForeground(new java.awt.Color(255, 255, 255));
         JogoPersonalizadoConsultarCodigo.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        PainelJogoPersonalizado.add(JogoPersonalizadoConsultarCodigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 280, 140, 30));
+        PainelJogoPersonalizado.add(JogoPersonalizadoConsultarCodigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 270, 140, 40));
 
         JogoPersonalizadoQuestao.setBackground(new java.awt.Color(162, 96, 171));
         JogoPersonalizadoQuestao.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -151,7 +151,7 @@ public class JogoPersonalizado extends javax.swing.JFrame {
                 btJogoPersonalizadoInformacaoActionPerformed(evt);
             }
         });
-        PainelJogoPersonalizado.add(btJogoPersonalizadoInformacao, new org.netbeans.lib.awtextra.AbsoluteConstraints(645, 18, 40, 40));
+        PainelJogoPersonalizado.add(btJogoPersonalizadoInformacao, new org.netbeans.lib.awtextra.AbsoluteConstraints(645, 28, 40, 20));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
