@@ -65,13 +65,13 @@ public class JogoPersonalizado extends javax.swing.JFrame {
         JogoPersonalizadoConsultarCodigo.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         JogoPersonalizadoConsultarCodigo.setForeground(new java.awt.Color(255, 255, 255));
         JogoPersonalizadoConsultarCodigo.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        PainelJogoPersonalizado.add(JogoPersonalizadoConsultarCodigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 270, 140, 40));
+        PainelJogoPersonalizado.add(JogoPersonalizadoConsultarCodigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 270, 130, 30));
 
         JogoPersonalizadoQuestao.setBackground(new java.awt.Color(162, 96, 171));
         JogoPersonalizadoQuestao.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         JogoPersonalizadoQuestao.setForeground(new java.awt.Color(255, 255, 255));
         JogoPersonalizadoQuestao.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        PainelJogoPersonalizado.add(JogoPersonalizadoQuestao, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 133, 300, 30));
+        PainelJogoPersonalizado.add(JogoPersonalizadoQuestao, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 123, 270, 30));
 
         btJogoPersonalizadoBuscarJogo.setText("Buscar Jogos");
         btJogoPersonalizadoBuscarJogo.setContentAreaFilled(false);
@@ -80,7 +80,7 @@ public class JogoPersonalizado extends javax.swing.JFrame {
                 btJogoPersonalizadoBuscarJogoActionPerformed(evt);
             }
         });
-        PainelJogoPersonalizado.add(btJogoPersonalizadoBuscarJogo, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 167, 280, -1));
+        PainelJogoPersonalizado.add(btJogoPersonalizadoBuscarJogo, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 150, 280, 40));
 
         btJogoPersonalizadoJogar.setText("Jogar");
         btJogoPersonalizadoJogar.setContentAreaFilled(false);
@@ -89,7 +89,7 @@ public class JogoPersonalizado extends javax.swing.JFrame {
                 btJogoPersonalizadoJogarActionPerformed(evt);
             }
         });
-        PainelJogoPersonalizado.add(btJogoPersonalizadoJogar, new org.netbeans.lib.awtextra.AbsoluteConstraints(52, 346, 210, 30));
+        PainelJogoPersonalizado.add(btJogoPersonalizadoJogar, new org.netbeans.lib.awtextra.AbsoluteConstraints(52, 336, 210, 40));
 
         btJogoPersonalizadoA.setBackground(new java.awt.Color(162, 96, 171));
         btJogoPersonalizadoA.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -100,7 +100,7 @@ public class JogoPersonalizado extends javax.swing.JFrame {
                 btJogoPersonalizadoAActionPerformed(evt);
             }
         });
-        PainelJogoPersonalizado.add(btJogoPersonalizadoA, new org.netbeans.lib.awtextra.AbsoluteConstraints(357, 225, 100, 20));
+        PainelJogoPersonalizado.add(btJogoPersonalizadoA, new org.netbeans.lib.awtextra.AbsoluteConstraints(357, 215, 100, 30));
 
         btJogoPersonalizadoB.setBackground(new java.awt.Color(162, 96, 171));
         btJogoPersonalizadoB.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -111,7 +111,7 @@ public class JogoPersonalizado extends javax.swing.JFrame {
                 btJogoPersonalizadoBActionPerformed(evt);
             }
         });
-        PainelJogoPersonalizado.add(btJogoPersonalizadoB, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 225, 100, 20));
+        PainelJogoPersonalizado.add(btJogoPersonalizadoB, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 215, 100, 30));
 
         btJogoPersonalizadoC.setBackground(new java.awt.Color(162, 96, 171));
         btJogoPersonalizadoC.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -122,7 +122,7 @@ public class JogoPersonalizado extends javax.swing.JFrame {
                 btJogoPersonalizadoCActionPerformed(evt);
             }
         });
-        PainelJogoPersonalizado.add(btJogoPersonalizadoC, new org.netbeans.lib.awtextra.AbsoluteConstraints(356, 304, 100, 20));
+        PainelJogoPersonalizado.add(btJogoPersonalizadoC, new org.netbeans.lib.awtextra.AbsoluteConstraints(356, 294, 100, 30));
 
         btJogoPersonalizadoD.setBackground(new java.awt.Color(162, 96, 171));
         btJogoPersonalizadoD.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -133,7 +133,7 @@ public class JogoPersonalizado extends javax.swing.JFrame {
                 btJogoPersonalizadoDActionPerformed(evt);
             }
         });
-        PainelJogoPersonalizado.add(btJogoPersonalizadoD, new org.netbeans.lib.awtextra.AbsoluteConstraints(572, 304, 100, 20));
+        PainelJogoPersonalizado.add(btJogoPersonalizadoD, new org.netbeans.lib.awtextra.AbsoluteConstraints(572, 294, 100, 30));
 
         btJogoPersonalizadoVoltar.setText("voltar");
         btJogoPersonalizadoVoltar.setContentAreaFilled(false);
